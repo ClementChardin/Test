@@ -1,0 +1,17 @@
+BIL v 4
+MDH v ERE
+
+4 v ERE
+BIL v MDH
+
+MDH v 4
+ERE v BIL
+
+4 v MDH
+BIL v ERE
+
+ERE v 4
+MDH v BIL
+
+4 v BIL
+ERE v MDH

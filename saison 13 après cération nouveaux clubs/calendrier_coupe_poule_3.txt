@@ -1,0 +1,17 @@
+KH v 4
+DKW v MRB
+
+4 v MRB
+KH v DKW
+
+DKW v 4
+MRB v KH
+
+4 v DKW
+KH v MRB
+
+MRB v 4
+DKW v KH
+
+4 v KH
+MRB v DKW

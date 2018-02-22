@@ -1,0 +1,13 @@
+GP	Dyomendal	8,81	BSK	50	5
+HTH	Uskass	8,93	FS	263	2
+CAT	Klendaeth	9,32	DKF	94	8
+SN	Lyath	9,74	DKF	50	6
+vide	Erkash	8,62	QNL	20	3
+vide	Omar	8,29	PRG	86	7
+AL	Demp	8,38	TLB	20	3
+APA	Umaan	9,00	FS	99	3
+CAT	Paezol	9,52	KHR	50	5
+DKW	Merkot	9,12	ED	50	8
+MSL	Vereneux	9,49	ALT	123	8
+TA	Psorek	9,13	TO	50	6
+KHR	Thrond	10,58	HTH	354	11

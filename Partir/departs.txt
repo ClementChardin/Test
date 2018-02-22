@@ -1,0 +1,349 @@
+Jens	ALT			
+Hudek	ALT			
+Denen	ALT	ALT		10
+Qaethil	APA	APA		3
+Haktu	BRB			
+Patassenh	BRB	MSL	157	10
+Abdek	BRB	BRB		3
+Gyafed	BRB			
+Jether	BSK	BSK		4
+Zebu	BSK			
+Imear	CAT	CAT		1
+Tremaol	CAT			
+Vlatyol	CAT			
+Thodenyl	CAT	APA	50	6
+Gfird	DKW	BSK	20	2
+Hirodh	DKW	TLB	50	5
+Chotc	ED	BRB	200	24
+Wisspe	ED	MDL	200	35
+Retohop	ED	DKW	78	10
+Fothoer	ED	CAT	37	2
+Oltess	ED			
+Kohod	FS	FS		2
+Dormad	FS			
+Rendard	FS	APA	242	12
+Dyomendal	GP			
+Wubad	HTH			
+Niendi	KAK	PRG	84	7
+Otopo	KAK	KAK		21
+Ovlehr	KAK	KAK		17
+Boris Ursus	KAK			
+Brednh	KAK	MRB	356	15
+Vretk	KH	KH		3
+Rodenk	KH	KH		8
+Gofedr	KH	TO	416	7
+Deloy	KHR			
+Syng	KHR	KHR		2
+Saluum	KHR	BRB	127	4
+Stavaer	KHR	KHR		7
+Graissus	MRB	TA	1398	33
+Gueteur	MSL			
+Kyrs	PRG	PRG		1
+Kareops	PRG	PRG		4
+Bredug	QNL			
+X'uv	TA	TA		10
+Jlipeov	vide	TLB	50	5
+Igor	vide			
+Youly	vide			
+Oliveiro	vide			
+Wagdaor	vide			
+Beno	vide			
+Chebanar	vide	GP	74	8
+Muelhass	vide	QNL	73	5
+Zuel Kar	vide	DKW	47	2
+Naraj	vide			
+Rak Hem'Dil	vide			
+Hegard	AL	HTH	60	4
+Jomendt	APA			
+Veel	APA			
+Cloedl	BRB	AL	202	21
+Zwig	BSK			
+Meneux	DKF	DKF		4
+Kholkov	FS	KH	289	34
+Wugnik	GP	BSK	20	2
+Jidal	HTH			
+Uskass	HTH			
+Jitaeth	HTH	HTH		1
+Ghenf	KAK	MRB	200	20
+Xend	KH			
+Hygz	KHR	HTH	50	5
+Hoegh	MDL			
+Bragg	MRB	TLB	281	5
+Haphard	MRB	MRB		49
+Xiheforss	PRG	PRG		1
+Krokss	SN			
+Dafeor	SN	KHR	119	6
+Garurh	TA			
+Ikmelet	TO	TO		3
+Ghirkhelev	vide	AL	23	2
+Ztoldeov	vide			
+Tiffano	vide			
+Puero	vide			
+Daniel	vide			
+Vurhzal	vide	MRB	171	6
+Voyer	vide			
+Guiyohar	AL			
+Sfoar	ALT	ALT		27
+Lassek	ALT			
+Kadraq	ALT	TO	249	20
+Ykbiel	BRB	TLB	159	8
+Klendaeth	CAT			
+Vomleth	CAT	HTH	61	7
+Tretab	ED	HTH	100	15
+Ploetl	ED	ED		43
+Nuwatt	FS	FS		2
+Daethyl	HTH	HTH		23
+Lofaed	HTH			
+Noroel	HTH	HTH		10
+Vornemdt	KAK			
+Ittedr	KH	MDL	143	7
+Eskendir	KH	BRB	95	6
+Yoenthor	KHR	ALT	1570	112
+Hubert	KHR			
+Roberdt	MDL			
+Jexath	MDL	MDL		51
+Doroen	MRB			
+Prendt	MRB	MRB		10
+Urthendt	MRB	MRB		1
+Pretlir	MRB			
+Frendeor	MRB	MRB		1
+Kelter	MSL	GP	81	5
+Ulmeux	MSL	MSL		54
+Xakett	MSL	MSL		6
+Haradt	PRG	PRG		2
+Yxolder	QNL	QNL		27
+Rigaad	QNL	QNL		36
+Lyath	SN			
+Holothen	TA	FS	136	13
+Melian	TA	TA		40
+Lucas	TLB			
+Wurtyd	TLB	TLB		1
+Puule	TO	GP	236	8
+Halmasill	vide			
+Woroslaw	vide	TLB	20	3
+Khakalkhiev	vide	TLB	229	2
+Yientli	vide			
+Rodrigues	vide			
+Samuel	vide			
+Guido	vide	BRB	220	10
+Xelten	vide			
+Vartiendel	vide			
+Brennar	vide			
+Krakshar	vide	APA	117	12
+Erkash	vide			
+Rohogd	AL	AL		118
+Edward	ALT			
+Rohr	ALT	DKF	142	6
+Kuel'hel	ALT	TLB	100	12
+Dagdear	APA	MSL	100	12
+Rdal	APA	APA		2
+Ik'Vied	APA	APA		
+Crepich	BRB	QNL	100	19
+Hougrap	BRB	MRB	393	20
+Grof	DKF	DKF		3
+Hugan	KAK	KH	113	15
+Daenyl	KAK	TLB	351	10
+Maonel	KH	KH		5
+Tror	KH	KH		19
+Ryed	KHR	ALT	100	14
+Vgadhr	KHR	KHR		42
+Filodil	KHR	KHR		10
+Dungan	MDL	ALT	101	5
+Lebel	MSL	BRB	127	14
+Xhyrev	PRG			
+Gnen	SN	SN		5
+Witen	SN			
+Zamten	TA			
+Beragueux	TA	DKF	100	15
+Roets	TA	TA		40
+Treban	TLB	TLB		3
+Van Rell	TO			
+Srend	TO	QNL	1053	33
+Lafael	TO	DKF	100	16
+Areniev	vide	KHR	50	9
+Biskil	vide			
+Criansen	vide			
+Omar	vide			
+Huelto	vide			
+Cuidal	vide	KHR	293	7
+Neniel	vide			
+Resh'Al Hidir	vide			
+Xif Al'Khadir	vide			
+Prass Ta'Madir	vide	FS	206	5
+Har Hel	vide			
+Burug	ALT	ALT		17
+Jaexol	BRB	MSL	221	45
+Famyed	CAT	DKF	50	5
+Trund	DKW			
+Xendt	ED	ED		5
+Archaon	FS	BRB	1350	112
+Ibign	HTH	HTH		18
+Karhol	KHR			
+Rhoff	KHR			
+Garrin	KHR	CAT	183	10
+Retendt	MRB			
+Gruncan	MRB			
+Duumt	MRB			
+Querelead	MSL	MSL		21
+Walud	MSL	MSL		2
+Qruv	PRG	PRG		1
+Gramoun	QNL	MSL	244	19
+Magh	SN	SN		129
+Thoryol	TA			
+Monov	vide			
+Snim	vide			
+Xhev El'Huarad	vide	BRB	163	27
+Wrenk	vide	PRG	20	2
+Harik	vide	SN	229	7
+Demp	AL			
+Zumaen	AL	QNL	500	106
+Sradi	ALT			
+Umaan	APA			
+Hakun	APA	GP	167	10
+Glatar	BRB	BSK	198	18
+Paezol	CAT			
+Iemloth	CAT	DKW	50	9
+Ratelet	DKF	DKF		12
+Choerol	DKW	CAT	165	6
+Drumgid	GP	GP		3
+Fumen	KH	KH		5
+Itenlyd	KHR			
+Popolat	MDL	APA	146	5
+Nyare	PRG	HTH	165	7
+Olthyr	PRG			
+Sydikal	QNL			
+Modolen	SN	MSL	755	15
+Frash Mark	vide			
+Frash Term	vide	MDL	258	8
+Tladol	AL	AL		25
+Faenor	ALT	ALT		49
+Wulfart	APA	APA		53
+Ersg	BRB			
+Veiamaor	CAT	CAT		49
+Olamet	DKF	DKF		4
+Merkot	DKW			
+Mendart	FS			
+Latael	HTH	HTH		7
+Fetaor	KAK	KAK		5
+Traoun	KH			
+Blenkyr	KHR			
+Aoden	MDL	MDL		8
+Lataen	MRB	MRB		20
+Vereneux	MSL			
+Habdal	PRG	TLB	50	10
+Ientl	PRG	TO	100	18
+Dyrthied	PRG	PRG		5
+Hurther	QNL			
+Dan	SN			
+Haloen	SN			
+Rdog	TA			
+Dror	TA			
+Von Duek	TLB	BRB	43	2
+Hoerdal	TO	QNL	323	33
+Ploatl	TO			
+Yvohen	vide			
+Troeditt	vide	GP	250	11
+Ioquet	vide			
+Hal	vide	FS	210	15
+Hectivio	vide			
+Datar	vide			
+Jtaren	AL	PRG	100	21
+Cathaen	ALT	SN	398	17
+Iqatl	APA	AL	352	26
+Xyden	APA	APA		33
+Brux	BSK	BSK		2
+Yomaed	CAT	CAT		11
+Xodenr	DKF	DKF		8
+Farifend	HTH	SN	123	18
+Pfessyr	KH	ALT	200	35
+Soled	KHR	KHR		49
+Totit	MDL			
+Naedol	MRB	MSL	500	56
+Baupaoy	MRB	MRB		3
+Matafierd	MSL	KHR	247	35
+Myhed	PRG	TLB	82	5
+Von Dokhoff	QNL	HTH	562	89
+Drogard	SN	MDL	112	8
+Psorek	TA			
+Nratr	TA	TA		25
+Aaron	TLB	TLB		3
+Molienisk	vide			
+Abden	vide	TA	50	9
+Renkel	vide	MDL	181	5
+Taral	vide	BRB	142	18
+Rerh Ardil	vide	vide		54
+Ilirh	vide	SN	354	15
+Kledyr	CAT	KAK	50	9
+Kothenrk	DKW	ED	50	10
+Hurther	ED			
+Katakat	ED			
+Dolean	FS	TO	50	8
+Grendi	KAK	KAK		6
+Fretard	KAK	DKF	275	20
+Vikk	KH	KH		2
+Fraty	KH	DKW	92	5
+Aralt	PRG	ED	151	12
+Ibalen	PRG			
+Dendaenol	SN	TO	100	12
+Nakten	TO			
+Dal'd	TO			
+Youtorsk	vide			
+Lomoel	vide			
+Rak Tesh	vide	vide		5
+Goerh Al'Dim	vide			
+Vlyner	AL	AL		8
+Ilemen	AL	APA	200	24
+Blatir	ALT	QNL	56	5
+Delelhors	ALT	TA	142	14
+Rysdik	BRB			
+Siegfried	BRB			
+Patlop	ED	BRB	243	7
+Nisst	ED	ED		19
+Haloepl	GP	SN	236	12
+Xyos	HTH	ALT	50	8
+Rhovend	KAK	TO	1811	123
+Gnok	KH	KH		5
+Thrond	KHR			
+Lhiken	MSL			
+Yvarov	MSL	MSL		15
+Meblann	PRG			
+Irstolfg	QNL	PRG	20	4
+Nenoel	SN	CAT	243	25
+Sytaeth	SN	QNL	271	6
+Luress	TA	ED	112	20
+Lumoor	TO	KAK	688	24
+Ximenev	vide			
+Uulnen	vide	PRG	61	2
+Menoel	vide			
+Italu	vide			
+Osimpo	vide	KAK	297	54
+Widrik	vide			
+Sidmuil	vide	BRB	151	7
+Chaba	vide			
+Nert Kadesh	vide	MDL	167	7
+Louesh	vide	PRG	20	2
+Vivrodech	vide			
+Eothenol	ALT	ALT		10
+Hour	ALT			
+Icaps	ALT			
+Athlen	ALT			
+Zen'Aod	APA	APA		1
+Metheil	BRB	ED	50	6
+Iglidr	BRB	GP	26	3
+Otelyer	BSK			
+Silofel	DKF	DKF		5
+Ysslav	ED			
+Hurg	FS			
+Epaotl	GP			
+Kurg	HTH			
+Lamenoire	KAK	KH	1004	206
+Bidord	KAK	BSK	35	3
+Kriplets	KH	KH		10
+Northend	KHR	KHR		10
+Marodard	MDL	KHR	67	6
+Refed	MRB	BSK	322	41
+Praedol	SN	ED	100	18
+Flodil	TA	ALT	84	8
+Ybtenov	vide			
+Loco	vide			
+Cahen Caher	vide	PRG	209	11

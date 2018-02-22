@@ -1,0 +1,17 @@
+QNL v 4
+DKF v GP
+
+4 v GP
+QNL v DKF
+
+DKF v 4
+GP v QNL
+
+4 v DKF
+QNL v GP
+
+GP v 4
+DKF v QNL
+
+4 v QNL
+GP v DKF

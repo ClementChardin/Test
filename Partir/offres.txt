@@ -1,0 +1,70 @@
+Icaps BSK 32 4 7
+Icaps BRB 38 2 13
+Icaps ED 20 2 7
+Athlen BSK 43 2 12
+Athlen BRB 28 2 13
+Athlen ED 30 4 7
+Athlen GP 35 3 7
+Metheil ED 50 6 7
+Iglidr GP 26 3 7
+Hurg BRB 50 6 18
+Kurg BRB 56 7 18
+Lamenoire ALT 1000 178 18
+Lamenoire MRB 1000 100 18
+Lamenoire QNL 1000 105 12
+Lamenoire APA 1000 120 12
+Lamenoire GP 1000 206 14
+Lamenoire MRB 1204 180 18
+Lamenoire MSL 1000 178 18
+Lamenoire KH 1004 206 14
+Lamenoire TO 1000 247 14
+Bidord BSK 35 3 7
+Bidord GP 41 3 7
+Northend MSL 50 9 13
+Northend TLB 50 8 7
+Northend MDL 50 8 13
+Northend TO 50 5 7
+Northend ALT 50 6 13
+Northend BSK 50 6 12
+Marodard KHR 67 6 13
+Refed ALT 274 28 18
+Refed BSK 322 41 12
+Refed MRB 245 20 18
+Refed PRG 200 35 12
+Refed QNL 232 24 7
+Refed APA 200 22 7
+Refed BRB 241 20 18
+Refed ED 241 33 12
+Refed GP 274 31 12
+Refed ALT 354 43 18
+Refed KAK 464 49 13
+Refed MSL 290 35 18
+Refed PRG 306 39 12
+Refed KH 338 37 12
+Praedol ALT 100 17 11
+Praedol BSK 100 11 10
+Praedol MRB 100 10 11
+Praedol PRG 100 21 12
+Praedol QNL 100 12 5
+Praedol APA 100 15 5
+Praedol BRB 100 21 18
+Praedol ED 100 18 5
+Praedol GP 100 10 10
+Praedol ALT 100 15 11
+Praedol KAK 100 12 11
+Praedol MSL 100 11 11
+Praedol PRG 100 15 10
+Praedol KH 100 16 10
+Flodil TLB 50 6 5
+Flodil ALT 84 8 11
+Flodil BRB 70 9 11
+Flodil KHR 51 7 11
+Ybtenov GP 22 3 7
+Cahen Caher MSL 178 9 11
+Cahen Caher TLB 134 5 5
+Cahen Caher MDL 223 5 11
+Cahen Caher TO 245 5 5
+Cahen Caher ALT 237 9 11
+Cahen Caher KHR 237 7 11
+Cahen Caher KAK 237 10 12
+Cahen Caher PRG 209 11 6

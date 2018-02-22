@@ -1,0 +1,6 @@
+DKW	 Gfird	 PI	 TL	 	 8.74	 <	 <	3	12	 True	3	1	 [ME	 E	 R]	 [9	9	 12])
+DKW	 Hirodh	 PI	 	 	 9.59	 ^^^	 ^^^	5	12	 False	45	5	 [R	 PL	 E]	 [10	10	 11])
+DKW	 Trund	 N8	 TL	 	 9.83	 *	 *	2	13	 False	80	8	 [ME	 PL	 RP_tot]	 [10	11	 12])
+DKW	 Choerol	 DM	 AI	 CE	 9.34	 x	 x	-1	12	 False	147	16	 [A	 RP_tot	 PA]	 [11	12	 14])
+DKW	 Merkot	 DO	 	 	 9.12	 ^	 ^	3	14	 True	6	1	 [E	 JP	 PA]	 [10	10	 10])
+DKW	 Kothenrk	 C2	 	 	 9.34	 <	 <	3	13	 True	3	1	 [PA	 PL	 RP_tot]	 [10	10	 11])

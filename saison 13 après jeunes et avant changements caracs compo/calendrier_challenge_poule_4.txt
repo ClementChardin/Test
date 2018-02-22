@@ -1,0 +1,17 @@
+BSK v 4
+KAK v GP
+
+4 v GP
+BSK v KAK
+
+KAK v 4
+GP v BSK
+
+4 v KAK
+BSK v GP
+
+GP v 4
+KAK v BSK
+
+4 v BSK
+GP v KAK

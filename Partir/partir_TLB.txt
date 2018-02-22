@@ -1,0 +1,5 @@
+TLB	 Lucas	 DL	 	 	 7.53	 >	 >	4	16	 False	5	1	 [RP_tot	 TO	 M]	 [8	9	 9])
+TLB	 Wurtyd	 DL	 TL	 	 8.18	 <	 <	11	24	 True	3	1	 [RP_tot	 R	 PL]	 [9	9	 9])
+TLB	 Treban	 TL	 	 	 8.0	 ^^	 ^^	8	20	 True	10	1	 [PL	 RP_tot	 E]	 [8	9	 10])
+TLB	 Von Duek	 DO	 AR	 	 8.94	 <<	 <<	10	17	 False	26	3	 [P	 M	 PL]	 [9	11	 11])
+TLB	 Aaron	 C1	 DO	 	 8.67	 >	 >	7	19	 True	5	1	 [M	 A	 RP_tot]	 [9	10	 11])

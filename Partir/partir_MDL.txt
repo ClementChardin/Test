@@ -1,0 +1,7 @@
+MDL	 Hoegh	 TA	 DL	 TL	 8.69	 <<	 <<	-2	12	 False	20	2	 [TA	 PA	 E]	 [9	10	 12])
+MDL	 Roberdt	 DL	 TL	 	 7.91	 <<	 <<	1	12	 False	34	4	 [TO	 R	 A]	 [8	9	 10])
+MDL	 Jexath	 DL	 	 	 11.0	 **	 **	8	18	 True	284	18	 [E	 PA	 TO]	 [12	12	 14])
+MDL	 Dungan	 TL	 	 	 9.52	 *	 *	3	13	 False	54	6	 [RP_tot	 E	 R]	 [9	11	 12])
+MDL	 Popolat	 DM	 AI	 CE	 9.23	 *	 *	6	19	 False	130	18	 [PL	 RP_tot	 R]	 [10	11	 11])
+MDL	 Aoden	 DO	 DM	 CE	 9.03	 ^^	 ^^	4	14	 True	22	3	 [P	 PA	 A]	 [10	11	 12])
+MDL	 Marodard	 AR	 CE	 AI	 9.45	 *	 *	2	9	 False	40	5	 [E	 PL	 RP_tot]	 [10	10	 12])

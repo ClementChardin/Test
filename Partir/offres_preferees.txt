@@ -1,0 +1,218 @@
+Denen	ED	50	9
+Patassenh	MSL	157	10
+Abdek	PRG	25	4
+Gyafed	MSL	39	2
+Jether	HTH	20	4
+Tremaol	BRB	20	3
+Thodenyl	APA	50	6
+Gfird	BSK	20	2
+Hirodh	TLB	50	5
+Chotc	BRB	200	24
+Wisspe	MDL	200	35
+Retohop	DKW	78	10
+Fothoer	CAT	37	2
+Oltess	CAT	65	3
+Rendard	APA	242	12
+Dyomendal	APA	24	2
+Wubad	CAT	37	3
+Niendi	PRG	84	7
+Boris Ursus	ED	493	7
+Brednh	MRB	356	15
+Vretk	BSK	20	3
+Rodenk	DKW	50	8
+Gofedr	TO	416	7
+Deloy	MSL	35	3
+Saluum	BRB	127	4
+Graissus	TA	1398	33
+Jlipeov	TLB	50	5
+Chebanar	GP	74	8
+Muelhass	QNL	73	5
+Zuel Kar	DKW	47	2
+Hegard	HTH	60	4
+Cloedl	AL	202	21
+Zwig	APA	30	3
+Kholkov	KH	289	34
+Wugnik	BSK	20	2
+Uskass			
+Ghenf	MRB	200	20
+Xend			
+Hygz	HTH	50	5
+Bragg	TLB	281	5
+Krokss	BSK	41	2
+Dafeor	KHR	119	6
+Ghirkhelev	AL	23	2
+Vurhzal	MRB	171	6
+Guiyohar	MDL	28	2
+Sfoar	APA	100	12
+Lassek			
+Kadraq	TO	249	20
+Ykbiel	TLB	159	8
+Klendaeth			
+Vomleth	HTH	61	7
+Tretab	HTH	100	15
+Daethyl	BRB	117	14
+Noroel	MRB	50	11
+Vornemdt	AL	20	4
+Ittedr	MDL	143	7
+Eskendir	BRB	95	6
+Yoenthor	ALT	1570	112
+Jexath	FS	404	34
+Prendt	BRB	50	8
+Pretlir	MDL	37	2
+Kelter	GP	81	5
+Ulmeux	MSL	200	41
+Xakett	MRB	50	7
+Yxolder	FS	200	30
+Rigaad	HTH	231	20
+Lyath	HTH	50	5
+Holothen	FS	136	13
+Melian	MSL	477	49
+Puule	GP	236	8
+Halmasill	MRB	19	2
+Woroslaw	TLB	20	3
+Khakalkhiev	TLB	229	2
+Guido	BRB	220	10
+Krakshar	APA	117	12
+Rohogd	KHR	572	65
+Rohr	DKF	142	6
+Kuel'hel	TLB	100	12
+Dagdear	MSL	100	12
+Crepich	QNL	100	19
+Hougrap	MRB	393	20
+Grof	TLB	20	2
+Hugan	KH	113	15
+Daenyl	TLB	351	10
+Ryed	ALT	100	14
+Dungan	ALT	101	5
+Lebel	BRB	127	14
+Xhyrev	TLB	106	3
+Gnen	ALT	50	10
+Witen	TLB	33	3
+Beragueux	DKF	100	15
+Roets	BRB	200	26
+Srend	QNL	1053	33
+Lafael	DKF	100	16
+Areniev	KHR	50	9
+Cuidal	KHR	293	7
+Resh'Al Hidir	DKF	50	5
+Prass Ta'Madir	FS	206	5
+Burug	KH	100	18
+Jaexol	MSL	221	45
+Famyed	DKF	50	5
+Trund			
+Archaon	BRB	1350	112
+Garrin	CAT	183	10
+Retendt	MSL	20	2
+Gruncan			
+Duumt			
+Querelead	TLB	100	18
+Gramoun	MSL	244	19
+Magh	FS	500	123
+Thoryol			
+Snim	MSL	89	1
+Xhev El'Huarad	BRB	163	27
+Wrenk	PRG	20	2
+Harik	SN	229	7
+Zumaen	QNL	500	106
+Umaan	BSK	69	8
+Hakun	GP	167	10
+Glatar	BSK	198	18
+Paezol	BSK	50	6
+Iemloth	DKW	50	9
+Choerol	CAT	165	6
+Fumen			
+Popolat	APA	146	5
+Nyare	HTH	165	7
+Modolen	MSL	755	15
+Frash Term	MDL	258	8
+Tladol	ED	173	27
+Faenor	ED	404	36
+Veiamaor	MRB	200	43
+Merkot	MDL	50	8
+Latael	PRG	97	7
+Traoun	TLB	50	7
+Aoden			
+Lataen	MRB	200	20
+Vereneux	HTH	185	9
+Habdal	TLB	50	10
+Ientl	TO	100	18
+Dan	BRB	46	3
+Haloen	TA	20	3
+Dror	BRB	20	3
+Von Duek	BRB	43	2
+Hoerdal	QNL	323	33
+Yvohen	TLB	25	3
+Troeditt	GP	250	11
+Hal	FS	210	15
+Jtaren	PRG	100	21
+Cathaen	SN	398	17
+Iqatl	AL	352	26
+Xyden	SN	204	34
+Yomaed	DKF	50	5
+Farifend	SN	123	18
+Pfessyr	ALT	200	35
+Soled	HTH	286	43
+Naedol	MSL	500	56
+Matafierd	KHR	247	35
+Myhed	TLB	82	5
+Von Dokhoff	HTH	562	89
+Drogard	MDL	112	8
+Aaron	KH	20	3
+Abden	TA	50	9
+Renkel	MDL	181	5
+Taral	BRB	142	18
+Rerh Ardil	HTH	200	35
+Ilirh	SN	354	15
+Kledyr	KAK	50	9
+Kothenrk	ED	50	10
+Katakat			
+Dolean	TO	50	8
+Grendi	MRB	50	6
+Fretard	DKF	275	20
+Fraty	DKW	92	5
+Aralt	ED	151	12
+Dendaenol	TO	100	12
+Lomoel			
+Rak Tesh	KH	20	4
+Vlyner	CAT	50	9
+Ilemen	APA	200	24
+Blatir	QNL	56	5
+Delelhors	TA	142	14
+Patlop	BRB	243	7
+Nisst	BSK	128	20
+Haloepl	SN	236	12
+Xyos	ALT	50	8
+Rhovend	TO	1811	123
+Thrond	MSL	420	20
+Lhiken	BRB	54	3
+Yvarov	ED	220	15
+Irstolfg	PRG	20	4
+Nenoel	CAT	243	25
+Sytaeth	QNL	271	6
+Luress	ED	112	20
+Lumoor	KAK	688	24
+Ximenev	BRB	20	2
+Uulnen	PRG	61	2
+Osimpo	KAK	297	54
+Sidmuil	BRB	151	7
+Chaba	BRB	50	10
+Nert Kadesh	MDL	167	7
+Louesh	PRG	20	2
+Vivrodech	BRB	74	9
+Eothenol	MDL	100	10
+Hour	BRB	41	5
+Icaps	BSK	32	4
+Athlen	BRB	28	2
+Metheil	ED	50	6
+Iglidr	GP	26	3
+Hurg	BRB	50	6
+Kurg	BRB	56	7
+Lamenoire	KH	1004	206
+Bidord	BSK	35	3
+Northend	MSL	50	9
+Marodard	KHR	67	6
+Refed	BSK	322	41
+Praedol	ED	100	18
+Flodil	ALT	84	8
+Ybtenov	GP	22	3
+Cahen Caher	PRG	209	11

@@ -1,0 +1,17 @@
+ALT v 4
+BRB v DKW
+
+4 v DKW
+ALT v BRB
+
+BRB v 4
+DKW v ALT
+
+4 v BRB
+ALT v DKW
+
+DKW v 4
+BRB v ALT
+
+4 v ALT
+DKW v BRB

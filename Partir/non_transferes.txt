@@ -1,0 +1,7 @@
+Thrond	KHR	MSL	420	20		10,58
+Lhiken	MSL	BRB	54	3		8,94
+Ximenev	vide	BRB	20	2		8,55
+Sidmuil	vide	BRB	151	7		9,76
+Chaba	vide	BRB	50	10		9,1
+Vivrodech	vide	BRB	74	9		9,32
+Glatar	BRB	BSK	198	18		

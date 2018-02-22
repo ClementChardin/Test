@@ -1,0 +1,5 @@
+GP	 Dyomendal	 PI	 TL	 	 8.81	 <<	 x	10	25	 False	20	2	 [R	 E	 M]	 [10	11	 12])
+GP	 Wugnik	 TA	 PI	 	 8.93	 <	 <	5	14	 True	9	1	 [RP_tot	 PL	 E]	 [9	10	 11])
+GP	 Drumgid	 DM	 	 	 8.13	 ^^^	 ^^^	3	12	 True	11	1	 [PA	 TB	 E]	 [9	9	 10])
+GP	 Haloepl	 AI	 CE	 	 10.42	 *	 *	5	18	 False	150	14	 [E	 RP_tot	 M]	 [10	13	 14])
+GP	 Epaotl	 AR	 AI	 	 7.27	 <	 <	7	15	 False	15	2	 [M	 PL	 E]	 [9	9	 11])

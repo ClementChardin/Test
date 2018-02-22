@@ -1,0 +1,17 @@
+APA v 4
+PRG v CAT
+
+4 v CAT
+APA v PRG
+
+PRG v 4
+CAT v APA
+
+4 v PRG
+APA v CAT
+
+CAT v 4
+PRG v APA
+
+4 v APA
+CAT v PRG

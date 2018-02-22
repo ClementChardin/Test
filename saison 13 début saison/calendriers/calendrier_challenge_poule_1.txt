@@ -1,0 +1,17 @@
+TA v 4
+ED v DKF
+
+4 v DKF
+TA v ED
+
+ED v 4
+DKF v TA
+
+4 v ED
+TA v DKF
+
+DKF v 4
+ED v TA
+
+4 v TA
+DKF v ED

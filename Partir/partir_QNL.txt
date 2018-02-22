@@ -1,0 +1,6 @@
+QNL	 Yxolder	 DL	 N8	 TL	 11.5	 *	 *	5	16	 True	168	18	 [A	 RP_tot	 TO]	 [12	13	 14])
+QNL	 Rigaad	 DL	 TL	 N8	 11.26	 *	 *	3	12	 True	137	14	 [RP_tot	 PL	 R]	 [11	11	 13])
+QNL	 Gramoun	 N8	 TL	 	 10.59	 *	 *	8	23	 False	163	12	 [R	 PL	 RP_tot]	 [10	11	 14])
+QNL	 Sydikal	 DM	 	 	 8.58	 <	 <	1	8	 True	3	1	 [A	 E	 PA]	 [10	10	 11])
+QNL	 Von Dokhoff	 C1	 DO	 DM	 12.2	 xx	 xx	7	19	 True	500	43	 [E	 RP_tot	 PA]	 [14	14	 15])
+QNL	 Irstolfg	 AI	 	 	 8.58	 <	 <	4	16	 True	3	1	 [M	 A	 RP_tot]	 [9	10	 11])

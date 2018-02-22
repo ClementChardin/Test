@@ -1,0 +1,5 @@
+BSK	 Jether	 PI	 	 	 8.67	 ^	 ^	8	18	 True	10	1	 [M	 R	 PL]	 [9	9	 10])
+BSK	 Zebu	 PI	 	 	 8.48	 ^^	 ^^	2	12	 True	21	1	 [E	 PL	 RP_tot]	 [9	9	 10])
+BSK	 Zwig	 TA	 	 	 8.59	 ^^	 ^^	9	21	 False	17	2	 [PL	 TA	 E]	 [8	10	 11])
+BSK	 Brux	 C1	 	 	 8.09	 ^	 *	11	23	 False	12	2	 [RP_tot	 TB	 PL]	 [9	9	 9])
+BSK	 Otelyer	 AR	 	 	 7.88	 ^	 ^	9	21	 False	14	1	 [RP_tot	 M	 PL]	 [8	9	 10])

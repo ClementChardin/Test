@@ -1,0 +1,8 @@
+FS	 Kohod	 PI	 	 	 8.07	 <	 <	3	12	 False	20	2	 [A	 ME	 R]	 [9	9	 9])
+FS	 Dormad	 PI	 	 	 7.93	 <	 <	2	10	 False	1	1	 [RP_tot	 E	 R]	 [8	9	 9])
+FS	 Rendard	 PI	 	 	 10.52	 **	 **	3	10	 False	136	12	 [PL	 ME	 RP_tot]	 [10	11	 13])
+FS	 Kholkov	 TA	 PI	 	 11.41	 **	 **	7	22	 False	184	23	 [PL	 A	 RP_tot]	 [12	13	 13])
+FS	 Nuwatt	 DL	 PI	 	 8.78	 ^^	 ^^	11	21	 False	18	2	 [ME	 E	 R]	 [10	10	 10])
+FS	 Archaon	 N8	 TL	 	 12.17	 ***	 ***	1	9	 False	600	110	 [A	 R	 RP_tot]	 [13	13	 14])
+FS	 Dolean	 C2	 AR	 AI	 9.62	 <	 <	4	13	 True	8	1	 [M	 PA	 PL]	 [10	11	 11])
+FS	 Hurg	 AR	 AI	 	 9.12	 >	 >	0	12	 True	10	1	 [M	 RP_tot	 PL]	 [9	10	 12])

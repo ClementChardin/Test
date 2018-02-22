@@ -1,0 +1,17 @@
+KIS v 4
+CPH v MAG
+
+4 v MAG
+KIS v CPH
+
+CPH v 4
+MAG v KIS
+
+4 v CPH
+KIS v MAG
+
+MAG v 4
+CPH v KIS
+
+4 v KIS
+MAG v CPH

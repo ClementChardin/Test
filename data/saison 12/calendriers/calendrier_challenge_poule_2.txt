@@ -1,0 +1,17 @@
+AL v 4
+CAT v ED
+
+4 v ED
+AL v CAT
+
+CAT v 4
+ED v AL
+
+4 v CAT
+AL v ED
+
+ED v 4
+CAT v AL
+
+4 v AL
+ED v CAT

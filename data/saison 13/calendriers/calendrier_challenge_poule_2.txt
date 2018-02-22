@@ -1,0 +1,17 @@
+KHR v 4
+SN v TLB
+
+4 v TLB
+KHR v SN
+
+SN v 4
+TLB v KHR
+
+4 v SN
+KHR v TLB
+
+TLB v 4
+SN v KHR
+
+4 v KHR
+TLB v SN

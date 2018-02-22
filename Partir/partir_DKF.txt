@@ -1,0 +1,6 @@
+DKF	 Meneux	 TA	 PI	 	 8.21	 <	 <	1	12	 False	36	4	 [PL	 TA	 ME]	 [9	9	 10])
+DKF	 Grof	 TL	 N8	 	 8.95	 ^	 ^	4	12	 True	13	1	 [PL	 M	 R]	 [9	10	 10])
+DKF	 Ratelet	 DM	 DO	 	 9.34	 ^^	 ^^	8	19	 False	99	12	 [P	 M	 PA]	 [10	10	 12])
+DKF	 Olamet	 DO	 CE	 	 7.97	 ^^	 *	9	24	 False	41	4	 [A	 PA	 M]	 [9	9	 10])
+DKF	 Xodenr	 C1	 AR	 DM	 9.33	 <	 <	3	9	 True	1	1	 [PA	 PL	 A]	 [10	10	 11])
+DKF	 Silofel	 AR	 AI	 DO	 9.39	 <	 <	-1	11	 False	50	5	 [PA	 PL	 M]	 [10	10	 11])

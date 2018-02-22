@@ -1,0 +1,142 @@
+Denen	10		
+Abdek	3		
+Jether	4		
+Zebu	2		
+Imear	4		
+Tremaol	BRB	20	3
+Gfird	BSK	20	2
+Chotc	BRB	200	24
+Wisspe	MDL	200	35
+Ovlehr	31		
+Vretk	3		
+Rodenk	8		
+Syng	2		
+Stavaer	12		
+Kyrs	2		
+Kareops	7		
+Jlipeov	TLB	50	5
+Youly	4		
+Wagdaor	2		
+Muelhass	12		
+Wugnik	BSK	20	2
+Jitaeth	3		
+Xend			
+Hygz	HTH	50	5
+Ghirkhelev	3		
+Tiffano	4		
+Daniel	3		
+Voyer	4		
+Sfoar	27		
+Tretab	HTH	100	15
+Daethyl	23		
+Noroel	10		
+Jexath	51		
+Prendt	10		
+Urthendt	2		
+Frendeor	5		
+Ulmeux	54		
+Xakett	6		
+Haradt	10		
+Yxolder	27		
+Rigaad	36		
+Lyath	HTH	50	5
+Melian	40		
+Wurtyd	3		
+Woroslaw	TLB	20	3
+Rodrigues	2		
+Xelten	4		
+Vartiendel	2		
+Brennar	3		
+Erkash	3		
+Rohogd	118		
+Dagdear	MSL	100	12
+Crepich	QNL	100	19
+Grof	3		
+Ryed	ALT	100	14
+Filodil	33		
+Lebel	BRB	127	14
+Gnen	5		
+Witen	TLB	33	3
+Beragueux	DKF	100	15
+Roets	40		
+Treban	3		
+Lafael	DKF	100	16
+Areniev	KHR	50	9
+Biskil	3		
+Omar	3		
+Neniel	4		
+Resh'Al Hidir	10		
+Burug	17		
+Jaexol	MSL	221	45
+Famyed	DKF	50	5
+Retendt	MSL	20	2
+Querelead	21		
+Walud	2		
+Magh	129		
+Xhev El'Huarad	BRB	163	27
+Wrenk	PRG	20	2
+Zumaen	QNL	500	106
+Paezol	BSK	50	6
+Iemloth	DKW	50	9
+Drumgid	3		
+Fumen	5		
+Tladol	25		
+Faenor	49		
+Veiamaor	49		
+Merkot	MDL	50	8
+Latael	7		
+Fetaor	20		
+Traoun	TLB	50	7
+Aoden	8		
+Lataen	MRB	200	20
+Habdal	TLB	50	10
+Ientl	TO	100	18
+Haloen	TA	20	3
+Dror	BRB	20	3
+Yvohen	3		
+Jtaren	PRG	100	21
+Xyden	33		
+Yomaed	11		
+Xodenr	8		
+Pfessyr	ALT	200	35
+Soled	49		
+Naedol	MSL	500	56
+Baupaoy	7		
+Matafierd	KHR	247	35
+Von Dokhoff	HTH	562	89
+Psorek	8		
+Aaron	3		
+Abden	TA	50	9
+Rerh Ardil	54		
+Kledyr	KAK	50	9
+Kothenrk	ED	50	10
+Dolean	TO	50	8
+Grendi	6		
+Vikk	2		
+Aralt	ED	151	12
+Dendaenol	TO	100	12
+Rak Tesh	5		
+Vlyner	8		
+Ilemen	APA	200	24
+Nisst	19		
+Xyos	ALT	50	8
+Yvarov	15		
+Irstolfg	PRG	20	4
+Luress	ED	112	20
+Ximenev	BRB	20	2
+Menoel	3		
+Osimpo	KAK	297	54
+Widrik	4		
+Chaba	BRB	50	10
+Louesh	PRG	20	2
+Vivrodech	BRB	74	9
+Eothenol	10		
+Hour	BRB	41	5
+Zen'Aod	3		
+Metheil	ED	50	6
+Hurg	BRB	50	6
+Lamenoire	KH	1004	206
+Northend	10		
+Refed	BSK	322	41
+Praedol	ED	100	18
+Ybtenov	GP	22	3
