@@ -68,10 +68,10 @@ class JCaracsWidget(QtGui.QWidget):
                 poste = jj.postes[k]
                 if poste != '':
                     if poste in ['C1', 'CE']:
-                        self.mod.setItem(r, c, QtGui.QStandardItem('C1 : ' + '%0.2f' % s.calc_EV(jj, 'C1', fatigue=self.parent().fatigue, caracs=caracs_jj) + ' ; \n' + 
+                        self.mod.setItem(r, c, QtGui.QStandardItem('C1 : ' + '%0.2f' % s.calc_EV(jj, 'C1', fatigue=self.parent().fatigue, caracs=caracs_jj) + '\n' + 
                                                                    'C2 : ' + '%0.2f' % s.calc_EV(jj, 'C2', fatigue=self.parent().fatigue, caracs=caracs_jj)))
                     elif poste == 'C2':
-                        self.mod.setItem(r, c, QtGui.QStandardItem('C2 : ' + '%0.2f' % s.calc_EV(jj, 'C2', fatigue=self.parent().fatigue, caracs=caracs_jj) + ' ; \n' + 
+                        self.mod.setItem(r, c, QtGui.QStandardItem('C2 : ' + '%0.2f' % s.calc_EV(jj, 'C2', fatigue=self.parent().fatigue, caracs=caracs_jj) + '\n' + 
                                                                    'C1 : ' + '%0.2f' % s.calc_EV(jj, 'C1', fatigue=self.parent().fatigue, caracs=caracs_jj)))
                     else :
                         self.mod.setItem(r, c, QtGui.QStandardItem(poste + ' : ' + '%0.2f' % s.calc_EV(jj, poste, fatigue=self.parent().fatigue, caracs=caracs_jj)))
@@ -92,6 +92,9 @@ class JCaracsWidget(QtGui.QWidget):
     def setup_ui(self):
         self.vue = QtGui.QTableView()
         self.vue.setModel(self.mod)
+        self.vue.setWordWrap(True)
+        self.vue.setTextElideMode(QtCore.Qt.ElideMiddle)
+        self.vue.resizeRowsToContents()
 
         #Couleurs min et max
         if len(self.joueurs) > 1:
@@ -193,10 +196,10 @@ class JInfosWidget(QtGui.QWidget):
                 poste = jj.postes[k]
                 if poste != '':
                     if poste in ['C1', 'CE']:
-                        self.mod.setItem(r, c, QtGui.QStandardItem('C1 : ' + '%0.2f' % s.calc_EV(jj, 'C1') + ' ; \n' + 
+                        self.mod.setItem(r, c, QtGui.QStandardItem('C1 : ' + '%0.2f' % s.calc_EV(jj, 'C1') + '\n' + 
                                                                    'C2 : ' + '%0.2f' % s.calc_EV(jj, 'C2')))
                     elif poste == 'C2':
-                        self.mod.setItem(r, c, QtGui.QStandardItem('C2 : ' + '%0.2f' % s.calc_EV(jj, 'C2') + ' ; \n' + 
+                        self.mod.setItem(r, c, QtGui.QStandardItem('C2 : ' + '%0.2f' % s.calc_EV(jj, 'C2') + '\n' + 
                                                                    'C1 : ' + '%0.2f' % s.calc_EV(jj, 'C1')))
                     else :
                         self.mod.setItem(r, c, QtGui.QStandardItem(poste + ' : ' + '%0.2f' % s.calc_EV(jj, poste)))
@@ -240,6 +243,9 @@ class JInfosWidget(QtGui.QWidget):
     def setup_ui(self):
         self.vue = QtGui.QTableView()
         self.vue.setModel(self.mod)
+        self.vue.setWordWrap(True)
+        self.vue.setTextElideMode(QtCore.Qt.ElideMiddle)
+        self.vue.resizeRowsToContents()
         
         #Largeur des colones
         self.vue.resizeColumnsToContents()
