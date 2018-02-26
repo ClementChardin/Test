@@ -209,8 +209,11 @@ class Match():
         """
         On determine le nombre de temps forts pour chaque equipe
         """
-        l1 = [misc.tirer_carte()]*3
-        l2 = [misc.tirer_carte()]*3
+        l1 = []
+        l2 = []
+        for ii in range(3):
+            l1.append(misc.tirer_carte())
+            l2.append(misc.tirer_carte())
         if self.terrain_neutre:
             bonus_domicile = 0
         else:
