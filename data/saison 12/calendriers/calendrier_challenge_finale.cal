@@ -45,14 +45,13 @@ S'AL'
 p27
 aS'QNL'
 p28
-aS''
-p29
 asS'dict_bonus_defensifs'
-p30
-(dp31
+p29
+(dp30
 g28
 I0
-sg29
+sS''
+p31
 I0
 sg27
 I0
@@ -78,7 +77,7 @@ p42
 (dp43
 g28
 I1
-sg29
+sg31
 I0
 sg27
 I1
@@ -87,7 +86,7 @@ p44
 (dp45
 g28
 I20
-sg29
+sg31
 I0
 sg27
 I9
@@ -96,7 +95,7 @@ p46
 (dp47
 g28
 I0
-sg29
+sg31
 I0
 sg27
 I0
@@ -105,7 +104,7 @@ p48
 (dp49
 g28
 I1
-sg29
+sg31
 I0
 sg27
 I0
@@ -121,7 +120,7 @@ p56
 (dp57
 g28
 I0
-sg29
+sg31
 I0
 sg27
 I1
@@ -130,7 +129,7 @@ p58
 (dp59
 g28
 I9
-sg29
+sg31
 I0
 sg27
 I20
@@ -140,7 +139,7 @@ p60
 (lp62
 S'AL v QNL'
 p63
-ag29
+ag31
 aasS'dat'
 p64
 I12
@@ -189,7 +188,7 @@ p93
 (dp94
 g28
 I0
-sg29
+sg31
 I0
 sg27
 I0

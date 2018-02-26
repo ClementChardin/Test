@@ -58,12 +58,11 @@ aS'DKW'
 p36
 aS'MSL'
 p37
-aS''
-p38
 asS'dict_bonus_defensifs'
-p39
-(dp40
-g38
+p38
+(dp39
+S''
+p40
 I0
 sg36
 I0
@@ -102,7 +101,7 @@ stp55
 aNaasS'dict_joues'
 p56
 (dp57
-g38
+g40
 I0
 sg36
 I1
@@ -115,7 +114,7 @@ I1
 ssS'dict_pour'
 p58
 (dp59
-g38
+g40
 I0
 sg36
 I23
@@ -128,7 +127,7 @@ I21
 ssS'dict_nuls'
 p60
 (dp61
-g38
+g40
 I0
 sg36
 I0
@@ -141,7 +140,7 @@ I0
 ssS'dict_gagnes'
 p62
 (dp63
-g38
+g40
 I0
 sg36
 I0
@@ -164,7 +163,7 @@ tp72
 aNaasS'dict_perdus'
 p73
 (dp74
-g38
+g40
 I0
 sg36
 I1
@@ -177,7 +176,7 @@ I0
 ssS'dict_contre'
 p75
 (dp76
-g38
+g40
 I0
 sg36
 I35
@@ -195,7 +194,7 @@ S'SN v MRB'
 p80
 aS'DKW v MSL'
 p81
-ag38
+ag40
 aasS'dat'
 p82
 I12
@@ -276,7 +275,7 @@ stp128
 aNaasS'dict_bonus_offensifs'
 p129
 (dp130
-g38
+g40
 I0
 sg36
 I0

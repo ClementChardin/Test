@@ -64,11 +64,9 @@ aS'QNL'
 p38
 aS'TO'
 p39
-aS''
-p40
 asS'dict_bonus_defensifs'
-p41
-(dp42
+p40
+(dp41
 g38
 I0
 sg39
@@ -77,7 +75,8 @@ sg37
 I0
 sg36
 I0
-sg40
+sS''
+p42
 I0
 ssS'journees'
 p43
@@ -114,7 +113,7 @@ sg37
 I1
 sg36
 I1
-sg40
+sg42
 I0
 ssS'dict_pour'
 p58
@@ -127,7 +126,7 @@ sg37
 I19
 sg36
 I21
-sg40
+sg42
 I0
 ssS'dict_nuls'
 p60
@@ -140,7 +139,7 @@ sg37
 I0
 sg36
 I0
-sg40
+sg42
 I0
 ssS'dict_gagnes'
 p62
@@ -153,7 +152,7 @@ sg37
 I0
 sg36
 I1
-sg40
+sg42
 I0
 ssS'dicts_drop_rates'
 p64
@@ -176,7 +175,7 @@ sg37
 I1
 sg36
 I0
-sg40
+sg42
 I0
 ssS'dict_contre'
 p75
@@ -189,7 +188,7 @@ sg37
 I21
 sg36
 I19
-sg40
+sg42
 I0
 ssS'matches'
 p77
@@ -279,7 +278,7 @@ sg37
 I0
 sg36
 I0
-sg40
+sg42
 I0
 ssS'dicts_drops'
 p127

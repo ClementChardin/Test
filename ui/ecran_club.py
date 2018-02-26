@@ -9,10 +9,13 @@ from stats_widget import StatsWidget
 from saison import *
 
 class EcranClubWidget(QtGui.QWidget):
-    def __init__(self, nom_saison=None, ecran_precedant=None, parent=None):
+    def __init__(self, dat=None, ecran_precedant=None, parent=None):
         super(EcranClubWidget, self).__init__(parent)
-        print "nom saison =", nom_saison
-        self.saison = charger_saison(nom_saison)
+        #print "nom saison =", nom_saison
+        self.dat = dat
+        self.nom_saison = None if self.dat is None \
+                          else 'saison_' + str(self.dat) + '_c'
+        self.saison = charger_saison(self.nom_saison, self.dat)
         self.ecran_precedant = ecran_precedant
         #self.charger_clubs()
 
@@ -30,7 +33,7 @@ class EcranClubWidget(QtGui.QWidget):
         self.noms_coupes = []
         self.noms_calendriers = []
         for cal in self.calendriers:
-            clas = ClassementWidget(cal.nom_championnat, parent=self)
+            clas = ClassementWidget(cal.nom_championnat, parent=self, dat=self.dat)
             self.classements_widgets.append(clas)
             if 'poule' in cal.nom_championnat \
                or 'quarts' in cal.nom_championnat \
@@ -176,13 +179,13 @@ class EcranClubWidget(QtGui.QWidget):
         self.match_widget.show()
 
     def aux_cal_championnat(self):
-        self.show_calendrier(self.noms_championnats[self.idx_championnat])
+        self.show_calendrier(self.noms_championnats[self.idx_championnat], self.dat)
 
     def aux_cal_coupe(self):
-        self.show_calendrier(self.noms_coupes[self.idx_coupe])
+        self.show_calendrier(self.noms_coupes[self.idx_coupe], self.dat)
 
-    def show_calendrier(self, nom):
-        self.C = CalendrierWidget(nom)
+    def show_calendrier(self, nom, dat):
+        self.C = CalendrierWidget(nom, dat=dat)
         self.C.show()
 
     def championnat_precedent(self):

@@ -4,13 +4,14 @@ from constantes import *
 from noms_all import *
 
 class ClassementWidget(QtGui.QWidget):
-    def __init__(self, nom_tournoi, parent=None):
+    def __init__(self, nom_tournoi, dat=None, parent=None):
         super(ClassementWidget, self).__init__(parent)
         self.nom_tournoi = nom_tournoi
+        self.dat = dat
         try:
-            self.calendrier = cal.charger_calendrier(self.nom_tournoi)
+            self.calendrier = cal.charger_calendrier(self.nom_tournoi, dat=self.dat)
         except IOError:
-            self.calendrier = cal.calendrier(nom_tournoi)
+            self.calendrier = cal.calendrier(self.nom_tournoi)
 
         self.lay = QtGui.QVBoxLayout()
         self.setLayout(self.lay)

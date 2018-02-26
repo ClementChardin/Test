@@ -9,9 +9,9 @@ class CalendrierWidget(QtGui.QWidget):
         self.dat = dat
 
         try:
-            self.calendrier = cal.charger_calendrier(self.nom_championnat)
+            self.calendrier = cal.charger_calendrier(self.nom_championnat, dat=self.dat)
         except IOError:
-            self.calendrier = cal.calendrier(nom_championnat)
+            self.calendrier = cal.calendrier(nom_championnat, dat=self.dat)
         self.nombre_equipes_impair = len(self.calendrier.noms_clubs) % 2 == 1
 
         self.lay = QtGui.QVBoxLayout()

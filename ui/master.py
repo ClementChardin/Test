@@ -20,11 +20,12 @@ class MasterWidget(QtGui.QWidget):
         self.ecran_accueil = ea.EcranAccueilWidget(parent=self)
         self.lay.addWidget(self.ecran_accueil)
 
-        nom_saison_c = None if self.dat is None \
-                       else 'saison_' + str(self.dat) + '_c'
+        #nom_saison_c = None if self.dat is None \
+        #               else 'saison_' + str(self.dat) + '_c'
         self.ecran_club = ec.EcranClubWidget(parent=self,
-                                            ecran_precedant=self.ecran_accueil,
-                                             nom_saison=nom_saison_c)
+                                             ecran_precedant=self.ecran_accueil,
+                                             dat=self.dat)
+                                             #nom_saison=nom_saison_c)
         self.lay.addWidget(self.ecran_club)
         self.ecran_club.hide()
         """
