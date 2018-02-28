@@ -235,7 +235,7 @@ class EcranClubWidget(QtGui.QWidget):
             self.clubs.append(cc)
 
     def maj(self):
-        self.parent().ecran_club = EcranClubWidget(nom_saison=self.saison.nom,
+        self.parent().ecran_club = EcranClubWidget(dat=self.dat,
                                                    parent=self.parent(),
                                                    ecran_precedant=self.parent().ecran_accueil)
         #self.parent().ecran_club.ecran_precedant = self.parent().ecran_accueil
