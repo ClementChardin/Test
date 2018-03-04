@@ -455,10 +455,22 @@ class Col2Widget(QtGui.QWidget):
         self.setFixedWidth(350)
 
     def sauvegarder_compo(self):
-        mb = QtGui.QMessageBox()
-        if mb.question(None, "Confirmation", "Sauvegarder sous nom " + self.nom.text(), "Non", "Oui") == 1:
-            self.comp.sauvegarder(self.nom.text(), self.club.nom, self.parent().c_ou_s)
-            self.parent().compo_sauvee = True
+        if self.nom.text() in self.parent().club.compos_sauvees() \
+           and not self.comp.nom == self.nom.text():
+            dial = QtGui.QDialog()
+            lay = QtGui.QVBoxLayout()
+            dial.setLayout(lay)
+            lab = QtGui.QLabel(u"Ce nom de compo est déjà utilisé !")
+            lay.addWidget(lab)
+            but = QtGui.QPushButton('OK')
+            lay.addWidget(but)
+            but.clicked.connect(dial.close)
+            dial.exec_()
+        else:
+            mb = QtGui.QMessageBox()
+            if mb.question(None, "Confirmation", "Sauvegarder sous nom " + self.nom.text(), "Non", "Oui") == 1:
+                self.comp.sauvegarder(self.nom.text(), self.club.nom, self.parent().c_ou_s)
+                self.parent().compo_sauvee = True
 
     def restaurer_defaut(self):
         self.parent().comp = s.charger_compo(self.club.nom+'_defaut', self.club.nom, self.c_ou_s)

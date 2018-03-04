@@ -224,44 +224,61 @@ class ColMatchWidget(QtGui.QWidget):
                            self.c_ou_s)
         
     def commencer(self):
-        self.mb = QtGui.QMessageBox()
-        st = "Avez-vous clique sur la compo voulue ?"
-        sauver = self.sauv_check.isChecked()
-        if sauver:
-            st += "\nSauver active"
-        terrain_neutre = self.neutre_check.isChecked()
-        if terrain_neutre:
-            st += "\nTerrain neutre active"
-        phase_finale = self.finale_check.isChecked()
-        if phase_finale:
-            st += "\nPhase finale activee"
-        if self.mb.question(None,
-                         "Question",
-                         st,
-                         "Non",
-                         "Oui") == 1:
-            self.definir_match()
+        nom_compo1 = str(self.parent().col_eq1.col1.combo2.currentText())
+        nom_compo2 = str(self.parent().col_eq2.col1.combo2.currentText())
+        nom = self.parent().col_eq1.equipe.nom + '_' + self.parent().col_eq2.equipe.nom
+        if not (nom in nom_compo1 and nom in nom_compo2):
+            dial = QtGui.QDialog()
+            lay = QtGui.QVBoxLayout()
+            dial.setLayout(lay)
+            lay.addWidget(QtGui.QLabel(u"Les compositions d'équipes ne correspondent pas !"))
+            lay.addWidget(QtGui.QLabel(u"Nom détecté : "+nom))
+            lay.addWidget(QtGui.QLabel(u"Nom compo 1 : "+nom_compo1))
+            lay.addWidget(QtGui.QLabel(u"Nom compo 2 : "+nom_compo2))
+            but = QtGui.QPushButton('OK')
+            lay.addWidget(but)
+            but.clicked.connect(dial.close)
+            dial.exec_()
+            raise ValueError()
+        else:
+            self.mb = QtGui.QMessageBox()
+            st = "Avez-vous clique sur la compo voulue ?"
+            sauver = self.sauv_check.isChecked()
+            if sauver:
+                st += "\nSauver active"
+            terrain_neutre = self.neutre_check.isChecked()
+            if terrain_neutre:
+                st += "\nTerrain neutre active"
+            phase_finale = self.finale_check.isChecked()
+            if phase_finale:
+                st += "\nPhase finale activee"
+            if self.mb.question(None,
+                             "Question",
+                             st,
+                             "Non",
+                             "Oui") == 1:
+                self.definir_match()
 
-            cal = self.identifier_calendrier()
-            if cal is None and sauver:
-                self.dial = MyDialog(u"Le match ne correspond à aucun calendrier, il n'a pas été joué")
-            else:
-                #print "commencer"
-                self.match.jouer(sauver=sauver,
-                                 phase_finale=phase_finale)
-                #self.print_res_match()
-                self.R = r.ResultatWidget(self.match)
-                self.R.show()
+                cal = self.identifier_calendrier()
+                if cal is None and sauver:
+                    self.dial = MyDialog(u"Le match ne correspond à aucun calendrier, il n'a pas été joué")
+                else:
+                    #print "commencer"
+                    self.match.jouer(sauver=sauver,
+                                     phase_finale=phase_finale)
+                    #self.print_res_match()
+                    self.R = r.ResultatWidget(self.match)
+                    self.R.show()
 
-                ii, jj = cal.enregistrer_resultats(self.match)
-                if sauver:
-                    cal.sauvegarder()
-                    if jj == len(cal.scores[ii])-1:
-                        if cal.nom_championnat in self.saison.dict_indice_journees.keys():
-                            self.saison.dict_indice_journees[cal.nom_championnat] += 1
-                        else:
-                            self.saison.dict_indice_journees[cal.nom_championnat] = 1
-                    self.saison.sauvegarder()
+                    ii, jj = cal.enregistrer_resultats(self.match)
+                    if sauver:
+                        cal.sauvegarder()
+                        if jj == len(cal.scores[ii])-1:
+                            if cal.nom_championnat in self.saison.dict_indice_journees.keys():
+                                self.saison.dict_indice_journees[cal.nom_championnat] += 1
+                            else:
+                                self.saison.dict_indice_journees[cal.nom_championnat] = 1
+                        self.saison.sauvegarder()
 
     def print_res_match(self):
         eq1 = self.match.eq1

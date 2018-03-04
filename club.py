@@ -438,6 +438,8 @@ class compo:
                            T2 = 0,
                            T3 = 0)
 
+        self.nom = ''
+
     def __call__(self):
         return self
 
@@ -487,6 +489,8 @@ class compo:
 
         if not osp.isdir(save_dir):
             os.mkdir(save_dir)
+
+        self.nom = nom
         with open(save_dir+'/'+nom+'.comp', 'w') as f:
             pickle.dump(self, f)
 
@@ -702,7 +706,9 @@ def charger_compo(nom_compo,nom_equipe, c_ou_s, date=None):
     else:
         raise ValueError("c_ou_s doit etre 'c' pour club ; 's' pour selection !")
     with open(save_dir+'/'+nom_compo+'.comp', 'r') as f:
-         c = pickle.load(f)       
+         c = pickle.load(f)
+    if not 'nom' in c.__dict__.keys():
+        c.nom = nom_compo
     return c    
 
 coeffs_compo_old = dict(M = dict(n1=.5, n2=.5, n3=.5, n4=.5, n5=.5, n6=1, n7=1, n8=.5, n9=1.5, n10=1.5, n11=2.5, n12=1.5, n13=1.5, n14=2.5, n15=2, n16=0, n17=0, n18=0, n19=0, n20=.5, n21=.5, n22=1),
