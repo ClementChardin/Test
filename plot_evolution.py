@@ -9,9 +9,11 @@ from joueur import *
 from numpy import *
 from matplotlib.pyplot import *
 
-def plot_evolution(jj, dat=None):
+def plot_evolution(jj, dat=None, ax=None):
     if dat is None:
         dat = lire_date()
+    if ax is None:
+        ax = subplot(111)
     dats = []
     evs = []
     cts = []
@@ -43,24 +45,24 @@ def plot_evolution(jj, dat=None):
     
     dats = array(dats)
     width = .2
-    bar(dats - width/2, cts, width,
+    ax.bar(dats - width/2, cts, width,
         label='Club, titulaire',
         color=cols)
-    bar(dats - width/2, crs/2., width, bottom=cts,
+    ax.bar(dats - width/2, crs/2., width, bottom=cts,
         label=u'Club, remplaçant',
         color=cols2)
 
     c_arm = couleurs.couleurs_equipes[jj.ARM].getRgbF()
     c_arm2 = (c_arm[0], c_arm[1], c_arm[2], .7)
-    ax = subplot(111)
-    bar(dats - width/2, sts, width, bottom=cts+crs/2.,
+    #ax = subplot(111)
+    ax.bar(dats - width/2, sts, width, bottom=cts+crs/2.,
         label=jj.ARM+u', titulaire',
         color=c_arm)
-    bar(dats - width/2, srs/2., width, bottom=cts+crs/2.+sts,
+    ax.bar(dats - width/2, srs/2., width, bottom=cts+crs/2.+sts,
         label=jj.ARM+u', remplaçant',
         color=c_arm2)
     ax2 = ax.twinx()
-    plot(dats, evs, 'o-',
+    ax2.plot(dats, evs, 'o-',
          label='Evaluation',
          color='k')#couleurs.couleurs_equipes[jj.club].getRgbF())
 
@@ -72,12 +74,12 @@ def plot_evolution(jj, dat=None):
             else:
                 nom_club2 = jj.anciens_clubs.split(';')[ii+1].split(' ')[0]
                 trans = da + ' : ' + nom_club + ' -> ' + nom_club2
-            axvline(int(da)-.5, linestyle='--', color='k', linewidth=2, label=trans)
+            ax.axvline(int(da)-.5, linestyle='--', color='k', linewidth=2, label=trans)
 
     if jj.D <= dat:
-        axvline(jj.D-.5,linestyle='--', color='r', linewidth=2, label=u'Déclin : '+str(jj.D))
+        ax.axvline(jj.D-.5,linestyle='--', color='r', linewidth=2, label=u'Déclin : '+str(jj.D))
 
-    xlim(min(dats)-1, max(dats)+1)
+    ax.set_xlim(min(dats)-1, max(dats)+1)
     #ax.legend()
     #ax2.legend()
     #lns = ax.lines+ax2.lines
@@ -85,7 +87,7 @@ def plot_evolution(jj, dat=None):
     h1, l1 = ax.get_legend_handles_labels()
     h2, l2 = ax2.get_legend_handles_labels()
     ax.legend(h1+h2, l1+l2)
-    title(jj.nom)
+    ax.set_title(jj.nom)
     xlabel('Date')
     ax.set_ylabel(u'Matches joués')
     ax2.set_ylabel(u'Evaluation')

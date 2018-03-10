@@ -159,7 +159,8 @@ class EcranClubWidget(QtGui.QWidget):
         self.match_widget.hide()
 
     def retour_ecran_precedant(self):
-        self.wid_aux.hide()
+        #self.wid_aux.hide()
+        self.hide()
         self.ecran_precedant.show()
 
     def voir_equipes(self):

@@ -366,7 +366,10 @@ class joueur:
                          label_TO=None,
                          label_TA=None,
                          label_TB=None,
-                         force_av_ar=None):
+                         force_av_ar=None,
+                         ax=None):
+        if ax is None:
+            ax = plt.subplot(111)
         caracs_a_ploter = []
         noms = []
         
@@ -473,15 +476,15 @@ class joueur:
             xx.append(x)
             y = c*np.sin(angle)
             yy.append(y)
-            plt.plot([0, (car_max+1)*np.cos(angle)],[0, (car_max+1)*np.sin(angle)], linestyle='--', color='k')
+            ax.plot([0, (car_max+1)*np.cos(angle)],[0, (car_max+1)*np.sin(angle)], linestyle='--', color='k')
             if texte:
-                plt.text((car_max+2)*np.cos(angle), (car_max+2)*np.sin(angle), noms[i])
+                ax.text((car_max+2)*np.cos(angle), (car_max+2)*np.sin(angle), noms[i])
 
         xx.append(caracs_a_ploter[0])
         yy.append(0)
 
-        plt.plot(xx, yy, label=self.nom) #
-        plt.legend()
+        ax.plot(xx, yy, label=self.nom) #
+        ax.legend()
 
         for i in range(1,car_max+2):
             cercle_x = []
@@ -490,9 +493,9 @@ class joueur:
                 cercle_x.append(i*np.cos(2*k*np.pi/N_points_cercles))
                 cercle_y.append(i*np.sin(2*k*np.pi/N_points_cercles))
             if i%5 ==0:
-                plt.plot(cercle_x, cercle_y, color='k')
+                ax.plot(cercle_x, cercle_y, color='k')
             else:
-                plt.plot(cercle_x, cercle_y, color='k', linestyle='--')
+                ax.plot(cercle_x, cercle_y, color='k', linestyle='--')
         
 #        plt.axhline(0, linestyle='--', color='k')
 #        plt.axvline(0, linestyle='--', color='k')

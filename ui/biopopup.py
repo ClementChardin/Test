@@ -68,10 +68,10 @@ class JCaracsWidget(QtGui.QWidget):
                 poste = jj.postes[k]
                 if poste != '':
                     if poste in ['C1', 'CE']:
-                        self.mod.setItem(r, c, QtGui.QStandardItem('C1 : ' + '%0.2f' % s.calc_EV(jj, 'C1', fatigue=self.parent().fatigue, caracs=caracs_jj) + '\n' + 
+                        self.mod.setItem(r, c, QtGui.QStandardItem('C1 : ' + '%0.2f' % s.calc_EV(jj, 'C1', fatigue=self.parent().fatigue, caracs=caracs_jj) + '\n' + \
                                                                    'C2 : ' + '%0.2f' % s.calc_EV(jj, 'C2', fatigue=self.parent().fatigue, caracs=caracs_jj)))
                     elif poste == 'C2':
-                        self.mod.setItem(r, c, QtGui.QStandardItem('C2 : ' + '%0.2f' % s.calc_EV(jj, 'C2', fatigue=self.parent().fatigue, caracs=caracs_jj) + '\n' + 
+                        self.mod.setItem(r, c, QtGui.QStandardItem('C2 : ' + '%0.2f' % s.calc_EV(jj, 'C2', fatigue=self.parent().fatigue, caracs=caracs_jj) + '\n' + \
                                                                    'C1 : ' + '%0.2f' % s.calc_EV(jj, 'C1', fatigue=self.parent().fatigue, caracs=caracs_jj)))
                     else :
                         self.mod.setItem(r, c, QtGui.QStandardItem(poste + ' : ' + '%0.2f' % s.calc_EV(jj, poste, fatigue=self.parent().fatigue, caracs=caracs_jj)))
@@ -93,7 +93,8 @@ class JCaracsWidget(QtGui.QWidget):
         self.vue = QtGui.QTableView()
         self.vue.setModel(self.mod)
         self.vue.setWordWrap(True)
-        self.vue.setTextElideMode(QtCore.Qt.ElideMiddle)
+        #self.vue.setTextElideMode(QtCore.Qt.ElideMiddle)
+        self.vue.setTextElideMode(QtCore.Qt.ElideNone) 
         self.vue.resizeRowsToContents()
 
         #Couleurs min et max
@@ -223,7 +224,7 @@ class JInfosWidget(QtGui.QWidget):
             r += 1
             self.mod.setItem(r, c, QtGui.QStandardItem(str(jj.club)))
             r += 1
-            st = str(jj.anciens_clubs)#.replace(';', '\n')
+            st = str(jj.anciens_clubs.replace(';', '\n'))
             self.mod.setItem(r, c, QtGui.QStandardItem(st))
             r += 1
             st = str(jj.changements_postes)#.replace(';', '\n')

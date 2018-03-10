@@ -3,7 +3,8 @@ import rolespopup as rp
 from selection import *
 from PyQt4 import QtCore, QtGui
 from couleurs import *
-from plot_evolution import *
+from plot_evolution_widget import PlotEvolutionWidget
+from diagramme_joueurs_widget import DiagrammeJoueursWidget
 
 class ChoixJoueursWidget(QtGui.QWidget):
     def __init__(self, parent=None,
@@ -322,13 +323,19 @@ class ChoixJoueursWidget(QtGui.QWidget):
                    else False
         label_TB = True if max(TB) >= 8 \
                    else False
-        
+        """
         for nn, jj in enumerate(joueurs):
             texte = True if nn == 0 else False
             jj.diagramme_etoile(texte=texte,
                                 label_TO=label_TO,
                                 label_TA=label_TA,
                                 label_TB=label_TB)
+        """
+        self.djw = DiagrammeJoueursWidget(joueurs,
+                                     label_TO=label_TO,
+                                     label_TA=label_TA,
+                                     label_TB=label_TB)
+        
 
     def plot_evolution(self):
         rows = []
@@ -341,7 +348,7 @@ class ChoixJoueursWidget(QtGui.QWidget):
         else:
             nom = str(self.table.item(rr, 0).text()).split(" - ")[0]
             jj = self.club.get_joueur_from_nom(nom)
-            plot_evolution(jj)
+            self.pew = PlotEvolutionWidget(jj)#, dat=self.parent().dat)
             
 
 class MyTableWidgetItem(QtGui.QTableWidgetItem):
