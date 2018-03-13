@@ -432,7 +432,7 @@ I0
 sg83
 I0
 sg84
-S'Cashak (12)'
+S'Cashak'
 p138
 sg86
 I10
@@ -1021,7 +1021,7 @@ I0
 sg83
 I0
 sg84
-S'Cashak (11)'
+S'Cashak'
 p282
 sg86
 I10
@@ -1601,7 +1601,7 @@ I0
 sg83
 I0
 sg84
-S'Kerfaod (12)'
+S'Kerfaod'
 p414
 sg86
 I11
@@ -2159,7 +2159,7 @@ I0
 sg83
 I0
 sg84
-S'Kerfaod (11)'
+S'Kerfaod'
 p539
 sg86
 I11
@@ -2723,7 +2723,7 @@ I0
 sg83
 I0
 sg84
-S'Ulmeux (12)'
+S'Ulmeux'
 p663
 sg86
 I7
@@ -2761,7 +2761,7 @@ p672
 I5
 sS'RP_tot'
 p673
-I16
+I18
 sS'P'
 p674
 I6
@@ -3301,7 +3301,7 @@ I0
 sg83
 I0
 sg84
-S'Ulmeux (11)'
+S'Ulmeux'
 p789
 sg86
 I7
@@ -3339,7 +3339,7 @@ p798
 I4
 sS'RP_tot'
 p799
-I13
+I14
 sS'P'
 p800
 I5
@@ -3841,7 +3841,7 @@ I0
 sg83
 I0
 sg84
-S'Bispoek (12)'
+S'Bispoek'
 p882
 sg86
 I11
@@ -4388,7 +4388,7 @@ I0
 sg83
 I0
 sg84
-S'Bispoek (11)'
+S'Bispoek'
 p977
 sg86
 I11
@@ -4961,7 +4961,7 @@ I572
 sg83
 I49
 sg84
-S'Lamenoire (12)'
+S'Lamenoire'
 p1095
 sg86
 I0
@@ -5524,7 +5524,7 @@ I523
 sg83
 I75
 sg84
-S'Lamenoire (11)'
+S'Lamenoire'
 p1220
 sg86
 I0
@@ -6129,7 +6129,7 @@ I97
 sg83
 I39
 sg84
-S'Bechen (12)'
+S'Bechen'
 p1356
 sg86
 I3
@@ -6709,7 +6709,7 @@ I58
 sg83
 I34
 sg84
-S'Bechen (11)'
+S'Bechen'
 p1484
 sg86
 I3
@@ -7306,7 +7306,7 @@ I0
 sg83
 I0
 sg84
-S'Acharoel (12)'
+S'Acharoel'
 p1620
 sg86
 I6
@@ -7874,7 +7874,7 @@ I0
 sg83
 I0
 sg84
-S'Acharoel (11)'
+S'Acharoel'
 p1743
 sg86
 I6
@@ -8470,7 +8470,7 @@ I238
 sg83
 I0
 sg84
-S'Yodoeth (12)'
+S'Yodoeth'
 p1877
 sg86
 I4
@@ -9032,7 +9032,7 @@ I238
 sg83
 I0
 sg84
-S'Yodoeth (11)'
+S'Yodoeth'
 p2001
 sg86
 I4
@@ -9602,7 +9602,7 @@ I0
 sg83
 I0
 sg84
-S'Vrokhaen (12)'
+S'Vrokhaen'
 p2100
 sg86
 I5
@@ -10149,7 +10149,7 @@ I0
 sg83
 I0
 sg84
-S'Vrokhaen (11)'
+S'Vrokhaen'
 p2195
 sg86
 I5
@@ -10701,7 +10701,7 @@ I9
 sg83
 I9
 sg84
-S'Kemfa (12)'
+S'Kemfa'
 p2301
 sg86
 I10
@@ -11263,7 +11263,7 @@ I0
 sg83
 I0
 sg84
-S'Kemfa (11)'
+S'Kemfa'
 p2425
 sg86
 I10
@@ -11851,7 +11851,7 @@ I0
 sg83
 I0
 sg84
-S'Woraed (12)'
+S'Woraed'
 p2557
 sg86
 I2
@@ -11889,7 +11889,7 @@ p2566
 I6
 sS'RP_tot'
 p2567
-I13
+I14
 sS'P'
 p2568
 I6
@@ -12409,7 +12409,7 @@ I0
 sg83
 I0
 sg84
-S'Woraed (11)'
+S'Woraed'
 p2682
 sg86
 I2
@@ -12447,7 +12447,7 @@ p2691
 I6
 sS'RP_tot'
 p2692
-I11
+I12
 sS'TO'
 p2693
 I11
@@ -12657,7 +12657,7 @@ p2738
 p2739
 S'QString'
 p2740
-(VULT_defaut
+(VULT_ULTB
 p2741
 tp2742
 tp2743
@@ -13056,7 +13056,7 @@ I1
 sg83
 I1
 sg84
-S'Sigvald (12)'
+S'Sigvald'
 p2830
 sg86
 I9
@@ -13094,7 +13094,7 @@ p2839
 I10
 sS'RP_tot'
 p2840
-I15
+I17
 sS'P'
 p2841
 I14
@@ -13612,7 +13612,7 @@ I0
 sg83
 I0
 sg84
-S'Sigvald (11)'
+S'Sigvald'
 p2953
 sg86
 I9
@@ -13650,7 +13650,7 @@ p2962
 I10
 sS'RP_tot'
 p2963
-I14
+I16
 sS'P'
 p2964
 I13
@@ -14188,7 +14188,7 @@ I41
 sg83
 I2
 sg84
-S'Jtess (12)'
+S'Jtess'
 p3086
 sg86
 I7
@@ -14746,7 +14746,7 @@ I39
 sg83
 I36
 sg84
-S'Jtess (11)'
+S'Jtess'
 p3211
 sg86
 I7
@@ -15279,7 +15279,7 @@ I0
 sg83
 I0
 sg84
-S'Jaraol (12)'
+S'Jaraol'
 p3300
 sg86
 I8
@@ -15824,7 +15824,7 @@ I0
 sg83
 I0
 sg84
-S'Jaraol (11)'
+S'Jaraol'
 p3393
 sg86
 I8
@@ -16402,7 +16402,7 @@ I0
 sg83
 I0
 sg84
-S'Drask (12)'
+S'Drask'
 p3513
 sg86
 I7
@@ -16440,7 +16440,7 @@ p3522
 I8
 sS'RP_tot'
 p3523
-I14
+I15
 sS'TO'
 p3524
 I10
@@ -16962,7 +16962,7 @@ I0
 sg83
 I0
 sg84
-S'Drask (11)'
+S'Drask'
 p3640
 sg86
 I7
@@ -17000,7 +17000,7 @@ p3649
 I8
 sS'RP_tot'
 p3650
-I14
+I15
 sS'P'
 p3651
 I9
@@ -17551,7 +17551,7 @@ I0
 sg83
 I0
 sg84
-S'Kadraq (12)'
+S'Kadraq'
 p3778
 sg86
 I4
@@ -18122,7 +18122,7 @@ I0
 sg83
 I0
 sg84
-S'Kadraq (11)'
+S'Kadraq'
 p3904
 sg86
 I4
@@ -18679,7 +18679,7 @@ I0
 sg83
 I0
 sg84
-S'Croskhaen (12)'
+S'Croskhaen'
 p4003
 sg86
 I7
@@ -18708,7 +18708,7 @@ I9
 sg423
 I10
 sg424
-I12
+I13
 sg425
 I9
 sg426
@@ -19202,7 +19202,7 @@ I0
 sg83
 I0
 sg84
-S'Croskhaen (11)'
+S'Croskhaen'
 p4093
 sg86
 I7
@@ -19240,7 +19240,7 @@ p4102
 I9
 sS'RP_tot'
 p4103
-I12
+I13
 sS'TO'
 p4104
 I13
@@ -19755,7 +19755,7 @@ I72
 sg83
 I71
 sg84
-S'Gemedol (12)'
+S'Gemedol'
 p4205
 sg86
 I10
@@ -20315,7 +20315,7 @@ I1
 sg83
 I0
 sg84
-S'Gemedol (11)'
+S'Gemedol'
 p4332
 sg86
 I10
@@ -20863,7 +20863,7 @@ I0
 sg83
 I0
 sg84
-S"Kal'Darq (12)"
+S"Kal'Darq"
 p4428
 sg86
 I5
@@ -21386,7 +21386,7 @@ I0
 sg83
 I0
 sg84
-S"Kal'Darq (11)"
+S"Kal'Darq"
 p4518
 sg86
 I5
@@ -21961,7 +21961,7 @@ I0
 sg83
 I0
 sg84
-S'Ghenf (12)'
+S'Ghenf'
 p4633
 sg86
 I7
@@ -22523,7 +22523,7 @@ I0
 sg83
 I0
 sg84
-S'Ghenf (11)'
+S'Ghenf'
 p4757
 sg86
 I7
@@ -23114,7 +23114,7 @@ I0
 sg83
 I0
 sg84
-S'Graissus (12)'
+S'Graissus'
 p4879
 sg86
 I3
@@ -23678,7 +23678,7 @@ I0
 sg83
 I0
 sg84
-S'Graissus (11)'
+S'Graissus'
 p4998
 sg86
 I3
@@ -24265,7 +24265,7 @@ I0
 sg83
 I0
 sg84
-S'Rohogd (12)'
+S'Rohogd'
 p5128
 sg86
 I7
@@ -24831,7 +24831,7 @@ I0
 sg83
 I0
 sg84
-S'Rohogd (11)'
+S'Rohogd'
 p5259
 sg86
 I7

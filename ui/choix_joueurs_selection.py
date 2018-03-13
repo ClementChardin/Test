@@ -79,7 +79,7 @@ class ChoixJoueursSelectionWidget(QtGui.QWidget):
         #self.filtrer_joueurs()
 
     def setup_table(self):
-        self.hlabels = ['Nom', 'EV', 'Poste 1', 'Poste 2', 'Poste 3']
+        self.hlabels = ['Nom', 'EV', 'Poste 1', 'Poste 2', 'Poste 3', 'C', 'D']
         self.table = QtGui.QTableWidget(len(self.selected_joueurs),
                                         len(self.hlabels))
         self.table.setHorizontalHeaderLabels(self.hlabels)
@@ -110,6 +110,12 @@ class ChoixJoueursSelectionWidget(QtGui.QWidget):
             
             lab = QtGui.QTableWidgetItem(jj.postes[3])
             self.table.setItem(ii, 4, MyTableWidgetItem(lab))
+            
+            lab = QtGui.QTableWidgetItem(str(jj.C))
+            self.table.setItem(ii, 5, MyTableWidgetItem(lab))
+            
+            lab = QtGui.QTableWidgetItem(str(jj.D))
+            self.table.setItem(ii, 6, MyTableWidgetItem(lab))
 
         self.lay.addWidget(self.table)
 
