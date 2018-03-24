@@ -147,7 +147,7 @@ class Match():
             self.clubs = None
         else:
             self.clubs = []
-            for nom in s.noms_clubs:
+            for nom in s.noms_clubs():
                 self.clubs.append(s.charger(nom, 'c'))
         """
         self.journee = journee

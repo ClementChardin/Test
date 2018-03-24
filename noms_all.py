@@ -1,5 +1,5 @@
 # -*- coding: cp1252 -*-
-from os import listdir
+from os import listdir, getcwd
 from date import *
 from savefiles import *
 
@@ -18,7 +18,7 @@ noms_clubs_challenge_poule_3 = ['AL', 'APA', 'TLB']
 noms_clubs_challenge_poule_4 = ['ED', 'BRB', 'CAT']
 
 #noms_armees = sorted(['EMP', 'CHS', 'O', 'HE', 'B', 'N', 'ES', 'S', 'EN', 'CV', 'HL', 'HB', 'OG'])
-noms_armees = listdir("C:\Users\Clement\Documents\Test\data\saison 12\selections")
+noms_armees = listdir(getcwd() + "\data\saison 12\selections")
 
 noms_complets = {'AES':'Aeslings',
                   'AHK':'Al Haikk',
