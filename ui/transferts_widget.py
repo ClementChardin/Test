@@ -12,20 +12,20 @@ from choix_joueurs import MyTableWidgetItem
 
 
 class TransfertsWidget(QtGui.QWidget):
-    def __init__(self, parent=None, noms_clubs=s.noms_clubs, dat=None, vague=0):
+    def __init__(self, parent=None, dat=None, vague=0):
         super(TransfertsWidget, self).__init__(parent)
 
         self.dat = dat
         self.vague = vague
 
-        self.noms_clubs = noms_clubs
+        self.noms_clubs = s.noms_clubs(self.dat)
         self.clubs = []
         self.propositions = {}
         self.recrutements = {}
         self.val_propositions = {}
         self.val_recrutements = {}
         for nom in self.noms_clubs:
-            self.clubs.append(s.charger(nom, 'c'))
+            self.clubs.append(s.charger(nom, 'c', self.dat))
             self.propositions[nom] = {}
             self.recrutements[nom] = {}
             self.val_propositions[nom] = 0
