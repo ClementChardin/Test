@@ -169,6 +169,7 @@ class MilieuWidget(QtGui.QWidget):
         self.parent().parent().selection_compo_widget.ecran_precedant = self.parent()
         self.parent().parent().selection_compo_widget.show()
         self.parent().parent().selection_compo_widget.set_club(self.parent().selection.nom)
+        self.parent().parent().selection_compo_widget.compo.nom = self.parent().selection.nom + '_defaut'
 
     def retour(self):
         self.parent().hide()
