@@ -203,28 +203,79 @@ class calendrier(object):
         return ll
 
     def get_classement_joueurs(self, attr):
-        if attr == 'points':
-            attr += '_joueurs'
-        dicts = getattr(self, 'dicts_'+attr)
-        ll = []
-        noms = []
-        for ii in range(len(dicts)):
-            for jj in range(len(dicts[ii])):
-                if dicts[ii][jj] is None:
-                    continue
-                else:
-                    dd1, dd2 = dicts[ii][jj]
-                    noms = self.matches[ii][jj].split(' v ')
-                    for kk, dd in enumerate((dd1, dd2)):
-                        for nom, val in dd.items():
-                            if nom in noms:
-                                idx = noms.index(nom)
-                                old = ll[idx]
-                                ll[idx] = (nom, noms[kk], old[1] + val)
-                            else:
-                                ll.append((nom, noms[kk], val))
-                                noms.append(nom)
-        ll.sort(key=lambda tu: tu[1])
+        if attr == 'pourcentage':
+            ll_reussis = []
+            ll_rates = []
+            noms_reussis = []
+            noms_rates = []
+            for nn, dicts in enumerate((self.dicts_tab_reussis, self.dicts_tab_rates)):
+                ll = (ll_reussis, ll_rates)[nn]
+                noms = (noms_reussis, noms_rates)[nn]
+                for ii in range(len(dicts)):
+                    for jj in range(len(dicts[ii])):
+                        if dicts[ii][jj] is None:
+                            continue
+                        else:
+                            dd1, dd2 = dicts[ii][jj]
+                            noms_clubs = self.matches[ii][jj].split(' v ')
+                            for kk, dd in enumerate((dd1, dd2)):
+                                for nom, val in dd.items():
+                                    if nom in noms:
+                                        idx = noms.index(nom)
+                                        old = ll[idx]
+                                        ll[idx] = (nom, noms_clubs[kk], old[2] + val)
+                                    else:
+                                        ll.append((nom, noms_clubs[kk], val))
+                                        noms.append(nom)
+            for tu in ll_reussis:
+                if not tu[0] in noms_rates:
+                    ll_rates.append((tu[0], tu[1], 0))
+                    noms_rates.append(tu[0])
+            for tu in ll_rates:
+                if not tu[0] in noms_reussis:
+                    ll_reussis.append((tu[0], tu[1], 0))
+                    noms_reussis.append(tu[0])
+
+            ll = []
+            for ii in range(len(ll_reussis)):
+                tu = ll_reussis[ii]
+                nom = tu[0]
+                nom_club = tu[1]
+                reussis = tu[2]
+                idx = noms_rates.index(nom)
+                tot = tu[2] + ll_rates[idx][2]
+                val = (round(100. * reussis / tot, 2))
+                ll.append((nom, nom_club, (val, tot)))
+            for ii, nom in enumerate(noms_rates):
+                if not nom in [tu[0] for tu in ll]:
+                    tu = ll_rates[ii]
+                    ll.append((tu[0], tu[1], (0, tu[2])))
+            ll.sort(key=lambda tu: tu[2][1])
+
+        else:
+            if attr == 'points':
+                attr += '_joueurs'
+            dicts = getattr(self, 'dicts_'+attr)
+            ll = []
+            noms = []
+            for ii in range(len(dicts)):
+                for jj in range(len(dicts[ii])):
+                    if dicts[ii][jj] is None:
+                        continue
+                    else:
+                        dd1, dd2 = dicts[ii][jj]
+                        noms_clubs = self.matches[ii][jj].split(' v ')
+                        for kk, dd in enumerate((dd1, dd2)):
+                            for nom, val in dd.items():
+                                if nom in noms:
+                                    idx = noms.index(nom)
+                                    old = ll[idx]
+                                    ll[idx] = (nom, noms_clubs[kk], old[2] + val)
+                                else:
+                                    ll.append((nom, noms_clubs[kk], val))
+                                    noms.append(nom)
+            ll.sort(key=lambda tu: tu[2])
+
         ll.reverse()
         return ll
 
@@ -233,7 +284,6 @@ class calendrier(object):
         ll = []
         for ii in range(len(self.matches)):
             ll.append([])
-            ll_misc = []
             for jj in range(len(self.matches[ii])):
                 if not self.scores[ii][jj] is None:
                     dd0 = {}
@@ -253,6 +303,58 @@ class calendrier(object):
                             dd[nom] += val*3
                         for (nom, val) in self.dicts_drops[ii][jj][kk].items():
                             dd[nom] += val*3
+                        if kk == 0:
+                            dd0 = dd
+                        elif kk == 1:
+                            dd1 = dd
+                    tu = (dd0, dd1)
+                    ll[ii].append(tu)
+        return ll
+
+    @property
+    def dicts_tab_reussis(self):
+        ll = []
+        for ii in range(len(self.matches)):
+            ll.append([])
+            for jj in range(len(self.matches[ii])):
+                if not self.scores[ii][jj] is None:
+                    dd0 = {}
+                    dd1 = {}
+                    for kk in range(2):
+                        dd = {}
+                        for nom in self.dicts_penalites[ii][jj][kk].keys() + \
+                            self.dicts_transformations[ii][jj][kk].keys():
+                            dd[nom] = 0
+                        for (nom, val) in self.dicts_transformations[ii][jj][kk].items():
+                            dd[nom] += val
+                        for (nom, val) in self.dicts_penalites[ii][jj][kk].items():
+                            dd[nom] += val
+                        if kk == 0:
+                            dd0 = dd
+                        elif kk == 1:
+                            dd1 = dd
+                    tu = (dd0, dd1)
+                    ll[ii].append(tu)
+        return ll
+
+    @property
+    def dicts_tab_rates(self):
+        ll = []
+        for ii in range(len(self.matches)):
+            ll.append([])
+            for jj in range(len(self.matches[ii])):
+                if not self.scores[ii][jj] is None:
+                    dd0 = {}
+                    dd1 = {}
+                    for kk in range(2):
+                        dd = {}
+                        for nom in self.dicts_penalite_ratees[ii][jj][kk].keys() + \
+                            self.dicts_transformation_ratees[ii][jj][kk].keys():
+                            dd[nom] = 0
+                        for (nom, val) in self.dicts_transformation_ratees[ii][jj][kk].items():
+                            dd[nom] += val
+                        for (nom, val) in self.dicts_penalite_ratees[ii][jj][kk].items():
+                            dd[nom] += val
                         if kk == 0:
                             dd0 = dd
                         elif kk == 1:

@@ -1,4 +1,4 @@
-﻿from PyQt4 import QtGui, QtCore
+from PyQt4 import QtGui, QtCore
 
 class StatsWidget(QtGui.QWidget):
     def __init__(self, saison, parent=None):
@@ -34,7 +34,7 @@ class StatsJoueursWidget(QtGui.QWidget):
         """
         self.idx_cal_actif = 0
 
-        self.attrs = ['Essais', 'Transformations', 'Penalites', 'Drops', 'Points']
+        self.attrs = ['Essais', 'Transformations', 'Penalites', 'Drops', 'Points', 'Pourcentage']
         self.idx_attr_actif = 0
 
         self.lay = QtGui.QVBoxLayout()
@@ -48,6 +48,8 @@ class StatsJoueursWidget(QtGui.QWidget):
 
         self.combo_cal = QtGui.QComboBox()
         self.noms_cals = []
+        self.combo_cal.addItem('Saison')
+        self.noms_cals.append('Saison')
         for cal in self.calendriers:
             nom = cal.nom_championnat
             if '_poule' in nom:
@@ -67,19 +69,23 @@ class StatsJoueursWidget(QtGui.QWidget):
         self.lay_combos.addWidget(self.combo_attr)
 
         self.tables = []
-        for ii in range(len(self.noms_cals)):#calendriers)):
+        for ii in range(len(self.noms_cals)):
             tables = []
             for jj in range(len(self.attrs)):
                 ll = self.get_classement(ii, jj)
+                attr = self.attrs[jj]
 
-                table = QtGui.QTableWidget(10, 3)
-                hlabels = ['Nom', 'Club', self.attrs[jj]]
+                table = QtGui.QTableWidget(len(ll), 3)
+                hlabels = ['Nom', 'Club', attr]
                 table.setHorizontalHeaderLabels(hlabels)
 
                 for kk, tu in enumerate(ll):
                     nom = tu[0]
-                    club = tu[1] #Pas implémenté dans calendrier.get_classement_joueur
-                    val = str(tu[2]) #Sera tu[2] à la fin
+                    club = tu[1]
+                    if attr == 'Pourcentage':
+                        val = str(tu[2][0]) + ' % (' + str(tu[2][1]) + ')'
+                    else:
+                        val = str(tu[2])
 
                     table.setItem(kk, 0, QtGui.QTableWidgetItem(nom))
                     table.setItem(kk, 1, QtGui.QTableWidgetItem(club))
@@ -111,7 +117,7 @@ class StatsJoueursWidget(QtGui.QWidget):
         min = chr(ord(maj)+32)
 
         attr = min + attr[1:]
-        ll = self.saison.get_classement_joueurs(attr, nom)[:10]
+        ll = self.saison.get_classement_joueurs(attr, nom)
         return ll
 
     def cacher_table(self):

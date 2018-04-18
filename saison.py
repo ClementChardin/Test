@@ -213,19 +213,31 @@ class saison(object):
             self.sauvegarder()
 
     def get_classement_joueurs(self, attr, nom_championat):
-        cals = []
-        for ii, nom in enumerate(self.noms_championats):
-            if nom_championat == nom or \
-               (nom_championat in ('coupe', 'challenge', 'nordsud') and \
-                nom_championat in nom):
-                cals.append(self.calendriers[ii])
+        if nom_championat == 'Saison':
+            cals = self.calendriers
+        else:
+            cals = []
+            for ii, nom in enumerate(self.noms_championats):
+                if nom_championat == nom or \
+                   (nom_championat in ('coupe', 'challenge', 'nordsud') and \
+                    nom_championat in nom):
+                    cals.append(self.calendriers[ii])
         dd = {}
         for cal in cals:
             clas = cal.get_classement_joueurs(attr)
             for tu in clas:
                 if tu[0] in dd.keys():
                     tuu = dd[tu[0]]
-                    dd[tu[0]] = (tu[0], tu[1], tuu[2] + tu[2])
+                    if attr == 'pourcentage':
+                        val_old = tuu[2][0]
+                        tot_old = tuu[2][1]
+                        val = tu[2][0]
+                        tot = tu[2][1]
+                        tot_new = tot + tot_old
+                        val_new = round((val*tot + val_old*tot_old) / tot_new, 2)
+                        dd[tu[0]] = (tu[0], tu[1], (val_new, tot_new))
+                    else:
+                        dd[tu[0]] = (tu[0], tu[1], tuu[2] + tu[2])
                 else:
                     dd[tu[0]] = (tu[0], tu[1], tu[2])
         ll = dd.values()
