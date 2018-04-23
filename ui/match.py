@@ -181,6 +181,11 @@ class ColMatchWidget(QtGui.QWidget):
         self.but_prochain_match.clicked.connect(self.set_prochain_match)
         self.lay.addWidget(self.but_prochain_match)
 
+        #Set compos prochain match
+        self.but_set_compos_prochain_match = QtGui.QPushButton("Set compos")
+        self.but_set_compos_prochain_match.clicked.connect(self.set_compos_prochain_match)
+        self.lay.addWidget(self.but_set_compos_prochain_match)
+
         #Diagramme étoile
         self.diag = None
         self.faire_diagramme()
@@ -262,6 +267,7 @@ class ColMatchWidget(QtGui.QWidget):
                 cal = self.identifier_calendrier()
                 if cal is None and sauver:
                     self.dial = MyDialog(u"Le match ne correspond à aucun calendrier, il n'a pas été joué")
+                    self.dial.exec_()
                 else:
                     #print "commencer"
                     self.match.jouer(sauver=sauver,
@@ -294,6 +300,7 @@ class ColMatchWidget(QtGui.QWidget):
 
     def set_prochain_match(self, nom_championnat):
         pm = self.saison.prochain_match()
+        noms_equipes = pm.split(' v ')
         if pm == 'repos':
             mb = QtGui.QMessageBox()
             if mb.question(None, "Question", """"Le prochain match est un jour de repos\n
@@ -304,9 +311,51 @@ class ColMatchWidget(QtGui.QWidget):
             else:
                 pass
         else:
-            noms_equipes = pm.split(' v ')
-            self.parent().col_eq1.set_club(noms_equipes[0])
-            self.parent().col_eq2.set_club(noms_equipes[1])
+            if not self.parent().col_eq1.equipe.nom == noms_equipes[0]:
+                self.parent().col_eq1.set_club(noms_equipes[0])
+            if not self.parent().col_eq2.equipe.nom == noms_equipes[1]:
+                self.parent().col_eq2.set_club(noms_equipes[1])
+
+    def set_compos_prochain_match(self):
+        #pm = self.saison.prochain_match()
+        #noms_compos = pm.replace(' v ', '_')
+        nom1 = self.parent().col_eq1.equipe.nom
+        nom2 = self.parent().col_eq2.equipe.nom
+        noms_compos = nom1 + '_' + nom2
+
+        compos1 = []
+        for nom in self.parent().col_eq1.equipe.compos_sauvees():
+            if noms_compos in nom:
+                compos1.append(nom)
+        compos2 = []
+        for nom in self.parent().col_eq2.equipe.compos_sauvees():
+            if noms_compos in nom:
+                compos2.append(nom)
+        if len(compos1) > 0 and len(compos2) > 0:
+            """
+            Cas len différente -> message
+            Cas len == 1 -> auto
+            cas len égale et > 1 -> dialog
+            """
+            if not compos1 == compos2:
+                dial = MyDialog("Il manque une compo !")
+                dial.exec_()
+            elif len(compos1) == 1:
+                nom = compos1[0]
+                self.parent().col_eq1.col1.set_comp(nom)
+                self.parent().col_eq2.col1.set_comp(nom)
+            else:
+                ccd = ChoixCompoDialog(compos1)
+                res = ccd.exec_()
+                if res == 1:
+                    nom = str(ccd.group.checkedButton().text())
+                    self.parent().col_eq1.col1.set_comp(nom)
+                    self.parent().col_eq2.col1.set_comp(nom)
+                else:
+                    pass
+        else:
+            dial = MyDialog(u"Aucune compo correspondante détectée !")
+            dial.exec_()
 
     def identifier_calendrier(self):#, match, nom_championnat):
         cal, ii, jj = self.saison.cal_indices_prochain_match()
@@ -328,8 +377,6 @@ class MyDialog(QtGui.QDialog):
         self.but.clicked.connect(self.close)
         self.lay.addWidget(self.but)
 
-        self.show()
-
     def keyPressEvent(self, event):
         if event.key() in (QtCore.Qt.Key_Escape, QtCore.Qt.Key_Enter):
             self.close()
@@ -337,3 +384,27 @@ class MyDialog(QtGui.QDialog):
         else:
             super(Dialog, self).keyPressEvent(event)
 
+class ChoixCompoDialog(QtGui.QDialog):
+    def __init__(self, compos, parent=None):
+        super(ChoixCompoDialog, self).__init__(parent)
+        self.compos = compos
+
+        self.lay = QtGui.QVBoxLayout()
+        self.setLayout(self.lay)
+
+        self.group = QtGui.QButtonGroup()
+        for nom in self.compos:
+            rad = QtGui.QRadioButton(nom)
+            self.lay.addWidget(rad)
+            self.group.addButton(rad)
+
+        self.lay_but = QtGui.QHBoxLayout()
+        self.lay.addLayout(self.lay_but)
+
+        self.but_yes = QtGui.QPushButton('Valider')
+        self.lay_but.addWidget(self.but_yes)
+        self.but_yes.clicked.connect(self.accept)
+
+        self.but_no = QtGui.QPushButton('Annuler')
+        self.lay_but.addWidget(self.but_no)
+        self.but_no.clicked.connect(self.reject)

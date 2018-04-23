@@ -50,7 +50,7 @@ class calendrier(object):
                     st += line
             journees = st.split('\n\n')
             if journees[-1][-1] == '\n':
-                cal.journees[-1][:-1]
+                journees[-1] = journees[-1][:-1]
             self._journees = journees
         return self._journees
 

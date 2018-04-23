@@ -3,8 +3,12 @@ from os import listdir, getcwd
 from date import *
 from savefiles import *
 
+noms_coupes = ('coupe', 'challenge', 'nordsud')
+
 noms_clubs_vieux_monde = ['AL', 'ALT', 'BSK', 'DKF', 'DKW', 'KAK', 'MRB', 'MSL', 'PRG', 'QNL', 'TA', 'TLB']
 noms_clubs_nouveaux_mondes = ['APA', 'BRB', 'CAT', 'ED', 'FS', 'GP', 'HTH', 'KH', 'KHR', 'MDL', 'SN', 'TO']
+noms_clubs_nord = ['AES', 'ERE', 'FST', 'KIS', 'KKR', 'MDH']
+noms_clubs_sud = ['AHK', 'BIL', 'CPH', 'EKR', 'MAG', 'MRT']
 def noms_clubs(dat=None):
     dat = lire_date() if dat is None else dat
     return listdir(CLUBS_DIR_NAME(dat))

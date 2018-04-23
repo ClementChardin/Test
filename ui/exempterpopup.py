@@ -26,13 +26,30 @@ class ExempterPopup(QtGui.QWidget):
         #self.show()
 
     def setup_ui(self):
-        self.lay_check = QtGui.QGridLayout()
+        self.lay_check = QtGui.QHBoxLayout()
 
-        for ii, nom in enumerate(self.noms):
+        self.lay_vieux_monde = QtGui.QVBoxLayout()
+        self.lay_nouveaux_mondes = QtGui.QVBoxLayout()
+        self.lay_nord = QtGui.QVBoxLayout()
+        self.lay_sud = QtGui.QVBoxLayout()
+
+        for nom in self.noms:
             setattr(self, 'check_'+nom, QtGui.QCheckBox(nom))
-            self.lay_check.addWidget(getattr(self, 'check_'+nom), ii-ii%2, ii%2)
+            if nom in noms_clubs_vieux_monde:
+                self.lay_vieux_monde.addWidget(getattr(self, 'check_'+nom))
+            elif nom in noms_clubs_nouveaux_mondes:
+                self.lay_nouveaux_mondes.addWidget(getattr(self, 'check_'+nom))
+            if nom in noms_clubs_nord:
+                self.lay_nord.addWidget(getattr(self, 'check_'+nom))
+            if nom in noms_clubs_sud:
+                self.lay_sud.addWidget(getattr(self, 'check_'+nom))
 
         self.lay.addLayout(self.lay_check)
+
+        self.lay_check.addLayout(self.lay_vieux_monde)
+        self.lay_check.addLayout(self.lay_nouveaux_mondes)
+        self.lay_check.addLayout(self.lay_nord)
+        self.lay_check.addLayout(self.lay_sud)
 
         self.lay_but = QtGui.QHBoxLayout()
 
