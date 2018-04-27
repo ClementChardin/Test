@@ -9,6 +9,8 @@ class SelectionWidget(QtGui.QWidget):
         super(SelectionWidget, self).__init__(parent)
         self.ecran_precedant = ecran_precedant
 
+        self.points_selection = 0.
+
         self.joueurs_choix = []
         self.joueurs_choisis = []
         self.selection = s.selection()
@@ -71,6 +73,7 @@ class SelectionWidget(QtGui.QWidget):
             self.joueurs_exclus = []
         if osp.isfile(SELECTIONS_DIR_NAME() + "/" + self.nom + '/' + self.nom + ".sel"):
             self.selection = s.charger(self.nom, 's')
+            self.points_selection = self.selection.points
             self.joueurs_choisis = self.selection.joueurs
             for jj in self.joueurs_choisis + self.joueurs_exclus:
                 for jj2 in self.joueurs_choix:
@@ -151,6 +154,7 @@ class MilieuWidget(QtGui.QWidget):
         if dial.ok:
             self.selection = s.selection(nom=str(self.combo_armees.currentText()),
                                          joueurs=self.parent().joueurs_choisis)
+            self.selection.points = self.points_selection
             self.selection.sauvegarder()
 
     def reset(self):

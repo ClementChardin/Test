@@ -153,6 +153,14 @@ def jouer_essai(Oplus_att, Omoins_def, bonus=0):
 
 def essai_ou_pas(diff):
     carte = tirer_carte()
+    val = carte["valeur"]
+    seuil = diff if diff < 10 else min(diff, 10 + max(int(diff / 10 -1), 0))
+    res = seuil - val
+    boo = res >= 0
+    print u'différence :', diff, "; seuil", seuil, "; carte", val
+    print u"résultat :", boo, "; bonus M :", int(res)
+    return boo, int(res)
+    """
     if diff < 10:
         if carte["valeur"] <= diff:
             print diff, "; carte", carte["valeur"], True
@@ -168,6 +176,7 @@ def essai_ou_pas(diff):
         else:
             print diff, "; carte", carte["valeur"], False
             return False
+    """
 
 def jouer_touche_melee(comp_att, comp_def, t_ou_m):
     """
@@ -267,8 +276,8 @@ def tester_M(comp_att, comp_def, bonus):
     else:
         val_att = M_att + carte_att["valeur"]
         val_def = M_def + carte_def["valeur"]
-        boo = (val_att - val_def) > 0
-        print "attaque :", M_att, '+', carte_att["valeur"], '=', val_att,
+        boo = (val_att + bonus - val_def) > 0
+        print "attaque :", M_att, '+', carte_att["valeur"],  '+', bonus, '=', val_att,
         print 'defense:', M_def, '+', carte_def["valeur"], '=', val_def,
         print 'resultat :', boo
         return boo
@@ -303,8 +312,9 @@ def jouer_essai_complet(eq_att,
         else:
             marque("transformation_ratee", buteur, eq_att, sauver, clubs, c_ou_s)
     else: #st = "test_essai"
-        if essai_ou_pas(diff): #Test essai reussi
-            if not test_M or (test_M and tester_M(eq_att.comp, eq_def.comp, min(10, bonus))):
+        essai, bonus_M = essai_ou_pas(diff)
+        if essai: #Test essai reussi
+            if not test_M or (test_M and tester_M(eq_att.comp, eq_def.comp, min(10, bonus_M))):
                 Oplus_M = "M" if test_M else "Oplus"
                 jj = attribuer_essai(eq_att.comp,av_ar, Oplus_M)
                 marque("essai", jj, eq_att, sauver, clubs, c_ou_s)

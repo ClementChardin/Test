@@ -101,8 +101,9 @@ class JCaracsWidget(QtGui.QWidget):
         if len(self.joueurs) > 1:
             self.color_min_max()
 
-        #Largeur des colones
+        #Largeur des colones et des lignes
         self.vue.resizeColumnsToContents()
+        self.vue.resizeRowsToContents()
 
         rec = QtCore.QRect(300, 100, self.vue.width(), self.vue.height())
         self.setGeometry(rec)
@@ -250,6 +251,7 @@ class JInfosWidget(QtGui.QWidget):
         
         #Largeur des colones
         self.vue.resizeColumnsToContents()
+        self.vue.resizeRowsToContents()
 
         rec = QtCore.QRect(300, 100, self.vue.width(), self.vue.height())
         self.setGeometry(rec)
@@ -350,6 +352,7 @@ class JStatsWidget(QtGui.QWidget):
         
         #Largeur des colones
         self.vue.resizeColumnsToContents()
+        self.vue.resizeRowsToContents()
         
         rec = QtCore.QRect(300, 100, self.vue.width(), self.vue.height())
         self.setGeometry(rec)
