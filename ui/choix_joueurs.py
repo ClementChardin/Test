@@ -339,16 +339,25 @@ class ChoixJoueursWidget(QtGui.QWidget):
 
     def plot_evolution(self):
         rows = []
+        joueurs = []
         for idx in self.table.selectedIndexes():
             rr = idx.row()
             if not rr in rows:
                 rows.append(rr)
+        for rr in rows:
+            nom = str(self.table.item(rr, 0).text()).split(" - ")[0]
+            jj = self.club.get_joueur_from_nom(nom)
+            joueurs.append(jj)
+        self.pew = PlotEvolutionWidget(joueurs)
+        """
         if len(rows) > 1:
             raise ValueError("Un seul joueur possible")
         else:
             nom = str(self.table.item(rr, 0).text()).split(" - ")[0]
             jj = self.club.get_joueur_from_nom(nom)
             self.pew = PlotEvolutionWidget(jj)#, dat=self.parent().dat)
+        """
+        
             
 
 class MyTableWidgetItem(QtGui.QTableWidgetItem):
