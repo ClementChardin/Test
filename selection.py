@@ -117,7 +117,7 @@ class selection(club):
             os.mkdir(save_dir)
         with open(save_dir+'/'+self.nom+'.sel', 'w') as f:
             pickle.dump(self, f)
-        print self.nom + u"sauvegardé"
+        print self.nom + u" sauvegardé"
 
     def get_all_joueurs(self):
         return self.joueurs

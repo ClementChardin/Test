@@ -585,26 +585,30 @@ def merge_clubs(ini, a_changer):
             ini.remove(cc)
     return ini + a_changer
 
-def exempter_de_match(nom, c_ou_s='c', clubs=None):
-    equipe = s.charger(nom, c_ou_s)
-    clubs_a_sauver = []
+def exempter_de_match(nom_ou_noms, c_ou_s='c', clubs=None):
+    #nom_ou_noms est une str si c_ou_s == 'c'
+    #nom_ou_noms est une list(str) si c_ou_s == 's'
     if c_ou_s == 'c':
+        equipe = s.charger(nom_ou_noms, c_ou_s)
         for jj in equipe.get_all_joueurs():
             jj.fatigue = max(0, jj.fatigue - 5)
             jj.blessure = max(0, jj.blessure - 1)
         equipe.sauvegarder()
-        print nom, u'exempté'
+        print nom_ou_noms, u'exempté'
         return 0
     else:
+        #clubs_a_sauver = []
         if clubs is None:
             clubs = [s.charger(nom, 'c') for nom in s.noms_clubs]
         for cc in clubs:
             for jj in cc.get_all_joueurs():
-                ll = [jjj.nom for jjj in equipe.joueurs]
-                if jj.nom in ll:
+                #ll = [jjj.nom for jjj in equipe.joueurs]
+                #if jj.nom in ll:
+                if jj.ARM in nom_ou_noms:
                     jj.fatigue = max(0, jj.fatigue - 5)
                     jj.blessure = max(0, jj.blessure - 1)
-        print nom, u'exempté'
+        for nom in nom_ou_noms:
+            print nom, u'exempté'
         return clubs
         """
         for jj in equipe.get_all_joueurs():

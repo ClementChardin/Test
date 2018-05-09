@@ -64,8 +64,8 @@ class ExempterPopup(QtGui.QWidget):
             for ii, nom in enumerate(self.noms):
                 setattr(self, 'check_'+nom, QtGui.QCheckBox(nom))
                 self.lay_check.addWidget(getattr(self, 'check_'+nom),
-                                         ii%4,
-                                         ii/4)
+                                         ii/4,
+                                         ii%4)
 
         self.lay.addLayout(self.lay_check)
 
@@ -101,20 +101,28 @@ class ExempterPopup(QtGui.QWidget):
                 
         mb = QtGui.QMessageBox()
         if mb.question(None, "Question", question, "Non", "Oui") == 1:
-            for nom in self.a_exempter:
-                ll = exempter_de_match(nom,
-                                       c_ou_s=self.c_ou_s,
-                                       clubs=self.clubs)
+            if self.c_ou_s == 'c':
+                for nom in self.a_exempter:
+                    ll = exempter_de_match(nom,
+                                           c_ou_s=self.c_ou_s,
+                                           clubs=self.clubs)
+                """
                 if ll == 0:
                     #Cas c_ou_s == 'c'
                     pass
                 else:
                     self.clubs = ll
-            if not self.clubs is None:
-                for cc in ll:
-                    cc.sauvegarder()
-            if (not self.ecran_classement is None) and self.c_ou_s == 'c':
-                self.ecran_classement.maj()
+                """
+            elif self.c_ou_s == 's':
+                ll = exempter_de_match(self.a_exempter,
+                                       c_ou_s=self.c_ou_s,
+                                       clubs=self.clubs)
+                self.clubs = ll
+                if not self.clubs is None:
+                    for cc in ll:
+                        cc.sauvegarder()
+                if (not self.ecran_classement is None) and self.c_ou_s == 'c':
+                    self.ecran_classement.maj()
             self.close()
 
     def cocher_tout(self):

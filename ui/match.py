@@ -401,10 +401,10 @@ class ChoixCompoDialog(QtGui.QDialog):
         self.lay_but = QtGui.QHBoxLayout()
         self.lay.addLayout(self.lay_but)
 
-        self.but_yes = QtGui.QPushButton('Valider')
-        self.lay_but.addWidget(self.but_yes)
-        self.but_yes.clicked.connect(self.accept)
-
         self.but_no = QtGui.QPushButton('Annuler')
         self.lay_but.addWidget(self.but_no)
         self.but_no.clicked.connect(self.reject)
+
+        self.but_yes = QtGui.QPushButton('Valider')
+        self.lay_but.addWidget(self.but_yes)
+        self.but_yes.clicked.connect(self.accept)

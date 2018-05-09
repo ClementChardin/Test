@@ -22,7 +22,8 @@ class saison(object):
         self.calendriers = []
         self.dict_indice_journees = {}
         for nom in self.noms_championats:
-            self.calendriers.append(charger_calendrier(nom, self.dat))
+            play_down = True if 'tournoi' in nom else False
+            self.calendriers.append(charger_calendrier(nom, self.dat, play_down))
             self.dict_indice_journees[nom] = 0
 
         self._journees = None
@@ -36,13 +37,18 @@ class saison(object):
         self.demies_initiees = False
         self.finale_initiee = False
         """
-        self.quarts_inities = {}
-        self.demies_initiees = {}
-        self.finale_initiee = {}
-        for nom in noms_all.noms_coupes:
-            self.quarts_inities[nom] = False
-            self.demies_initiees[nom] = False
-            self.finale_initiee[nom] = False
+        if self.c_ou_s == 'c':
+            self.quarts_inities = {}
+            self.demies_initiees = {}
+            self.finale_initiee = {}
+            for nom in noms_all.noms_coupes:
+                self.quarts_inities[nom] = False
+                self.demies_initiees[nom] = False
+                self.finale_initiee[nom] = False
+        elif self.c_ou_s == 's':
+            self.quarts_inities = {'tournoi':True}
+            self.demies_initiees = {'tournoi':False}
+            self.finale_initiee = {'tournoi':False}
 
     def get_journees(self):
         if self._journees is None:
@@ -187,12 +193,16 @@ class saison(object):
         #for nom_championat in noms_all.noms_coupes:
         quart = self.calendriers[self.noms_championats.index(nom_championat + '_quarts')]
         vainqueurs = []
+        perdants = []
         for jj in range(4):
             match = quart.matches[0][jj]
             noms = match.split(' v ')
             vainc = noms[0] if quart.scores[0][jj][0] > quart.scores[0][jj][1] \
                     else noms[1]
             vainqueurs.append(vainc)
+            perd = noms[1] if quart.scores[0][jj][0] > quart.scores[0][jj][1] \
+                    else noms[0]
+            perdants.append(perd)
 
         cal_name = nom_championat + '_demies'
         filename = CALENDRIERS_DIR_NAME(self.dat) + '/calendrier_' + \
@@ -201,8 +211,12 @@ class saison(object):
             for ii in range(2):
                 st = vainqueurs[2*ii] + ' v ' + vainqueurs[2*ii+1]
                 ff.write(st +'\n')
+            if quart.play_down:
+                for ii in range(2):
+                    st = perdants[2*ii] + ' v ' + perdants[2*ii+1]
+                    ff.write(st +'\n')
 
-        cal = calendrier(cal_name, self.dat)
+        cal = calendrier(cal_name, self.dat, quart.play_down)
         cal.sauvegarder()
         self.noms_championats.append(cal_name)
         self.calendriers.append(cal)
@@ -214,21 +228,43 @@ class saison(object):
         #for nom_championat in noms_all.noms_coupes:
         demie = self.calendriers[self.noms_championats.index(nom_championat + '_demies')]
         vainqueurs = []
+        petite_finale = []
+        vainqueurs_play_down = []
+        perdants_play_down = []
         for jj in range(2):
             match = demie.matches[0][jj]
             noms = match.split(' v ')
             vainc = noms[0] if demie.scores[0][jj][0] > demie.scores[0][jj][1] \
                     else noms[1]
             vainqueurs.append(vainc)
+            perd = noms[1] if demie.scores[0][jj][0] > demie.scores[0][jj][1] \
+                    else noms[0]
+            petite_finale.append(perd)
+            
+            match = demie.matches[0][jj+2]
+            noms = match.split(' v ')
+            vainc = noms[0] if demie.scores[0][jj][0] > demie.scores[0][jj][1] \
+                    else noms[1]
+            vainqueurs_play_down.append(vainc)
+            perd = noms[1] if demie.scores[0][jj][0] > demie.scores[0][jj][1] \
+                    else noms[0]
+            perdants_play_down.append(perd)
 
         cal_name = nom_championat + '_finale'
         filename = CALENDRIERS_DIR_NAME(self.dat) + '/calendrier_' + \
                 cal_name + '.txt'
         with open(filename, 'w') as ff:
-            st = vainqueurs[0] + ' v ' + vainqueurs[+1]
+            st = vainqueurs[0] + ' v ' + vainqueurs[1]
             ff.write(st +'\n')
+            if demie.play_down:
+                st = petite_finale[0] + ' v ' + petite_finale[1]
+                ff.write(st +'\n')
+                st = vainqueurs_play_down[0] + ' v ' + vainqueurs_play_down[1]
+                ff.write(st +'\n')
+                st = perdants_play_down[0] + ' v ' + perdants_play_down[1]
+                ff.write(st +'\n')
 
-        cal = calendrier(cal_name, self.dat)
+        cal = calendrier(cal_name, self.dat, demie.play_down)
         cal.sauvegarder()
         self.noms_championats.append(cal_name)
         self.calendriers.append(cal)

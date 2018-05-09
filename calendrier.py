@@ -20,10 +20,11 @@ def match_exemption(st):
     return bb
 
 class calendrier(object):
-    def __init__(self, nom_championnat, dat=None):
+    def __init__(self, nom_championnat, dat=None, play_down=False):
         super(calendrier, self).__init__()
         self.nom_championnat = nom_championnat
         self.dat = dat
+        self.play_down = play_down
         self._journees = None
         self.journees = self.get_journees()
         self.matches = self.get_matches()
@@ -363,7 +364,7 @@ class calendrier(object):
                     ll[ii].append(tu)
         return ll
 
-def charger_calendrier(nom, dat=None):
+def charger_calendrier(nom, dat=None, play_down=False):
     datt = lire_date() if dat is None else dat
     filename = CALENDRIERS_DIR_NAME(datt) + '\calendrier_' + nom + '.cal'
     if osp.isfile(filename):
@@ -371,5 +372,5 @@ def charger_calendrier(nom, dat=None):
              as f:
             cal = pickle.load(f)
     else:
-        cal = calendrier(nom, dat)
+        cal = calendrier(nom, dat, play_down)
     return cal
