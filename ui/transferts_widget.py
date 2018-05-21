@@ -9,6 +9,7 @@ from changement_saison import *
 from couleurs import *
 from biopopup import BioPopup
 from choix_joueurs import MyTableWidgetItem
+from plot_evolution_widget import PlotEvolutionWidget
 
 
 class TransfertsWidget(QtGui.QWidget):
@@ -47,7 +48,7 @@ class TransfertsWidget(QtGui.QWidget):
         self.all_joueurs = []
         for cc in self.clubs:
             for jj in cc.get_all_joueurs():
-                if jj.veut_partir and not jj.nom in self.recrutes:
+                if (jj.veut_partir and not jj.nom in self.recrutes) or jj.retraite:
                     self.all_joueurs.append(jj)
         self.selected_joueurs = self.all_joueurs
         self.lay = QtGui.QVBoxLayout()
@@ -93,8 +94,8 @@ class TransfertsWidget(QtGui.QWidget):
         self.lab_avertissement = QtGui.QLabel("Avertissement")
         self.lay_club.addWidget(self.lab_avertissement)
 
-        self.lab_val_avertissement = QtGui.QLabel(str(self.club.avertissement))
-        self.lay_club.addWidget(self.lab_val_avertissement)
+        self.lab_avertissement_val = QtGui.QLabel(str(self.club.avertissement))
+        self.lay_club.addWidget(self.lab_avertissement_val)
 
         """
         Options de tri des joueurs + sauver propositions + Faire propositions
@@ -223,6 +224,7 @@ class TransfertsWidget(QtGui.QWidget):
 
     def colorer_table(self):
         dd = dict()
+        dd_fond = {}
         for ii, jj in enumerate(self.selected_joueurs):
             if not jj.blessure == 0:
                 couleur = indian_red
@@ -237,12 +239,18 @@ class TransfertsWidget(QtGui.QWidget):
 
             dd[jj.nom] = couleur
 
+            if jj.retraite:
+                dd_fond[jj.nom] = gris
+            else:
+                dd_fond[jj.nom] = blanc
+
         numcol = self.table.columnCount()
         for rr in range(self.table.rowCount()):
             nom = str(self.table.item(rr, 0).text())
             for cc in range(numcol):
                 if not self.table.item(rr, cc) is None:
                     self.table.item(rr, cc).setTextColor(dd[nom])
+                    self.table.item(rr, cc).setBackgroundColor(dd_fond[nom])
 
     def choix_club(self, nom):
         nom = str(self.combo_club.currentText())
@@ -250,6 +258,7 @@ class TransfertsWidget(QtGui.QWidget):
             self.lab_val_budget.setText('0')
             self.lab_val_temps_reel.setText('0')
             self.lab_val_previsions.setText('0')
+            self.lab_avertissement_val.setText('0')
         else:
             cc = self.clubs[self.noms_clubs.index(nom)]
             self.club = cc
@@ -267,6 +276,7 @@ class TransfertsWidget(QtGui.QWidget):
                 self.lab_val_temps_reel.setStyleSheet('color: black')
 
             self.lab_val_previsions.setText(str(self.previsions_club()))
+            self.lab_avertissement_val.setText(str(self.club.avertissement))
 
         self.maj()
 
@@ -369,6 +379,10 @@ class TransfertsWidget(QtGui.QWidget):
         propAction.triggered.connect(self.faire_proposition)
         self.menu.addAction(propAction)
 
+        plotevAction = QtGui.QAction(u'Plot évoltution', self)
+        plotevAction.triggered.connect(self.plot_evolution)
+        self.menu.addAction(plotevAction)
+
         self.menu.popup(QtGui.QCursor.pos())
 
     def afficher_bio(self):
@@ -423,6 +437,20 @@ class TransfertsWidget(QtGui.QWidget):
                                 label_TO=label_TO,
                                 label_TA=label_TA,
                                 label_TB=label_TB)
+    def plot_evolution(self):
+        rows = []
+        joueurs = []
+        for idx in self.table.selectedIndexes():
+            rr = idx.row()
+            if not rr in rows:
+                rows.append(rr)
+        for rr in rows:
+            nom = str(self.table.item(rr, 0).text())
+            nom_club = str(self.table.item(rr, 1).text())
+            cc = self.clubs[self.noms_clubs.index(nom_club)]
+            jj = cc.get_joueur_from_nom(nom)
+            joueurs.append(jj)
+        self.pew = PlotEvolutionWidget(joueurs)
 
     def sauvegarder_propositions(self):
         with open(TRANSFERTS_DIR_NAME(dat=self.dat) + '/propositions' + str(self.vague) + '.prop', 'w') as ff:
@@ -465,7 +493,8 @@ class TransfertsWidget(QtGui.QWidget):
                 if offres == []:
                     pass
                 else:
-                    ch = choisir_offre(jj, offres)
+                    classement = classer_offres(jj, offres)
+                    ch = classement[0]
                     self.choix[jj.nom] = ch
                     print jj.nom, ch[0].nom, ch[1], ch[2], ch[3]
         with open(TRANSFERTS_DIR_NAME(dat=self.dat) + '/choix' + str(self.vague) + '.prop', 'w') as ff:

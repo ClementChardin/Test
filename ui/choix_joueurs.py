@@ -212,6 +212,7 @@ class ChoixJoueursWidget(QtGui.QWidget):
 
     def colorer_table(self):
         dd = dict()
+        dd_fond = {}
         for ii, jj in enumerate(self.selected_joueurs):
             if jj.blessure == 0:
                 couleur = noir
@@ -235,10 +236,19 @@ class ChoixJoueursWidget(QtGui.QWidget):
 
             dd[jj.nom] = couleur
 
+            if jj.veut_partir:
+                fond = orange if jj.MS_probleme else rouge
+            else:
+                fond = blanc
+            if jj.retraite:
+                fond = gris
+            dd_fond[jj.nom] = fond
+
         for rr in range(self.table.rowCount()):
             for cc in range(self.table.columnCount()):
                 nom = str(self.table.item(rr, 0).text()).split(" - ")[0]
                 self.table.item(rr, cc).setTextColor(dd[nom])
+                self.table.item(rr, cc).setBackgroundColor(dd_fond[nom])
 
     def maj_compo_aux_1(self):
         rr = self.table.currentIndex().row()
@@ -323,14 +333,6 @@ class ChoixJoueursWidget(QtGui.QWidget):
                    else False
         label_TB = True if max(TB) >= 8 \
                    else False
-        """
-        for nn, jj in enumerate(joueurs):
-            texte = True if nn == 0 else False
-            jj.diagramme_etoile(texte=texte,
-                                label_TO=label_TO,
-                                label_TA=label_TA,
-                                label_TB=label_TB)
-        """
         self.djw = DiagrammeJoueursWidget(joueurs,
                                      label_TO=label_TO,
                                      label_TA=label_TA,
@@ -349,16 +351,6 @@ class ChoixJoueursWidget(QtGui.QWidget):
             jj = self.club.get_joueur_from_nom(nom)
             joueurs.append(jj)
         self.pew = PlotEvolutionWidget(joueurs)
-        """
-        if len(rows) > 1:
-            raise ValueError("Un seul joueur possible")
-        else:
-            nom = str(self.table.item(rr, 0).text()).split(" - ")[0]
-            jj = self.club.get_joueur_from_nom(nom)
-            self.pew = PlotEvolutionWidget(jj)#, dat=self.parent().dat)
-        """
-        
-            
 
 class MyTableWidgetItem(QtGui.QTableWidgetItem):
     def __lt__(self, other):

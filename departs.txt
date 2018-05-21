@@ -1,676 +1,1040 @@
-PI	TA	DL	*	*	4	17	True	70	7	AL	Koussir	10.3703703704	
+PI	DL	TL	<<	<<	8	21	True	43	4	AES	Qladyr	9.32352941176	
 
-PI	TA		^	^	-1	12	False	16	2	ALT	Jens	6.93103448276	
+PI			*	*	8	18	False	161	16	AHK	Jraktoer	8.76470588235	
 
-PI	DL		^^	^^	4	14	True	12	1	APA	Vaelith	9.08823529412	
+PI	DL		x	x	9	22	False	190	19	AHK	Zsadofh	10.1111111111	
 
-PI			^	^	9	18	False	16	3	BRB	Abdek	8.33333333333	
+PI	TA	DL	*	*	4	17	False	70	12	AL	Koussir	10.7777777778	
 
-PI	TA		^^	^^	8	18	False	17	2	BSK	Alfred	7.55555555556	
+PI			x	x	11	26	False	143	12	AL	Jlopdair	9.5	
 
-PI			^^^	^^^	4	16	True	50	5	DKW	Rodoel	10.1851851852	
+PI			<<	<<	4	13	True	50	5	AL	Maethol	11.7777777778	
 
-PI	TA		^^^	^^^	6	15	False	92	20	ED	Vuzgr	10.4827586207	
+PI			**	**	8	20	False	380	36	ALT	Haald'Ap	10.0740740741	
 
-PI	TA		^^^	^^^	1	11	False	65	7	GP	Ykwen	7.96551724138	
+PI	TL	TA	^	^	2	14	False	20	10	ALT	Denen	9.59259259259	
 
-PI	N8	TA	<	<	-2	11	False	14	2	HTH	Lohonel	8.37037037037	
+PI	TA		x	x	8	17	False	288	28	ALT	Naharx	11.3703703704	
 
-PI	TA	DL	^	^	1	13	True	11	1	HTH	Ylen	8.0	
+PI			*	*	11	22	False	85	6	APA	Qaethil	9.03703703704	
 
-PI			x	x	8	19	False	192	11	HTH	Quadyr	8.59259259259	
+PI	TA		^	^	11	22	True	32	3	APA	Zad'Beq	9.2962962963	
 
-PI			^	^	8	20	False	14	2	KAK	Bouky	7.81481481481	
+PI	DL		^^^	^^^	7	20	False	16	1	BIL	Blaqui	7.82352941176	
 
-PI			xx	xx	5	16	True	90	9	KH	Niad	10.4444444444	
+PI			^^^	^^^	11	20	False	23	2	BIL	Trem	8.2962962963	
 
-PI	TA		^	^	10	20	False	13	2	KH	Mkacoel	8.33333333333	
+PI			^	^	8	18	False	10	4	BSK	Jether	8.88888888889	
 
-PI			**	**	9	25	False	224	23	KHR	Nravyx	10.1111111111	
+PI	DL		*	*	4	16	False	78	12	BSK	Jkebr	9.73529411765	
 
-PI	TA		^	^	1	10	False	12	2	KHR	Syng	8.18518518519	
+PI	TA		>	>	6	17	False	20	2	CPH	Dkom	7.27586206897	
 
-PI	TA		<	<	1	12	False	35	4	MDL	Bonod	8.13793103448	
+PI	TA		*	*	9	23	False	241	24	CPH	Zarh Me'Hendil	10.2222222222	
 
-PI			^	^	3	10	False	10	2	MDL	Van Vhyr	8.59259259259	
+PI	DL		*	*	10	25	False	65	7	DKF	Uvolher	8.14814814815	
 
-PI	TA		xx	xx	8	19	False	219	5	MRB	Nexter	9.03703703704	
+PI	TA	DL	^	^	9	22	True	8	0	EKR	Xater	8.03703703704	
 
-PI	DL	TL	xx	*	3	15	False	363	41	MRB	Slend	11.0	
+PI			^	^	9	21	False	12	1	FST	Ekrensen	7.59259259259	
 
-PI	TL	TA	<	<	3	13	True	50	5	MSL	Ledol	11.5925925926	
+PI	TA		^^^	^^^	1	14	False	8	3	KH	Vretk	8.8275862069	
 
-PI	N8	TA	**	**	4	11	False	210	21	PRG	Stavehyr	10.1851851852	
+PI	N8	DL	**	**	6	16	False	210	21	KHR	Dylzohed	11.0294117647	
 
-PI			**	**	6	18	False	105	9	PRG	Aked	8.47058823529	
+PI			>	>	8	17	True	11	1	KKR	Xajy	9.14814814815	
 
-PI	TA		*	*	4	11	False	136	13	QNL	Harounk	8.55555555556	
+PI	DL		<	<	6	18	False	37	3	MAG	Neyeniol	8.40740740741	
 
-PI			^^^	^^^	3	14	True	13	1	SN	Redael	9.25925925926	
+PI			^^^	^^^	6	14	True	16	1	MAG	Qiedeb	8.02941176471	
 
-PI			^^	^^	4	18	True	12	1	TA	Saolteh	9.44444444444	
+PI	TA		>	>	9	21	True	11	1	MDH	Jotendt	8.07407407407	
 
-PI	TA		^^	^^	4	13	True	8	1	TA	Fress	9.55555555556	
+PI			**	**	6	18	False	561	56	MDL	Morohg	9.74074074074	
 
-PI			^^	^^	9	17	True	9	1	TA	Siviss	9.18518518519	
+PI			^^^	^^^	4	15	True	10	1	MRB	Denard	9.48148148148	
 
-PI	N8	TL	**	**	5	15	False	150	16	TO	Gorr	9.81481481481	
+PI			^^	^^	6	17	True	12	1	MRT	Thresh'ti	8.29411764706	
 
-PI	TA		xx	xx	8	21	False	362	37	TO	B'Aald	11.1111111111	
+PI	TA		^^^	^^^	11	21	False	53	7	MSL	D'Iber	8.51724137931	
 
-PI	TA		x	x	6	14	False	125	10	TO	Nanarik	9.48275862069	
+PI	TA		*	*	11	23	False	79	10	QNL	Umareux	9.0	
 
-PI			^^^	^^^	1	11	False	19	1	vide	Wagdaor	7.85185185185	
+PI	TA		^^^	^^^	8	19	False	185	10	TA	X'uv	8.93103448276	
 
-PI			<	<	2	11	False	12	1	vide	Rak Hem'Dil	7.67647058824	
+PI	N8		*	*	1	11	False	35	5	TLB	Sentherd	8.55555555556	
 
-PI			<<	<<	11	22	True	16	1	vide	Gmetoff	8.26470588235	
+PI	TA		*	*	11	21	True	80	8	TLB	Qamr	10.7407407407	
 
-PI	DL	N8	^^	^^	7	20	False	40	3	vide	Oliveiro	8.0	
+PI			^	^	11	21	False	41	2	TO	Klopek	7.96296296296	
 
-PI	TA		^^	^^	9	21	False	52	4	vide	Christan	8.62962962963	
+PI	TA		*	*	11	25	False	68	8	TO	Clebe	8.79310344828	
 
-PI			^^^	^^^	1	11	False	19	1	vide	Wagdaor	7.85185185185	
+PI			<<	<<	11	22	True	16	1	vide	Gmetoff	8.67647058824	
 
-PI			<<<	<<<	9	21	False	28	2	vide	Beno	8.88888888889	
+PI			<<<	<<<	9	21	True	28	2	vide	Beno	9.0	
 
-PI	DL		^^	^^	11	19	False	31	2	vide	Vituro	8.73529411765	
+PI	DL		^^	^^	11	19	True	31	2	vide	Vituro	9.22222222222	
 
-PI	DL		<<	<<	5	17	False	45	4	vide	Naraj	7.82352941176	
+PI	DL		<<	<<	5	17	False	45	4	vide	Naraj	7.94117647059	
 
-PI			<	<	2	11	False	12	1	vide	Rak Hem'Dil	7.67647058824	
+PI			<<	<<	11	22	True	16	1	vide	Gmetoff	8.67647058824	
 
-PI			<	<	1	9	False	1	1	vide	Hudek	7.48148148148	
+PI	DL	N8	^^	^^	7	20	False	40	3	vide	Oliveiro	8.33333333333	
 
-PI			>	>	8	20	True	10	1	vide	Haktu	8.11111111111	
+PI	TA		^^	^^	9	21	False	52	4	vide	Christan	8.48148148148	
+
+PI			<<<	<<<	9	21	True	28	2	vide	Beno	9.0	
+
+PI	DL		^^	^^	11	19	True	31	2	vide	Vituro	9.22222222222	
+
+PI	DL		<<	<<	5	17	False	45	4	vide	Naraj	7.94117647059	
+
+PI			<	<	1	9	False	1	1	vide	Hudek	7.33333333333	
+
+PI			>	>	8	20	True	10	1	vide	Haktu	8.66666666667	
 
 PI	TA	DL	^^	^^	4	13	False	28	3	vide	Vlatyol	8.14705882353	
 
-PI			<	<	2	10	False	1	1	vide	Dormad	7.55555555556	
+PI			<	<	2	10	False	1	1	vide	Dormad	7.18518518519	
 
-PI	TL		^^^	x	10	25	False	20	2	vide	Dyomendal	8.40740740741	
+PI			>	>	4	12	False	20	2	vide	Wubad	7.88888888889	
 
-PI			>	>	4	12	False	20	2	vide	Wubad	8.40740740741	
+PI			<<	<<	1	10	False	17	3	vide	Deloy	7.74074074074	
 
-PI			<<	<<	1	10	False	17	3	vide	Deloy	7.81481481481	
+PI			<<	<<	8	15	False	28	3	vide	Gueteur	7.92592592593	
 
-PI			<<	<<	8	15	False	28	3	vide	Gueteur	7.62962962963	
+PI	TA		^^	^^	1	14	False	10	1	vide	Bredug	6.77777777778	
 
-PI	TA		^^	^^	1	14	False	10	1	vide	Bredug	6.92592592593	
+PI	TA		^	^	12	24	False	6	0	vide	Zhre Zaq	7.62962962963	
 
-PI	TA		^	^	12	24	False	6	0	vide	Zhre Zaq	7.92592592593	
+PI	TA		^	^	3	10	False	45	5	vide	Vroden	8.62962962963	
 
-TA	N8		**	**	1	11	False	150	20	APA	Chaat'Sy	8.68965517241	
+PI	TA		^	^	-1	12	False	16	2	vide	Jens	6.65517241379	
 
-TA	PI		^	^	0	9	False	14	2	DKF	Romduyd	7.8275862069	
+PI			^	^	9	18	False	16	3	vide	Abdek	8.25925925926	
 
-TA			^^	^^	5	17	False	40	3	ERE	Ztoldeov	8.0	
+PI	TA		^^	^^	8	18	False	17	2	vide	Alfred	7.37037037037	
 
-TA			^^	^^	1	9	False	8	2	FS	Fendal	8.34482758621	
+PI	TA		^^^	^^^	1	11	False	65	7	vide	Ykwen	7.93103448276	
 
-TA	PI		^	^	0	10	True	6	1	KAK	Mign	8.8275862069	
+PI	N8	TA	<	<	-2	11	False	14	2	vide	Lohonel	8.07407407407	
 
-TA			<<<	<<<	8	16	False	75	8	KH	Morpent	8.58620689655	
+PI	TA	DL	^	^	1	13	False	11	1	vide	Ylen	7.88888888889	
 
-TA	PI		^	^	0	11	False	12	1	KHR	Rylsed	7.62068965517	
+PI			^	^	8	20	False	14	2	vide	Bouky	8.14814814815	
 
-TA	TL	N8	**	**	2	10	False	119	19	KHR	Gound	8.79310344828	
+PI	TA		^	^	10	20	False	13	2	vide	Mkacoel	8.55555555556	
 
-TA			*	*	8	19	False	93	8	KIS	Wiktor	9.06896551724	
+PI	TA		^	^	1	10	False	12	2	vide	Syng	8.18518518519	
 
-TA			^^	^^	5	13	False	55	6	MDL	Detoyr	7.62068965517	
+PI	TA		<	<	1	12	False	35	4	vide	Bonod	7.79310344828	
 
-TA	PI		*	*	9	19	False	183	14	MDL	Vettl	8.34482758621	
+PI			^	^	3	10	False	10	2	vide	Van Vhyr	7.92592592593	
 
-TA	PI		*	*	8	19	True	60	6	MSL	D'Uvars	10.7586206897	
+PI			**	**	6	18	False	105	9	vide	Aked	7.94117647059	
 
-TA	PI		**	*	1	13	False	110	11	QNL	Ortiens	8.89655172414	
+PI	TA		*	*	4	11	False	136	13	vide	Harounk	8.07407407407	
 
-TA	N8		x	x	4	11	False	70	8	TA	Jrohd	9.0	
+PI			^^^	^^^	1	11	False	19	1	vide	Wagdaor	7.40740740741	
 
-TA	PI		^	^	7	21	True	6	1	TLB	Erkyel	8.24137931034	
+PI			<	<	2	11	False	12	1	vide	Rak Hem'Dil	7.52941176471	
 
-TA			**	**	3	11	False	180	200	TO	Vek'Vekd	7.8275862069	
+PI	TA	DL	<	<	0	11	False	14	2	vide	Qyld	7.38888888889	
 
-TA	TL		<	<	2	9	False	9	1	vide	Tiffano	7.68965517241	
+PI	TA		^	^	2	10	False	14	2	vide	Oatheld	7.38235294118	
 
-TA			^	^	5	19	False	9	1	vide	Puero	7.27586206897	
+PI			<	<	3	12	False	20	2	vide	Kohod	7.40740740741	
 
-TA			^^^	^^^	9	17	True	15	1	vide	Daniel	8.03448275862	
+PI	DL		**	**	2	12	False	10	1	vide	Kyrs	7.85294117647	
 
-TA	PI		^^	^^	6	18	True	14	1	vide	Voyer	8.58620689655	
+PI	TA		^^^	^^^	-2	8	False	12	4	vide	Leloir	7.62068965517	
 
-TA			^^	x	11	20	False	28	2	vide	Dimitri	8.75862068966	
+PI	TA	DL	^	<<	13	22	False	13	1	vide	Menlot	7.85185185185	
 
-TA	N8		x	x	8	18	False	165	16	vide	Thibald	8.65517241379	
+PI	TA	TL	<<	<<	13	23	False	25	2	vide	Tlendev	8.40740740741	
 
-TA	TL		<	<	2	9	False	9	1	vide	Tiffano	7.68965517241	
+PI	DL		<	x	13	22	True	16	1	vide	Plendao	8.48148148148	
 
-TA			^	^	5	19	False	9	1	vide	Puero	7.27586206897	
+TA	PI		<<	<<	5	16	True	34	3	AES	Vaceer	9.24137931034	
 
-TA			^^^	^^^	9	17	True	15	1	vide	Daniel	8.03448275862	
+TA	PI	TL	<<	<<	6	17	True	29	2	AES	Ichendye	9.1724137931	
 
-TA			<<	<<	11	21	False	28	2	vide	Rassko	8.65517241379	
+TA	PI		^^	^^	3	14	False	7	0	AHK	Ednib	7.93103448276	
 
-TA	PI		^^	^^	6	18	True	14	1	vide	Voyer	8.58620689655	
+TA			xx	xx	8	24	False	115	12	BRB	Xug	10.4137931034	
 
-TA	PI		^^^	^^^	7	22	False	65	7	vide	Veel	8.41379310345	
+TA	PI		*	^^	5	12	False	65	7	BRB	Rtarem	8.51724137931	
 
-TA	PI	DL	<<	<<	1	9	False	10	2	vide	Jidal	8.31034482759	
+TA			^^^	^^^	11	19	True	13	1	CAT	Iaemor	8.44827586207	
 
-TA			^	^	3	12	True	11	1	vide	Xend	8.10344827586	
+TA	PI		^^	^^	11	20	True	9	0	CPH	Pratish	8.24137931034	
 
-TA	DL	TL	<<	<<	-2	12	False	20	2	vide	Hoegh	8.34482758621	
+TA			^	^	11	21	False	29	6	DKF	Antbyop	8.27586206897	
 
-TA	PI		<<	<<	10	18	False	22	2	vide	Krokss	8.27586206897	
+TA	PI		<	<	1	12	False	36	4	DKF	Meneux	7.62068965517	
 
-TA			^^	^^	3	11	True	8	1	vide	Garurh	8.1724137931	
+TA	PI		^^	^	3	12	True	6	1	DKW	Rodenk	9.62068965517	
 
-TA	TL		<<	*	12	24	False	43	4	vide	Diel	8.58620689655	
+TA	PI		*	*	9	23	False	73	7	ED	Meriss	8.79310344828	
 
-TA			<	*	12	22	True	8	0	vide	Rukel	8.03448275862	
+TA	PI		^	^	3	15	True	6	1	ED	Dobard	8.93103448276	
 
-DL			*	*	4	16	False	70	7	AL	Offendal	9.5	
+TA	PI		<	<	6	18	True	8	0	EKR	Louper	8.24137931034	
 
-DL	N8		*	*	10	23	False	54	5	ALT	William	9.47058823529	
+TA			>	>	5	18	False	17	1	EKR	Habfed	7.86206896552	
 
-DL	TL		^^	^^	9	20	True	19	2	APA	Daef	9.94117647059	
+TA			^	^	10	21	True	11	1	GP	Omdoir	8.51724137931	
 
-DL			x	x	8	22	False	80	8	BRB	Lukakr	8.85185185185	
+TA	PI		**	**	7	20	False	480	29	KH	Oplet	10.3448275862	
 
-DL			x	x	7	18	False	168	10	BSK	Moblak	9.33333333333	
+TA			<<	<<	11	21	False	20	1	KIS	Frenal	7.86206896552	
 
-DL			>	>	4	11	True	13	1	DKF	Mathais	8.88235294118	
+TA	PI		<	<	6	18	False	19	1	KKR	Angrev	7.89655172414	
 
-DL			^	^	1	9	False	25	5	DKF	Aelieth	8.26470588235	
+TA			^^	^^	6	14	False	52	5	MAG	Guelto	7.62068965517	
 
-DL	PI		xx	xx	10	19	True	300	25	DKW	Cashak	12.5185185185	
+TA	PI		<<<	<<<	5	16	False	23	2	MAG	Obdenol	8.1724137931	
 
-DL	PI		<<	<<	3	16	False	80	7	FS	Merked	8.37037037037	
+TA	N8	PI	*	*	8	20	False	80	8	MDH	Kolel	9.34482758621	
 
-DL	PI	TA	*	*	1	11	False	96	12	HTH	Gyendal	8.41176470588	
+TA	TL		x	x	-2	8	False	75	12	MRB	Crilen	8.20689655172	
 
-DL			^^	^^	8	16	True	12	1	KH	Rimeen	8.14705882353	
+TA	PI		*	*	11	26	False	59	6	MSL	Drian	8.62068965517	
 
-DL	PI		>	>	3	18	False	20	2	KHR	Wauak	7.32352941176	
+TA			*	*	11	23	False	87	8	PRG	Wadwyr	8.37931034483	
 
-DL			**	**	6	18	False	153	12	KHR	Dopregd	10.3235294118	
+TA			*	*	11	19	False	95	7	TA	Jisster	9.65517241379	
 
-DL			^	^	8	18	False	16	1	KIS	Yientli	7.64705882353	
+TA			<<	<<	11	21	False	28	2	vide	Rassko	8.75862068966	
 
-DL	PI		^^	^^	2	11	False	15	3	MDL	Maryath	7.74074074074	
+TA	N8		x	x	8	18	False	165	16	vide	Thibald	8.79310344828	
 
-DL			*	*	4	11	False	98	12	PRG	Muss	8.91176470588	
+TA			<<	<<	11	21	False	28	2	vide	Rassko	8.75862068966	
 
-DL	PI		^^^	^^^	3	11	True	11	1	SN	Lesyl	9.20588235294	
+TA	PI		^^^	^^^	7	22	False	65	7	vide	Veel	8.96551724138	
 
-DL	PI		^^^	^^^	0	12	False	18	2	SN	Skud	8.66666666667	
+TA	PI	DL	<<	<<	1	9	False	10	2	vide	Jidal	8.06896551724	
 
-DL	N8		*	*	1	13	False	60	6	TLB	Rekig	8.96296296296	
+TA			^	^	3	12	False	11	1	vide	Xend	7.89655172414	
 
-DL	PI		<	<	0	14	False	20	2	TO	Mrid	8.35294117647	
+TA	DL	TL	<<	<<	-2	12	False	20	2	vide	Hoegh	8.20689655172	
 
-DL			**	**	7	18	False	198	18	TO	Skoss	10.5882352941	
+TA	PI		<<	<<	10	18	False	22	2	vide	Krokss	8.20689655172	
 
-DL			^	^	5	13	False	13	1	vide	Samuel	7.70588235294	
+TA			^^	^^	3	11	False	8	1	vide	Garurh	7.89655172414	
 
-DL			^^^	^^^	6	19	True	15	1	vide	Xelten	8.44117647059	
+TA	TL		^^^	*	12	24	False	64	6	vide	Diel	9.10344827586	
 
-DL	TL		^	^	3	13	True	12	1	vide	Vartiendel	8.66666666667	
+TA			^^	*	12	22	False	8	0	vide	Rukel	7.86206896552	
 
-DL			<	<	7	19	True	14	1	vide	Brennar	8.0	
+TA	N8		**	**	1	11	False	150	20	vide	Chaat'Sy	8.48275862069	
 
-DL	TL		<	<	2	12	False	7	1	vide	Denkel	7.82352941176	
+TA	PI		^	^	0	9	False	14	2	vide	Romduyd	7.41379310345	
 
-DL	N8		^^	*	11	22	False	28	2	vide	Halmasill	8.17647058824	
+TA			^^	^^	5	17	False	40	3	vide	Ztoldeov	7.68965517241	
 
-DL	N8		x	x	11	24	False	82	7	vide	Rodrigues	8.97058823529	
+TA			^^	^^	1	9	False	8	2	vide	Fendal	7.89655172414	
 
-DL			^	^	5	13	False	13	1	vide	Samuel	7.70588235294	
+TA	PI		^	^	0	10	True	6	1	vide	Mign	8.8275862069	
 
-DL			^^^	^^^	6	19	True	15	1	vide	Xelten	8.44117647059	
+TA	PI		^	^	0	11	False	12	1	vide	Rylsed	7.51724137931	
 
-DL	TL		^	^	3	13	True	12	1	vide	Vartiendel	8.66666666667	
+TA	TL	N8	**	**	2	10	False	119	19	vide	Gound	8.58620689655	
 
-DL			<	<	7	19	True	14	1	vide	Brennar	8.0	
+TA			^^	^^	5	13	False	55	6	vide	Detoyr	7.31034482759	
 
-DL	TL		<	<	2	12	False	7	1	vide	Denkel	7.82352941176	
+TA	PI		*	*	9	19	False	183	14	vide	Vettl	9.03448275862	
 
-DL			^^^	^^	6	14	True	46	4	vide	Mar Al'Her	9.33333333333	
+TA	N8		x	x	4	11	False	70	8	vide	Jrohd	8.86206896552	
 
-DL	TL	N8	xx	xx	8	15	False	203	18	vide	Lassek	10.7777777778	
+TA	PI		^	^	7	21	True	6	1	vide	Erkyel	8.0	
 
-DL	N8		^	^	1	8	False	5	1	vide	Lofaed	7.94117647059	
+TA			**	**	3	11	False	180	200	vide	Vek'Vekd	7.31034482759	
 
-DL			>	>	-1	9	False	12	2	vide	Hubert	7.41176470588	
+TA	TL		<	<	2	9	False	9	1	vide	Tiffano	7.79310344828	
 
-DL	TL		<<	<<	1	12	False	34	4	vide	Roberdt	7.88235294118	
+TA			^	^	5	19	False	9	1	vide	Puero	6.86206896552	
 
-DL	TL		<<	<<	4	11	False	8	1	vide	Doroen	7.7037037037	
+TA			^^^	^^^	9	17	True	15	1	vide	Daniel	8.62068965517	
 
-DL			>	>	4	16	False	5	1	vide	Lucas	7.76470588235	
+TA	PI		^^	^^	6	18	True	14	1	vide	Voyer	9.0	
 
-DL	PI	N8	^^	*	12	23	False	50	5	vide	Frowlow	7.85294117647	
+TA	PI		^^^	^^^	2	9	False	66	13	vide	De Loyl	7.86206896552	
 
-DL			^	^	12	23	False	12	1	vide	Maelo	7.35294117647	
+TA			^^^	^^^	1	14	True	10	1	vide	Xiheforss	8.06896551724	
 
-DL	PI		<	<	12	19	False	15	1	vide	Cuamael	7.79411764706	
+TA	TL		^	**	13	21	False	16	1	vide	Lukend	7.93103448276	
 
-DL	PI		^^	<<<	12	19	False	28	2	vide	Quessel	8.74074074074	
+TA			<	^^	13	20	True	7	0	vide	Ustensol	8.20689655172	
 
-DL			<	<	12	21	True	7	0	vide	Brarsh	8.35294117647	
+TA	PI		<	^^	13	25	False	15	1	vide	Didiaol	7.44827586207	
 
-DL			<	<	12	24	True	7	0	vide	Hal Hamidl	8.11111111111	
+TA	PI		^	<<	13	24	False	10	1	vide	Kendraerh	7.86206896552	
 
-TL			xx	xx	7	21	False	359	118	AL	Rohogd	12.4193548387	
+TA	PI		^^	*	13	24	False	50	5	vide	Osuel	7.68965517241	
 
-TL			*	*	9	19	True	31	3	ALT	Yves	9.25806451613	
+TA			^	^^	13	25	True	12	1	vide	Utraef	8.13793103448	
 
-TL	N8		**	**	8	24	True	155	16	BRB	Nogr	11.4516129032	
+TA			^	*	13	26	False	12	1	vide	Isven	6.8275862069	
 
-TL	N8		^	^	4	12	False	13	3	DKF	Grof	8.63157894737	
+TA			<	^^	13	20	False	11	1	vide	Poersk	7.72413793103	
 
-TL	DL	N8	xx	xx	8	24	False	173	18	DKW	Zhdavr	10.3548387097	
+DL	TL		<<	<<	7	15	False	48	4	AES	Dlanaor	8.48148148148	
 
-TL			*	*	1	12	False	70	7	ED	Zatavsk	9.0	
+DL	TL		>	>	10	23	False	29	2	AES	Frathoer	8.51851851852	
 
-TL			*	*	2	14	True	70	7	FS	Senfel	12.2105263158	
+DL			^	^	4	16	False	55	27	ALT	Sfoar	11.037037037	
 
-TL	N8	DL	**	**	8	23	True	140	16	FS	Tafaol	11.6842105263	
+DL			^^	^^	2	15	False	46	5	ALT	Dysl	9.70588235294	
 
-TL	DL		<<<	<<<	8	20	False	75	8	GP	Yrmatot	8.77419354839	
+DL	PI		^^^	^	11	21	False	79	8	APA	Froek	8.92592592593	
 
-TL	DL	PI	<	<	3	10	False	14	2	HTH	Raleux	8.45161290323	
+DL			<	<	11	21	True	31	2	APA	Ymdar	9.02941176471	
 
-TL	DL		xx	xx	2	15	False	168	18	KAK	Huken	9.54838709677	
+DL			^^	^^	9	20	False	36	3	BIL	Fieltos	8.17647058824	
 
-TL	N8		^	^	6	18	True	16	1	KIS	Biskil	8.55263157895	
+DL	TL	N8	<	<	10	20	True	15	1	BIL	Riendi	8.11111111111	
 
-TL	DL		<	<	6	16	False	32	2	KIS	Criansen	8.51612903226	
+DL	N8		xx	xx	6	14	False	115	12	BRB	Houdeg	10.1764705882	
 
-TL			**	**	-1	12	False	100	13	MDL	Vkohar	10.0322580645	
+DL			x	x	11	22	True	93	8	BSK	Wiwid	11.1470588235	
 
-TL	DL		^	^	4	13	True	11	1	MRB	Blaeden	9.86842105263	
+DL			*	*	9	20	False	78	14	BSK	Uprek	9.25925925926	
 
-TL	DL		**	**	6	20	False	140	12	PRG	Obolendt	10.3870967742	
+DL	PI		<<	<<	6	13	True	11	1	CAT	Zyvlor	9.32352941176	
 
-TL	DL	TA	>	>	2	15	False	50	5	PRG	Paad	9.26315789474	
+DL			<<	<<	5	15	False	11	1	CAT	Ztalmed	7.20588235294	
 
-TL	DL		**	**	8	20	False	127	11	QNL	Le Lof	9.60526315789	
+DL			^^	^^	9	21	True	10	1	CPH	Mratoh	8.52941176471	
 
-TL	N8		<<	*	10	17	True	14	1	vide	Iouri	8.29032258065	
+DL	TL		x	x	11	21	True	101	9	DKF	Cartayd	11.2941176471	
 
-TL	DL		^	^	4	13	False	13	1	vide	Neniel	7.60526315789	
+DL			>	>	4	11	False	13	2	DKF	Mathais	8.55882352941	
 
-TL			<<	<<	1	10	False	38	3	vide	Xif Al'Khadir	8.61290322581	
+DL			^	^	4	17	True	12	1	DKW	Qend	8.38235294118	
 
-TL	N8		<<	*	10	17	True	14	1	vide	Iouri	8.29032258065	
+DL	TL	N8	^	^	8	21	True	16	1	EKR	Mnartoc	9.59259259259	
 
-TL	DL		<<<	<<<	11	20	False	29	2	vide	Vagael	8.06451612903	
+DL	TL	N8	xx	*	1	10	False	80	7	FS	Mud	9.37037037037	
 
-TL	DL	N8	^^^	*	11	24	False	45	4	vide	Huelto	8.51612903226	
+DL	TL	N8	^	^	-1	12	True	7	1	FS	Grind	8.07407407407	
 
-TL	DL		^	^	4	13	False	13	1	vide	Neniel	7.60526315789	
+DL			<	<	4	12	True	19	1	FST	Ujari	8.91176470588	
 
-TL			<<	<<	5	13	False	26	2	vide	Resh'Al Hidir	8.90322580645	
+DL			^^^	^^^	4	19	False	65	7	GP	Lalaod	9.0	
 
-TL			<<	<<	1	10	False	38	3	vide	Xif Al'Khadir	8.61290322581	
+DL			<	<	2	14	False	23	2	GP	Nowak	8.40740740741	
 
-TL	DL		x	x	11	18	False	149	14	vide	Mtaresh	10.5789473684	
+DL			^^^	^^^	6	19	False	25	10	HTH	Noroel	10.3823529412	
 
-TL	PI		^^	x	10	22	True	6	1	vide	Har Hel	8.29032258065	
+DL			^^	^^	2	13	False	50	5	HTH	Mue	8.73529411765	
 
-TL	DL		**	**	-1	7	False	75	15	vide	Edward	8.07894736842	
+DL	TL		^^^	^^^	10	20	False	22	2	KAK	Jkader	8.59259259259	
 
-TL	DL		*	*	8	19	False	60	6	vide	Xhyrev	7.93548387097	
+DL	PI		^	^	11	21	True	20	2	KKR	Throed	9.22222222222	
 
-TL	N8		<	*	12	23	False	7	0	vide	Quam	7.60526315789	
+DL			*	*	6	19	False	70	7	MDH	Amendir	9.20588235294	
 
-N8	TL		xx	xx	8	19	False	140	14	AL	Quank	9.72222222222	
+DL			^^	^^	6	19	True	17	1	MDH	Ztendh	8.44117647059	
 
-N8	TL		xx	xx	6	15	True	100	11	ALT	Utelg	11.1379310345	
+DL			>	>	4	14	True	5	1	MDL	Methend	8.76470588235	
 
-N8	TL		^	^	8	20	True	11	1	BSK	Denpett	8.65517241379	
+DL			xx	xx	11	22	False	85	8	MRB	Urthendt	9.44117647059	
 
-N8	DL	TL	<	<	0	11	False	13	2	DKW	Ethrol	8.47222222222	
+DL	PI		***	***	11	19	False	308	23	MRB	Krell	9.0	
 
-N8	TL		^	^	2	13	False	48	5	MDL	Tronedz	8.10344827586	
+DL			*	*	8	20	False	149	14	MRT	Vorkaech	10.2592592593	
 
-N8	DL		^^	^^	3	12	False	105	5	QNL	Gorog	8.1724137931	
+DL	PI		^^^	<	3	16	True	21	2	PRG	Haradt	11.037037037	
 
-N8	TL		xx	xx	7	17	False	303	129	SN	Magh	11.6896551724	
+DL			**	**	1	11	False	105	11	QNL	Figuenol	8.02941176471	
 
-N8	TL		xx	xx	7	20	True	170	17	TO	Zerhen	11.3793103448	
+DL	TL		*	*	8	20	True	99	7	SN	Remod	10.2352941176	
 
-N8			^^	x	9	18	False	28	2	vide	Lucas	8.75862068966	
+DL	TL		**	**	3	10	False	60	9	TA	Kents	8.36111111111	
 
-N8			<	<	11	24	False	18	1	vide	Nomploeff	7.96551724138	
+DL			x	x	6	17	True	265	40	TA	Melian	12.2352941176	
 
-N8	DL		x	x	9	19	False	180	17	vide	Vridiel	9.97222222222	
+DL			^^	^^	11	23	True	10	1	TLB	Patrick	8.97058823529	
 
-N8	TL	DL	^^^	*	11	20	False	50	4	vide	Snim	7.8275862069	
+DL			**	**	7	18	True	198	6	TO	Skoss	11.1176470588	
 
-N8			^^	x	9	18	False	28	2	vide	Lucas	8.75862068966	
+DL	TL		**	**	5	14	False	150	31	TO	Centanael	11.2647058824	
 
-N8	TL		*	*	2	13	False	80	8	vide	Trund	9.48275862069	
+DL	N8		^^^	*	11	22	False	28	2	vide	Halmasill	8.73529411765	
 
-N8	TL		<	<	-1	12	True	5	1	vide	Retendt	8.11111111111	
+DL			^^^	^^	6	14	True	46	4	vide	Mar Al'Her	9.11111111111	
 
-N8	TL	PI	^^^	^^^	1	10	False	140	8	vide	Gruncan	9.1724137931	
+DL	N8		^	^	1	8	False	5	1	vide	Lofaed	7.76470588235	
 
-N8	TL	DL	^^^	^^^	3	11	False	45	5	vide	Duumt	8.86206896552	
+DL			>	>	-1	9	False	12	2	vide	Hubert	7.32352941176	
 
-N8	TL		**	**	6	17	False	714	120	vide	Thoryol	11.4722222222	
+DL	TL		<<	<<	1	12	False	34	4	vide	Roberdt	7.79411764706	
 
-DM			^	^	10	22	True	12	1	ALT	Semeld	8.27586206897	
+DL	TL		<<	<<	4	11	False	8	1	vide	Doroen	7.66666666667	
 
-DM	DO		<	<	1	8	False	9	2	BRB	Skoathel	8.31034482759	
+DL	PI	N8	^^^	*	12	23	False	50	5	vide	Frowlow	8.23529411765	
 
-DM			*	*	9	19	False	117	14	BSK	Drudred	9.20689655172	
+DL			^	^	12	23	False	12	1	vide	Maelo	7.73529411765	
 
-DM	DO	CE	^^^	^^^	3	10	False	14	5	DKW	Rden	8.68965517241	
+DL	PI		<	<	12	19	False	15	1	vide	Cuamael	7.73529411765	
 
-DM	DO		<<	<<	8	16	True	11	1	ED	Wazaoth	9.72413793103	
+DL	PI		<<<	<<<	12	19	False	28	2	vide	Quessel	8.59259259259	
 
-DM			xx	xx	10	26	False	127	11	FS	Abanar	9.68965517241	
+DL			<	<	12	21	True	7	0	vide	Brarsh	8.11764705882	
 
-DM			<	<	8	20	False	9	1	KH	Oktar	7.44827586207	
+DL			<	<	12	24	True	7	0	vide	Hal Hamidl	8.44444444444	
 
-DM			^	^	3	13	False	11	5	KH	Fumen	8.70967741935	
+DL			x	x	8	22	False	80	8	vide	Lukakr	8.7037037037	
 
-DM			>	>	8	15	False	12	1	MRB	Franck	7.34482758621	
+DL			^	^	1	9	False	25	5	vide	Aelieth	8.14705882353	
 
-DM			<<	<<	10	20	True	27	3	TA	Meliss	9.44827586207	
+DL	PI		<<	<<	3	16	False	80	7	vide	Merked	8.51851851852	
 
-DM			^^	^^	8	17	True	10	1	TLB	Xyter	8.55172413793	
+DL	PI	TA	*	*	1	11	False	96	12	vide	Gyendal	8.26470588235	
 
-DM	DO		**	**	6	14	False	126	14	TO	Ludalr	10.2068965517	
+DL			^^	^^	8	16	False	12	1	vide	Rimeen	7.94117647059	
 
-DM	AR		*	*	6	16	False	195	19	vide	Loued Rash	9.27586206897	
+DL	PI		>	>	3	18	False	20	2	vide	Wauak	7.20588235294	
 
-DM			^^^	**	11	23	True	48	4	vide	Jatoff	9.75862068966	
+DL			^	^	8	18	False	16	1	vide	Yientli	7.52941176471	
 
-DM			x	x	5	13	False	150	14	vide	Fredirico	9.44827586207	
+DL	PI		^^	^^	2	11	False	15	3	vide	Maryath	7.66666666667	
 
-DM	DO		^	^	10	21	False	7	1	vide	Lole	7.41379310345	
+DL			*	*	4	11	False	98	12	vide	Muss	8.47058823529	
+
+DL	PI		^^^	^^^	0	12	False	18	2	vide	Skud	8.44444444444	
+
+DL	PI		<	<	0	14	False	20	2	vide	Mrid	8.44117647059	
+
+DL			^	^	5	13	False	13	1	vide	Samuel	7.41176470588	
+
+DL	TL		^	^	3	13	True	12	1	vide	Vartiendel	8.62962962963	
+
+DL			<	<	7	19	True	14	1	vide	Brennar	8.64705882353	
+
+DL	TL		<	<	2	12	False	7	1	vide	Denkel	7.79411764706	
+
+DL			>	>	4	16	True	5	1	vide	Lucass	8.20588235294	
+
+DL			^	^	11	23	False	34	6	vide	Smoyd	8.11764705882	
+
+DL	TL		<	<	11	24	False	3	1	vide	Wurtyd	7.47058823529	
+
+DL			<<	*	13	27	False	19	1	vide	Salter	7.97058823529	
+
+DL			^^	^^	13	21	False	48	4	vide	Erelndar	8.92592592593	
+
+DL	TL	N8	^	*	13	24	False	15	1	vide	Skadir	7.55882352941	
+
+DL			^	**	13	22	True	7	0	vide	Holhao	8.05882352941	
+
+DL			^	**	13	22	True	12	1	vide	Paloer	8.32352941176	
+
+DL	N8		<<	x	13	25	False	43	4	vide	Erk Aar	8.5	
+
+DL	TL	PI	^	<<	13	26	False	9	0	vide	Brenzaker	7.70588235294	
+
+DL	PI		^	^^^	13	23	False	9	0	vide	Warmir	7.35294117647	
+
+DL	TL	N8	^^	*	13	22	False	50	5	vide	Arnen	8.61764705882	
+
+DL			^	<<<	13	22	True	12	1	vide	Nendao	8.25925925926	
+
+DL	TL		<	<	13	20	True	15	1	vide	Niomel	8.08823529412	
+
+DL			^	<<	13	22	False	6	0	vide	Umarsk	7.82352941176	
+
+DL			^^	*	13	24	False	12	1	vide	Pref Qaldir	7.79411764706	
+
+TL	N8		^	^	10	22	True	11	1	AHK	Vroesh	8.12903225806	
+
+TL	DL		*	*	8	20	True	70	7	AL	Yssendil	11.5526315789	
+
+TL	DL	N8	x	x	8	23	False	93	9	ALT	Nevard	8.92105263158	
+
+TL	DL	CE	***	***	9	18	False	544	35	APA	Vlad Von Carstein	10.3870967742	
+
+TL			^^	^^	11	22	True	18	1	BRB	Mureutt	8.64516129032	
+
+TL	DL		**	**	4	16	False	203	18	BSK	Mahetyf	9.22580645161	
+
+TL	DL		^	^	9	21	False	10	1	BSK	Nepp	7.35483870968	
+
+TL			xx	xx	9	23	False	90	9	CAT	Mediart	9.5	
+
+TL	N8		*	*	7	14	True	60	6	CAT	Amthyed	10.7105263158	
+
+TL			<<	<<	10	19	False	40	4	CPH	Ven Katesh	8.57894736842	
+
+TL	DL		^	^	11	21	False	41	6	DKF	Iegamor	8.92105263158	
+
+TL	DL		<<	<<	3	11	False	95	10	ED	Ftoden	9.57894736842	
+
+TL			**	*	-2	12	False	57	7	ED	Nerieux	8.52631578947	
+
+TL	DL	N8	xx	xx	7	19	False	517	44	ED	Zyrvgh	10.8064516129	
+
+TL	N8		*	*	7	20	False	251	21	FS	Jdorh	9.83870967742	
+
+TL			<<	<<	4	13	False	18	1	FST	Chratenioc	7.8064516129	
+
+TL			x	x	10	22	False	100	10	GP	Lyemerich	10.7631578947	
+
+TL	DL		*	*	2	14	False	60	6	GP	Gruknam	9.32258064516	
+
+TL	N8		x	x	7	16	False	157	17	KAK	Naas'Tal	9.67741935484	
+
+TL	DL		*	*	5	13	False	150	15	KAK	Xouvess	10.7894736842	
+
+TL			^	^	8	21	True	11	1	KH	Thlad	8.06451612903	
+
+TL	DL		^^	^	1	14	True	50	5	KH	Maonel	10.0322580645	
+
+TL			^	^	11	19	True	24	2	KHR	Aytaed	9.57894736842	
+
+TL			>	>	11	23	True	8	0	KKR	Brarr	8.96774193548	
+
+TL	DL		<	<	7	15	False	3	0	MDH	Guerhazy	7.54838709677	
+
+TL			^^^	^^^	6	19	False	80	18	MDL	Houg	10.0322580645	
+
+TL	N8		***	***	9	18	False	2354	160	MDL	Manfred Von Carstein	11.0322580645	
+
+TL	DL		^	^	4	13	False	11	7	MRB	Blaeden	9.65789473684	
+
+TL	N8		<<	<<	4	13	True	11	1	MRB	Dvonen	10.1315789474	
+
+TL			*	*	3	16	False	112	10	MRB	Prateps	10.2368421053	
+
+TL			x	x	7	18	False	142	14	MRT	Amerdios	10.5789473684	
+
+TL			*	*	3	9	False	97	9	QNL	Zurung	8.16129032258	
+
+TL			**	**	3	18	True	270	19	SN	Skater	11.0	
+
+TL			xx	xx	10	25	True	117	12	TA	Ak	11.2258064516	
+
+TL	DL		*	*	4	14	False	70	40	TA	Roets	11.0526315789	
+
+TL			^^	^^	11	19	False	8	1	TLB	Kerfuen	7.97368421053	
+
+TL	DL	N8	*	*	11	24	False	85	8	vide	Huelto	9.12903225806	
+
+TL			<<	<<	5	13	False	26	2	vide	Resh'Al Hidir	8.61290322581	
+
+TL	DL		<<<	<<<	11	20	False	29	2	vide	Vagael	7.87096774194	
+
+TL	DL	N8	*	*	11	24	False	85	8	vide	Huelto	9.12903225806	
+
+TL			<<	<<	5	13	False	26	2	vide	Resh'Al Hidir	8.61290322581	
+
+TL	DL		**	**	-1	7	False	75	15	vide	Edward	7.81578947368	
+
+TL	DL		*	*	8	19	False	60	6	vide	Xhyrev	7.70967741935	
+
+TL	N8		^^	*	12	23	True	24	1	vide	Quam	8.10526315789	
+
+TL	N8		^	^	4	12	False	13	3	vide	Grof	8.41935483871	
+
+TL			*	*	1	12	False	70	7	vide	Zatavsk	8.8064516129	
+
+TL	DL		<<<	<<<	8	20	False	75	8	vide	Yrmatot	9.09677419355	
+
+TL	DL	PI	<	<	3	10	False	14	2	vide	Raleux	7.87096774194	
+
+TL	DL		<	<	6	16	False	32	2	vide	Criansen	8.64516129032	
+
+TL	N8		^^^	*	10	17	True	14	1	vide	Iouri	8.64516129032	
+
+TL	DL		^	^	4	13	False	13	1	vide	Neniel	7.36842105263	
+
+TL			<<	<<	1	10	False	38	3	vide	Xif Al'Khadir	8.32258064516	
+
+TL	N8	DL	^^	x	13	24	True	8	0	vide	Qras'Kader	8.71052631579	
+
+TL	N8		<<	x	13	26	False	24	2	vide	Lenkec	7.92105263158	
+
+TL			^^	^^	13	24	False	31	3	vide	Flataov	7.70967741935	
+
+TL	DL		^^	^^^	13	26	False	31	3	vide	Undedi	8.45161290323	
+
+TL			^	^^	13	27	False	8	0	vide	Brask Al'Hramad	7.84210526316	
+
+N8	DL		**	**	8	21	True	135	14	AL	Faross	11.0555555556	
+
+N8	TL		^^	^^	11	23	True	17	2	AL	Vlenael	10.4444444444	
+
+N8	TL		<	<	4	17	True	14	1	BIL	Geol	8.51724137931	
+
+N8	TL		^	^	8	20	False	11	2	BSK	Denpett	8.8275862069	
+
+N8	TL		*	*	9	21	True	111	11	ED	Uhentyl	12.3611111111	
+
+N8	DL		<<	<<	8	15	False	51	5	ED	Xendt	9.13888888889	
+
+N8			^^	^^	11	21	False	31	2	ERE	Trijlotov	8.55555555556	
+
+N8			<<	<<	3	16	False	21	2	FST	Skendal	8.03448275862	
+
+N8	TL		*	*	4	11	False	80	11	HTH	Rothonhal	9.55555555556	
+
+N8	TL		*	*	8	19	True	60	6	KH	Ravied	10.4827586207	
+
+N8			^^	^^	3	10	False	40	4	MAG	Hamaul	7.79310344828	
+
+N8	PI		<<<	<<<	8	19	False	75	21	MSL	Querelead	9.89655172414	
+
+N8	DL		xx	xx	11	25	False	94	9	PRG	Jerome	8.75	
+
+N8	TL		>	>	8	17	False	10	1	PRG	Qruv	7.61111111111	
+
+N8	DL		<<<	<<<	3	13	False	100	10	TLB	Imtorghf	9.06896551724	
+
+N8			<	<	11	24	False	18	1	vide	Nomploeff	7.89655172414	
+
+N8			<	<	11	24	False	18	1	vide	Nomploeff	7.89655172414	
+
+N8	TL		*	*	2	13	False	80	8	vide	Trund	9.20689655172	
+
+N8	TL		<	<	-1	12	False	5	1	vide	Retendt	7.97222222222	
+
+N8	TL	PI	^^^	^^^	1	10	False	140	8	vide	Gruncan	9.0	
+
+N8	TL	DL	^^^	^^^	3	11	False	45	5	vide	Duumt	8.27586206897	
+
+N8	DL	TL	<	<	0	11	False	13	2	vide	Ethrol	8.27777777778	
+
+N8	TL		^	^	2	13	False	48	5	vide	Tronedz	7.93103448276	
+
+N8	DL		^^	^^	3	12	False	105	5	vide	Gorog	8.03448275862	
+
+N8	DL	TL	^^	^^	0	12	False	33	3	vide	Dyenal	7.47222222222	
+
+N8	DL		>	>	2	12	False	4	2	vide	Walud	7.80555555556	
+
+N8	TL		^	^	8	17	False	8	1	vide	Noupel	7.55555555556	
+
+N8			<	^^	13	24	False	15	1	vide	Brakel	7.94444444444	
+
+DM			*	*	3	13	False	138	13	AHK	Oprasken	8.79310344828	
+
+DM			^^	^^	8	18	True	15	2	AL	Befendal	9.13793103448	
+
+DM			x	x	3	11	False	95	13	ALT	Ryde	9.06896551724	
+
+DM	DO	CE	**	*	5	17	False	100	10	BRB	Igharel	9.31034482759	
+
+DM			*	*	4	12	False	100	10	KAK	Effleed	9.70967741935	
+
+DM			<<	<<	11	23	False	53	5	KHR	Beraor	8.89655172414	
+
+DM	AR	DO	^^	^^	11	21	True	36	3	KIS	Timoelic	9.37931034483	
+
+DM	DO		^	^	4	16	False	20	2	KKR	Gnor	8.34482758621	
+
+DM			^^	^^	4	16	False	36	3	MAG	Leoled	8.54838709677	
+
+DM			x	x	10	21	False	180	18	MDH	Doliedt	8.20689655172	
+
+DM			^	^	11	19	False	7	0	MRT	Umnen	7.20689655172	
+
+DM	DO		<<	<<	2	13	False	208	13	MSL	Laeth	9.27586206897	
+
+DM	DO		x	x	3	13	False	898	174	TA	Senloth	12.4827586207	
+
+DM			^^	^^	8	17	False	10	3	TLB	Xyter	8.55172413793	
+
+DM	DO		^	^	10	21	False	7	1	vide	Lole	7.1724137931	
 
 DM			<	<	11	18	False	9	1	vide	Intirio	7.79310344828	
 
-DM	DO		<<	<<	11	20	True	31	2	vide	Frash Mark	9.24137931034	
+DM	DO		^	^	10	21	False	7	1	vide	Lole	7.1724137931	
 
-DM	AR		*	*	6	16	False	195	19	vide	Loued Rash	9.27586206897	
+DM			<	<	11	18	False	9	1	vide	Intirio	7.79310344828	
 
-DM	CE	AR	x	x	3	10	False	15	2	vide	Sradi	7.44827586207	
+DM	CE	AR	x	x	3	10	False	15	2	vide	Sradi	7.03448275862	
 
-DM			<<	<<	3	10	False	13	2	vide	Itenlyd	8.34482758621	
+DM			<<	<<	3	10	False	13	2	vide	Itenlyd	8.31034482759	
 
-DM	DO	CE	^	^	3	10	False	20	5	vide	Olthyr	8.68965517241	
+DM	DO	CE	^	^	3	10	False	20	5	vide	Olthyr	8.45161290323	
 
-DM			<	<	1	8	True	3	1	vide	Sydikal	8.64516129032	
+DM			<	<	1	8	True	3	1	vide	Sydikal	8.35483870968	
 
-DM			^	^	12	25	False	7	0	vide	Kar'Kadish	7.51724137931	
+DM			^	^	12	25	False	7	0	vide	Kar'Kadish	7.93103448276	
 
-DM	DO	CE	^^^	*	12	21	False	54	5	vide	Berh Lamir	9.51724137931	
+DM			^	^	10	22	False	12	1	vide	Semeld	7.96551724138	
 
-DO	DM	CE	*	*	1	12	False	80	8	ALT	Hermann	8.69696969697	
+DM	DO		<	<	1	8	False	9	2	vide	Skoathel	8.41379310345	
 
-DO	DM		*	*	8	20	False	70	7	BRB	Csestich	9.18181818182	
+DM	DO	CE	^^^	^^^	3	10	False	14	5	vide	Rden	8.34482758621	
 
-DO			^^	^^	8	20	True	14	2	BSK	Maxyd	9.06060606061	
+DM			<	<	8	20	False	9	1	vide	Oktar	7.31034482759	
 
-DO			<<<	<<<	8	19	False	75	8	ED	Yreptol	8.09090909091	
+DM			^	^	3	13	False	11	5	vide	Fumen	8.41935483871	
 
-DO	AI		^^	^^	10	23	False	58	11	ED	Empot	8.48484848485	
+DM			>	>	8	15	False	12	1	vide	Franck	7.13793103448	
 
-DO	AR		^	^	10	19	True	8	1	FS	Zumbad	8.31428571429	
+DM			^^^	^^^	3	12	False	11	3	vide	Drumgid	7.67741935484	
 
-DO	CE		**	**	9	24	False	150	14	GP	Skem	9.65714285714	
+DM			>	>	10	18	False	5	1	vide	Barseld	7.62068965517	
 
-DO	DM	CE	^^	^^	4	14	False	22	8	MDL	Aoden	8.48484848485	
+DM			^	*	13	20	True	18	1	vide	Ulten	8.31034482759	
 
-DO	CE	AI	*	*	5	20	False	60	6	MSL	Le Hag	8.57575757576	
+DM			<<	x	13	20	False	28	2	vide	Aaradir	7.58620689655	
 
-DO	DM	DL	**	**	5	13	False	419	31	SN	Laoten	11.35	
+DM	AI		<	x	13	25	False	11	1	vide	Remeo	7.96551724138	
 
-DO			>	>	3	14	True	7	1	TO	Raeth	9.17142857143	
+DO			^^	^^	4	14	False	79	7	AES	Xharmistl	8.85714285714	
 
-DO			^	^	4	16	False	7	1	vide	Hectivio	7.51428571429	
+DO	CE		<<	<<	9	18	False	52	5	AHK	Jrenker	8.30303030303	
 
-DO	DM	AR	^^^	^^^	6	16	False	63	5	vide	Qarzesh	9.51515151515	
+DO	DM		<	<	10	18	True	36	3	APA	Kerfael	10.0606060606	
 
-DO			x	**	11	18	False	80	7	vide	Ioquet	8.94285714286	
+DO	CE		***	***	9	22	False	866	53	APA	Wulfart	8.77142857143	
 
-DO			^	^	4	16	False	7	1	vide	Hectivio	7.51428571429	
+DO			^^^	^^^	2	15	False	50	5	BRB	Hynien	9.0	
 
-DO			<<	<<	11	21	False	28	2	vide	Niash	8.0303030303	
+DO	AR		**	**	8	18	False	130	49	CAT	Veiamaor	11.2285714286	
 
-DO	CE	AR	^	^	3	17	False	6	1	vide	Datar	7.94285714286	
+DO	DM		<<	<<	8	18	True	11	1	CAT	Antoel	10.3333333333	
 
-DO	DM	AR	^^^	^^^	6	16	False	63	5	vide	Qarzesh	9.51515151515	
+DO	CE		x	x	8	22	False	82	9	DKF	Jevoff	9.12121212121	
 
-DO	CE		^	^	3	15	False	72	12	vide	Mendart	7.33333333333	
+DO	CE		*	*	9	24	False	63	6	DKF	Olamet	8.48571428571	
 
-DO	CE		>	>	3	14	True	7	1	vide	Traoun	9.66666666667	
+DO	CE	AR	^^	^^	4	14	True	24	2	DKW	Vistaed	11.3636363636	
 
-DO	AR	CE	*	*	1	8	False	20	8	vide	Blenkyr	7.78787878788	
+DO	AR		<	<	4	16	False	7	0	EKR	Clodol	7.68571428571	
 
-DO	AI	AR	>	>	-2	11	False	5	1	vide	Hurther	7.60606060606	
+DO	CE		<	<	8	15	False	9	0	EKR	Daelto	7.51428571429	
+
+DO	AR		^	^	9	21	True	16	1	ERE	Yvohen	8.0	
+
+DO	AR		^^^	^^^	8	16	True	58	7	HTH	Latael	10.1142857143	
+
+DO	AR		^^^	^^^	4	17	True	19	1	KKR	Wignik	8.45454545455	
+
+DO	DM	CE	^^^	^^^	11	23	True	22	1	MRB	Venmaol	9.22857142857	
+
+DO	DM		*	*	1	12	False	100	20	MRB	Lataen	10.4545454545	
+
+DO	CE		**	**	6	13	False	112	15	TA	Rafael	10.8484848485	
+
+DO			<<	<<	11	21	False	28	2	vide	Niash	8.30303030303	
+
+DO			<<	<<	11	21	False	28	2	vide	Niash	8.30303030303	
+
+DO	CE	AR	^	^	3	17	False	6	1	vide	Datar	7.51515151515	
+
+DO	CE		^^	^	3	15	False	89	13	vide	Mendart	7.90909090909	
+
+DO	AR	CE	*	*	1	8	False	20	8	vide	Blenkyr	7.42424242424	
+
+DO	AI	AR	>	>	-2	11	False	5	1	vide	Hurther	7.45714285714	
+
+DO	DM		<<	<<	8	16	True	14	1	vide	Haloen	8.48484848485	
+
+DO	AR	CE	>	>	4	11	False	8	1	vide	Rdog	7.63636363636	
+
+DO	CE		^^	^^	4	16	True	10	1	vide	Dror	8.51515151515	
+
+DO	DM	CE	*	*	1	12	False	80	8	vide	Hermann	8.45454545455	
+
+DO			<<<	<<<	8	19	False	75	8	vide	Yreptol	7.81818181818	
+
+DO	DM	CE	^^	^^	4	14	False	22	8	vide	Aoden	8.18181818182	
+
+DO	CE	AI	*	*	5	20	False	60	6	vide	Le Hag	8.30303030303	
+
+DO			^	^	4	16	False	7	1	vide	Hectivio	7.74285714286	
 
 DO	CE		<<	<<	3	16	False	26	3	vide	Dan	8.06060606061	
 
-DO	DM		<<	<<	8	16	True	14	1	vide	Haloen	8.63636363636	
+DO			^	x	13	27	True	14	1	vide	Ydenr	8.0	
 
-DO	AR	CE	>	>	4	11	False	8	1	vide	Rdog	7.69696969697	
+DO	DM		^	<<<	13	25	False	13	1	vide	Lestel	7.63636363636	
 
-DO	CE		^^	^^	4	16	True	10	1	vide	Dror	8.18181818182	
+DO			^	*	13	26	False	12	1	vide	Oplinde	7.54545454545	
 
-C1	AI	AR	*	*	7	23	True	64	6	ALT	Sdaehir	11.5666666667	
+DO	CE	AR	<	^^	13	23	False	11	1	vide	Rescael	7.87878787879	
 
-C1	AR		**	**	4	21	True	130	13	APA	Birtan	12.0333333333	
+C1	AI		<<	<<	11	19	False	48	4	AHK	Orkhar	8.56666666667	
 
-C1	DO	DM	>	>	0	11	False	14	2	BRB	Cenredal	8.63333333333	
+C1	AI		^^	^^	8	18	True	77	5	AL	Nanael	10.0625	
 
-C1			^^	^^	10	18	True	16	1	BSK	Kropeg	8.26666666667	
+C1			*	*	11	23	False	62	6	ALT	Wembot	9.0	
 
-C1	AI		*	*	10	20	True	60	6	CAT	Flamoed	10.1666666667	
+C1	AR	DM	**	**	6	17	True	193	15	ALT	Katrouk	11.2333333333	
 
-C1	AR	AI	^	^	9	21	False	38	4	DKF	Iktav	7.8125	
+C1	AI		>	>	10	21	True	8	1	APA	Ma'Nar	9.06666666667	
 
-C1	AR	DM	<	<	3	9	False	1	8	DKF	Xodenr	8.46666666667	
+C1	DO		*	*	7	18	False	75	7	BIL	Terel	9.16666666667	
 
-C1	DO		^^^	^^^	5	17	False	46	3	DKW	Jofaed	8.28125	
+C1			*	*	11	23	False	70	7	BSK	Brux	9.0625	
 
-C1	DO	AR	*	*	7	16	False	68	6	HTH	Coutard	9.8	
+C1	AR		^^	^^	9	20	True	9	0	CPH	Qlara	8.7	
 
-C1	AR	DO	x	x	1	11	False	140	15	MDL	Rozengh	9.8125	
+C1	DO	DM	<	<	8	15	False	14	2	DKF	Xevarh	8.86666666667	
 
-C1	DO		x	x	8	20	False	100	11	MRB	Jopleur	9.53125	
+C1			<<	<<	11	21	True	18	1	ERE	Sedrik	8.34375	
 
-C1	AR	DO	**	**	3	17	True	243	27	QNL	Bechen	12.3	
+C1			*	*	9	18	True	70	7	GP	Coess	11.3	
 
-C1	DO	AR	*	*	7	19	False	87	13	QNL	Vendt	9.96666666667	
+C1			>	>	7	16	True	16	1	KKR	Harik	8.16666666667	
 
-C1	AR	TA	**	**	3	12	False	130	13	SN	Myaed	9.69230769231	
+C1			<	<	8	18	False	13	1	MAG	Ulnan	7.83333333333	
 
-C1	DO		>	>	7	19	False	5	3	TLB	Aaron	8.26666666667	
+C1	AI		>	>	11	23	True	8	0	MDH	Bemmel	8.06666666667	
 
-C1	DO		x	x	6	16	False	114	54	vide	Rerh Ardil	11.6666666667	
+C1			^^	^^	11	18	True	11	1	MRT	Prenterhs	8.9	
 
-C1	DO		x	x	6	16	False	114	54	vide	Rerh Ardil	11.6666666667	
+C1			*	*	10	19	False	184	18	MRT	Varzz	9.43333333333	
 
-C2	AI		>	>	-2	12	False	20	2	AL	Dan	7.06451612903	
+C1	DO		<<	<<	11	21	True	32	3	SN	Croess	10.1	
 
-C2	AI		*	*	8	19	False	60	6	BRB	Jlatar	8.8064516129	
+C1	AR	AI	xx	xx	8	15	False	323	25	TA	Nratr	10.65625	
 
-C2	AI		*	*	9	20	False	104	12	BSK	Qayod	9.20689655172	
+C1	DO	DM	**	**	4	12	False	181	18	TO	Srud	10.1666666667	
 
-C2	AI		^^^	^^^	3	12	True	18	2	DKW	Crend	9.10344827586	
+C1	DO	DM	>	>	0	11	False	14	2	vide	Cenredal	8.4	
 
-C2	AR	AI	*	*	1	11	False	50	7	HTH	Guzum	9.79310344828	
+C1			^^	^^	10	18	False	16	1	vide	Kropeg	7.83333333333	
 
-C2	AI		>	>	9	20	True	23	1	HTH	Vimeen	8.89655172414	
+C1	AR	AI	^	^	9	21	False	38	4	vide	Iktav	7.625	
 
-C2	AR		>	>	1	14	False	7	6	KAK	Grendi	9.31034482759	
+C1	AR	DM	<	<	3	9	False	1	8	vide	Xodenr	8.33333333333	
 
-C2			^	^	8	16	False	11	2	KH	Vikk	8.22580645161	
+C1	DO		>	>	7	19	False	5	3	vide	Aaron	8.26666666667	
 
-C2	AI		<<	<<	8	19	True	29	2	KHR	Laror	9.55172413793	
+C1	DO		^^	^^	1	9	False	40	6	vide	Rieulex	8.25	
 
-C2	AR		>	>	4	12	True	5	1	MRB	Marard	8.68965517241	
+C2	AI		***	***	11	22	False	700	58	AL	Golfag	9.93103448276	
 
-C2	AR		^	^	2	10	True	1	1	MRB	Drosard	8.10344827586	
+C2	AI		^	^	4	17	False	6	0	BIL	Lomda	7.96551724138	
 
-C2	AI		*	*	8	18	False	60	6	MSL	Guetelloy	9.41379310345	
+C2			<	<	3	10	False	40	5	BRB	Daov	6.86206896552	
 
-C2	AI	AR	**	**	4	13	False	275	42	TA	Von Vendher	11.8620689655	
+C2	AI		^	^	6	14	True	36	2	DKF	Eathol	9.54838709677	
 
-C2	AI		^^	^^	9	21	True	10	1	TLB	Pretendt	8.34482758621	
+C2	AR	AI	x	x	3	10	False	70	16	DKW	Mlidaal	8.93103448276	
 
-C2			^^	^^	7	19	False	43	3	vide	Guical	8.24137931034	
+C2	AR		^^^	^^^	9	22	True	14	1	FST	Luquemet	9.13793103448	
 
-C2	AI		^^	^^	11	24	False	25	2	vide	Facundo	8.48387096774	
+C2	AI		^	^	9	19	False	11	1	FST	Namet	7.89655172414	
 
-C2	AI		^^	^^	7	17	False	48	4	vide	Lomoel	8.44827586207	
+C2	AR	AI	x	x	2	12	False	90	9	GP	Skerog	8.31034482759	
 
-C2			^	^	11	18	False	6	5	vide	Rak Tesh	8.41379310345	
+C2	AI		x	x	11	21	False	107	11	KHR	Garyoid	9.44827586207	
 
-C2			^	^	1	8	False	7	1	vide	Goerh Al'Dim	7.75862068966	
+C2	AR		^	^	11	22	False	19	1	KIS	Youtorsk	7.86206896552	
 
-C2			<	<	11	22	True	13	1	vide	Fafarzech	8.34482758621	
+C2	AI		<<	<<	3	12	False	44	4	MDH	Cratetied	8.41379310345	
 
-C2	AR	AI	<	<	-1	11	False	12	2	vide	Hurther	7.65517241379	
+C2			^	^	5	15	True	6	0	MDH	Bomdel	8.34482758621	
 
-C2	AI		<	<	8	21	False	5	1	vide	Ibalen	7.65517241379	
+C2			*	*	11	20	False	178	19	MDL	Hetak	9.13793103448	
 
-C2	AI		<	<	3	10	False	11	2	vide	Dal'd	7.65517241379	
+C2			^	^	9	20	False	58	6	MDL	Hobeled	9.8275862069	
 
-C2	AI		<<	<<	12	22	False	48	4	vide	Estoej	8.8275862069	
+C2	AR		^	^	9	18	True	11	1	TA	Wazen	8.25806451613	
 
-AI	AR	CE	***	***	0	13	False	418	62	AL	De Sinople	11.8387096774	
+C2	AI		**	**	7	15	False	264	21	TO	De Laheault	10.1379310345	
 
-AI			*	*	1	10	False	55	8	ALT	Hans	8.54545454545	
+C2	AI		^^	^^	11	24	False	25	2	vide	Facundo	8.70967741935	
 
-AI			xx	xx	1	13	False	115	12	BRB	Fzen	10.6129032258	
+C2	AI		<<<	^^	7	17	False	48	4	vide	Lomoel	8.89655172414	
 
-AI			^^	^^	3	12	False	48	6	BSK	Femeal	8.87096774194	
+C2			^	^	11	18	False	6	5	vide	Rak Tesh	8.37931034483	
 
-AI	AR		<	<	10	21	True	9	1	CAT	Tarkign	9.09677419355	
+C2			^	^	1	8	False	7	1	vide	Goerh Al'Dim	7.64516129032	
 
-AI			^^^	^^^	8	17	True	18	2	CAT	Varss	9.12903225806	
+C2			<	<	11	22	True	13	1	vide	Fafarzech	8.13793103448	
 
-AI	CE		^^	^^	9	19	True	28	3	CAT	Healmoth	9.1935483871	
+C2			^^	^^	7	19	False	43	3	vide	Guical	8.27586206897	
 
-AI			**	**	9	23	False	181	18	DKF	Qleyr	10.9032258065	
+C2	AI		^^	^^	11	24	False	25	2	vide	Facundo	8.70967741935	
 
-AI	CE	DM	^^	^^	3	11	False	5	1	DKW	Senri	7.45161290323	
+C2	AI		<<<	^^	7	17	False	48	4	vide	Lomoel	8.89655172414	
 
-AI	AR		^^^	^^^	3	10	True	11	2	DKW	Fendel	9.22580645161	
+C2			^	^	11	18	False	6	5	vide	Rak Tesh	8.37931034483	
 
-AI	CE		^^^	^^^	0	13	False	45	5	DKW	Prent	8.90322580645	
+C2			^	^	1	8	False	7	1	vide	Goerh Al'Dim	7.64516129032	
 
-AI	AR		^	^	5	14	True	18	3	DKW	Iohel	9.8064516129	
+C2			<	<	11	22	True	13	1	vide	Fafarzech	8.13793103448	
 
-AI	AR	CE	^^^	^^^	0	8	False	10	2	ED	Setuval	8.12903225806	
+C2	AR	AI	<	<	-1	11	False	12	2	vide	Hurther	7.8275862069	
 
-AI	DM	DO	^	^	2	13	True	7	1	FS	Gnun	9.03225806452	
+C2	AI		<	<	8	21	True	5	1	vide	Ibalen	8.1724137931	
 
-AI	AR		^^^	^^^	3	17	False	20	2	FS	Sieldaeth	8.69696969697	
+C2	AI		<	<	3	10	False	11	2	vide	Dal'd	7.48275862069	
 
-AI			x	x	7	19	True	20	2	FS	Waad'Up	11.2903225806	
+C2	AI		>	>	-2	12	False	20	2	vide	Dan	6.77419354839	
 
-AI	CE		^^^	^^^	1	10	False	9	1	GP	Ukmett	7.8064516129	
+C2	AI		^^^	^^^	3	12	True	18	2	vide	Crend	9.06896551724	
 
-AI			>	>	2	12	True	10	1	HTH	Lilien	8.8064516129	
+C2	AI		>	>	9	20	True	23	1	vide	Vimeen	8.89655172414	
 
-AI	DM	CE	**	**	2	9	False	176	23	HTH	Arthenol	9.77419354839	
+C2			^	^	8	16	False	11	2	vide	Vikk	8.32258064516	
 
-AI	CE		>	>	7	17	True	20	2	KAK	Brouk	9.25806451613	
+C2	AR		>	>	4	12	True	5	1	vide	Marard	8.24137931034	
 
-AI			^^	^^	9	21	True	56	4	KHR	Nalohal	9.1935483871	
+C2	AR		^	^	2	10	False	1	1	vide	Drosard	7.79310344828	
 
-AI			<<	<<	7	16	True	14	1	KIS	Elantanson	8.93548387097	
+C2	AR	DO	<<	<<	-2	10	False	12	2	vide	Refier	7.06896551724	
 
-AI			<	<	2	14	False	20	2	MRB	Lenoir	8.32258064516	
+AI	AR		^	^	4	14	True	16	1	AES	Zkarmeol	9.03225806452	
 
-AI	CE		^^	^^	8	15	False	100	10	MSL	Laroed	9.87096774194	
+AI	CE		<<	<<	9	17	False	28	2	AHK	Pketal	8.93548387097	
 
-AI			*	*	8	19	False	80	8	PRG	Qapry	8.45161290323	
+AI	AR		^^^	^^^	8	16	False	20	8	AL	Vlyner	9.74193548387	
 
-AI	CE	AR	<<	<	3	12	True	34	3	QNL	Ilaeth	9.18181818182	
+AI	CE		^^	^^	3	13	False	26	2	BIL	Tardil	7.67741935484	
 
-AI	CE	AR	xx	xx	7	17	False	1564	174	SN	Drask	13.6451612903	
+AI			^^	^^	4	12	True	12	1	CPH	Herhualesh	8.22580645161	
 
-AI	AR	DM	**	**	7	23	True	121	12	SN	Grodhan	11.064516129	
+AI			^^	^^	1	14	False	20	2	DKF	Alberdt	8.61290322581	
 
-AI	AR	CE	*	*	2	12	False	70	7	TA	Rdadan	9.96774193548	
+AI	CE		*	*	8	19	False	76	19	ED	Nisst	9.70967741935	
 
-AI			^	^	10	20	True	12	1	TA	Jrevek	8.41935483871	
+AI			xx	xx	8	21	False	140	14	ED	Lukarik	10.3548387097	
 
-AI			*	*	10	24	True	27	4	TO	Kyeem	10.5757575758	
+AI			^	^	11	22	True	14	1	ERE	Qimor	8.66666666667	
 
-AI	DM		>	>	8	17	True	8	1	TO	Idlal	9.29032258065	
+AI	AR		^^^	^^^	9	22	True	16	1	FST	Zamon	9.35483870968	
 
-AI			<<<	<<<	1	13	False	29	2	vide	Italu	8.35483870968	
+AI			xx	xx	10	25	False	147	14	KH	Werked	10.2903225806	
 
-AI	CE	AR	^	^	2	12	False	11	1	vide	Widrik	7.8064516129	
+AI	CE	AR	xx	xx	11	21	False	151	14	KH	Enktageth	9.45454545455	
 
-AI			<	<	9	19	True	9	1	vide	Chaba	8.96774193548	
+AI			^^	^^	10	23	False	55	5	KIS	Uamnetov	8.54838709677	
 
-AI			<<	<<	1	12	False	38	3	vide	Vivrodech	8.93548387097	
+AI	CE		^	^	5	12	True	19	1	KKR	Bisqath	8.38709677419	
 
-AI			^^^	x	11	20	True	26	2	vide	Betorsen	9.36363636364	
+AI			>	>	8	21	True	12	1	KKR	Pregin	8.74193548387	
 
-AI	AR		^	^	11	22	False	8	1	vide	Menoel	7.96774193548	
+AI	DM		<	<	5	17	True	15	1	MAG	Blenfol	8.12903225806	
 
-AI			<<<	<<<	1	13	False	29	2	vide	Italu	8.35483870968	
+AI	CE	AR	>	>	8	16	True	10	1	MDH	Remer	8.67741935484	
 
-AI	CE	AR	^	^	2	12	False	11	1	vide	Widrik	7.8064516129	
+AI	AR	CE	<<	<<	4	11	False	50	7	MDL	Joendal	8.18181818182	
 
-AI			<	<	9	19	True	9	1	vide	Chaba	8.96774193548	
+AI			<<	^	11	19	False	27	3	MRB	Renald	8.61290322581	
 
-AI	CE		x	x	4	15	False	161	15	vide	Quaz	10.8709677419	
+AI	CE	DM	**	**	1	9	False	105	15	MRB	Dorbert	8.8064516129	
 
-AI			<<	<<	1	12	False	38	3	vide	Vivrodech	8.93548387097	
+AI	CE		<<	<<	7	16	False	50	5	MRT	Yrmnen	8.96774193548	
 
-AI	CE	AR	^^	^^	-1	10	False	9	2	vide	Rysdik	7.69696969697	
+AI			**	**	8	19	False	435	29	TA	Reladt	10.7419354839	
 
-AI			>	>	1	12	False	20	2	vide	Siegfried	8.32258064516	
+AI			**	**	10	22	False	100	10	TLB	Namytrgh	10.2580645161	
 
-AR	AI		x	x	4	11	False	65	11	BRB	Herden	9.09090909091	
+AI			^^	^^	11	22	True	10	1	TLB	Drimed	8.16129032258	
 
-AR	AI		**	**	4	15	True	110	1	CAT	Ameray	10.7272727273	
+AI	AR	CE	**	**	5	16	False	162	20	TO	Frors	11.5483870968	
 
-AR	CE	DO	x	x	7	15	True	439	42	KAK	Laosal	12.2727272727	
+AI	AR		^	^	11	22	True	8	1	vide	Menoel	8.35483870968	
 
-AR	AI	CE	^^	^^	5	16	True	62	4	KHR	Wydoeth	10.0909090909	
+AI	AR		^	^	11	22	True	8	1	vide	Menoel	8.35483870968	
 
-AR	DM		<	<	1	13	False	9	1	MDL	Vavah	5.6	
+AI	CE	AR	^^	^^	-1	10	False	9	2	vide	Rysdik	7.45454545455	
 
-AR	AI	CE	^^^	^^^	8	18	False	136	18	MDL	Mentre	10.4242424242	
+AI			>	>	1	12	False	20	2	vide	Siegfried	7.90322580645	
 
-AR			*	*	2	13	False	70	7	vide	Loco	9.06060606061	
+AI			*	*	1	10	False	55	8	vide	Hans	8.33333333333	
 
-AR			^^	**	11	20	True	31	2	vide	Optil	9.30303030303	
+AI			^^	^^	3	12	False	48	6	vide	Femeal	8.74193548387	
 
-AR			*	*	2	13	False	70	7	vide	Loco	9.06060606061	
+AI	CE	DM	^^	^^	3	11	False	5	1	vide	Senri	7.41935483871	
 
-AR	CE	AI	^^^	**	8	17	False	38	3	vide	Quendal	7.77142857143	
+AI	CE		^^^	^^^	0	13	False	45	5	vide	Prent	8.58064516129	
 
-AR	AI		*	*	11	24	False	68	5	vide	Famac	8.54285714286	
+AI	AR	CE	^^^	^^^	0	8	False	10	2	vide	Setuval	8.12903225806	
 
-AR			x	x	3	13	False	190	18	vide	Dar'Dalash	10.8	
+AI	DM	DO	^	^	2	13	True	7	1	vide	Gnun	8.70967741935	
 
-AR	AI		<<	<<	9	18	False	55	5	vide	Kedimch	8.75757575758	
+AI	AR		^^^	^^^	3	17	False	20	2	vide	Sieldaeth	8.67741935484	
 
-AR	CE		^	^	1	13	True	20	2	vide	Hour	9.69696969697	
+AI	CE		^^^	^^^	1	10	False	9	1	vide	Ukmett	7.51612903226	
 
-AR			^	^	9	21	False	14	1	vide	Otelyer	7.75757575758	
+AI			>	>	2	12	True	10	1	vide	Lilien	8.35483870968	
 
-AR			<<	^	0	10	False	12	2	vide	Ysslav	7.09090909091	
+AI			<<	<<	7	16	True	14	1	vide	Elantanson	8.58064516129	
 
-AR	AI		>	>	0	12	True	10	1	vide	Hurg	8.93939393939	
+AI			<	<	2	14	False	20	2	vide	Lenoir	8.12903225806	
 
-AR	AI		<	<	7	15	False	15	2	vide	Epaotl	7.09090909091	
+AI			*	*	8	19	False	80	8	vide	Qapry	8.41935483871	
 
-AR			^	^	1	11	False	50	5	vide	Kurg	9.45454545455	
+AI			^	^	10	20	True	12	1	vide	Jrevek	8.90322580645	
+
+AI			<<<	<<<	1	13	False	29	2	vide	Italu	8.32258064516	
+
+AI	CE	AR	^	^	2	12	False	11	1	vide	Widrik	7.87096774194	
+
+AI			<<	<<	1	12	False	38	3	vide	Vivrodech	8.96774193548	
+
+AI	CE	AR	x	*	7	18	False	126	9	vide	Vrepte	8.87096774194	
+
+AI	CE		>	>	1	10	False	25	5	vide	Gnok	7.51612903226	
+
+AR	AI	CE	^^	^^	7	18	True	36	3	AES	Zafleoth	9.69696969697	
+
+AR	AI		^^	^^	1	12	False	20	2	AL	Vutileux	7.90909090909	
+
+AR	CE		^	^	11	22	False	48	4	AL	Nekloir	8.72727272727	
+
+AR	DO	CE	^^^	^^^	3	10	False	18	10	ALT	Eothenol	9.8	
+
+AR	AI		^	^	5	16	False	20	2	APA	Drabed	8.72727272727	
+
+AR	CE		<<	<<	2	13	True	11	1	CAT	Chinal	10.0303030303	
+
+AR	CE		*	*	10	23	True	88	8	DKW	Tekr	10.5757575758	
+
+AR	CE	AI	***	***	9	18	False	567	63	ED	Leitdorf	10.1818181818	
+
+AR			<<	<<	11	22	True	16	1	ERE	Ybtenov	8.18181818182	
+
+AR	CE		*	*	11	21	True	72	7	FS	Ueltoir	11.696969697	
+
+AR	AI	CE	^^^	^^^	11	21	True	35	4	HTH	Neffair	10.3142857143	
+
+AR	CE	AI	*	*	4	12	False	116	10	KH	Kriplets	8.48484848485	
+
+AR	CE	DO	<<	<<	4	16	False	19	10	KHR	Northend	9.42424242424	
+
+AR	DM		<	<	3	15	True	14	1	MAG	Suli	8.21212121212	
+
+AR	CE		**	**	11	24	True	189	17	MSL	Benmiyd	12.3636363636	
+
+AR	CE	DO	*	*	8	23	True	19	2	TA	Fozog	9.72727272727	
+
+AR	CE	AI	**	**	7	17	False	100	10	TLB	Hrgoth	10.5757575758	
+
+AR	AI	DO	>	>	3	15	True	4	1	TO	Iroad	9.24242424242	
+
+AR	CE	AI	*	*	6	16	True	110	8	TO	Crodard	10.8181818182	
+
+AR	AI		*	*	11	24	False	68	5	vide	Famac	8.71428571429	
+
+AR	AI		*	*	11	24	False	68	5	vide	Famac	8.71428571429	
+
+AR	AI		<<	<<	9	18	False	55	5	vide	Kedimch	8.54545454545	
+
+AR			^	^	9	21	False	14	1	vide	Otelyer	7.88571428571	
+
+AR			<<	^	0	10	False	12	2	vide	Ysslav	6.9696969697	
+
+AR	AI		>	>	0	12	True	10	1	vide	Hurg	8.90909090909	
+
+AR	AI		<	<	7	15	False	15	2	vide	Epaotl	6.69696969697	
+
+AR	AI		x	x	4	11	False	65	11	vide	Herden	9.12121212121	
+
+AR	DM		<	<	1	13	False	9	1	vide	Vavah	5.4	
+
+AR			*	*	2	13	False	70	7	vide	Loco	8.69696969697	
+
+AR	AI		^^^	^^^	1	14	True	13	1	vide	Soroner	9.21212121212	
 

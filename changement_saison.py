@@ -8,6 +8,28 @@ from generer_joueur.val_armee import *
 from numpy import mean
 from numpy.random import random_integers
 
+def retraite(joueur, dat=None):
+    dat = s.lire_date() if dat is None else dat
+    if joueur.D > dat:
+        joueur.retraite = False
+        joueur.points_retraite = 0
+        joueur.rand_retraite = 10
+    else:
+        D = max(joueur.D, 11)
+        key = 's'+str(D)
+        EVD = joueur.jj_passe[key].EV if key in joueur.jj_passe.keys() \
+              else joueur.EV
+
+        N = dat - joueur.D + int(EVD - joueur.EV)
+        joueur.points_retraite = N
+
+        rand = random_integers(10)
+        joueur.random_retraite = rand
+        if rand < N:
+            joueur.retraite = True
+        else:
+            joueur.retraite = False
+
 def veut_partir(joueur):
     dernier_transfert = joueur.anciens_clubs.split(';')[-1]
     if dernier_transfert == '':
@@ -97,6 +119,14 @@ def choisir_offre(jj, offres):
         if aux >= rand:
             break
     return offres[ii]
+
+def classer_offres(jj, offres):
+    classement = []
+    while len(offres) > 0:
+        preferee = choisir_offres(jj, offres)
+        classement.append(preferee)
+        offres.remove(preferees)
+    return classement
 
 def joueurs_meme_poste(joueur, cc=None):
     if cc is None:
@@ -253,16 +283,18 @@ def pts_matches_total(jj):
 def bonus_evolution(jj):
     pts = pts_matches_total(jj)
     EV = int(jj.EV)
-    if pts < EV-3:
-        return 0
-    elif pts < EV-1:
-        return 1
-    elif pts < EV+2:
-        return 2
-    elif pts < EV+6:
-        return 3
+    if pts < EV-3 + EV-6:
+        bonus = 0
+    elif pts < EV-1 + EV-6:
+        bonus = 1
+    elif pts < EV+2 + EV-6:
+        bonus = 2
+    elif pts < EV+6 + EV-6:
+        bonus = 3
     else:
-        return 4
+        bonus = 4
+    jj.bonus = bonus
+    return bonus
         
 def bonus_MS(jj, MS=None):
     if MS is None:
@@ -453,6 +485,7 @@ def evolution_joueur(jj):
     #    dd[car] = val
     bonus = bonus_evolution(jj)
     carte = tirer_carte()
+    jj.carte_evolution = carte
     sgn = -1 if (carte['r_n'] == 'r' or jj.D <= s.date) else 1
     print jj.nom, "signe :", sgn, "; valeur :", carte['valeur']
     if jj.RG < jj.RG_max:
@@ -460,11 +493,13 @@ def evolution_joueur(jj):
 
     if carte['valeur'] == 14 \
        and sgn == -1 \
-       and not jj.RG.type_nb >= 5 \
+       and jj.RG.type_nb < 5 \
        and not jj.D <= s.date:
+        jj.evolution = 'rang'
         upgrade_rang(jj)
     else:
         nb = d3_plus(carte)
+        jj.evolution = sgn * nb
         for ii in range(nb):
             evoluer_carac_hasard(jj, sgn)
 
@@ -610,14 +645,15 @@ def evolution_TAB(jj, car='TB'):
             if carte['valeur'] <= 5:
                 jj.caracs[car] = jj.caracs[car] - 1
 
-        if jj.transformations_total + jj.penalites_total >= 100 \
-           and jj.caracs[car] < 9:
-            jj.caracs[car] = 9
-        elif jj.transformations_total + jj.penalites_total >= 500 \
-           and jj.caracs[car] < 10:
-            jj.caracs[car] = 10
-        elif jj.transformations_total + jj.penalites_total >= 1000 \
-           and jj.caracs[car] < 11:
-            jj.caracs[car] = 11
+        if car == 'TB':
+            if jj.transformations_total + jj.penalites_total >= 80 \
+               and jj.caracs[car] < 9:
+                jj.caracs[car] = 9
+            elif jj.transformations_total + jj.penalites_total >= 200 \
+               and jj.caracs[car] < 10:
+                jj.caracs[car] = 10
+            elif jj.transformations_total + jj.penalites_total >= 500 \
+               and jj.caracs[car] < 11:
+                jj.caracs[car] = 11
 
         jj.EV = s.calc_EV(jj, jj.postes[1], fatigue=False)

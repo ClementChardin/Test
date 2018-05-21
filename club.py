@@ -22,7 +22,8 @@ class club(object):
                             DO = [],
                             CE = [],
                             AI = [],
-                            AR = [])
+                            AR = [],
+                            espoirs = [])
 
         self.valeur = 0
         self.masse_salariale = 0
@@ -36,6 +37,9 @@ class club(object):
             setattr(self, at+'_championat', 0)
             setattr(self, at+'_coupe', 0)
         self.fatigue_prise_en_compte = True
+
+        self.besoins = []
+        self.avertissement = 0
 
     def __call__(self):
         return self

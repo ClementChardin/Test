@@ -11,10 +11,10 @@ from choix_joueurs import MyTableWidgetItem
 
 
 class RecrutementWidget(QtGui.QWidget):
-    def __init__(self, parent=None, noms_clubs=s.noms_clubs, dat=None, vague=0):
+    def __init__(self, parent=None, noms_clubs=s.noms_clubs(), dat=None, vague=0):
         super(RecrutementWidget, self).__init__(parent)
 
-        self.dat = dat
+        self.dat = s.lire_date() if dat is None else dat
         self.vague = vague
 
         self.noms_clubs = noms_clubs

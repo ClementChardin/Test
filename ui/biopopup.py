@@ -386,6 +386,7 @@ class JEvolutionWidget(QtGui.QWidget):
             for date in range(max(self.dat_debut, jj.C), self.dat):
                 jj_aux = jj.jj_passe['s'+str(date)]#s.joueur()
                 jj_aux.nom = jj.nom + ' (' + str(date) + ')'
+                #jj.nom = jj.nom.split(' (')[0]
                 """
                 jj_aux.caracs_sans_fatigue = jj.jj_passe['s'+str(date)].caracs_sans_fatigue \
                                              if date < s.date \

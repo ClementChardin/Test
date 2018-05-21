@@ -7,6 +7,8 @@ jaune  = QtGui.QColor(238, 201, 0)
 indian_red  = QtGui.QColor(205, 92, 92)
 noir  = QtGui.QColor(0, 0, 0)
 bleu = QtGui.QColor(0, 0, 255)
+gris = QtGui.QColor(217, 217, 217)
+blanc = QtGui.QColor(255, 255, 255)
 
 couleurs_equipes = dict(AL = QtGui.QColor(51, 255, 51),
                         AL2 = QtGui.QColor(204, 102, 0),
@@ -132,3 +134,18 @@ values_indian_red = "{r}, {g}, {b}, {a}".format(r = indian_red.red(),
                                            b = indian_red.blue(),
                                            a = alpha
                                            )
+
+def get_colors(nom):
+    coul = couleurs_equipes[nom].getRgb()
+    tu1 = (coul[0]/255., coul[1]/255., coul[2]/255., coul[3]/255.)
+    coul2 = couleurs_equipes[nom+'2'].getRgb()
+    tu2 = (coul2[0]/255., coul2[1]/255., coul2[2]/255., coul2[3]/255.)
+    figure()
+    bar([0], [1], color=tu1, label=nom, width=1)
+    bar([1], [1], color=tu2, label=nom+' 2', width=1)
+
+def colorer_qlabel(lab, qcolor):
+    pal = lab.palette()
+    pal.setColor(lab.foregroundRole(), qcolor)
+    lab.setPalette(pal)
+

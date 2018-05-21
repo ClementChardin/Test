@@ -1,0 +1,26 @@
+ES v EN
+S v HB
+OG v CHS
+HE v B
+EMP v N
+CV v K
+O v HL
+EST v ARA
+
+CHS v ES
+S v HE
+EN v CV
+HL v HB
+K v B
+O v EMP
+EST v N
+ARA v OG
+
+ES v S
+EN v HB
+CHS v CV
+HL v HE
+EMP v B
+OG v N
+K v ARA
+EST v O
