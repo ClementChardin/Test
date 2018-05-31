@@ -78,7 +78,8 @@ class InterfaceWidget(QtGui.QWidget):
         self.col3 = cj.ChoixJoueursWidget(parent=self,
                                           club=self.club,
                                           poste_filtre=poste_filtre,
-                                          fatigue=self.fatigue)
+                                          fatigue=self.fatigue,
+                                          dat=self.dat)
         self.col3_lay = QtGui.QVBoxLayout()
         self.col3_lay.addWidget(self.col3)
         self.lay.addLayout(self.col3_lay)

@@ -10,9 +10,11 @@ class ChoixJoueursWidget(QtGui.QWidget):
     def __init__(self, parent=None,
                  club=charger('Vide', 'c'),
                  poste_filtre='all',
+                 dat=None,
                  fatigue=True):
         super(ChoixJoueursWidget, self).__init__(parent)
         self.club = club
+        self.dat = s.lire_date() if dat is None else dat
         self.all_joueurs = self.club.get_all_joueurs()
         self.poste_filtre = poste_filtre
         self.fatigue = fatigue
@@ -280,7 +282,10 @@ class ChoixJoueursWidget(QtGui.QWidget):
             jj = self.club.get_joueur_from_nom(nom)
             joueurs.append(jj)
         
-        self.pop = b.BioPopup(joueurs=joueurs, col3=self, fatigue=self.fatigue)
+        self.pop = b.BioPopup(joueurs=joueurs,
+                              col3=self, 
+                              fatigue=self.fatigue,
+                              dat=self.dat)
         self.pop.show()
 
     def assigner_role_mult(self):
