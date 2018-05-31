@@ -21,12 +21,14 @@ class InterfaceWidget(QtGui.QWidget):
                  saison=None,
                  fatigue=True,
                  nom_compo=None,
-                 c_ou_s='c'):
+                 c_ou_s='c',
+                 dat=None):
         super(InterfaceWidget, self).__init__(parent)
         self.ecran_precedant = ecran_precedant
         self.setWindowTitle("Interface Club")
         self.setGeometry(80, 100, 1200, 600)
-        self.club = s.charger("vide", 'c')
+        self.dat = s.lire_date() if dat is None else dat
+        self.club = s.charger("vide", 'c', self.dat)
         self.comp = self.club.compo_defaut
         self.compo_sauvee = True
         self.match = match
@@ -53,7 +55,8 @@ class InterfaceWidget(QtGui.QWidget):
                                club=self.club,
                                comp=self.comp,
                                nom_compo=self.nom_compo,
-                               c_ou_s=self.c_ou_s)
+                               c_ou_s=self.c_ou_s,
+                               dat=self.dat)
         self.col1_lay = QtGui.QVBoxLayout()
         self.col1_lay.addWidget(self.col1)
         self.lay.addLayout(self.col1_lay)
@@ -64,7 +67,8 @@ class InterfaceWidget(QtGui.QWidget):
                                nom_compo=self.nom_compo,
                                saison=self.saison,
                                buttons=True,
-                               fatigue=self.fatigue)
+                               fatigue=self.fatigue,
+                               dat=self.dat)
         self.col2_lay = QtGui.QVBoxLayout()
         self.col2_lay.addWidget(self.col2)
         self.lay.addLayout(self.col2_lay)
@@ -109,7 +113,7 @@ class InterfaceWidget(QtGui.QWidget):
         Charge un club ou une selection
         la fonction est re ecrite pour la classe SelectionCompoWidget
         """
-        return s.charger(nom, self.c_ou_s)
+        return s.charger(nom, self.c_ou_s, self.dat)
 
     def update_ui(self):
         """
@@ -134,7 +138,7 @@ class InterfaceWidget(QtGui.QWidget):
     def maj_compo_2(self, nom_compo):
         """ Mise à jour de la compo après sélection d'une nouvelle compo de départ"""
         self.nom_compo = nom_compo
-        self.comp = s.charger_compo(self.nom_compo, self.club.nom, self.c_ou_s)
+        self.comp = s.charger_compo(self.nom_compo, self.club.nom, self.c_ou_s, self.dat)
         self.maj()
 
     def maj_roles(self, couples):
@@ -161,8 +165,10 @@ class Col1Widget(QtGui.QWidget):
                  nom_compo=None,
                  nom_comp_ref=None,
                  c_ou_s='c',
-                 bool_diag=True):
+                 bool_diag=True,
+                 dat=None):
         super(Col1Widget, self).__init__(parent)
+        self.dat = s.lire_date() if dat is None else dat
         self.col1_lay = QtGui.QVBoxLayout()
         self.setLayout(self.col1_lay)
         self.club = club
@@ -170,7 +176,7 @@ class Col1Widget(QtGui.QWidget):
         self.c_ou_s = c_ou_s
         self.nom_compo = self.club.nom+'_defaut' if nom_compo is None \
                          else nom_compo
-        self.comp_reference = s.charger_compo(self.nom_compo, self.club.nom, self.c_ou_s) if nom_comp_ref is None \
+        self.comp_reference = s.charger_compo(self.nom_compo, self.club.nom, self.c_ou_s, self.dat) if nom_comp_ref is None \
                               else self.club.compo_defaut_fatigue
         self.bool_diag = bool_diag
         self.setMaximumWidth(200)
@@ -191,7 +197,7 @@ class Col1Widget(QtGui.QWidget):
         #Choix compo
         self.combo2 = QtGui.QComboBox()
         self.combo2.setObjectName("Choix compo")
-        for nom in self.club.compos_sauvees():
+        for nom in self.club.compos_sauvees(self.dat):
             if nom == self.nom_compo:
                 self.combo2.insertItem(0,nom)
                 self.combo2.setCurrentIndex(0)
@@ -223,7 +229,7 @@ class Col1Widget(QtGui.QWidget):
         self.nom_compo = nom
         self.comp = self.club.compo_defaut_fatigue \
                     if nom == self.club.nom + "_defaut" \
-                    else s.charger_compo(nom, self.club.nom, self.c_ou_s)
+                    else s.charger_compo(nom, self.club.nom, self.c_ou_s, self.dat)
         self.parent().col2.nom.setText(self.club.nom + "_defaut")
         self.parent().maj_compo_2(self.nom_compo)
 
@@ -310,8 +316,10 @@ class Col2Widget(QtGui.QWidget):
                  nom_compo=None,
                  saison=None,
                  buttons=True,
-                 fatigue=True):
+                 fatigue=True,
+                 dat=None):
         super(Col2Widget, self).__init__(parent)
+        self.dat = s.lire_date() if dat is None else dat
         self.club = club
         self.comp = comp
         self.nom_compo = self.club.nom+'_defaut' if nom_compo is None \
@@ -473,7 +481,7 @@ class Col2Widget(QtGui.QWidget):
                 self.parent().compo_sauvee = True
 
     def restaurer_defaut(self):
-        self.parent().comp = s.charger_compo(self.club.nom+'_defaut', self.club.nom, self.c_ou_s)
+        self.parent().comp = s.charger_compo(self.club.nom+'_defaut', self.club.nom, self.c_ou_s, self.dat)
         s.set_caracs_old_compo(self.parent().comp, self.club, sans_fatigue=True)
         self.parent().comp.calc_totaux_old()
         self.compo_sauvee = True

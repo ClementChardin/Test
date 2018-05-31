@@ -10,11 +10,11 @@ from couleurs import *
 from biopopup import BioPopup
 from choix_joueurs import MyTableWidgetItem
 from plot_evolution_widget import PlotEvolutionWidget
+from match import MyDialog
 
-
-class TransfertsWidget(QtGui.QWidget):
+class PropositionsWidget(QtGui.QWidget):
     def __init__(self, parent=None, dat=None, vague=0):
-        super(TransfertsWidget, self).__init__(parent)
+        super(PropositionsWidget, self).__init__(parent)
 
         self.dat = dat
         self.vague = vague
@@ -241,6 +241,8 @@ class TransfertsWidget(QtGui.QWidget):
 
             if jj.retraite:
                 dd_fond[jj.nom] = gris
+            elif jj.club == self.club.nom:
+                dd_fond[jj.nom] = orange
             else:
                 dd_fond[jj.nom] = blanc
 
@@ -326,14 +328,26 @@ class TransfertsWidget(QtGui.QWidget):
             jj = cc.get_joueur_from_nom(nom)
             joueurs.append(jj)
 
+        nom_club = str(self.combo_club.currentText())
         for ii, jj in enumerate(joueurs):
-            nom_club = str(self.combo_club.currentText())
-            cc = self.clubs[self.noms_clubs.index(nom_club)]
-            dial = PropositionDialog(jj, parent=self, nom_club=cc.nom,
-                                     besoins=cc.besoins)
-            dial.exec_()
-            if dial.ok:
-                tu = dial.proposition
+            if jj.club == nom_club and not jj.MS_probleme:
+                dial = MyDialog(u"Impossible de prolonger ce joueur")
+                dial.exec_()
+                joueurs.remove(jj)
+
+            elif jj.retraite:
+                dial = MyDialog(u"Ce joueur prend sa retraite")
+                dial.exec_()
+                joueurs.remove(jj)
+
+        cc = self.clubs[self.noms_clubs.index(nom_club)]
+        dial = PropositionDialog(joueurs, parent=self, nom_club=cc.nom,
+                                 besoins=cc.besoins)
+        dial.exec_()
+        if dial.ok:
+            propositions = dial.propositions
+            for ii, jj in enumerate(joueurs):
+                tu = propositions[ii]
                 print self.club.nom, jj.nom, tu
                 self.ajouter_proposition_table(tu, rows[ii])
 
@@ -480,7 +494,8 @@ class TransfertsWidget(QtGui.QWidget):
                        "Question",
                        u"Avez-vous bien effectué toutes les propostitions ?"
                        , "Non", "Oui") == 1:
-            self.choix = {}
+            #self.choix = {}
+            self.classements = {}
             for jj in self.all_joueurs:
                 offres = []
                 for nom, dd in self.propositions.items():
@@ -495,16 +510,18 @@ class TransfertsWidget(QtGui.QWidget):
                 else:
                     classement = classer_offres(jj, offres)
                     ch = classement[0]
-                    self.choix[jj.nom] = ch
-                    print jj.nom, ch[0].nom, ch[1], ch[2], ch[3]
+                    #self.choix[jj.nom] = ch
+                    self.classements[jj.nom] = classement
+                    print jj.nom, ch[0], ch[1], ch[2], ch[3]
         with open(TRANSFERTS_DIR_NAME(dat=self.dat) + '/choix' + str(self.vague) + '.prop', 'w') as ff:
-            pickle.dump(self.choix, ff)
+            #pickle.dump(self.choix, ff)
+            pickle.dump(self.classements, ff)
         print u"Choix sauvegardés"
 
 class PropositionDialog(QtGui.QDialog):
-    def __init__(self, joueur, parent=None, nom_club="", besoins=[]):
+    def __init__(self, joueurs, parent=None, nom_club="", besoins=[]):
         super(PropositionDialog, self).__init__(parent)
-        self.joueur = joueur
+        self.joueurs = joueurs
         self.nom_club = nom_club
         self.besoins = besoins
         self.ok = False
@@ -565,8 +582,10 @@ class PropositionDialog(QtGui.QDialog):
               float(str(self.combo_besoin.currentText()).split(' : ')[1]))
         poste = self.joueur.postes[1] if tu[0] == 'tous' else tu[0]
 
-        val, ms = faire_offre(self.joueur, priorite, poste)
-        self.proposition = (val, ms, tu)
+        self.propositions = []
+        for jj in self.joueurs:
+            val, ms = faire_offre(jj, priorite, poste)
+            self.propositions.append((val, ms, tu))
         self.ok = True
         self.accept()
         

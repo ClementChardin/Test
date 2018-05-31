@@ -75,7 +75,7 @@ def score_offre(joueur, club, ms, poste):
         pts = [pts_matches_club(jj) for jj in a_comparer]
         score += int(round(mean(pts)))
 
-    score += int(club.prestige / 3.)
+    score += int(club.prestige() / 3.)
 
     ms_min = MS_min(joueur.EV)
     coeff = 1. if ms_min < 20 else 5.
@@ -102,7 +102,7 @@ def choisir_offre(jj, offres):
     scores = []
     tot = 0
     for offre in offres:
-        club, VAL, MS, poste = offre
+        club, VAL, MS, poste, tps_laisse = offre
         score = score_offre(jj, club, MS, poste)
         scores.append(score)
         tot += score
@@ -120,12 +120,29 @@ def choisir_offre(jj, offres):
             break
     return offres[ii]
 
+def attribuer_temps_laisse(offres):
+    res = []
+    for offre in offres:
+        club, VAL, MS, poste = offre
+        temps_laisse = 3 + d6_plus()
+        res.append((club, VAL, MS, poste, temps_laisse))
+    return res
+
+def aux_offre(offre):
+    """
+    Transforme une offre (club, VAL, MS, poste, tps_laisse)
+    en (nom_club, VAL, MS, poste, tps_laisse)
+    """
+    club, VAL, MS, poste, tps_laisse = offre
+    return club.nom, VAL, MS, poste, tps_laisse
+
 def classer_offres(jj, offres):
     classement = []
+    offres = attribuer_temps_laisse(offres)
     while len(offres) > 0:
-        preferee = choisir_offres(jj, offres)
-        classement.append(preferee)
-        offres.remove(preferees)
+        preferee = choisir_offre(jj, offres)
+        classement.append(aux_offre(preferee))
+        offres.remove(preferee)
     return classement
 
 def joueurs_meme_poste(joueur, cc=None):

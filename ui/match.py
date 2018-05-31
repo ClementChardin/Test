@@ -13,10 +13,12 @@ class MatchWidget(QtGui.QWidget):
                  saison,
                  ecran_precedant=None,
                  parent=None,
-                 c_ou_s='c'):
+                 c_ou_s='c',
+                 dat=None):
         super(MatchWidget, self).__init__(parent)
         self.ecran_precedant = ecran_precedant
         self.c_ou_s = c_ou_s
+        self.dat = s.lire_date() if dat is None else dat
         self.saison = saison
         self.calendriers = self.saison.calendriers
         
@@ -27,10 +29,10 @@ class MatchWidget(QtGui.QWidget):
         self.update_ui()
 
     def setup_ui(self):
-        self.col_eq1 = EquipeWidget(parent=self, c_ou_s=self.c_ou_s)
+        self.col_eq1 = EquipeWidget(parent=self, c_ou_s=self.c_ou_s, dat=self.dat)
         self.lay.addWidget(self.col_eq1)
 
-        self.col_eq2 = EquipeWidget(parent=self, c_ou_s=self.c_ou_s)
+        self.col_eq2 = EquipeWidget(parent=self, c_ou_s=self.c_ou_s, dat=self.dat)
         self.lay.addWidget(self.col_eq2)
 
         self.col_match = ColMatchWidget(saison=self.saison,
@@ -47,9 +49,10 @@ class MatchWidget(QtGui.QWidget):
         pass
 
 class EquipeWidget(QtGui.QWidget):
-    def __init__(self, parent=None, c_ou_s='c', saison=None):
+    def __init__(self, parent=None, c_ou_s='c', saison=None, dat=None):
         super(EquipeWidget, self).__init__(parent)
         self.c_ou_s = c_ou_s
+        self.dat = s.lire_date() if dat is None else dat
         self.saison = self.parent().saison if saison is None else saison
         self.equipe = s.club(nom="Vide")
         self.comp = s.compo()
@@ -68,14 +71,16 @@ class EquipeWidget(QtGui.QWidget):
                                    nom_compo=self.nom_compo,
                                    nom_comp_ref='defaut',
                                    c_ou_s=self.c_ou_s,
-                                   bool_diag=False)
+                                   bool_diag=False,
+                                   dat=self.dat)
         self.lay.addWidget(self.col1)
         self.setup_col1()
 
         self.col2 = iqt.Col2Widget(parent=self,
                                    club=self.equipe,
                                    comp=self.comp,
-                                   buttons=False)
+                                   buttons=False,
+                                   dat=self.dat)
         self.lay.addWidget(self.col2)
         self.setup_col2()
 

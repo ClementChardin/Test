@@ -145,7 +145,8 @@ class EcranClubWidget(QtGui.QWidget):
         Interface widget
         """
         self.interface_widget = InterfaceWidget(parent=self,
-                                                ecran_precedant=self.wid_aux)
+                                                ecran_precedant=self.wid_aux,
+                                                dat=self.dat)
         self.lay.addWidget(self.interface_widget)
         self.interface_widget.hide()
 
@@ -154,7 +155,8 @@ class EcranClubWidget(QtGui.QWidget):
         """
         self.match_widget = MatchWidget(saison=self.saison,
                                         parent=self,
-                                        ecran_precedant=self.wid_aux)
+                                        ecran_precedant=self.wid_aux,
+                                        dat=self.dat)
         self.lay.addWidget(self.match_widget)
         self.match_widget.hide()
 

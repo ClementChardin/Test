@@ -40,6 +40,7 @@ class club(object):
 
         self.besoins = []
         self.avertissement = 0
+        self.prestige_saison = {}
 
     def __call__(self):
         return self
@@ -53,14 +54,27 @@ class club(object):
     def joues_championat(self):
         return self.gagnes_championat + self.nuls_championat + self.perdus_championat
     """
+
+    def prestige(self, dat=None):
+        """
+        Donne le prestige du club au début de la saison demandée
+        """
+        dat = s.lire_date() if dat is None else dat
+        pres = 0
+        for da in range(dat-3, dat):
+            key = 's'+str(da)
+            if key in self.prestige_saison.keys():
+                pres += self.prestige_saison[key]
+        return pres
+
     def show(self):
-        for poste in postes:
+        for poste in postes+['espoirs']:
             if poste != 'C1' and poste != 'C2':
                 l = self.joueurs[poste]
                 ll = []
                 for j in l:
                     ll.append(j.nom)
-                print poste + str(ll)
+                print poste, ll
 
     def get_all_joueurs(self):
         ll = []
@@ -224,9 +238,10 @@ class club(object):
         self.valeur = VAL
         print VAL
 
-    def compos_sauvees(self):
+    def compos_sauvees(self, dat=None):
+        dat = s.lire_date() if dat is None else dat
         l = []
-        for file in os.listdir(s.CLUBS_DIR_NAME()+"/"+self.nom):
+        for file in os.listdir(s.CLUBS_DIR_NAME(dat)+"/"+self.nom):
             if file.endswith(".comp"):
                 l.append(file[:-5])
         return l

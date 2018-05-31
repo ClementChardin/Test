@@ -92,9 +92,10 @@ limite_poste = dict(PI=6,
                     espoirs=15)
 
 ordre_postes = dict()
-for i, p in enumerate(['PI', 'TA', 'DL', 'TL', 'N8',
-                       'DM', 'DO', 'C1', 'C2', 'CE', 'AI', 'AR', 'espoirs']):
+for i, p in enumerate(['PI', 'TA', 'DL', 'TL', 'N8','DM', 'DO', 'C1', 'C2',
+                       'CE', 'AI', 'AR', 'espoirs', 'tous']):
     ordre_postes[p] = i
+
 
 nb_joueurs_poste = dict(PI=2,
                         TA=1,

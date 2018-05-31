@@ -7,6 +7,7 @@ from val_armee import *
 from rang_arm import *
 from noms_all import *
 from ui.biopopup import BioPopup
+from numpy.random import random_integers
 				   
 caracs = ['M', 'PL', 'PA', 'JP', 'TB', 'P', 'RP1', 'RP2', 'ME', 'R', 'TO', 'TA', 'A', 'E']
 
@@ -185,3 +186,73 @@ def generer_ajouter_joueur_complet(poste,
         club.budget -= jj.VAL
 
     club.sauvegarder()
+
+def creer_joueur_legendaire(dat):
+    nb_postes = random_integers(1, 3)
+
+    jj = joueur()
+
+    st = raw_input(u"""Entrer la ligne du joueur en separant les donnees par un espace,
+et en remplaçant poste vide ou espace dans le nom par -
+Nombre de postes : """+str(nb_postes)+'\n')
+    ll = st.split(" ")
+
+    jj.nom = ll[0].replace('-', ' ')
+
+    jj.caracs_sans_fatigue["M"] = int(ll[1])
+    jj.caracs_sans_fatigue["PL"] = int(ll[2])
+    jj.caracs_sans_fatigue["PA"] = int(ll[3])
+    jj.caracs_sans_fatigue["JP"] = int(ll[4])
+    jj.caracs_sans_fatigue["TB"] = int(ll[5])
+    jj.caracs_sans_fatigue["P"] = int(ll[6])
+    jj.caracs_sans_fatigue["RP1"] = int(ll[7])
+    jj.caracs_sans_fatigue["RP2"] = int(ll[8])
+    RPmin = min(jj.caracs_sans_fatigue["RP1"], jj.caracs_sans_fatigue["RP2"])
+    RPmax = max(jj.caracs_sans_fatigue["RP1"], jj.caracs_sans_fatigue["RP2"])
+    if RPmin <= 7:
+        m = 0
+    elif RPmin <= 10:
+        m = 1
+    else:
+        m = 2
+    if RPmax <= 7:
+        N = 1
+    elif RPmax <= 10:
+        N = 2
+    else:
+        N = 3
+    jj.caracs_sans_fatigue["RP_tot"] = RPmax + max(m, RPmin - (RPmax - N))
+    #jj.caracs_sans_fatigue["RP_tot"] = jj.caracs_sans_fatigue["RP1"] + max(0, jj.caracs_sans_fatigue["RP2"]-7)
+    jj.caracs_sans_fatigue["ME"] = int(ll[9])
+    jj.caracs_sans_fatigue["R"] = int(ll[10])
+    jj.caracs_sans_fatigue["TO"] = int(ll[11])
+    jj.caracs_sans_fatigue["TA"] = int(ll[12])
+    jj.caracs_sans_fatigue["A"] = int(ll[13])
+    jj.caracs_sans_fatigue["E"] = int(ll[14])
+
+    jj.caracs = dict()
+
+    p1 = ll[15]
+    p2 = "" if ll[16] == "-" else ll[16]
+    p3 = "" if ll[17] == "-" else ll[17]
+    jj.postes = ('dummy', p1, p2,p3)
+
+    jj.RG = rang_new('***')
+    jj.C = dat
+    jj.anciens_clubs = ""
+
+    jj.VAL = int(ll[18])
+    jj.MS = int(ll[19])
+    jj.ARM = ll[20]
+
+    jj.essais_total = 0
+    jj.penalites_total = 0
+    jj.drops_total = 0
+    jj.transformations_total = 0
+
+    jj.RG_max = rang_new('***')
+    jj.D = dat + d6_plus() + 7
+
+    jj.set_EV()
+    print jj.nom, jj.EV
+    return jj

@@ -44,7 +44,8 @@ def plot_evolution(joueurs, dat=None, ax=None):
             sts.append(st)
             srs.append(sr)
             c_club = couleurs.couleurs_equipes[jjj.club].getRgbF()
-            c_club2 = (c_club[0], c_club[1], c_club[2], .7)
+            c_club2 = couleurs.couleurs_equipes[jjj.club+'2'].getRgbF()
+            #c_club2 = (c_club[0], c_club[1], c_club[2], .7)
             cols.append(c_club)
             cols2.append(c_club2)
 
@@ -67,7 +68,8 @@ def plot_evolution(joueurs, dat=None, ax=None):
             color=cols2)
 
         c_arm = couleurs.couleurs_equipes[jj.ARM].getRgbF()
-        c_arm2 = (c_arm[0], c_arm[1], c_arm[2], .7)
+        c_arm2 = couleurs.couleurs_equipes[jj.ARM+'2'].getRgbF()
+        #c_arm2 = (c_arm[0], c_arm[1], c_arm[2], .7)
         
         lab = jj.nom + ' ' + jj.ARM + u', titulaire'
         dd[lab] = I

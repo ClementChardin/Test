@@ -126,9 +126,10 @@ class selection(club):
         for j in self.joueurs:
             print j.nom
 
-    def compos_sauvees(self):
+    def compos_sauvees(self, dat=None):
+        dat = lire_date() if dat is None else dat
         l = []
-        for file in os.listdir(s.SELECTIONS_DIR_NAME()+"/"+self.nom):
+        for file in os.listdir(s.SELECTIONS_DIR_NAME(dat)+"/"+self.nom):
             if file.endswith(".comp"):
                 l.append(file[:-5])
         return l

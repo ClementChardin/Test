@@ -326,6 +326,7 @@ class joueur:
         self.blessures_total = 0
 
         self.jj_passe = {}
+        self.retraite = False
 
     def set_EV(self):
         EV = calc_EV(self, self.postes[1], False) 

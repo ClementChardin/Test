@@ -9,10 +9,13 @@ class SelectionCompoWidget(InterfaceWidget):#QtGui.QWidget):
                  parent=None,
                  selection=s.selection(),
                  saison=None,
-                 ecran_precedant=None):
+                 ecran_precedant=None,
+                 dat=None):
         super(SelectionCompoWidget, self).__init__(parent,
                                                    saison=saison,
-                                                   c_ou_s='s')
+                                                   c_ou_s='s',
+                                                   dat=dat)
+        #self.dat = s.lire_date() if dat is None else dat
         self.set_club(selection.nom)
         self.ecran_precedant=ecran_precedant
         self.update_ui()
@@ -40,7 +43,7 @@ class SelectionCompoWidget(InterfaceWidget):#QtGui.QWidget):
         Charge un club ou une selection
         La fonction est re ecrite pour la classe SelectionCompoWidget
         """
-        return s.charger(nom, 's')
+        return s.charger(nom, 's', self.dat)
 
 """
 

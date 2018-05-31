@@ -45,7 +45,8 @@ class MasterWidget(QtGui.QWidget):
         """
         
         self.ecran_selection = es.EcranSelectionWidget(parent=self,
-                                                       ecran_precedant=self.ecran_accueil)
+                                                       ecran_precedant=self.ecran_accueil,
+                                                       dat=self.dat)
         self.lay.addWidget(self.ecran_selection)
         self.ecran_selection.hide()
         

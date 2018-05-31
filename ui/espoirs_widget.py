@@ -23,7 +23,7 @@ class EspoirsWidget(QtGui.QWidget):
         self.club = self.clubs[0]
         self.joueurs = self.club.joueurs['espoirs']
 
-        self.charger_decisions()
+        self.charger_decisions(self.club.nom)
 
         self.setup_ui()
 
@@ -44,6 +44,10 @@ class EspoirsWidget(QtGui.QWidget):
         self.combo_club.activated['QString'].connect(self.choix_club)
         self.lay_nb_joueurs.addWidget(self.combo_club)
 
+        self.but_sauvegarder = QtGui.QPushButton(u"Sauvegarder décisions")
+        self.but_sauvegarder.clicked.connect(self.sauvegarder_decisions)
+        self.lay_nb_joueurs.addWidget(self.but_sauvegarder)
+
         for poste in sorted(s.limite_poste.keys(), key=lambda pp: s.ordre_postes[pp]):
             if not poste == 'N8':
                 st, couleur = self.st_lab_nb_joueurs(poste)
@@ -52,9 +56,9 @@ class EspoirsWidget(QtGui.QWidget):
                 self.lay_nb_joueurs.addWidget(lab)
                 setattr(self, 'lab_' + poste, lab)
 
-        self.but_sauvegarder = QtGui.QPushButton(u"Sauvegarder décisions")
-        self.but_sauvegarder.clicked.connect(self.sauvegarder_decisions)
-        self.lay_nb_joueurs.addWidget(self.but_sauvegarder)
+        self.but_effectuer = QtGui.QPushButton("Effectuer les changements")
+        self.but_effectuer.clicked.connect(self.effectuer_changements)
+        self.lay_nb_joueurs.addWidget(self.but_effectuer)
 
         self.setup_table()
         self.colorer_table()
@@ -68,8 +72,6 @@ class EspoirsWidget(QtGui.QWidget):
         self.lay.addWidget(self.table)
         self.table.setHorizontalHeaderLabels(self.hlabels)
         self.table.setSelectionBehavior(QtGui.QAbstractItemView.SelectRows)
-        #self.table.resizeColumnsToContents()
-        self.table.resizeRowsToContents()
 
         #self.table.setSortingEnabled(True)
 
@@ -133,14 +135,24 @@ class EspoirsWidget(QtGui.QWidget):
         """
         #self.table.verticalHeader().setVisible(False)
 
-    def choix_club(self, nom):
+        """
+        Resize
+        """
+        #self.table.resizeColumnsToContents()
+        self.table.resizeRowsToContents()
+
+    def choix_club(self, nom, maj=True):
         nom = str(self.combo_club.currentText())
         cc = self.clubs[self.noms_clubs.index(nom)]
         self.club = cc
         self.joueurs = self.club.joueurs['espoirs']
 
-        self.charger_decisions()
+        self.charger_decisions(self.club.nom)
 
+        if maj:
+            self.maj()
+
+    def maj(self):
         for poste in s.limite_poste.keys():
             if not poste == 'N8':
                 lab = getattr(self, 'lab_'+poste)
@@ -148,9 +160,6 @@ class EspoirsWidget(QtGui.QWidget):
                 lab.setText(st)
                 colorer_qlabel(lab, couleur)
 
-        self.maj()
-
-    def maj(self):
         self.lay.removeWidget(self.table)
         #sip.delete(self.table)
 
@@ -352,12 +361,12 @@ class EspoirsWidget(QtGui.QWidget):
         with open(dirname+'/'+self.club.nom+'_espoirs.txt', 'w') as ff:
             json.dump(dd, ff)
 
-    def charger_decisions(self):
+    def charger_decisions(self, nom_club):
         self.passent_pro = []
         self.restent_espoirs = []
         self.partent = []
         dirname = s.TRANSFERTS_DIR_NAME(self.dat)
-        filename = dirname+'/'+self.club.nom+'_espoirs.txt'
+        filename = dirname+'/'+nom_club+'_espoirs.txt'
         if osp.isfile(filename):
             with open(filename, 'r') as ff:
                 dd = json.load(ff)
@@ -374,6 +383,37 @@ class EspoirsWidget(QtGui.QWidget):
             self.restent_espoirs = [jj for jj in self.joueurs]
             self.passent_pro = []
             self.partent = []
+
+    def effectuer_changements(self):
+        mb = QtGui.QMessageBox()
+        if mb.question(None,
+                       "Question",
+                       "Effectuer les changements puis fermer ?",
+                       "Non",
+                       "Oui") == 1:
+            dd = {}
+            for nom in self.noms_clubs:
+                self.club = self.clubs[self.noms_clubs.index(nom)]
+                dirname = s.TRANSFERTS_DIR_NAME(self.dat)
+                filename = dirname+'/'+nom+'_espoirs.txt'
+                if osp.isfile(filename):
+                    with open(filename, 'r') as ff:
+                        dd[nom] = json.load(ff)
+                #self.charger_decisions(nom)
+                #print self.passent_pro
+
+                for jj in self.club.joueurs['espoirs']:
+                    if dd[nom][jj.nom] == 'pro':
+                        print jj.nom, 'passe pro'
+                        poste = 'CE' if jj.postes[1] in ('C1', 'C2') else jj.postes[1]
+                        self.club.joueurs[poste].append(jj)
+                        self.club.joueurs['espoirs'].remove(jj)
+                        jj.passage_pro = self.dat
+                    elif dd[nom][jj.nom] == 'part':
+                        print jj.nom, 'part'
+                        jj.veut_partir = True
+                self.club.sauvegarder()
+            self.close()
 
 class DecisionWidget(QtGui.QDialog):
     def __init__(self, joueur, parent=None):

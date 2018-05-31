@@ -3,11 +3,12 @@ from match import MatchWidget
 from noms_all import *
 
 class MatchSelectionWidget(MatchWidget):
-    def __init__(self, saison, parent=None, ecran_precedant=None):
+    def __init__(self, saison, parent=None, ecran_precedant=None, dat=None):
         super(MatchSelectionWidget, self).__init__(saison=saison,
                                                    parent=parent,
                                                    ecran_precedant=ecran_precedant,
-                                                   c_ou_s='s')
+                                                   c_ou_s='s',
+                                                   dat=dat)
 
         self.c_ou_s = 's'
         self.update_ui()

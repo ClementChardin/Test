@@ -4,12 +4,18 @@ from selection_compo_widget import SelectionCompoWidget
 from match_selection import MatchSelectionWidget
 from savefiles import *
 from saison import *
+from date import *
 import exempterpopup as ep
 
 class EcranSelectionWidget(QtGui.QWidget):
-    def __init__(self, nom_saison=None, parent=None, ecran_precedant=None):
+    def __init__(self,
+                 nom_saison=None,
+                 parent=None,
+                 ecran_precedant=None,
+                 dat=None):
         super(EcranSelectionWidget, self).__init__(parent)
-        self.saison = charger_saison(nom=nom_saison, c_ou_s='s')
+        self.dat = lire_date() if dat is None else dat
+        self.saison = charger_saison(nom=nom_saison, c_ou_s='s', dat=self.dat)
         self.ecran_precedant = ecran_precedant
 
         self.lay = QtGui.QVBoxLayout()
@@ -71,7 +77,8 @@ class EcranSelectionWidget(QtGui.QWidget):
         Compo
         """
         self.selection_compo_widget = SelectionCompoWidget(saison=self.saison,
-                                                           ecran_precedant=self.wid_aux)#parent=self,
+                                                           ecran_precedant=self.wid_aux,
+                                                           dat=self.dat)#parent=self,
         self.lay.addWidget(self.selection_compo_widget)
         self.selection_compo_widget.hide()
 
@@ -80,7 +87,8 @@ class EcranSelectionWidget(QtGui.QWidget):
         """
         self.match_selection_widget = MatchSelectionWidget(parent=self,
                                                            saison=self.saison,
-                                                           ecran_precedant=self.wid_aux)
+                                                           ecran_precedant=self.wid_aux,
+                                                           dat=self.dat)
         self.lay.addWidget(self.match_selection_widget)
         self.match_selection_widget.hide()
 
