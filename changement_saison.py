@@ -97,15 +97,17 @@ def score_offre(joueur, club, ms, poste):
 def choisir_offre(jj, offres):
     """
     jj = joueur
-    offres = liste d'offres de la forme (club, VAL, MS, poste)
+    offres = liste d'offres de la forme (club, VAL, MS, poste, tps_laisse)
     """
     scores = []
     tot = 0
+    #print len(offres), "offres"
     for offre in offres:
         club, VAL, MS, poste, tps_laisse = offre
         score = score_offre(jj, club, MS, poste)
         scores.append(score)
         tot += score
+        #print club.nom, VAL, MS, poste, tps_laisse, "--- score :", score, "---, total :", tot
     """
     offres_print = [(o[0].nom, o[1], o[2], o[3]) for o in offres]
     for ii in range(len(offres)):
@@ -115,16 +117,19 @@ def choisir_offre(jj, offres):
     #print "rand =", rand
     aux = 0
     for ii, sc in enumerate(scores):
-        aux += score
+        aux += sc
+        #print ii, aux
         if aux >= rand:
             break
+    #club, VAL, MS, poste, tps_laisse = offres[ii]
+    #print "choisie :", club.nom, VAL, MS, poste, tps_laisse
     return offres[ii]
 
 def attribuer_temps_laisse(offres):
     res = []
     for offre in offres:
         club, VAL, MS, poste = offre
-        temps_laisse = 3 + d6_plus()
+        temps_laisse = 3 + d3_plus()
         res.append((club, VAL, MS, poste, temps_laisse))
     return res
 

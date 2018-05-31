@@ -253,6 +253,10 @@ class RecrutementsWidgetNew(QtGui.QWidget):
         plotevAction.triggered.connect(self.plot_evolution)
         self.menu.addAction(plotevAction)
 
+        classementAction = QtGui.QAction(u'Voir classement', self)
+        classementAction.triggered.connect(self.voir_classement)
+        self.menu.addAction(classementAction)
+
         refuserAction = QtGui.QAction(u'Refuser', self)
         refuserAction.triggered.connect(self.refuser)
         self.menu.addAction(refuserAction)
@@ -602,3 +606,58 @@ class RecrutementsWidgetNew(QtGui.QWidget):
             self.noms_clubs = [cc.nom for cc in self.clubs]
             print u"Ordre clubs créé\n"
             self.sauver_ordre_clubs()
+
+    def voir_classement(self):
+        rows = []
+        joueurs = []
+        classements = {}
+        for idx in self.table.selectedIndexes():
+            rr = idx.row()
+            if not rr in rows:
+                rows.append(rr)
+        for rr in rows:
+            nom = str(self.table.item(rr, 0).text()).split(" - ")[0]
+            jj = self.get_joueur_from_nom(nom)
+            joueurs.append(jj)
+            classements[nom] = self.classements[nom]
+        C = ClassementOffresDialog(joueurs, classements)
+        C.exec_()
+
+class ClassementOffresDialog(QtGui.QDialog):
+    def __init__(self, joueurs, classements, parent=None):
+        super(ClassementOffresDialog, self).__init__(parent)
+        self.joueurs = joueurs
+        self.classements = classements
+
+        self.lay = QtGui.QVBoxLayout()
+        self.setLayout(self.lay)
+
+        self.lay_joueurs = QtGui.QGridLayout()
+        self.lay.addLayout(self.lay_joueurs)
+
+        for nn, jj in enumerate(self.joueurs):
+            self.lay_joueurs.addWidget(QtGui.QLabel(jj.nom), 0, 2*nn)
+
+            grid = QtGui.QGridLayout()
+            self.lay_joueurs.addLayout(grid, 1, 2*nn)
+
+            for ii, offre in enumerate(self.classements[jj.nom]):
+                for kk, it in enumerate(offre):
+                    st = str(it)
+                    lab = QtGui.QLabel(st)
+                    grid.addWidget(lab, ii, kk)
+
+            if not jj == self.joueurs[-1]:
+                #self.lay_joueurs.addSpacing(50)
+                self.lay_joueurs.addWidget(QtGui.QLabel('\t'), 0, 2*nn+1)
+
+        self.but = QtGui.QPushButton("OK")
+        self.but.clicked.connect(self.close)
+        self.lay.addWidget(self.but)
+
+    def keyPressEvent(self, event):
+        if event.key() in (QtCore.Qt.Key_Escape, QtCore.Qt.Key_Enter):
+            self.close()
+            event.accept()
+        else:
+            super(Dialog, self).keyPressEvent(event)
