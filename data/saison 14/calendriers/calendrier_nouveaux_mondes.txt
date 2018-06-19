@@ -1,0 +1,76 @@
+BRB v CAT
+FS v GP
+KHR v SN
+KH v TO
+HTH v MDL
+ED v APA
+
+CAT v APA
+MDL v ED
+TO v HTH
+SN v KH
+GP v KHR
+BRB v FS
+
+FS v CAT
+KHR v BRB
+KH v GP
+HTH v SN
+ED v TO
+APA v MDL
+
+CAT v MDL
+TO v APA
+SN v ED
+GP v HTH
+BRB v KH
+FS v KHR
+
+KHR v CAT
+KH v FS
+HTH v BRB
+ED v GP
+APA v SN
+MDL v TO
+
+CAT v TO
+SN v MDL
+GP v APA
+BRB v ED
+FS v HTH
+KHR v KH
+
+KH v CAT
+HTH v KHR
+ED v FS
+APA v BRB
+MDL v GP
+TO v SN
+
+CAT v SN
+GP v TO
+BRB v MDL
+FS v APA
+KHR v ED
+KH v HTH
+
+HTH v CAT
+ED v KH
+APA v KHR
+MDL v FS
+TO v BRB
+SN v GP
+
+CAT v GP
+BRB v SN
+FS v TO
+KHR v MDL
+KH v APA
+HTH v ED
+
+ED v CAT
+APA v HTH
+MDL v KH
+TO v KHR
+SN v FS
+GP v BRB

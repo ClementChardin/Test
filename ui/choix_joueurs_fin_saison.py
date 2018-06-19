@@ -12,13 +12,14 @@ from choix_joueurs_selection import *
 from match import MyDialog
 
 class ChoixJoueursFinSaisonWidget(QtGui.QWidget):
-    def __init__(self, parent=None, noms_clubs=s.noms_clubs, dat=None, vagues=0):
+    def __init__(self, parent=None, noms_clubs=None, dat=None, vagues=0):
         super(ChoixJoueursFinSaisonWidget, self).__init__(parent)
 
         self.dat = lire_date() if dat is None else dat
         self.vagues = vagues
 
-        self.noms_clubs = noms_clubs
+        self.noms_clubs = s.noms_clubs(self.dat) if noms_clubs is None \
+                          else noms_clubs
         self.clubs = []
         self.recrutements = {}
         for nom in self.noms_clubs:

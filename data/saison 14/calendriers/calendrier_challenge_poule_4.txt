@@ -1,0 +1,17 @@
+KKR v FST
+GP v AHK
+
+FST v AHK
+KKR v GP
+
+GP v FST
+AHK v KKR
+
+FST v GP
+KKR v AHK
+
+AHK v FST
+GP v KKR
+
+FST v KKR
+AHK v GP

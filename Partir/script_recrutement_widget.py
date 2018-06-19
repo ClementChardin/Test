@@ -5,12 +5,27 @@ import sys
 from savefiles import *
 import pickle
 
-with open(TRANSFERTS_DIR_NAME(dat=None) + '/choix' + str(0) + '.prop', 'r') as ff:
-    classements = pickle.load(ff)
-print u"Classement chargé"
+filename = TRANSFERTS_DIR_NAME(dat=None)+'/classements.dict'
+filename_choix_depart = TRANSFERTS_DIR_NAME(dat=None) + '/choix' + str(0) + '.prop'
+if osp.isfile(filename_choix_depart):
+    with open(filename_choix_depart, 'r') as ff:
+        dd = pickle.load(ff)
+    classements_depart = dd
+    print u"Classements départ chargés"
+else:
+    classements_depart = {}
+
+if osp.isfile(filename):
+    with open(filename, 'r') as ff:
+        dd = pickle.load(ff)
+    classements = dd
+    print u"Classements chargés"
+else:
+    classements = classements_depart
+    print u"Classements chargés à partir des choix de départ"
+
 clubs = []
 joueurs = []
-
 for nom in s.noms_clubs():
     cc = s.charger(nom, 'c')
     clubs.append(cc)
@@ -24,6 +39,7 @@ if __name__ == "__main__":
     R = RecrutementsWidgetNew(dat=None,
                               clubs=clubs,
                               all_joueurs=joueurs,
-                              classements=classements)
+                              classements=classements,
+                              classements_depart=classements_depart)
     R.showMaximized()
     sys.exit(app.exec_())
