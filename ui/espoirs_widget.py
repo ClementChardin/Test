@@ -141,7 +141,7 @@ class EspoirsWidget(QtGui.QWidget):
         #self.table.resizeColumnsToContents()
         self.table.resizeRowsToContents()
 
-    def choix_club(self, nom, maj=True):
+    def choix_club(self, nom):
         nom = str(self.combo_club.currentText())
         cc = self.clubs[self.noms_clubs.index(nom)]
         self.club = cc
@@ -149,8 +149,7 @@ class EspoirsWidget(QtGui.QWidget):
 
         self.charger_decisions(self.club.nom)
 
-        if maj:
-            self.maj()
+        self.maj()
 
     def maj(self):
         for poste in s.limite_poste.keys():

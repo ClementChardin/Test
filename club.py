@@ -267,7 +267,7 @@ class club(object):
             self._compo_defaut_fatigue = comp
         return self._compo_defaut_fatigue
 
-def ajouter_joueur(joueur, club, espoir=False):
+def ajouter_joueur(joueur, club, espoir=False, forcer_ajout=False):
     poste = 'espoirs' if espoir else joueur.postes[1]
     nom = joueur.nom
     if poste in ["C1", "C2"]:
@@ -279,7 +279,7 @@ def ajouter_joueur(joueur, club, espoir=False):
     elif poste == "N8":
         lim = lim - len(club.joueurs["TL"])
 
-    if len(l) >= lim:
+    if len(l) >= lim and not forcer_ajout:
         raise ValueError("poste plein !")
     else:
         l.append(joueur)
@@ -332,7 +332,14 @@ def mettre_a_jour_joueur(joueur, club):
     ajouter_joueur(joueur, club)
     print nom + " mis a jour"
 
-def transfert(nom, club_old, club_new, val, ms, transfert_argent=True):
+def transfert(nom,
+              club_old,
+              club_new,
+              val,
+              ms,
+              transfert_argent=True,
+              forcer_ajout=False,
+              espoir=False):
     joueur = club_old.get_joueur_from_nom(nom)
 
     if transfert_argent:
@@ -343,7 +350,7 @@ def transfert(nom, club_old, club_new, val, ms, transfert_argent=True):
 
         joueur.VAL = val
         joueur.MS = ms
-    ajouter_joueur(joueur, club_new)
+    ajouter_joueur(joueur, club_new, espoir=espoir, forcer_ajout=forcer_ajout)
     supprimer_joueur(joueur, club_old)
     if joueur.anciens_clubs == '':
         joueur.anciens_clubs = club_old.nom + ' ' + str(date)

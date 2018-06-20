@@ -7,6 +7,7 @@ jaune  = QtGui.QColor(238, 201, 0)
 indian_red  = QtGui.QColor(205, 92, 92)
 noir  = QtGui.QColor(0, 0, 0)
 bleu = QtGui.QColor(0, 0, 255)
+bleu_clair = QtGui.QColor(100, 150, 255)
 gris = QtGui.QColor(217, 217, 217)
 blanc = QtGui.QColor(255, 255, 255)
 

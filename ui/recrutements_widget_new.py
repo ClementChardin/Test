@@ -16,7 +16,8 @@ class RecrutementsWidgetNew(QtGui.QWidget):
                  dat=None,
                  clubs=[],
                  all_joueurs=[],
-                 classements={}):
+                 classements=None,
+                 classements_depart=None):
         """
         classements est un dict qui contient en keys les noms des joueurs et
         en values le classement des propositions qui ont été faites au joueur
@@ -29,26 +30,60 @@ class RecrutementsWidgetNew(QtGui.QWidget):
         self.dat = s.lire_date() if dat is None else dat
         self.clubs = clubs
         self.all_joueurs = all_joueurs
-        self.classements = classements
+
+        if not classements is None:
+            self.classements = classements
+            self.classements_depart = classements_depart
+            print u'Classements et classements départ initiés avec la valeur fournie'
+        else:
+            self.charger_classements()
 
         self.charger_ordre_clubs()
 
         self.dd_joueurs_recrutes = {}
         self.dd_valides_definitivement = {}
         self.dd_temps_passe = {}
+        self.dd_besoins_recrutes = {}
+        self.dd_tours_passes = {}
+        self.dd_ventes = {}
+        self.dd_joueurs_interesses_precedant = {}
+        """
+        dd_valides_definitivement[nom_club] = bool
+        dd_temps_passe[nom_club][nom_joueur] = temps passé par le joueur sur une offre (int)
+        dd_joueurs_recrutes[nom_club] = (nom_joueur, offre acceptée)
+        dd_besoins_recrutes[nom_club] = (nom_joueur, tuple_besoin)
+        dd_tours_passes[nom_club] = nb de tours passés pour ce club (int)
+        dd_ventes[nom_club] = revenus de la vente des joueurs recrutés par les autres clubs (in)
+        dd_joueurs_interesses_precedant[nom_club] = [joueurs intéressés au tour précédant]
+        """
         for nom in self.noms_clubs:
             self.dd_valides_definitivement[nom] = False
             self.dd_temps_passe[nom] = {}
             self.dd_joueurs_recrutes[nom] = []
+            self.dd_besoins_recrutes[nom] = []
+            self.dd_tours_passes[nom] = 0
+            self.dd_ventes[nom] = 0
+            self.dd_joueurs_interesses_precedant[nom] = []
 
         for nom_joueur, classement in self.classements.items():
             nom_club = classement[0][0]
             self.dd_temps_passe[nom_club][nom_joueur] = 0
 
-        self.idx_club = 0
+        #Charger dd_joueurs_recrutes si il a été sauvegardé auparavant
+        self.charger_recrutements()
+        joueurs_recrutes = []
+        for ll in self.dd_joueurs_recrutes.values():
+            joueurs_recrutes += ll
+        for nom_joueur, offre in joueurs_recrutes:
+            jj = self.get_joueur_from_nom(nom_joueur)
+            self.dd_ventes[jj.club] += offre[1]
+
+        ll_tours_passes = [self.dd_tours_passes[nom] for nom in self.noms_clubs]
+        self.idx_club = min([ll_tours_passes.index(min(ll_tours_passes))])
         self.club = self.clubs[self.idx_club]
         self.joueurs = self.get_joueurs_interesses(self.club.nom)
         self.joueur_recrute_temp = None
+        self.besoin_temp = None
         self.refuses = []
 
         self.setup_ui()
@@ -66,7 +101,8 @@ class RecrutementsWidgetNew(QtGui.QWidget):
         self.lab_nom = QtGui.QLabel(self.club.nom)
         self.lay_club.addWidget(self.lab_nom)
 
-        self.lab_budget = QtGui.QLabel("Budget : "+str(self.club.budget))
+        bud = self.budget_temps_reel(self.club.nom)
+        self.lab_budget = QtGui.QLabel("Budget : "+str(bud))
         couleur = rouge if self.club.budget < 0 else noir
         colorer_qlabel(self.lab_budget, couleur)
         self.lay_club.addWidget(self.lab_budget)
@@ -105,6 +141,7 @@ class RecrutementsWidgetNew(QtGui.QWidget):
         Table des joueurs intéressés
         """
         self.setup_table()
+        self.colorer_table()
 
         """
         Bouttons club suivant et valider définitivement
@@ -119,6 +156,14 @@ class RecrutementsWidgetNew(QtGui.QWidget):
         self.but_valider_definitivement = QtGui.QPushButton(u"Valider définitivement")
         self.but_valider_definitivement.clicked.connect(self.valider_definitivement)
         self.lay_but.addWidget(self.but_valider_definitivement)
+
+        self.but_sauvegarder_recrutements = QtGui.QPushButton("Sauvegarder transferts")
+        self.but_sauvegarder_recrutements.clicked.connect(self.sauvegarder_recrutements)
+        self.lay_but.addWidget(self.but_sauvegarder_recrutements)
+
+        self.but_faire_transferts = QtGui.QPushButton("Faire transferts")
+        self.but_faire_transferts.clicked.connect(self.faire_transferts)
+        self.lay_but.addWidget(self.but_faire_transferts)
 
     def setup_table(self):
         self.hlabels = ['Nom', 'EV', 'Poste 1', 'Poste 2', 'Poste 3', 'club',
@@ -340,7 +385,12 @@ class RecrutementsWidgetNew(QtGui.QWidget):
 
     def club_suivant(self):
         if not self.joueur_recrute_temp is None:
-            self.dd_joueurs_recrutes[self.joueur_recrute_temp.nom] = self.club.nom
+            self.dd_joueurs_recrutes[self.club.nom].append((self.joueur_recrute_temp.nom,
+                                                            self.classements[self.joueur_recrute_temp.nom][0]))
+            self.dd_besoins_recrutes[self.club.nom].append((self.joueur_recrute_temp.nom,
+                                                            self.besoin_temp))
+            if not self.joueur_recrute_temp.club == self.club.nom:
+                self.dd_ventes[self.joueur_recrute_temp.club] += self.classements[self.joueur_recrute_temp.nom][0][1]
 
         for jj in self.get_joueurs_interesses(self.club.nom):
             self.dd_temps_passe[self.club.nom][jj.nom] += 1
@@ -348,18 +398,22 @@ class RecrutementsWidgetNew(QtGui.QWidget):
         for jj in self.refuses:
             self.passer_offre(jj.nom)
 
+        self.dd_joueurs_interesses_precedant[self.club.nom] = self.get_joueurs_interesses(self.club.nom)
+
         self.idx_club += 1
+        self.dd_tours_passes[self.club.nom] += 1
 
         if self.idx_club % len(self.clubs) == 0:
             for jj in self.all_joueurs:
-                if not jj.nom in self.dd_joueurs_recrutes:
-                    nom_club, val, ms, besoin, tps_laisse = self.classements[jj.nom][0]
-                    if tps_laisse - self.dd_temps_passe[nom_club][jj.nom] < 0:
+                nom_club, val, ms, besoin, tps_laisse = self.classements[jj.nom][0]
+                if not jj in self.get_joueurs_recrutes(nom_club):
+                    if tps_laisse - self.dd_temps_passe[nom_club][jj.nom] < 1:
                         self.passer_offre(jj.nom)
 
         self.club = self.clubs[self.idx_club%len(self.clubs)]
         self.joueurs = self.get_joueurs_interesses(self.club.nom)
         self.joueur_recrute_temp = None
+        self.besoin_temp = None
         self.refuses = []
         self.maj_labs_club()
         self.maj_table_besoins()
@@ -391,29 +445,62 @@ class RecrutementsWidgetNew(QtGui.QWidget):
         nom = str(self.table.item(rr, 0).text()).split(" - ")[0]
         jj = self.get_joueur_from_nom(nom)
 
-        offre = self.classements[jj.nom][0]
-        boo = self.recrutement_possible(offre)
-
-        if boo:
-            self.joueur_recrute_temp = jj
-            self.colorer_table()
-            val = self.classements[jj.nom][0][1]
-            self.lab_budget.setText("Budget : "+str(self.club.budget-val))
-        else:
-            dial = MyDialog(u"Recrutement impossible")
+        if jj in self.get_joueurs_recrutes(self.club.nom):
+            dial = MyDialog(u"Joueur déjà recruté")
             dial.exec_()
 
-    def get_bool_avertissement(self):
+        else:
+            offre = self.classements[jj.nom][0]
+            boo = self.recrutement_possible(offre, jj)
+
+            if boo:
+                ll = []
+                for bes in self.club.besoins:
+                    poste = bes[0]
+                    if poste in jj.postes or (poste in ('C1', 'C2', 'CE') and \
+                                              jj.joue_centre()):
+                                              #('C1' in jj.postes or 'C2' in jj.postes \
+                                               #or 'CE' in jj.postes
+                        ll.append(bes)
+                print '\nListe des besoins possibles', ll
+                if len(ll) == 0:
+                    dial = MyDialog(u"Aucun besoin ne correspond aux postes de ce joueur")
+                    dial.exec_()
+                elif len(ll) == 1:
+                    besoin = ll[0]
+                    dial = MyDialog(u"Recruté automatiquement en tant que "+self.get_st_besoin(besoin))
+                    dial.exec_()
+                else:
+                    self.cbd = ChoixBesoinDialog(ll, jj, parent=self)
+                    res = self.cbd.exec_()
+                    if res == 1:
+                        besoin = self.st_besoin_to_besoin(self.cbd.group.checkedButton().text())
+                    else:
+                        besoin = None
+                print besoin
+                self.joueur_recrute_temp = jj
+                self.besoin_temp = besoin
+                self.colorer_table()
+                val = self.classements[jj.nom][0][1]
+                self.maj_labs_club()
+            else:
+                dial = MyDialog(u"Recrutement impossible")
+                dial.exec_()
+
+    def get_bool_avertissement(self, val):
+        """
+        True si le recrutement est permis
+        """
         bool_avertissement = True
-        nom_club, val, ms, besoin, tps_laisse = offre
         avertissement = self.club.avertissement
+        bud = self.budget_temps_reel(self.club.nom)
         if avertissement >= 2:
-            if self.club.budget - val < 0:
+            if bud - val < 0:
                 bool_avertissement = False
             else:
                 bool_avertissement = True
         elif avertissement == 1:
-            if self.club.budget + self.prevision() - val < 0:
+            if bud + self.prevision() - val < 0:
                 bool_avertissement = False
             else:
                 bool_avertissement = True
@@ -421,40 +508,50 @@ class RecrutementsWidgetNew(QtGui.QWidget):
             bool_avertissement = True
         return bool_avertissement
 
-    def recrutement_possible(self, offre):
+    def recrutement_possible(self, offre, joueur):
+        nom_club, val, ms, besoin, tps_laisse = offre
+
         valide_definitivement = self.dd_valides_definitivement[self.club.nom]
 
-        bool_avertissement = self.get_bool_avertissement()
+        bool_avertissement = self.get_bool_avertissement(val) or \
+                             joueur.club == self.club.nom
+
+        meme_club = joueur.club == self.club.nom and not joueur.MS_probleme
 
         print 'valide_definitivement', valide_definitivement
         print 'bool_avertissement', bool_avertissement
 
-        return (not valide_definitivement) and bool_avertissement
+        return (not valide_definitivement) and bool_avertissement \
+               and (not meme_club)
 
     def prevision(self):
         nom_club = self.club.nom
         p = 0
         for jj in self.all_joueurs:
             if jj.club == nom_club and \
-               not jj.nom in self.dd_joueurs_recrutes.keys():
+               not jj in self.get_joueurs_recrutes(nom_club):
                 p += jj.VAL
         return p
 
     def colorer_table(self):
         dd = {}
         for jj in self.joueurs:
-            if not self.joueur_recrute_temp is None:
-                if jj.nom == self.joueur_recrute_temp.nom:
-                    couleur = vert
-                else:
-                    couleur = blanc
+            couleur = blanc
+
+            if jj in self.get_joueurs_recrutes(self.club.nom):
+                couleur = bleu_clair
             elif jj in self.refuses:
                 couleur = rouge
-            else:
-                couleur = blanc
+            elif not jj.nom in [jjj.nom for jjj in self.get_joueurs_interesses_precedant(self.club.nom)]:
+                couleur = orange
 
             if jj.retraite:
                 couleur = gris
+
+            if not self.joueur_recrute_temp is None:
+                if jj.nom == self.joueur_recrute_temp.nom:
+                    couleur = vert
+
             dd[jj.nom] = couleur
 
         for rr in range(self.table.rowCount()):
@@ -467,8 +564,12 @@ class RecrutementsWidgetNew(QtGui.QWidget):
 
     def maj_labs_club(self):
         self.lab_nom.setText(self.club.nom)
-        self.lab_budget.setText("Budget : "+str(self.club.budget))
-        couleur = rouge if self.club.budget < 0 else noir
+        bud = self.budget_temps_reel(self.club.nom)
+        if not self.joueur_recrute_temp is None:
+            if not self.joueur_recrute_temp.club == self.club.nom:
+                bud -= self.classements[self.joueur_recrute_temp.nom][0][1]
+        self.lab_budget.setText("Budget : "+str(bud))
+        couleur = rouge if bud < 0 else noir
         colorer_qlabel(self.lab_budget, couleur)
         self.lab_avertissement.setText("Avertissement : "+\
                                        str(self.club.avertissement))
@@ -476,20 +577,28 @@ class RecrutementsWidgetNew(QtGui.QWidget):
         colorer_qlabel(self.lab_avertissement, couleur)
         self.lab_prevision.setText(u"Prévisions : "+str(self.prevision()))
 
+    def budget_temps_reel(self, nom_club):
+        club = self.clubs[self.noms_clubs.index(nom_club)]
+        bud = club.budget + self.dd_ventes[club.nom]*.75
+        for jj, offre in self.dd_joueurs_recrutes[club.nom]:
+            bud -= offre[1]
+        return int(bud)
+
     def set_table_besoins(self):
-        hlabels = [bes for bes in self.club.besoins]
-        for bes in hlabels:
-            while hlabels.count(bes) > 1:
-                hlabels.remove(bes)
-        hlabels.sort(key=lambda tu: s.ordre_postes[tu[0]])                
-        self.table_besoins = QtGui.QTableWidget(1, len(hlabels))
-        self.table_besoins.setHorizontalHeaderLabels([self.get_st_besoin(hlab) for hlab in hlabels])
-        for kk in range(len(hlabels)):
+        self.hlabels_besoins = [bes for bes in self.club.besoins]
+        for bes in self.hlabels_besoins:
+            while self.hlabels_besoins.count(bes) > 1:
+                self.hlabels_besoins.remove(bes)
+        self.hlabels_besoins.sort(key=lambda tu: s.ordre_postes[tu[0]])                
+        self.table_besoins = QtGui.QTableWidget(1, len(self.hlabels_besoins))
+        self.table_besoins.setHorizontalHeaderLabels([self.get_st_besoin(hlab) for hlab in self.hlabels_besoins])
+        for kk in range(len(self.hlabels_besoins)):
             val = 0
-            N = self.club.besoins.count(hlabels[kk])
-            for nom in self.get_joueurs_recrutes(self.club.nom):
-                offre = self.get_offre(self.club.nom, nom)
-                if offre[3] == hlabels[kk]:
+            N = self.club.besoins.count(self.hlabels_besoins[kk])
+            for nom, besoin in self.dd_besoins_recrutes[self.club.nom]:
+                #nom = jj.nom
+                #offre = self.get_offre(self.club.nom, nom)
+                if besoin == self.hlabels_besoins[kk]:
                     val += 1
             lab = QtGui.QTableWidgetItem(str(val))
             it = MyTableWidgetItem(lab)
@@ -498,10 +607,10 @@ class RecrutementsWidgetNew(QtGui.QWidget):
             elif val == N:
                 couleur = vert
             elif val > 0:
-                couleur = bleu
+                couleur = bleu_clair
             else:
-                couleur = noir
-            it.setTextColor(couleur)
+                couleur = blanc
+            it.setBackgroundColor(couleur)
             self.table_besoins.setItem(0, kk, it)
 
         p = QtGui.QSizePolicy()
@@ -541,23 +650,30 @@ class RecrutementsWidgetNew(QtGui.QWidget):
         couleur = rouge if nb > s.limite_poste[poste] else noir
         return st, couleur
 
-    def get_joueurs_interesses(self, nom_club):
+    def get_joueurs_interesses(self, nom_club, classements_depart=False):
         ll = []
-        noms_recrutes = self.dd_joueurs_recrutes.keys()
+        noms_recrutes = [jj.nom for jj in self.get_joueurs_recrutes(nom_club)]
         for jj in self.all_joueurs:
-            classement = self.classements[jj.nom]
+            classement = self.classements_depart[jj.nom] if classements_depart else self.classements[jj.nom]
             offre_preferee = classement[0]
-            if offre_preferee[0] == nom_club and not jj.nom in noms_recrutes:
+            if offre_preferee[0] == nom_club:# and not jj.nom in noms_recrutes:
                 ll.append(jj)
         return ll
 
+    def get_joueurs_interesses_precedant(self, nom_club):
+        if self.dd_joueurs_interesses_precedant[nom_club] == []:
+            return self.get_joueurs_interesses(nom_club, True)
+        else:
+            return self.dd_joueurs_interesses_precedant[nom_club]
+
     def get_joueurs_recrutes(self, nom_club):
         ll = []
-        for nom in self.dd_joueurs_recrutes[nom_club]:
-            classement = self.classements[nom]
-            offre_preferee = classement[0]
-            if offre_preferee[0] == nom_club:
-                ll.append(jj)
+        for nom, offre in self.dd_joueurs_recrutes[nom_club]:
+            jj = self.get_joueur_from_nom(nom)
+            #classement = self.classements[nom]
+            #offre_preferee = classement[0]
+            #if offre_preferee[0] == nom_club:
+            ll.append(jj)
         return ll
 
     def get_offre(self, nom_club, nom_joueur):
@@ -574,6 +690,10 @@ class RecrutementsWidgetNew(QtGui.QWidget):
     def get_st_besoin(self, besoin):
         poste, ev = besoin
         return poste + ' : ' + str(ev)
+
+    def st_besoin_to_besoin(self, st):
+        poste, ev = st.split(' : ')
+        return str(poste), float(ev)
 
     def passer_offre(self, nom_joueur):
         ll = self.classements[nom_joueur]
@@ -607,6 +727,91 @@ class RecrutementsWidgetNew(QtGui.QWidget):
             print u"Ordre clubs créé\n"
             self.sauver_ordre_clubs()
 
+    def sauvegarder_recrutements(self):
+        filename = s.TRANSFERTS_DIR_NAME(self.dat)+'/dd_joueurs_recrutes.dict'
+        with open(filename, 'w') as ff:
+            pickle.dump(self.dd_joueurs_recrutes, ff)
+        print u"dd_joueurs_recrutes sauvegardé"
+
+        filename_besoins = s.TRANSFERTS_DIR_NAME(self.dat)+'/dd_besoins_recrutes.dict'
+        with open(filename_besoins, 'w') as ff:
+            pickle.dump(self.dd_besoins_recrutes, ff)
+        print u"dd_besoins_recrutes sauvegardé"
+
+        filename_tours_passes = s.TRANSFERTS_DIR_NAME(self.dat)+'/dd_tours_passes.dict'
+        with open(filename_tours_passes, 'w') as ff:
+            pickle.dump(self.dd_tours_passes, ff)
+        print u"dd_tours_passes sauvegardé"
+        
+        filename_classements = s.TRANSFERTS_DIR_NAME(self.dat)+'/classements.dict'
+        with open(filename_classements, 'w') as ff:
+            pickle.dump(self.classements, ff)
+        print u"classements sauvegardé"
+
+        filename_temps_passes = s.TRANSFERTS_DIR_NAME(self.dat)+'/dd_temps_passe.dict'
+        with open(filename_temps_passes, 'w') as ff:
+            pickle.dump(self.dd_temps_passe, ff)
+        print u"dd_temps_passe sauvegardé"
+
+        filename_dd_joueurs_interesses_precedant = s.TRANSFERTS_DIR_NAME(self.dat)+'/dd_joueurs_interesses_precedant.dict'
+        with open(filename_dd_joueurs_interesses_precedant, 'w') as ff:
+            pickle.dump(self.dd_joueurs_interesses_precedant, ff)
+        print u"dd_joueurs_interesses_precedant sauvegardé"
+
+        dial = MyDialog(u"Joueurs recrutés et besoins correspondant sauvegardés")
+        dial.exec_()
+
+    def charger_recrutements(self):
+        filename = s.TRANSFERTS_DIR_NAME(self.dat)+'/dd_joueurs_recrutes.dict'
+        if osp.isfile(filename):
+            with open(filename, 'r') as ff:
+                dd = pickle.load(ff)
+            self.dd_joueurs_recrutes = dd
+            print u"\ndd_joueurs_recrutes chargé"
+        else:
+            print u"\ndd_joueurs_recrutes initié vide"
+            pass
+
+        filename_besoins = s.TRANSFERTS_DIR_NAME(self.dat)+'/dd_besoins_recrutes.dict'
+        if osp.isfile(filename_besoins):
+            with open(filename_besoins, 'r') as ff:
+                dd = pickle.load(ff)
+            self.dd_besoins_recrutes = dd
+            print u"dd_besoins_recrutes chargé"
+        else:
+            print u"dd_besoins_recrutes initié vide"
+            pass
+
+        filename_tours_passes = s.TRANSFERTS_DIR_NAME(self.dat)+'/dd_tours_passes.dict'
+        if osp.isfile(filename_tours_passes):
+            with open(filename_tours_passes, 'r') as ff:
+                dd = pickle.load(ff)
+            self.dd_tours_passes = dd
+            print u"dd_tours_passes chargé"
+        else:
+            print u"dd_tours_passes initié à 0"
+            pass
+
+        filename_temps_passes = s.TRANSFERTS_DIR_NAME(self.dat)+'/dd_temps_passe.dict'
+        if osp.isfile(filename_temps_passes):
+            with open(filename_temps_passes, 'r') as ff:
+                dd = pickle.load(ff)
+            self.dd_temps_passe = dd
+            print u"dd_temps_passe chargé"
+        else:
+            print u"dd_temps_passe initié à 0"
+            pass
+
+        filename_dd_joueurs_interesses_precedant = s.TRANSFERTS_DIR_NAME(self.dat)+'/dd_joueurs_interesses_precedant.dict'
+        if osp.isfile(filename_dd_joueurs_interesses_precedant):
+            with open(filename_dd_joueurs_interesses_precedant, 'r') as ff:
+                dd = pickle.load(ff)
+            self.dd_joueurs_interesses_precedant = dd
+            print u"dd_joueurs_interesses_precedant chargé"
+        else:
+            print u"dd_joueurs_interesses_precedant initié vide"
+            pass
+
     def voir_classement(self):
         rows = []
         joueurs = []
@@ -622,6 +827,67 @@ class RecrutementsWidgetNew(QtGui.QWidget):
             classements[nom] = self.classements[nom]
         C = ClassementOffresDialog(joueurs, classements)
         C.exec_()
+
+    def charger_classements(self):
+        filename = s.TRANSFERTS_DIR_NAME(self.dat)+'/classements.dict'
+        filename_choix_depart = s.TRANSFERTS_DIR_NAME(self.dat) + '/choix' + str(0) + '.prop'
+        if osp.isfile(filename_choix_depart):
+            with open(filename_choix_depart, 'r') as ff:
+                dd = pickle.load(ff)
+            self.classements_depart = dd
+            print u"classements_depart chargés"
+        else:
+            self.classements_depart = {}
+            print u"classements_depart initiés vides"
+
+        if osp.isfile(filename):
+            with open(filename, 'r') as ff:
+                dd = pickle.load(ff)
+            self.classements = dd
+            print u"\nclassements chargés"
+        else:
+            self.classements = self.classements_depart
+            print u"classements chargés à partir des choix de départ"
+
+    def faire_transferts(self):
+        mb = QtGui.QMessageBox()
+        if mb.question(None,
+                       "Question",
+                       u"Effectuer définitivement les transferts ?",
+                       "Non",
+                       "Oui") == 1:
+            self.en_attente = []
+            self.noms_recrutes = []
+            for nom_club in self.noms_clubs:
+                ll = self.dd_joueurs_recrutes[nom_club]
+                recrutes = [tu[0] for tu in ll]
+                offres = [tu[1] for tu in ll]
+                for ii, nom_jj in enumerate(recrutes):
+                    self.noms_recrutes.append(nom_jj)
+                    jj = self.get_joueur_from_nom(nom_jj)
+                    espoir = self.dat - jj.C <= 2
+                    nom_club_new, val, ms, poste, tps_laisse = offres[ii]
+                    if not nom_club == nom_club_new:
+                        raise ValueError("nom_club et nom_club_new ne correspondent pas : "+nom_club+" et "+nom_club_new)
+                    cc_old = self.clubs[self.noms_clubs.index(jj.club)]
+                    if jj.club == nom_club:
+                        cc_old.masse_salariale -= jj.MS
+                        cc_old.masse_salariale += ms
+                        jj.MS = ms
+                    else:
+                        cc_new = self.clubs[self.noms_clubs.index(nom_club)]
+                        try:
+                            s.transfert(jj.nom, cc_old, cc_new, val, ms, espoir=espoir, forcer_ajout=True)
+                        except ValueError:
+                            self.en_attente.append((jj, offres[ii]))
+                print nom_club, u" : transferts faits"
+
+            vide = self.clubs[self.noms_clubs.index('vide')]
+            for cc in self.clubs:
+                for jj in cc.get_all_joueurs():
+                    if (jj.veut_partir or jj.retraite) and not jj.nom in self.noms_recrutes:
+                        s.transfert(jj.nom, cc, vide, jj.VAL, jj.MS, transfert_argent=False)
+                cc.sauvegarder()
 
 class ClassementOffresDialog(QtGui.QDialog):
     def __init__(self, joueurs, classements, parent=None):
@@ -661,3 +927,29 @@ class ClassementOffresDialog(QtGui.QDialog):
             event.accept()
         else:
             super(Dialog, self).keyPressEvent(event)
+
+class ChoixBesoinDialog(QtGui.QDialog):
+    def __init__(self, besoins, joueur, parent=None):
+        super(ChoixBesoinDialog, self).__init__(parent)
+        self.besoins = besoins
+        self.joueur = joueur
+
+        self.lay = QtGui.QVBoxLayout()
+        self.setLayout(self.lay)
+
+        self.group = QtGui.QButtonGroup()
+        for besoin in self.besoins:
+            rad = QtGui.QRadioButton(self.parent().get_st_besoin(besoin))
+            self.lay.addWidget(rad)
+            self.group.addButton(rad)
+
+        self.lay_but = QtGui.QHBoxLayout()
+        self.lay.addLayout(self.lay_but)
+
+        self.but_no = QtGui.QPushButton('Annuler')
+        self.lay_but.addWidget(self.but_no)
+        self.but_no.clicked.connect(self.reject)
+
+        self.but_yes = QtGui.QPushButton('Valider')
+        self.lay_but.addWidget(self.but_yes)
+        self.but_yes.clicked.connect(self.accept)

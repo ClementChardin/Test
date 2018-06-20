@@ -1,0 +1,1 @@
+{"Vlendel": "pro", "Haohaeldil": "pro", "Trandyel": "espoir", "Plasten": "espoir", "Erlendir": "espoir"}
