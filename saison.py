@@ -118,18 +118,23 @@ class saison(object):
                         self.init_finale(nom_champ)
 
             noms = [journee[nn] for nn in range(len(journee))]
-            cals = [self.calendriers[self.noms_championats.index(nom)] \
-                    for nom in noms]
-            ll = []
-            for jou in self.journees[:kk+1]:
-                ll += jou.split('\n')
+            if noms == ['']:
+                cal = None
+                ii = 0
+                jj = 0
+            else:
+                cals = [self.calendriers[self.noms_championats.index(nom)] \
+                        for nom in noms]
+                ll = []
+                for jou in self.journees[:kk+1]:
+                    ll += jou.split('\n')
 
-            for nn, cal in enumerate(cals):
-                #num = self.dict_indice_journees[cal.nom_championnat]
-                num2 = ll.count(cal.nom_championnat) - 1
-                ii, jj = cal.indices_prochain_match()
-                if ii == num2 and cal.scores[ii][jj] is None:
-                    break
+                for nn, cal in enumerate(cals):
+                    #num = self.dict_indice_journees[cal.nom_championnat]
+                    num2 = ll.count(cal.nom_championnat) - 1
+                    ii, jj = cal.indices_prochain_match()
+                    if ii == num2 and cal.scores[ii][jj] is None:
+                        break
             return cal, ii, jj
 
     def match_joue(self, nom_eq1, nom_eq2, cal):

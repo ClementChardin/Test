@@ -10,35 +10,21 @@ Liste des scripts / fichiers à exécuter :
 2 : Choisir qui part
 2_departs.py
 
-3 : Définir les besoins
-3_script_definir_besoins_recrutements_clubs.py
-%run script_master.py (les départs sont surlignés)
+3 : 3_script_definir_besoins_recrutements_clubs.py
+    On voit les départs dans le master_widget
 
-4 : Création des joueurs légendaires
-scrip_creation_legendaires.py
-
-5 : dans la console
+4 : dans la console
 > from ui.propositions_widget import *
 > %matplotlib qt4
 > TW = PropositionsWidget()
   TW.showMaximized()
 
-6 : Recrutements
-%run Partir/script_recrutement_widget.py
+5 : Création des joueurs légendaires
+scrip_creation_legendaires.py
 
-7 : évolution joueurs
-
-8 : créations joueurs
-
-7 : Choix des expoirs qui passent pro / restent / partent
-from ui.espoirs_widget import *
-%gui qt
-ll = []
-for nom in s.noms_clubs():
-    ll.append(s.charger(nom, 'c'))
-EW = EspoirsWidget(clubs=ll)
-EW.showMaximized()
-
+6 : Choix des expoirs qui passent pro / restent / partent
+ui.espoir_widget.py
+EspoirWidget
 
 script_evolution_joueurs.py
 script_evolution_tab.py

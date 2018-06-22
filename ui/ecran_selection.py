@@ -69,7 +69,8 @@ class EcranSelectionWidget(QtGui.QWidget):
         Choix des joueurs
         """
         self.selection_widget = SelectionWidget(parent=self,
-                                                ecran_precedant=self.wid_aux)
+                                                ecran_precedant=self.wid_aux,
+                                                dat=self.dat)
         self.lay.addWidget(self.selection_widget)
         self.selection_widget.hide()
 

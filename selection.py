@@ -7,15 +7,15 @@ import pickle
 
 vide = creer_joueur_vide()
 
-def get_clubs_all():
+def get_clubs_all(dat=None):
     ll = []
-    for nom in noms_clubs():
-        cc = charger(nom, 'c')
+    for nom in noms_clubs(dat):
+        cc = charger(nom, 'c', dat)
         ll.append(cc)
     return ll
 
-def get_joueurs_all(arm):
-    clubs = get_clubs_all()
+def get_joueurs_all(arm, dat=None):
+    clubs = get_clubs_all(dat)
     ll = []
     if arm in ('ULT', 'ULTB'):
         for cc in clubs:
@@ -296,8 +296,8 @@ def selec_ultime_poste_prefere(poste, ret=True, show=False, n=10):
         for i,j in enumerate(l):
             print i+1, j.nom + ' ' + str('%0.2f' % calc_EV(j, poste)) + ' ' + j.ARM + ' ' + j.club + ' ' + str(j.C)
 
-def maj_joueurs(sel):
-    all_joueurs = get_joueurs_all(sel.nom)
+def maj_joueurs(sel, dat=None):
+    all_joueurs = get_joueurs_all(sel.nom, dat)
     for jj in all_joueurs:
         for jjj in sel.joueurs:
             if jjj.nom == jj.nom:
