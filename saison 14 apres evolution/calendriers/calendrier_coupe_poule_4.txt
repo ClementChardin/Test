@@ -1,0 +1,17 @@
+FS v AES
+QNL v ALT
+
+AES v ALT
+FS v QNL
+
+QNL v AES
+ALT v FS
+
+AES v QNL
+FS v ALT
+
+ALT v AES
+QNL v FS
+
+AES v FS
+ALT v QNL

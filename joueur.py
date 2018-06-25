@@ -293,7 +293,17 @@ class joueur:
                         ST=0,
                         SR=0)
 
-        self.XP = 0
+        #Pour l'évolution
+        self.nouveau_bonus_evolution = True
+        self.experience_saison = 0
+        self.experience_total = 0
+        self.residu_experience = 0
+        self.num_dernier_bonus = 0
+
+        #Résultats de l'évolution
+        self.bonus = 0
+        self.carte_evolution = {'valeur':0, 'couleur':1, 'r_nr':'n'}
+        self.evolution = 0
 
         #Cette saison
         self.essais_saison = 0

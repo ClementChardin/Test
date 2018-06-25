@@ -1,0 +1,17 @@
+BRB v APA
+KHR v HTH
+
+APA v HTH
+BRB v KHR
+
+KHR v APA
+HTH v BRB
+
+APA v KHR
+BRB v HTH
+
+HTH v APA
+KHR v BRB
+
+APA v BRB
+HTH v KHR

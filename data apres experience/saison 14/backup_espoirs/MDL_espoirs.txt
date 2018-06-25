@@ -1,0 +1,1 @@
+{"Tartelet": "espoir", "Umatot": "espoir", "Waliet": "espoir", "Karto": "espoir", "Sven": "espoir", "Opladet": "espoir", "Hamendot": "espoir", "Martiet": "pro"}

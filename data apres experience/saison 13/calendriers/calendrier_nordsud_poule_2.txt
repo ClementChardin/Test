@@ -1,0 +1,17 @@
+AES v 4
+FST v EKR
+
+4 v EKR
+AES v FST
+
+FST v 4
+EKR v AES
+
+4 v FST
+AES v EKR
+
+EKR v 4
+FST v AES
+
+4 v AES
+EKR v FST

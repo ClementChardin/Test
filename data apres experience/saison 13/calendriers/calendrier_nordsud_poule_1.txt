@@ -1,0 +1,17 @@
+MRT v 4
+AHK v KKR
+
+4 v KKR
+MRT v AHK
+
+AHK v 4
+KKR v MRT
+
+4 v AHK
+MRT v KKR
+
+KKR v 4
+AHK v MRT
+
+4 v MRT
+KKR v AHK

@@ -1,0 +1,19 @@
+B v 6
+EMP v EST
+ARA v K
+
+6 v K
+EST v ARA
+B v EMP
+
+EMP v 6
+ARA v B
+K v EST
+
+6 v EST
+B v K
+EMP v ARA
+
+ARA v 6
+K v EMP
+EST v B

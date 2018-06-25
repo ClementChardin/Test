@@ -1,3 +1,4 @@
+# -*- coding: cp1252 -*-
 from numpy import random
 
 def d6():
@@ -97,3 +98,35 @@ def lettre():
         else:
                 k = 1 if carte["r_n"] == "r" else 2
                 return chr(96 + k*carte["valeur"])
+
+def carte_to_string(carte):
+        cou = carte['couleur']
+        val = carte['valeur']
+        if cou == 1:
+                couleur = 'Pic'
+        elif cou == 2:
+                couleur = 'Coeur'
+        elif cou == 3:
+                couleur = u'Trèfle'
+        elif cou == 4:
+                couleur = 'Carreau'
+        elif cou is None and val == 14:
+                couleur = 'Rouge' if carte['r_n'] == 'r' else 'Noir'
+        else:
+                raise ValueError('Carte non valide')
+
+        if val == 1:
+                valeur = 'As'
+        elif val == 11:
+                valeur = 'Valet'
+        elif val == 12:
+                valeur = 'Dame'
+        elif val == 13:
+                valeur = 'Roi'
+        elif val == 14:
+                valeur = 'Jocker'
+        else:
+                valeur = str(val)
+
+        interm = ' ' if val == 14 else ' de '
+        return valeur + interm + couleur

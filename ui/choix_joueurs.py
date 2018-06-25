@@ -229,9 +229,9 @@ class ChoixJoueursWidget(QtGui.QWidget):
                 elif self.filtre_couleur == "age":
                     if jj.est_jeune():
                         couleur = vert
-                    elif jj.D == s.date + 1:
+                    elif jj.D == self.dat + 1:
                         couleur = bleu
-                    elif jj.D <= s.date:
+                    elif jj.D <= self.dat:
                         couleur = rouge
             else: #jj.blessure > 0
                 couleur = indian_red

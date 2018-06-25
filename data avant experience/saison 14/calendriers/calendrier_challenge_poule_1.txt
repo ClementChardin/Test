@@ -1,0 +1,18 @@
+MDL v MDH
+DKW v ERE
+
+MDH v ERE
+MDL v DKW
+
+DKW v MDH
+ERE v MDL
+
+MDH v DKW
+MDL v ERE
+
+ERE v MDH
+DKW v MDL
+
+Round 6
+MDH v MDL
+ERE v DKW

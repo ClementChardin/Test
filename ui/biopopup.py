@@ -1,5 +1,6 @@
 ﻿from PyQt4 import QtCore, QtGui
 import selection as s
+from miscellaneous import carte_to_string
 
 class BioPopup(QtGui.QWidget):
     def __init__(self, parent=None, joueurs=None, col3=None, dat=None, fatigue=True):
@@ -40,18 +41,24 @@ class BioPopup(QtGui.QWidget):
             self.resize(self.maximumSize())
 
 class JCaracsWidget(QtGui.QWidget):
-    def __init__(self, joueurs, parent=None, date=None):
+    def __init__(self, joueurs, parent=None, dat=None, evolution=False):
+        self.dat = dat
         super(JCaracsWidget, self).__init__(parent)
+        self.evolution = evolution
         self.joueurs = joueurs
         self.caracs = []
         for jj in self.joueurs:
-            if date is None:
+            self.caracs.append(s.get_caracs(jj, self.parent().fatigue))
+            """
+            if dat is None:
                 self.caracs.append(s.get_caracs(jj, self.parent().fatigue))
             else:
                 #self.caracs.append(getattr(jj, "caracs_saison_"+str(date)))
-                jj.jj_passe['s'+str(date)].caracs_sans_fatigue
+                jj.jj_passe['s'+str(dat)].caracs_sans_fatigue
+            """
 
-        self.mod = QtGui.QStandardItemModel(10, len(self.joueurs))
+        rows = 14 if self.evolution else 10
+        self.mod = QtGui.QStandardItemModel(rows, len(self.joueurs))
         self.setup_model()
         
         self.setup_ui()
@@ -81,10 +88,29 @@ class JCaracsWidget(QtGui.QWidget):
             for car in sorted(s.ordre_caracs_joueurs, key=lambda car: s.ordre_caracs_joueurs[car]):
                 self.mod.setItem(r, c, QtGui.QStandardItem(str(caracs_jj[car])))
                 r += 1
+
+            if self.evolution:
+                for attr in ('bonus', 'carte_evolution', 'evolution'):
+                    att = getattr(jj, attr)
+                    st = carte_to_string(att) if type(att) == dict else str(att)
+                    self.mod.setItem(r, c, QtGui.QStandardItem(st))
+                    r += 1
+
+                try:
+                    dat = jj.nom.split(' - ')[-1] if ' - ' in jj.nom else self.dat
+                except ValueError:
+                    dat = self.dat
+                declin = str(jj.D <= dat)
+                self.mod.setItem(r, c, QtGui.QStandardItem(declin))
+                r += 1
+
             c += 1
             
         for car in sorted(s.ordre_caracs_joueurs, key=lambda car: s.ordre_caracs_joueurs[car]):
             r_header.append(car)
+
+        if self.evolution:
+            r_header += ['Bonus', u'Carte évolution', 'Evolution', u'Déclin']
             
         self.mod.setHorizontalHeaderLabels(c_header)
         self.mod.setVerticalHeaderLabels(r_header)
@@ -128,9 +154,10 @@ class JCaracsWidget(QtGui.QWidget):
         self.parent().parent().parent().col3.maj_compo_aux_2(nom)
         
     def color_min_max(self):
-        b = s.est_un_avant(self.joueurs[0])
+        b = s.est_un_avant(self.joueurs[0]) or self.evolution
+        N = 18
         #Min
-        for row in range(3, self.mod.rowCount()):
+        for row in range(3, N):
             car = str(self.mod.verticalHeaderItem(row).text())
             min = 100
             rs = []
@@ -153,7 +180,7 @@ class JCaracsWidget(QtGui.QWidget):
                                 QtCore.Qt.BackgroundColorRole)
                         
         #Max
-        for row in range(3,self.mod.rowCount()):
+        for row in range(3, N):
             car = str(self.mod.verticalHeaderItem(row).text())
             max = 0
             rs = []
@@ -397,4 +424,4 @@ class JEvolutionWidget(QtGui.QWidget):
                 """
                 jjs.append(jj_aux)
             jjs.append(jj)
-        self.lay.addWidget(JCaracsWidget(joueurs=jjs, parent=self))
+        self.lay.addWidget(JCaracsWidget(joueurs=jjs, parent=self, evolution=True, dat=self.dat))

@@ -145,7 +145,8 @@ def generer_ajouter_joueur_complet(poste,
                                    club=None,
                                    nom_club="vide",
                                    payer=True,
-                                   espoir=False):
+                                   espoir=False,
+                                   noms_joueurs=None):
     if club is None:
         if not nom_club in s.noms_clubs():
             raise ValueError("Ce club n'existe pas !")
@@ -178,6 +179,9 @@ def generer_ajouter_joueur_complet(poste,
 
     n_lettre = random.random_integers(26)
     nom = raw_input(chr(96 + n_lettre) + ', ' + armee + ' ? ')
+    while not noms_joueurs is None and nom in noms_joueurs:
+        print nom, u"est déjà pris"
+        nom = raw_input(chr(96 + n_lettre) + ', ' + armee + ' ? ')
     jj.nom = nom
 
     s.ajouter_joueur(jj, club, espoir)

@@ -1,3 +1,4 @@
+# -*- coding: cp1252 -*-
 import selection as s
 from date import *
 from miscellaneous import *
@@ -302,7 +303,7 @@ def pts_matches_total(jj):
                getattr(jj, 'MJ'+str(ii))['SR']*.5
     return res
 
-def bonus_evolution(jj):
+def bonus_evolution(jj, dat=None):
     pts = pts_matches_total(jj)
     EV = int(jj.EV)
     if pts < EV-3 + EV-6:
@@ -315,9 +316,55 @@ def bonus_evolution(jj):
         bonus = 3
     else:
         bonus = 4
-    jj.bonus = bonus
     return bonus
-        
+
+def age(jj, dat):
+    return dat - jj.C
+
+def bonus_new_atteints(jj, dat, atteint_precedant, xp_sais, res_xp_ini):
+    seuil = atteint_precedant + age(jj, dat) 
+    xp = xp_sais + res_xp_ini
+    res_xp = xp
+    atteint = atteint_precedant
+    bonus = 0
+    while res_xp >= seuil:
+        bonus += 1
+        atteint += 1
+        res_xp -= seuil
+        seuil += atteint
+    return atteint, bonus, res_xp
+
+def bonus_evolution_new(jj, dat=None):
+    """
+    Dat est la date de la nouvelle saison !
+    """
+    dat = s.lire_date() if dat is None else dat
+    if dat == jj.C:
+        raise ValueError(jj.nom+u" vient d'être créé !")
+    elif dat == jj.C + 1:
+        atteint_precedant = 0
+        res_xp_ini = 0
+    else:
+        atteint_precedant = jj.jj_passe['s'+str(dat-2)].num_dernier_bonus
+        res_xp_ini = jj.jj_passe['s'+str(dat-2)].residu_experience
+    xp_sais = jj.jj_passe['s'+str(dat-1)].experience_saison
+    """
+    xp = jj.experience_saison + jj.residu_experience
+    jj.residu_experience = xp
+    age = dat - jj.C
+    seuil = jj.num_dernier_bonus + age
+    bonus = 0
+    while jj.residu_experience >= seuil:
+        bonus += 1
+        jj.num_dernier_bonus += 1
+        jj.residu_experience -= seuil
+        seuil += jj.num_dernier_bonus
+    """
+    atteint, bonus, res_xp = bonus_new_atteints(jj, dat, atteint_precedant, xp_sais, res_xp_ini)
+    jj.residu_experience = res_xp
+    jj.num_dernier_bonus = atteint
+    return bonus
+
 def bonus_MS(jj, MS=None):
     if MS is None:
         MS = jj.MS
@@ -498,31 +545,46 @@ def MS_min(EV):
     else:
         return 100
 
-def evolution_joueur(jj):
+def evolution_joueur(jj, dat=None):
+    """
+    dat est la date de la nouvelle saison !
+    """
     print "Evolution " + jj.nom
-    setattr(jj, "caracs_saison_"+str(date-1), dict())
-    setattr(jj, "EV_saison_"+str(date-1), jj.EV)
-    #dd = getattr(jj, "caracs_saison_"+str(date-1))
-    #for car, val in jj.caracs_sans_fatigue.items():
-    #    dd[car] = val
-    bonus = bonus_evolution(jj)
+    dat = s.lire_date() if dat is None else dat
+    setattr(jj, "caracs_saison_"+str(dat-1), dict())
+    setattr(jj, "EV_saison_"+str(dat-1), jj.EV)
+
+    if jj.nouveau_bonus_evolution:
+        bonus_fct = bonus_evolution_new
+    else:
+        bonus_fct = bonus_evolution
+    #Note : pour l'évolution de la saison 14,
+    #les bonus ont été laissés aux joueurs en déclin
+    bonus = bonus_fct(jj, dat)
+    if jj.D <= dat: 
+        bonus = 0
+    jj.bonus = bonus
     carte = tirer_carte()
     jj.carte_evolution = carte
-    sgn = -1 if (carte['r_n'] == 'r' or jj.D <= s.date) else 1
-    print jj.nom, "signe :", sgn, "; valeur :", carte['valeur']
+    sgn = -1 if (carte['r_n'] == 'r' or jj.D <= dat) else 1
+    if carte['valeur'] == 14 and jj.RG.type_nb >= 5 and not jj.D <= dat:
+        sgn = 1
+    print jj.nom, "signe :", sgn, "; valeur :", carte['valeur'], "; bonus :", bonus
     if jj.RG < jj.RG_max:
         upgrade_rang(jj)
 
     if carte['valeur'] == 14 \
        and sgn == -1 \
        and jj.RG.type_nb < 5 \
-       and not jj.D <= s.date:
+       and not jj.D <= dat:
         jj.evolution = 'rang'
         upgrade_rang(jj)
     else:
         nb = d3_plus(carte)
-        jj.evolution = sgn * nb
-        for ii in range(nb):
+        tot = sgn * nb + bonus
+        sgn = 1 if tot == 0 else tot/abs(tot)
+        jj.evolution = tot
+        for ii in range(abs(tot)):
             evoluer_carac_hasard(jj, sgn)
 
     jj.EV = s.calc_EV(jj, jj.postes[1], fatigue=False)
@@ -541,7 +603,7 @@ def upgrade_rang(jj):
         nouveau_rg = jj.RG_max
     else:
         if jj.ARM == 'EN' \
-           and 'x' in [rg.rang for rang in rangs_possibles] \
+           and 'x' in [rg.rang for rg in rangs_possibles] \
            and not jj.RG_max.rang == 'x':
             for rg in rangs_possibles:
                 if rg.rang == 'x':

@@ -1,0 +1,17 @@
+MSL v 4
+HTH v FS
+
+4 v FS
+MSL v HTH
+
+HTH v 4
+FS v MSL
+
+4 v HTH
+MSL v FS
+
+FS v 4
+HTH v MSL
+
+4 v MSL
+FS v HTH

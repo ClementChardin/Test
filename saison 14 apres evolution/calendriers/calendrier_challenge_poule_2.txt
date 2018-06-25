@@ -1,0 +1,17 @@
+TO v EKR
+BIL v MAG
+
+EKR v MAG
+TO v BIL
+
+BIL v EKR
+MAG v TO
+
+EKR v BIL
+TO v MAG
+
+MAG v EKR
+BIL v TO
+
+EKR v TO
+MAG v BIL
