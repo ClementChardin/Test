@@ -5,9 +5,10 @@ from choix_joueurs_selection import *
 from savefiles import *
 
 class SelectionWidget(QtGui.QWidget):
-    def __init__(self, parent=None, ecran_precedant=None):
+    def __init__(self, parent=None, ecran_precedant=None, dat=None):
         super(SelectionWidget, self).__init__(parent)
         self.ecran_precedant = ecran_precedant
+        self.dat = s.mire_date() if dat is None else dat
 
         self.points_selection = 0.
 
@@ -63,7 +64,7 @@ class SelectionWidget(QtGui.QWidget):
         self.setup_ui()
 
     def choix_armee(self, arm):
-        self.joueurs_choix = s.get_joueurs_all(arm)
+        self.joueurs_choix = s.get_joueurs_all(arm, self.dat)
         self.joueurs_choisis = []
         self.nom = self.milieu.combo_armees.currentText()
         if self.nom == 'ULTB' and osp.isfile(SELECTIONS_DIR_NAME() + '/ULT/ULT.sel'):

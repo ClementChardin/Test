@@ -4,9 +4,9 @@ from matplotlib.backends.backend_qt4agg import FigureCanvasQTAgg
 from matplotlib.figure import Figure
 
 class PlotEvolutionWidget(QtGui.QWidget):
-    def __init__(self, jj, parent=None, dat=None):
+    def __init__(self, joueurs, parent=None, dat=None):
         super(PlotEvolutionWidget, self).__init__(parent)
-        self.jj = jj
+        self.joueurs = joueurs
         self.dat = dat
 
         self.figure = Figure()
@@ -17,7 +17,7 @@ class PlotEvolutionWidget(QtGui.QWidget):
         self.setLayout(self.lay)
         self.lay.addWidget(self.canvas)
 
-        plot_evolution(self.jj, self.dat, self.axis)
+        plot_evolution(self.joueurs, self.dat, self.axis)
         self.canvas.draw()
 
         self.show()

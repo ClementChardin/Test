@@ -227,7 +227,7 @@ class ChoixJoueursWidget(QtGui.QWidget):
                     if jj.nom in [jjj.nom for jjj in self.parent().comp.joueurs.values()]:
                         couleur = bleu
                 elif self.filtre_couleur == "age":
-                    if jj.est_jeune():
+                    if jj.est_jeune(self.dat):
                         couleur = vert
                     elif jj.D == self.dat + 1:
                         couleur = bleu
@@ -239,7 +239,7 @@ class ChoixJoueursWidget(QtGui.QWidget):
             dd[jj.nom] = couleur
 
             if jj.veut_partir:
-                fond = orange if jj.MS_probleme else rouge
+                fond = orange if jj.MS_probleme else indian_red
             else:
                 fond = blanc
             if jj.retraite:
@@ -355,7 +355,7 @@ class ChoixJoueursWidget(QtGui.QWidget):
             nom = str(self.table.item(rr, 0).text()).split(" - ")[0]
             jj = self.club.get_joueur_from_nom(nom)
             joueurs.append(jj)
-        self.pew = PlotEvolutionWidget(joueurs)
+        self.pew = PlotEvolutionWidget(joueurs, dat=self.dat)
 
 class MyTableWidgetItem(QtGui.QTableWidgetItem):
     def __lt__(self, other):

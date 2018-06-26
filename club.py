@@ -375,7 +375,7 @@ def charger(nom_equipe, c_ou_s, date=None):
     with open(save_dir+'/'+ nom_equipe + extension, 'r') as f:
         cc = pickle.load(f)
     if c_ou_s == 's':
-        s.maj_joueurs(cc)
+        s.maj_joueurs(cc, date)
     return cc
      
 class compo:

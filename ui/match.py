@@ -237,7 +237,8 @@ class ColMatchWidget(QtGui.QWidget):
         nom_compo1 = str(self.parent().col_eq1.col1.combo2.currentText())
         nom_compo2 = str(self.parent().col_eq2.col1.combo2.currentText())
         nom = self.parent().col_eq1.equipe.nom + '_' + self.parent().col_eq2.equipe.nom
-        if not (nom in nom_compo1 and nom in nom_compo2):
+        sauver = self.sauv_check.isChecked()
+        if not (nom in nom_compo1 and nom in nom_compo2) and sauver:
             dial = QtGui.QDialog()
             lay = QtGui.QVBoxLayout()
             dial.setLayout(lay)
@@ -253,7 +254,6 @@ class ColMatchWidget(QtGui.QWidget):
         else:
             self.mb = QtGui.QMessageBox()
             st = "Avez-vous clique sur la compo voulue ?"
-            sauver = self.sauv_check.isChecked()
             if sauver:
                 st += "\nSauver active"
             terrain_neutre = self.neutre_check.isChecked()
@@ -274,10 +274,10 @@ class ColMatchWidget(QtGui.QWidget):
                     self.dial = MyDialog(u"Le match ne correspond à aucun calendrier, il n'a pas été joué")
                     self.dial.exec_()
                 else:
-                    #print "commencer"
+                    print "commencer"
                     self.match.jouer(sauver=sauver,
                                      phase_finale=phase_finale)
-                    #self.print_res_match()
+                    self.print_res_match()
                     self.R = r.ResultatWidget(self.match)
                     self.R.show()
 
@@ -364,7 +364,7 @@ class ColMatchWidget(QtGui.QWidget):
 
     def identifier_calendrier(self):#, match, nom_championnat):
         cal, ii, jj = self.saison.cal_indices_prochain_match()
-        nom = cal.nom_championnat
+        #nom = cal.nom_championnat
         return cal
 
 class MyDialog(QtGui.QDialog):
