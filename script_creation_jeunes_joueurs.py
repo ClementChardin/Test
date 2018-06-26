@@ -103,12 +103,14 @@ Liste à mettre à la place de s.noms_clubs en cas de bug
 """
 ll = [nom for nom in s.noms_clubs()]
 deja_faits = ['AES', 'AHK', 'AL', 'APA', 'BIL', 'BRB', 'BSK', 'CAT', 'CPH',
-              'DKF', 'DKW', 'ED']
+              'DKF', 'DKW', 'ED', 'EKR', 'ERE', 'FS', 'FST', 'GP', 'HTH',
+              'KAK', 'KH', 'KHR', 'KIS', 'KKR', 'MAG', 'MDH', 'MDL', 'MRB',
+              'MRT', 'MSL', 'PRG', 'QNL', 'SN', 'TA', 'TLB', 'TO']
 for nom in deja_faits:
     ll.remove(nom)
 
 for nom in ll:
-    print nom
+    print '\n', nom
     cc = s.charger(nom, 'c')
     for poste in dd_jeunes[nom]:
         idx = random.random_integers(len(dd_armees[nom])) - 1
@@ -122,10 +124,11 @@ for nom in ll:
                                        espoir=True)
 
 for armee in s.noms_armees:
-    nn = random.random_integers(d3_plus())
+    nn = d3_plus()
+    print '\n', armee, nn
     jeunes = []
     for ii in range(nn):
-        jeunes.append(s.postes[random.random_integers(nn) - 1])
+        jeunes.append(s.postes[random.random_integers(len(s.postes)) - 1])
     for poste in jeunes:
         if poste in ('C1', 'C2'):
             poste = 'CE'
