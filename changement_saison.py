@@ -597,19 +597,19 @@ def upgrade_rang(jj):
         for rg in caracs_all_arm_rg[jj.ARM].keys():
             if s.rang_new(rg).type_nb == jj.RG.type_nb + nn \
                and not():
-                rangs_possibles.append(s.rang_new(rg))
+                rangs_possibles.append(s.rang_new(rg).rang)
         nn += 1
-    if jj.RG_max in rangs_possibles:
+    if jj.RG_max.rang in rangs_possibles:
         nouveau_rg = jj.RG_max
     else:
         if jj.ARM == 'EN' \
-           and 'x' in [rg.rang for rg in rangs_possibles] \
+           and 'x' in rangs_possibles \
            and not jj.RG_max.rang == 'x':
             for rg in rangs_possibles:
-                if rg.rang == 'x':
+                if rg == 'x':
                     rangs_possibles.remove(rg)
         idx = random.random_integers(len(rangs_possibles)) - 1
-        nouveau_rg = rangs_possibles[idx]
+        nouveau_rg = s.rang_new(rangs_possibles[idx])
     caracs = caracs_all_arm_rg[jj.ARM][nouveau_rg.rang]
     if jj.RG.rang in caracs_all_arm_rg[jj.ARM].keys():
         rang_old = jj.RG.rang

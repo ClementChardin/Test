@@ -358,7 +358,7 @@ class joueur:
         print 'D : ' + str(self.D)
 
     def est_jeune(self, dat=None):
-        dat = s.lire_date() if dat is None else dat
+        dat = lire_date() if dat is None else dat
         return self.RG < self.RG_max or ((dat - self.C) < 2)
 
     def en_declin(self):
