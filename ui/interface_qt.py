@@ -51,16 +51,22 @@ class InterfaceWidget(QtGui.QWidget):
             self.match.show()
 
     def setup_ui(self):
+        """
+        self.splitter = QtGui.QSplitter(parent=self,
+                     objectName='splitter',
+                     frameShape=QtGui.QFrame.StyledPanel,
+                     frameShadow=QtGui.QFrame.Plain)
+        self.lay.addWidget(self.splitter)
+        """
         self.col1 = Col1Widget(parent=self,
                                club=self.club,
                                comp=self.comp,
                                nom_compo=self.nom_compo,
                                c_ou_s=self.c_ou_s,
                                dat=self.dat)
-        self.col1_lay = QtGui.QVBoxLayout()
-        self.col1_lay.addWidget(self.col1)
-        self.lay.addLayout(self.col1_lay)
-       
+        self.lay.addWidget(self.col1)
+        #self.splitter.addWidget(self.col1)
+
         self.col2 = Col2Widget(parent=self,
                                club=self.club,
                                comp=self.comp,
@@ -69,9 +75,8 @@ class InterfaceWidget(QtGui.QWidget):
                                buttons=True,
                                fatigue=self.fatigue,
                                dat=self.dat)
-        self.col2_lay = QtGui.QVBoxLayout()
-        self.col2_lay.addWidget(self.col2)
-        self.lay.addLayout(self.col2_lay)
+        self.lay.addWidget(self.col2)
+        #self.splitter.addWidget(self.col2)
 
         #self.col3 = Col3Widget(club=self.club)
         poste_filtre = self.col3.poste_filtre if "col3" in dir(self) else "all"
@@ -83,11 +88,16 @@ class InterfaceWidget(QtGui.QWidget):
         self.col3_lay = QtGui.QVBoxLayout()
         self.col3_lay.addWidget(self.col3)
         self.lay.addLayout(self.col3_lay)
+        #self.splitter.addWidget(self.col3)
 
         #pour SelectionCompoWidget
         self.update_ui()
     
     def clean_ui(self):
+        """
+        self.lay.removeWidget(self.splitter)
+        sip.delete(self.splitter)
+        """
         self.lay.removeWidget(self.col1)
         sip.delete(self.col1)
         

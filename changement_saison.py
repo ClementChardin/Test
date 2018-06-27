@@ -580,6 +580,8 @@ def evolution_joueur(jj, dat=None):
         jj.evolution = 'rang'
         upgrade_rang(jj)
     else:
+        if carte['valeur'] == 14:
+            sgn = 1
         nb = d3_plus(carte)
         tot = sgn * nb + bonus
         sgn = 1 if tot == 0 else tot/abs(tot)

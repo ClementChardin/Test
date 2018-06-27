@@ -10,7 +10,7 @@ for nom in s.noms_clubs(dat):
     for jj in cc.get_all_joueurs():
         if not jj.C == dat: #Pour éviter les joueurs légendaires
             evolution_TAB(jj)
-            if s.est_un_avant(jj):
+            if s.est_un_avant(jj) and not s.est_un_arriere(jj):
                 evolution_TAB(jj, car='JP')
                 evolution_TAB(jj, car='P')
     cc.sauvegarder(dat)

@@ -73,8 +73,6 @@ class EspoirsWidget(QtGui.QWidget):
         self.table.setHorizontalHeaderLabels(self.hlabels)
         self.table.setSelectionBehavior(QtGui.QAbstractItemView.SelectRows)
 
-        #self.table.setSortingEnabled(True)
-
         for ii, jj in enumerate(self.joueurs):
             st_ev = '%0.2f' % jj.EV
             
