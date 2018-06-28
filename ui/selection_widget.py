@@ -155,7 +155,7 @@ class MilieuWidget(QtGui.QWidget):
         if dial.ok:
             self.selection = s.selection(nom=str(self.combo_armees.currentText()),
                                          joueurs=self.parent().joueurs_choisis)
-            self.selection.points = self.points_selection
+            self.selection.points = self.parent().points_selection
             self.selection.sauvegarder()
 
     def reset(self):

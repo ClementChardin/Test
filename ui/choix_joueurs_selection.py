@@ -6,7 +6,8 @@ from choix_joueurs import MyTableWidgetItem
 from couleurs import *
 import sip
 from ui.changement_poste_popup import ChangementPostePopup
-from plot_evolution import *
+#from plot_evolution import *
+from plot_evolution_widget import PlotEvolutionWidget
 
 class ChoixJoueursSelectionWidget(QtGui.QWidget):
     def __init__(self,
@@ -277,13 +278,17 @@ class ChoixJoueursSelectionWidget(QtGui.QWidget):
             rr = idx.row()
             if not rr in rows:
                 rows.append(rr)
-        if len(rows) > 1:
-            raise ValueError("Un seul joueur possible")
-        else:
+        #if len(rows) > 1:
+        #    raise ValueError("Un seul joueur possible")
+        #else:
+        joueurs = []
+        for rr in rows:
             nom = str(self.table.item(rr, 0).text()).split(" - ")[0]
             #jj = self.parent().selection.get_joueur_from_nom(nom)
             jj = self.get_joueur_from_nom(nom)
-            plot_evolution(jj)
+            joueurs.append(jj)
+        #plot_evolution(joueurs)
+        self.pew = PlotEvolutionWidget(joueurs, dat=self.dat)
 
     def get_joueur_from_nom(self, nom):
         for jj in self.selected_joueurs:
