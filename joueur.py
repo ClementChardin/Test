@@ -193,16 +193,16 @@ def coeffs_EV_poste(poste):
 
     return d
 
-def est_un_avant(joueur):
-    postes = joueur.postes
+def est_un_avant(jj):
+    postes = jj.postes
     if ("PI" in postes) or ("TA" in postes) or ("DL" in postes) or \
        ("TL" in postes) or ("N8" in postes):
         return True
     else:
         return False
 
-def est_un_arriere(joueur):
-    postes = joueur.postes
+def est_un_arriere(jj):
+    postes = jj.postes
     if ("DM" in postes) or ("DO" in postes) or ("C1" in postes) or \
        ("C2" in postes) or ("CE" in postes) or ("AI" in postes) or \
        ("AR" in postes):
@@ -211,7 +211,6 @@ def est_un_arriere(joueur):
         return False
 
 class joueur:
-    
     def __init__(self):
         self.nom = "nom"
         self.caracs_sans_fatigue = dict(M = 0,
@@ -232,6 +231,7 @@ class joueur:
         self.caracs = self.caracs_sans_fatigue
         self.postes = ("dummy", "", "", "")
         #la valeur dummy sert a avoir poste 1 = poste[1], etc
+        self.postes_maitrises = ['dummy', True, False, False]
         
         self.RG = rang_new('')
         self.EV = 0.
@@ -643,71 +643,92 @@ def get_caracs(jj, fatigue=True):
                 dd[car] = jj.caracs_sans_fatigue[car]
         return dd
     else:
-        return jj.caracs_sans_fatigue
+        dd = {}
+        for car in jj.caracs_sans_fatigue.keys():
+            dd[car] = jj.caracs_sans_fatigue[car]
+        return dd
 
-def calc_EV(joueur, poste, fatigue=True, caracs=None):
-    dd = get_caracs(joueur, fatigue) if caracs is None else caracs
+def calc_EV(jj, poste, fatigue=True, caracs=None):
+    dd = get_caracs(jj, fatigue) if caracs is None else caracs
+
+    malus = 0
+    if not (poste in jj.postes or (est_poste_centre(poste) and jj.joue_centre())):
+        malus = 2
+        print "/!\ " + jj.nom + " ne joue pas " + poste + "; malus =", malus
+
+    #Maîtrise du poste
+    else:
+        if jj.postes[1] in ('C1', 'C2') and est_poste_centre(poste):
+            poste_aux = jj.postes[1]
+        elif poste in ('C1', 'C2') and jj.joue_centre():
+            poste_aux = 'CE'
+        else:
+            poste_aux = poste
+        poste_maitrise = jj.postes_maitrises[jj.postes.index(poste_aux)]
+        if not poste_maitrise:
+            idx = 2 if not jj.postes[2] == poste else 3
+            MJ = getattr(jj, 'MJ'+str(idx))
+            nb_matches = MJ['CT']+MJ['ST'] + .5*(MJ['CR']+MJ['SR'])
+            seuil = matches_pour_maitriser_poste(jj.postes[1], jj.postes[idx])
+            if nb_matches >= seuil:
+                malus = 0
+            elif nb_matches >= seuil / 2.:
+                malus = .5
+            else:
+                malus = 1
+            print u"Poste", poste,  u"non maîtrisé : malus =", malus
 
     if poste == '':
         return 0
 
     elif poste in ('C1', 'C2', 'CE'):
-        if (not ("C1" in joueur.postes)) and (not ("C2" in joueur.postes)) \
-           and (not ("CE" in joueur.postes)):
-            print "/!\ " + joueur.nom + " ne joue pas " + poste
+        coeffs = coeffs_EV_poste(poste)
+        temp = 0
+        tot = 0
+        RPmin = min(dd["RP1"], dd["RP2"])
+        RPmax = max(dd["RP1"], dd["RP2"])
+        if RPmin <= 7:
+            m = 0
+        elif RPmin <= 10:
+            m = 1
         else:
-            coeffs = coeffs_EV_poste(poste)
-            temp = 0
-            tot = 0
-            #dd["RP_tot"] = max(dd["RP1"], dd["RP2"]) + max(0, min(dd["RP1"], dd["RP2"])-7)
-            RPmin = min(dd["RP1"], dd["RP2"])
-            RPmax = max(dd["RP1"], dd["RP2"])
-            if RPmin <= 7:
-                m = 0
-            elif RPmin <= 10:
-                m = 1
-            else:
-                m = 2
-            if RPmax <= 7:
-                N = 1
-            elif RPmax <= 10:
-                N = 2
-            else:
-                N = 3
-            dd["RP_tot"] = RPmax + max(m, RPmin - (RPmax - N))
+            m = 2
+        if RPmax <= 7:
+            N = 1
+        elif RPmax <= 10:
+            N = 2
+        else:
+            N = 3
+        dd["RP_tot"] = RPmax + max(m, RPmin - (RPmax - N))
 
-            for i in dd.keys():
-                if i != "RP1" and i != "RP2":
-                    temp = temp + coeffs[i] * dd[i]
-                    tot = tot + coeffs[i]
+        for i in dd.keys():
+            if i != "RP1" and i != "RP2":
+                temp = temp + coeffs[i] * dd[i]
+                tot = tot + coeffs[i]
 
+        EV = temp / tot
+        
+        if dd["TB"] > EV:
+            temp = temp + dd["TB"]
+            tot = tot + 1
             EV = temp / tot
-            
-            if dd["TB"] > EV:
-                temp = temp + dd["TB"]
-                tot = tot + 1
-                EV = temp / tot
 
-            if dd["TO"] > EV and est_un_avant(joueur) and poste != "TA":
-                temp = temp + dd["TO"]*3.5
-                tot = tot + 3.5
-                EV = temp / tot
+        if dd["TO"] > EV and est_un_avant(jj) and poste != "TA":
+            temp = temp + dd["TO"]*3.5
+            tot = tot + 3.5
+            EV = temp / tot
 
-            if dd["TA"] > EV and "TA" in [joueur.postes[2],
-                                          joueur.postes[3]]:
-                temp = temp + dd["TA"]
-                tot = tot + 1
-                EV = temp / tot
+        if dd["TA"] > EV and "TA" in [jj.postes[2],
+                                      jj.postes[3]]:
+            temp = temp + dd["TA"]
+            tot = tot + 1
+            EV = temp / tot
 
-            return EV
-
-    elif not (poste in joueur.postes):
-        print "/!\ " + joueur.nom + " ne joue pas " + poste
+        return EV - malus
     else:
         coeffs = coeffs_EV_poste(poste)
         temp = 0
         tot = 0
-        #dd["RP_tot"] = max(dd["RP1"], dd["RP2"]) + max(0, min(dd["RP1"], dd["RP2"])-7)
         RPmin = min(dd["RP1"], dd["RP2"])
         RPmax = max(dd["RP1"], dd["RP2"])
         if RPmin <= 7:
@@ -736,18 +757,18 @@ def calc_EV(joueur, poste, fatigue=True, caracs=None):
             tot = tot + 1
             EV = temp / tot
 
-        if dd["TO"] > EV and est_un_avant(joueur) and poste != "TA":
+        if dd["TO"] > EV and est_un_avant(jj) and poste != "TA":
             temp = temp + dd["TO"]*3.5
             tot = tot + 3.5
             EV = temp / tot
 
-        if dd["TA"] > EV and "TA" in [joueur.postes[2],
-                                      joueur.postes[3]]:
+        if dd["TA"] > EV and "TA" in [jj.postes[2],
+                                      jj.postes[3]]:
             temp = temp + dd["TA"]
             tot = tot + 1
             EV = temp / tot
 
-        return EV
+        return EV - malus
 
 def changer_poste_joueur(jj, poste_new, dat=None):
     if not (poste_new in jj.postes or poste_new in ('C1', 'C2') and \
@@ -925,3 +946,24 @@ def club_saison_prec(jj, dat=None):
         trans = jj.anciens_clubs.split(';')[-1]
         datt = trans.split(' ')[1]
         return trans.split(' ')[0] if int(datt) == dat else jj.club
+
+def matches_pour_maitriser_poste(poste1, poste_new):
+    avants = ['PI', 'TA', 'DL', 'TL', 'N8']
+    arrieres = ['DM', 'DO', 'C1', 'C2', 'AI', 'AR']
+    if poste1 in avants:
+        res = 10 if poste_new in avants else 20
+    elif poste1 in arrieres:
+        res = 10 if poste_new in arrieres else 20
+    else:
+        print "/!\ Mauvaise valeur de poste1 dans matches_pour_maitriser_poste :", poste1
+        res = 0
+    return res
+
+def ajouter_poste(jj, poste):
+    if not '' in jj.postes:
+        raise ValueError(jj.nom + u"joue déjà trois postes :", jj.postes)
+    idx = 2 if jj.postes[2] == '' else 3
+    tu = ('dummy', jj.postes[1], poste, '') if idx == 2 else ('dummy', jj.postes[1], jj.postes[2], poste)
+    jj.postes = tu
+    jj.postes_maitrises[idx] = False
+    print poste, u"ajouté aux postes de", jj.nom

@@ -175,6 +175,10 @@ def generer_ajouter_joueur_complet(poste,
             ll[ii+1] = raw_input("Poste " + str(ii+2) + " / " + str(N+1)+" ? ")
 
     jj.postes = ("dummy", ll[0], ll[1], ll[2])
+    jj.postes_maitrises = ["dummy",
+                           not ll[1] == '',
+                           not ll[2] == '',
+                           not ll[3] == '']
     jj.EV = calc_EV(jj, jj.postes[1])
 
     n_lettre = random.random_integers(26)

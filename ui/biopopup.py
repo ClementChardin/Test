@@ -1,6 +1,7 @@
 ﻿from PyQt4 import QtCore, QtGui
 import selection as s
 from miscellaneous import carte_to_string
+from ui.couleurs import *
 
 class BioPopup(QtGui.QWidget):
     def __init__(self, parent=None, joueurs=None, col3=None, dat=None, fatigue=True):
@@ -82,6 +83,17 @@ class JCaracsWidget(QtGui.QWidget):
                                                                    'C1 : ' + '%0.2f' % s.calc_EV(jj, 'C1', fatigue=self.parent().fatigue, caracs=caracs_jj)))
                     else :
                         self.mod.setItem(r, c, QtGui.QStandardItem(poste + ' : ' + '%0.2f' % s.calc_EV(jj, poste, fatigue=self.parent().fatigue, caracs=caracs_jj)))
+                    if not jj.postes_maitrises[k]:
+                        MJ = getattr(jj, 'MJ'+str(k))
+                        nb_matches = MJ['CT']+MJ['ST'] + .5*(MJ['CR']+MJ['SR'])
+                        seuil = 0 if jj.nom == '' else s.matches_pour_maitriser_poste(jj.postes[1], jj.postes[k])
+                        if nb_matches >= seuil:
+                            couleur = noir
+                        elif nb_matches >= seuil / 2.:
+                            couleur = orange
+                        else:
+                            couleur = rouge
+                        self.mod.setData(self.mod.index(r, c), QtGui.QBrush(couleur), QtCore.Qt.TextColorRole)
                 r += 1
                 
             c_header.append(jj.nom)

@@ -2,6 +2,7 @@
 import rolespopup as rp
 from selection import *
 from PyQt4 import QtCore, QtGui
+#from match import MyDialog
 from couleurs import *
 from plot_evolution_widget import PlotEvolutionWidget
 from diagramme_joueurs_widget import DiagrammeJoueursWidget
@@ -195,6 +196,10 @@ class ChoixJoueursWidget(QtGui.QWidget):
         diagAction.triggered.connect(self.diagramme_etoile)
         self.menu.addAction(diagAction)
 
+        ajouterPosteAction = QtGui.QAction('Ajouter un poste', self)
+        ajouterPosteAction.triggered.connect(self.ajouter_poste_joueur)
+        self.menu.addAction(ajouterPosteAction)
+
         plotevAction = QtGui.QAction(u'Plot évoltution', self)
         plotevAction.triggered.connect(self.plot_evolution)
         self.menu.addAction(plotevAction)
@@ -342,7 +347,27 @@ class ChoixJoueursWidget(QtGui.QWidget):
                                      label_TO=label_TO,
                                      label_TA=label_TA,
                                      label_TB=label_TB)
-        
+
+    def ajouter_poste_joueur(self):
+        rows = []
+        joueurs = []
+        for idx in self.table.selectedIndexes():
+            rr = idx.row()
+            if not rr in rows:
+                rows.append(rr)
+        if len(rows) > 1:
+            raise ValueError("Un seul joueur possible !")
+        rr = rows[0]
+        nom = str(self.table.item(rr, 0).text()).split(" - ")[0]
+        jj = self.club.get_joueur_from_nom(nom)
+        if not (jj.postes[2] == '' or jj.postes[3] == ''):
+            self.dial = MyDialog(jj.nom + u"connaît déjà trois postes")
+            self.dial.exec_()
+        else:
+            self.dial = MyDialog("Ajout de poste pas encore implémenté")
+            self.dial.exec_()
+            #self.ajout = AjoutPosteWidget()
+            #self.ajout.exec_()
 
     def plot_evolution(self):
         rows = []

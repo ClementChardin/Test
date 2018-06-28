@@ -504,12 +504,13 @@ class compo:
         self.totaux_old["T2"] = arrondi_quart(.5 * (self.caracs_old["PA"] + self.caracs_old["JP"] + self.caracs_old["A"]))
         self.totaux_old["T3"] = arrondi_quart(.5 * self.caracs_old["E"])
 
-    def sauvegarder(self, nom, nom_equipe, c_ou_s):
+    def sauvegarder(self, nom, nom_equipe, c_ou_s, dat=None):
+        dat = lire_date() if dat is None else dat
         self._compo_defaut_fatigue = None
         if c_ou_s == 'c':
-            save_dir = CLUBS_DIR_NAME() + '/' + nom_equipe
+            save_dir = CLUBS_DIR_NAME(dat) + '/' + nom_equipe
         elif c_ou_s == 's':
-            save_dir = s.SELECTIONS_DIR_NAME() + '/' + nom_equipe
+            save_dir = s.SELECTIONS_DIR_NAME(dat) + '/' + nom_equipe
         else:
             raise ValueError("c_ou_s doit etre 'c' pour club ; 's' pour selection !")
 
@@ -522,13 +523,13 @@ class compo:
 
         if nom == nom_equipe+'_defaut':
             try:
-                clb = charger(nom_equipe, c_ou_s)
+                clb = charger(nom_equipe, c_ou_s, dat)
                 clb.compo_defaut = self
-                clb.sauvegarder()
+                clb.sauvegarder(dat)
             except IOError:
                 pass
 
-        print "compo", nom, u"sauvegardée pour", nom_equipe, "("+c_ou_s+")"
+        print "compo", nom, u"sauvegardée pour", nom_equipe, "("+c_ou_s+"), dat =", dat
 
     def get_joueurs_noms(self):
         l = self.joueurs.keys()
@@ -761,10 +762,46 @@ def set_caracs_old_compo(comp, equipe, fatigue=True):
         comp.caracs_old[carac] = 0
 
     """
-    Prise en compte de la fatigue
+    Prise en compte de la fatigue et de la maîtrise du poste
     """
-    for jj in comp.joueurs.values():
+    for num, jj in comp.joueurs.items():
         jj.caracs = s.get_caracs(jj, fatigue)
+        poste_maitrise = False
+        for poste in s.corres_num_poste[num].split(' '):
+            if poste in jj.postes or (s.est_poste_centre(poste) and jj.joue_centre()):
+                if jj.postes[1] in ('C1', 'C2') and s.est_poste_centre(poste):
+                    poste = jj.postes[1]
+                elif poste in ('C1', 'C2') and jj.joue_centre():
+                    poste = 'CE'
+                poste_maitrise = poste_maitrise or jj.postes_maitrises[jj.postes.index(poste)]
+        if not poste_maitrise and not jj.nom == "":
+            idx = 2 if not jj.postes[2] in s.corres_num_poste[num].split(' ') and not jj.postes_maitrises[2] else 3
+            MJ = getattr(jj, 'MJ'+str(idx))
+            nb_matches = MJ['CT']+MJ['ST'] + .5*(MJ['CR']+MJ['SR'])
+            seuil = 0 if jj.nom == '' else matches_pour_maitriser_poste(jj.postes[1], jj.postes[idx])
+            if nb_matches >= seuil:
+                malus = 0
+            elif nb_matches >= seuil / 2.:
+                malus = .5
+            else:
+                malus = 1
+        else:
+            malus = 0
+
+        for car in jj.caracs.keys():
+            jj.caracs[car] -= malus
+        
+        #On vérifie que le joueur est à son poste, sinon toutes les caracs subissent un -1
+        postes = corres_num_poste[num].split(" ")
+        boo = ne_joue_pas(postes, jj)
+        if boo:
+            if not jj.nom == "":
+                print "set_caracs_old_compo", jj.nom + " ne joue pas " + str(postes) + " !"
+                malus += 1
+        if malus > 0:
+            print u"Poste non maîtrisé ou non joué :", jj.nom, postes, "; Malus =", malus
+            for car in jj.caracs.keys():
+                jj.caracs[car] = jj.caracs[car] - malus
         
     """
     Debut calcul des caracs de la compo
@@ -782,37 +819,20 @@ def set_caracs_old_compo(comp, equipe, fatigue=True):
             for n in sorted(comp.joueurs.keys(), key=lambda kk: int(kk[1:])):
                 jj = comp.joueurs[n]
 
-                #On vérifie que le joueur est à son poste, sinon toutes les caracs subissent un -1
-                postes = corres_num_poste[n].split(" ")
-                boo = ne_joue_pas(postes, jj)
-                if boo:
-                    if not jj.nom == "":
-                        print "set_caracs_old_compo", carac, jj.nom + " ne joue pas " + str(postes) + " !"
-                    jj.caracs[car] = jj.caracs[car] - 1
-
                 if not n in dd[carac].keys():
                     dd[carac][n] = 0
 
                 if carac in ['OplusAV', 'OplusAR', 'OmoinsAV', 'OmoinsAR', 'M']:
-                    #comp.caracs_old[carac] = comp.caracs_old[carac] + dd[carac][n] * max(0,(jj.caracs[car] - 7))
                     comp.caracs_old[carac] = comp.caracs_old[carac] + dd[carac][n] * jj.caracs[car] / 2.
                 elif carac == 'JP':
-                    #comp.caracs_old[carac] = comp.caracs_old[carac] + dd[carac][n] * max(0,(jj.caracs['P'] - 5))
-                    #comp.caracs_old[carac] = comp.caracs_old[carac] + dd[carac][n] * max(0,(jj.caracs[car] - 5))
                     comp.caracs_old[carac] = comp.caracs_old[carac] + dd[carac][n] * jj.caracs['P'] / 2.
                     comp.caracs_old[carac] = comp.caracs_old[carac] + dd[carac][n] * jj.caracs[car] / 2.
                 else:
-                    #comp.caracs_old[carac] = comp.caracs_old[carac] + dd[carac][n] * max(0,(jj.caracs[car] - 5))
                     comp.caracs_old[carac] = comp.caracs_old[carac] + dd[carac][n] * jj.caracs[car] / 2.
 
     """
     Cas particuliers (TA, RJC, RJL...)
     """
-    #comp.caracs_old['JP'] = comp.caracs_old['JP'] + max(0, (comp.roles['RJL'].caracs['P']-5)) + max(0, (comp.roles['RJC'].caracs['JP']-5))
-    #comp.caracs_old['ME'] = comp.caracs_old['ME'] + max(0, comp.joueurs['n2'].caracs['TA']-5) + max(0,  comp.joueurs['n16'].caracs['TA']-5)*.5
-    #comp.caracs_old['E'] = comp.caracs_old['E'] + max(0, comp.roles['cap'].caracs['E']-5)
-    #comp.caracs_old['TO_off'] = comp.caracs_old['TO_off'] + max(0, comp.joueurs['n2'].caracs['TA']-5) + max(0, comp.joueurs['n16'].caracs['TA']-5)*.5
-
     comp.caracs_old['JP'] = comp.caracs_old['JP'] + comp.roles['RJL'].caracs['P'] / 2. + comp.roles['RJC'].caracs['JP'] / 2.
     comp.caracs_old['ME'] = comp.caracs_old['ME'] + comp.joueurs['n2'].caracs['TA'] / 2. + comp.joueurs['n16'].caracs['TA']*.5 / 2.
     comp.caracs_old['E'] = comp.caracs_old['E'] + comp.roles['cap'].caracs['E'] / 2.
