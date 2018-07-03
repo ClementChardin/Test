@@ -1,3 +1,6 @@
+roles = ['cap', 'B1', 'B2', 'B3', 'B4', 'RJC', 'RJL', 'SA_pcp1', 'SA_pcp2',
+         'SA_scd', 'SA_remp1', 'SA_remp2', 'drop1', 'drop2', 'drop3']
+
 corres_poste_num = dict(PI = ['n1','n3'],
                         TA = ['n2'],
                         DL = ['n4','n5'],

@@ -154,6 +154,8 @@ class InterfaceWidget(QtGui.QWidget):
 
     def maj_roles(self, couples):
         for role, joueur in couples:
+            if not role in s.roles:
+                raise ValueError("Mauvais role saisi : "+str(role))
             self.comp.roles[role] = joueur
         self.compo_sauvee = False
         s.set_caracs_old_compo(self.comp, self.club, fatigue=self.fatigue)
