@@ -3,7 +3,7 @@ from PyQt4 import QtGui, QtCore
 from numpy.random import shuffle
 from transferts_widget import MyTableWidgetItem
 from plot_evolution_widget import PlotEvolutionWidget
-from match import MyDialog
+from info_widget import InfoWidget
 from couleurs import *
 import selection as s
 import biopopup as b
@@ -446,7 +446,7 @@ class RecrutementsWidgetNew(QtGui.QWidget):
         jj = self.get_joueur_from_nom(nom)
 
         if jj in self.get_joueurs_recrutes(self.club.nom):
-            dial = MyDialog(u"Joueur déjà recruté")
+            dial = InfoWidget(u"Joueur déjà recruté")
             dial.exec_()
 
         else:
@@ -464,11 +464,11 @@ class RecrutementsWidgetNew(QtGui.QWidget):
                         ll.append(bes)
                 print '\nListe des besoins possibles', ll
                 if len(ll) == 0:
-                    dial = MyDialog(u"Aucun besoin ne correspond aux postes de ce joueur")
+                    dial = InfoWidget(u"Aucun besoin ne correspond aux postes de ce joueur")
                     dial.exec_()
                 elif len(ll) == 1:
                     besoin = ll[0]
-                    dial = MyDialog(u"Recruté automatiquement en tant que "+self.get_st_besoin(besoin))
+                    dial = InfoWidget(u"Recruté automatiquement en tant que "+self.get_st_besoin(besoin))
                     dial.exec_()
                 else:
                     self.cbd = ChoixBesoinDialog(ll, jj, parent=self)
@@ -484,7 +484,7 @@ class RecrutementsWidgetNew(QtGui.QWidget):
                 val = self.classements[jj.nom][0][1]
                 self.maj_labs_club()
             else:
-                dial = MyDialog(u"Recrutement impossible")
+                dial = InfoWidget(u"Recrutement impossible")
                 dial.exec_()
 
     def get_bool_avertissement(self, val):
@@ -758,7 +758,7 @@ class RecrutementsWidgetNew(QtGui.QWidget):
             pickle.dump(self.dd_joueurs_interesses_precedant, ff)
         print u"dd_joueurs_interesses_precedant sauvegardé"
 
-        dial = MyDialog(u"Joueurs recrutés et besoins correspondant sauvegardés")
+        dial = InfoWidget(u"Joueurs recrutés et besoins correspondant sauvegardés")
         dial.exec_()
 
     def charger_recrutements(self):

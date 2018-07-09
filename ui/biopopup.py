@@ -102,7 +102,7 @@ class JCaracsWidget(QtGui.QWidget):
                 r += 1
 
             if self.evolution:
-                for attr in ('bonus', 'carte_evolution', 'evolution'):
+                for attr in ('carte_evolution', 'bonus', 'evolution'):
                     att = getattr(jj, attr)
                     st = carte_to_string(att) if type(att) == dict else str(att)
                     self.mod.setItem(r, c, QtGui.QStandardItem(st))
@@ -122,7 +122,7 @@ class JCaracsWidget(QtGui.QWidget):
             r_header.append(car)
 
         if self.evolution:
-            r_header += ['Bonus', u'Carte évolution', 'Evolution', u'Déclin']
+            r_header += [u'Carte évolution', 'Bonus', 'Evolution', u'Déclin']
             
         self.mod.setHorizontalHeaderLabels(c_header)
         self.mod.setVerticalHeaderLabels(r_header)
@@ -133,7 +133,10 @@ class JCaracsWidget(QtGui.QWidget):
         self.vue.setWordWrap(True)
         #self.vue.setTextElideMode(QtCore.Qt.ElideMiddle)
         self.vue.setTextElideMode(QtCore.Qt.ElideNone) 
-        self.vue.resizeRowsToContents()
+        #self.vue.resizeRowsToContents()
+        row_header = self.vue.verticalHeader()
+        for row in range(self.mod.rowCount()):
+            row_header.setResizeMode(row, QtGui.QHeaderView.ResizeToContents)
 
         #Couleurs min et max
         if len(self.joueurs) > 1:

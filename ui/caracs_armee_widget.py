@@ -14,7 +14,7 @@ class CaracsArmeeWidget(QtGui.QWidget):
         self.tab = QtGui.QTabWidget()
         self.lay.addWidget(self.tab)
 
-        armees = s.noms_armees
+        armees = [arm for arm in s.noms_armees]
         armees.remove('ULT')
         armees.remove('ULTB')
         armees.remove('Vide')

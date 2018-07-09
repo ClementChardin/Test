@@ -352,10 +352,11 @@ def transfert(nom,
         joueur.MS = ms
     ajouter_joueur(joueur, club_new, espoir=espoir, forcer_ajout=forcer_ajout)
     supprimer_joueur(joueur, club_old)
-    if joueur.anciens_clubs == '':
-        joueur.anciens_clubs = club_old.nom + ' ' + str(date)
-    else:
-        joueur.anciens_clubs += ';' + club_old.nom + ' ' + str(date)
+    if not club_old.nom == club_new.nom:
+        if joueur.anciens_clubs == '':
+            joueur.anciens_clubs = club_old.nom + ' ' + str(date)
+        else:
+            joueur.anciens_clubs += ';' + club_old.nom + ' ' + str(date)
     if club_new.nom == 'vide':
         joueur.veut_partir = True
     else:

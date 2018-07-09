@@ -724,6 +724,10 @@ def attribuer_matches(eq, c_ou_s='c', clubs=None):
         jj_club.xp_saison += ev_moy
         jj_club.xp_total += ev_moy
 
+        if not jj.postes_maitrises[numero_poste] and attr_total[key_final] >= 10:
+            jj.postes_maitrises[numero_poste] = True
+            print jj.nom, jj.postes[numero_poste], u"Maitrisé !"
+
     if c_ou_s == 'c':
         equipe.sauvegarder()
         return 0

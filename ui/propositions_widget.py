@@ -10,7 +10,7 @@ from couleurs import *
 from biopopup import BioPopup
 from choix_joueurs import MyTableWidgetItem
 from plot_evolution_widget import PlotEvolutionWidget
-from match import MyDialog
+from info_widget import InfoWidget
 
 class PropositionsWidget(QtGui.QWidget):
     def __init__(self, parent=None, dat=None, vague=0):
@@ -331,12 +331,12 @@ class PropositionsWidget(QtGui.QWidget):
         nom_club = str(self.combo_club.currentText())
         for ii, jj in enumerate(joueurs):
             if jj.club == nom_club and not jj.MS_probleme:
-                dial = MyDialog(u"Impossible de prolonger ce joueur")
+                dial = InfoWidget(u"Impossible de prolonger ce joueur")
                 dial.exec_()
                 joueurs.remove(jj)
 
             elif jj.retraite:
-                dial = MyDialog(u"Ce joueur prend sa retraite")
+                dial = InfoWidget(u"Ce joueur prend sa retraite")
                 dial.exec_()
                 joueurs.remove(jj)
 
