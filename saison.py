@@ -318,9 +318,10 @@ class saison(object):
 
         ddd = {}
         if self.c_ou_s == 'c':
-            for st in ('coupe', 'challenge', 'nordsud'):
+            for st in ('coupe', 'challenge'):
                 noms = []
-                for ii in range(1, 5):
+                N = 5 if st == 'coupe' else 6
+                for ii in range(1, N):
                     cal = self.calendriers[self.noms_championats.index(st+'_poule_'+str(ii))]
                     noms += cal.noms_clubs
                 ddd[st] = noms
