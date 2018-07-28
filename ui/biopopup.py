@@ -169,7 +169,7 @@ class JCaracsWidget(QtGui.QWidget):
         self.parent().parent().parent().col3.maj_compo_aux_2(nom)
         
     def color_min_max(self):
-        b = s.est_un_avant(self.joueurs[0]) or self.evolution
+        b = s.est_un_avant(self.joueurs[0])# or self.evolution
         N = 18
         #Min
         for row in range(3, N):
@@ -183,7 +183,7 @@ class JCaracsWidget(QtGui.QWidget):
                 if val <= min:
                     min = val
             b_TA = car == 'TA' and 'TA' in self.joueurs[0].postes
-            if (b and car in s.caracs_avant) or (not b and car in s.caracs_arriere):
+            if (b and car in s.caracs_avant) or (not b and car in s.caracs_arriere) or self.evolution:
                 if b_TA or car != 'TA':
                     for col in range(self.mod.columnCount()):
                         item = self.mod.item(row, col)
@@ -205,7 +205,7 @@ class JCaracsWidget(QtGui.QWidget):
                 val = int(item.text())
                 if val >= max:
                     max = val
-            if (b and car in s.caracs_avant) or (not b and car in s.caracs_arriere):
+            if (b and car in s.caracs_avant) or (not b and car in s.caracs_arriere) or self.evolution:
                 if b_TA or car != 'TA':
                     for col in range(self.mod.columnCount()):
                         item = self.mod.item(row, col)
