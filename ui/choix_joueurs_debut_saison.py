@@ -9,11 +9,11 @@ from couleurs import *
 from biopopup import BioPopup
 from choix_joueurs import MyTableWidgetItem
 from choix_joueurs_selection import *
-from match import MyDialog
+from info_dialog import InfoDialog
 
-class ChoixJoueursFinSaisonWidget(QtGui.QWidget):
+class ChoixJoueursDebutSaisonWidget(QtGui.QWidget):
     def __init__(self, parent=None, noms_clubs=None, dat=None):
-        super(ChoixJoueursFinSaisonWidget, self).__init__(parent)
+        super(ChoixJoueursDebutSaisonWidget, self).__init__(parent)
 
         self.dat = s.lire_date() if dat is None else dat
 
@@ -24,6 +24,7 @@ class ChoixJoueursFinSaisonWidget(QtGui.QWidget):
         for nom in self.noms_clubs:
             self.clubs.append(s.charger(nom, 'c'))
             self.recrutements[nom] = {}
+        self.club = self.clubs[0]
 
         self.non_renouveles = [] #liste des joueurs non renouveles par le club
 
@@ -56,11 +57,11 @@ class ChoixJoueursFinSaisonWidget(QtGui.QWidget):
         self.lay.addWidget(self.milieu)
 
         self.wid_effectif = ChoixJoueursSelectionWidget(autre=None,
-                                                   parent=None,
-                                                   joueurs=self.effectif,
-                                                   poste_filtre='Tous',
-                                                   ev_filtre='Tous',
-                                                   fatigue=False)
+                                                        parent=None,
+                                                        joueurs=self.effectif,
+                                                        poste_filtre='Tous',
+                                                        ev_filtre='Tous',
+                                                        fatigue=False)
         #Retirer le choix "compo"
         self.wid_effectif.combo.removeItem(1)
         self.lay.addWidget(self.wid_effectif)
@@ -104,6 +105,14 @@ class ChoixJoueursFinSaisonWidget(QtGui.QWidget):
             ll.append(recrutements)
         return ll
 
+    def get_joueurs_en_attente(self):
+        ll = []
+        for jj in self.club.get_all_joueurs():
+            if jj.anciens_clubs != '' and \
+               int(jj.anciens_clubs.split(';')[-1].split(' ')[-1]) == self.dat:
+                ll.append(jj)
+        return ll
+
     def choix_club(self, nom):
         self.enlever_non_renouveles()
         self.club = self.clubs_saison_suivante[self.noms_clubs.index(nom)]
@@ -119,7 +128,7 @@ class ChoixJoueursFinSaisonWidget(QtGui.QWidget):
                  else len(self.club.joueurs[poste])
             if nb >= lim and not jj in self.club.joueurs[poste]:
                 #print "Probleme"
-                self.dial = MyDialog("Poste plein")
+                self.dial = InfoDialog("Poste plein")
             else:
                 if jj in self.non_renouveles:
                     self.non_renouveles.remove(jj)
@@ -185,7 +194,7 @@ class ChoixJoueursFinSaisonWidget(QtGui.QWidget):
     def sauvegarder(self):
         for cc in self.clubs_saison_suivante:
             cc.sauvegarder(dat=self.dat+1)
-        self.dial = MyDialog(u"Sauvegarde effectuée")
+        self.dial = InfoDialog(u"Sauvegarde effectuée")
 
 class MilieuWidget(QtGui.QWidget):
     def __init__(self, parent=None):

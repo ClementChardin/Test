@@ -127,7 +127,11 @@ def plot_evolution(joueurs, dat=None, ax=None):
             handler_map[handles[ii]] = MyHandler(cols)
         elif lab == lab_cr:
             handler_map[handles[ii]] = MyHandler(cols2)
-    ax.legend(handles, labels, ncol=len(joueurs), handler_map=handler_map)
+    ax.legend(handles,
+              labels,
+              ncol=len(joueurs),
+              handler_map=handler_map,
+              fontsize='x-large')
     xlabel('Date')
     ax.set_ylabel(u'Matches joués')
     ax2.set_ylabel(u'Evaluation')
@@ -141,14 +145,23 @@ class MyHandler(object):
         x0, y0 = handlebox.xdescent, handlebox.ydescent
         width, height = handlebox.width, handlebox.height
         patches = []
+        contour = mpatches.Rectangle([x0, y0],
+                                     width,
+                                     height,
+                                     facecolor='none',
+                                     edgecolor='black',
+                                     lw=1.,
+                                     transform=handlebox.get_transform())
+        handlebox.add_artist(contour)
+        patches.append(contour)
         for ii, col in enumerate(self.colors):
-            edge = 'black' if col == (1., 1., 1., 1.) else col
-            patch = mpatches.Rectangle([x0+ii*width/self.N, y0],
-                                       width/self.N,
-                                       height,
+            #edge = 'black' if col == (1., 1., 1., 1.) else col
+            patch = mpatches.Rectangle([x0+1+ii*width/self.N, y0],
+                                       (width-2)/self.N,
+                                       height-1,
                                        facecolor=col,
-                                       edgecolor=edge,
-                                       lw=.5,
+                                       edgecolor='none',
+                                       lw=0,
                                        transform=handlebox.get_transform())
             handlebox.add_artist(patch)
             patches.append(patch)
