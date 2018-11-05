@@ -137,7 +137,12 @@ class EspoirsWidget(QtGui.QWidget):
         Resize
         """
         #self.table.resizeColumnsToContents()
-        self.table.resizeRowsToContents()
+        #self.table.resizeRowsToContents()
+        #self.table.horizontalHeader().sortIndicatorChanged.connect(
+        #    self.table.resizeRowsToContents)
+        row_header = self.table.verticalHeader()
+        for row in range(self.table.rowCount()):
+            row_header.setResizeMode(row, QtGui.QHeaderView.ResizeToContents)
 
     def choix_club(self, nom):
         nom = str(self.combo_club.currentText())
@@ -162,6 +167,8 @@ class EspoirsWidget(QtGui.QWidget):
 
         self.setup_table()
         self.colorer_table()
+
+        self.table.resizeRowsToContents()
 
         self.maj_st_nb_joueurs()
 
@@ -330,20 +337,37 @@ class EspoirsWidget(QtGui.QWidget):
         self.pew = PlotEvolutionWidget(joueurs)
 
     def matches_joues(self, jj):
-        st = ""
-        tot_tit_club = 0
+        def aux(jj):
+            tot_club = 0
+            tot_tit_club = 0
+            for ii in (1, 2, 3):
+                dd = getattr(jj, "MJ"+str(ii))
+                poste = jj.postes[ii]
+                if not poste == "":
+                    tot_club += dd['CT'] + dd['CR']
+                    tot_tit_club += dd['CT']
+            return tot_club, tot_tit_club
+
         tot_club = 0
+        tot_tit_club = 0
+        for jj_passe in jj.jj_passe.values():
+            aux_, aux_tit = aux(jj_passe)
+            tot_club += aux_
+            tot_tit_club += aux_tit
+        sais, sais_tit = aux(jj)
+        tot_club += sais
+        tot_tit_club += sais_tit
+
+        st = ""
         for ii in (1, 2, 3):
             dd = getattr(jj, "MJ"+str(ii))
             poste = jj.postes[ii]
-            if not poste == "":
+            if not poste == '':
                 st += poste + " " + str(dd['CT'] + dd['CR']) + ' (' + \
                       str(dd['CT']) + ')'
-                if ii < 3:
+                if ii < jj.nombre_postes:
                     st += '\n'
-                tot_club += dd['CT'] + dd['CR']
-                tot_tit_club += dd['CT']
-                st_tot_club = str(tot_club) + ' (' + str(tot_tit_club) + ')'
+        st_tot_club = str(tot_club) + ' (' + str(tot_tit_club) + ')'
         return st, st_tot_club
 
     def sauvegarder_decisions(self):

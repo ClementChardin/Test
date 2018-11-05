@@ -274,7 +274,7 @@ def selec_ultime_poste_joue(poste, ret=True, show=False, n=10):
 def selec_ultime_poste_prefere(poste, ret=True, show=False, n=10):
     d = dict()
     j_vide = j_vide_poste(poste)
-    for ar in armees:
+    for ar in noms_armees:
         d[ar] = n_meilleurs(ar, poste, 6, ret=True)
     l = []
     for ll in d.values():

@@ -7,6 +7,7 @@ import calendrier as cal
 from PyQt4 import QtGui, QtCore
 from tournoi import Match
 from diagramme_compo_widget import *
+from info_dialog import InfoDialog
 
 class MatchWidget(QtGui.QWidget):
     def __init__(self,
@@ -271,7 +272,7 @@ class ColMatchWidget(QtGui.QWidget):
 
                 cal = self.identifier_calendrier()
                 if cal is None and sauver:
-                    self.dial = MyDialog(u"Le match ne correspond à aucun calendrier, il n'a pas été joué")
+                    self.dial = InfoDialog(u"Le match ne correspond à aucun calendrier, il n'a pas été joué")
                     self.dial.exec_()
                 else:
                     print "commencer"
@@ -343,7 +344,7 @@ class ColMatchWidget(QtGui.QWidget):
             cas len égale et > 1 -> dialog
             """
             if not compos1 == compos2:
-                dial = MyDialog("Il manque une compo !")
+                dial = InfoDialog("Il manque une compo !")
                 dial.exec_()
             elif len(compos1) == 1:
                 nom = compos1[0]
@@ -359,35 +360,13 @@ class ColMatchWidget(QtGui.QWidget):
                 else:
                     pass
         else:
-            dial = MyDialog(u"Aucune compo correspondante détectée !")
+            dial = InfoDialog(u"Aucune compo correspondante détectée !")
             dial.exec_()
 
     def identifier_calendrier(self):#, match, nom_championnat):
         cal, ii, jj = self.saison.cal_indices_prochain_match()
         #nom = cal.nom_championnat
         return cal
-
-class MyDialog(QtGui.QDialog):
-    def __init__(self, st, parent=None):
-        super(MyDialog, self).__init__(parent)
-        self.st = st
-
-        self.lay = QtGui.QVBoxLayout()
-        self.setLayout(self.lay)
-
-        self.lab = QtGui.QLabel(self.st)
-        self.lay.addWidget(self.lab)
-
-        self.but = QtGui.QPushButton("OK")
-        self.but.clicked.connect(self.close)
-        self.lay.addWidget(self.but)
-
-    def keyPressEvent(self, event):
-        if event.key() in (QtCore.Qt.Key_Escape, QtCore.Qt.Key_Enter):
-            self.close()
-            event.accept()
-        else:
-            super(Dialog, self).keyPressEvent(event)
 
 class ChoixCompoDialog(QtGui.QDialog):
     def __init__(self, compos, parent=None):

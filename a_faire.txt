@@ -1,0 +1,31 @@
+###########################
+A faire :
+###########################
+
+choix_joueurs_debut_saison_widget -> à refaire, basé sur
+	ChoixJoueursSelectionWidget, en ajoutant :
+		- choix_club
+		- nb joueurs par poste
+		- espoirs dans le tri des joueurs
+		- enlever compo dans le tri des joueurs
+		- bouton sauvegarder
+
+changement de poste : si nouveau poste == postes[3]
+	faire permutation circulaire et pas
+	échange 1 - 3
+
+Transferts : mettre en place un système de contrats
+	avec durée fixée à la signature
+
+match : mettre en place une version plus interactive
+
+###########################
+Fait
+###########################
+calc_EV 
+jj.postes_maitrises = ['dummy', bool, bool, bool]
+attribuer matches -> prendre en compte postes_maitrises
+
+ajouter poste : dans ChoixJoueursWidget donner la 
+	possibilité d'ajouter un poste (non maitrisé)
+	à un joueur

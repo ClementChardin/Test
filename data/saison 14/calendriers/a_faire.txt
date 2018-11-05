@@ -1,4 +1,0 @@
-jj.postes_maitrises = ['dummy', bool, bool, boll]
-
-attribuer matches
-calc_EV

@@ -104,7 +104,7 @@ def generer_val_ms(armee, rg):
     carte_val = tirer_carte()
     VAL = val * (1 + carte_val['valeur']/10.)
     carte_ms = tirer_carte()
-    MS = ms * (1 + carte_val['valeur']/10.)
+    MS = max(1, ms * (1 + carte_val['valeur']/10.))
     return int(VAL), int(MS)
 
 def generer_joueur(poste, armee, saison_en_cours=True, nom_club=''):

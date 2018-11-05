@@ -372,6 +372,15 @@ class joueur:
                 break
         return res
 
+    @property
+    def nombre_postes(self):
+        trouve = False
+        for ii in range(1,4):
+            if self.postes[ii] == "":
+                trouve = True
+                break
+        return ii-1 if trouve else ii
+
     def diagramme_etoile(self,
                          N_points_cercles=100,
                          texte=True,

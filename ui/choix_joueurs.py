@@ -2,10 +2,11 @@
 import rolespopup as rp
 from selection import *
 from PyQt4 import QtCore, QtGui
-#from match import MyDialog
+from info_dialog import InfoDialog
 from couleurs import *
 from plot_evolution_widget import PlotEvolutionWidget
 from diagramme_joueurs_widget import DiagrammeJoueursWidget
+from ajout_poste_dialog import AjoutPosteDialog
 
 class ChoixJoueursWidget(QtGui.QWidget):
     def __init__(self, parent=None,
@@ -360,14 +361,33 @@ class ChoixJoueursWidget(QtGui.QWidget):
         rr = rows[0]
         nom = str(self.table.item(rr, 0).text()).split(" - ")[0]
         jj = self.club.get_joueur_from_nom(nom)
-        if not (jj.postes[2] == '' or jj.postes[3] == ''):
-            self.dial = MyDialog(jj.nom + u"connaît déjà trois postes")
+        if not '' in jj.postes:
+            self.dial = InfoDialog(jj.nom + u" connaît déjà trois postes")
             self.dial.exec_()
         else:
-            self.dial = MyDialog("Ajout de poste pas encore implémenté")
-            self.dial.exec_()
-            #self.ajout = AjoutPosteWidget()
-            #self.ajout.exec_()
+            #self.dial = InfoDialog("Ajout de poste pas encore implémenté")
+            #self.dial.exec_()
+            self.ajout = AjoutPosteDialog(jj)
+            res = self.ajout.exec_()
+            if res == 1:
+                poste = self.ajout.poste_choisi()
+                if poste in jj.postes or (s.est_poste_centre(poste) and jj.joue_centre()):
+                    dial = InfoDialog(jj.nom+u" joue déjà "+poste)
+                else:
+                    ev = self.ajout.EV_choisie()
+                    mb = QtGui.QMessageBox()
+                    if mb.question(None,
+                                   "Question",
+                                   jj.nom+" jouera "+poste+u" et sera évalué à "+ev,
+                                   "Annuler",
+                                   "Sauvegarder") == 1:
+                        if poste in ('C1', 'C2'):
+                            poste = 'CE'
+                        s.ajouter_poste(jj, poste)
+                        self.club.sauvegarder()
+                        self.parent().maj()
+            else:
+                pass
 
     def plot_evolution(self):
         rows = []
