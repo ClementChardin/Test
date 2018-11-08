@@ -1,0 +1,17 @@
+PRG v CPH
+SN v DKF
+
+CPH v DKF
+PRG v SN
+
+SN v CPH
+DKF v PRG
+
+CPH v SN
+PRG v DKF
+
+DKF v CPH
+SN v PRG
+
+CPH v PRG
+DKF v SN
