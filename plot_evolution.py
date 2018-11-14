@@ -14,7 +14,7 @@ def plot_evolution(joueurs, dat=None, ax=None):
         ax = subplot(111)
     ax2 = ax.twinx()
     d = 100
-    D = 11
+    D = 11 #date début des datas
     I = 0 #indice pour les légendes
     dd = {} #dict pour les légendes
     for ii, jj in enumerate(joueurs):
