@@ -102,7 +102,7 @@ dd_armees=dict(AL='ES'.split(' '),
 Liste à mettre à la place de s.noms_clubs en cas de bug
 """
 ll = [nom for nom in s.noms_clubs()]
-deja_faits = []
+deja_faits = ['AES', 'AHK']
 """
 ['AES', 'AHK', 'AL', 'APA', 'BIL', 'BRB', 'BSK', 'CAT', 'CPH',
 'DKF', 'DKW', 'ED', 'EKR', 'ERE', 'FS', 'FST', 'GP', 'HTH',

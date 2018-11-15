@@ -176,10 +176,12 @@ def generer_ajouter_joueur_complet(poste,
 
     jj.postes = ("dummy", ll[0], ll[1], ll[2])
     jj.postes_maitrises = ["dummy",
-                           not ll[1] == '',
-                           not ll[2] == '',
-                           not ll[3] == '']
+                           not jj.postes[1] == '',
+                           not jj.postes[2] == '',
+                           not jj.postes[3] == '']
     jj.EV = calc_EV(jj, jj.postes[1])
+    print 'EV :', round(jj.EV, 2)
+    print 'club :', club.nom
 
     n_lettre = random.random_integers(26)
     nom = raw_input(chr(96 + n_lettre) + ', ' + armee + ' ? ')
