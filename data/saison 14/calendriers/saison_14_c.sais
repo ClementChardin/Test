@@ -86,7 +86,7 @@ p40
 I0
 sS'nouveaux_mondes'
 p41
-I0
+I1
 sS'coupe_poule_1'
 p42
 I0
@@ -1125,453 +1125,385 @@ g41
 sg73
 (lp568
 (lp569
-NaNaNaNaNaNaa(lp570
-NaNaNaNaNaNaa(lp571
-NaNaNaNaNaNaa(lp572
-NaNaNaNaNaNaa(lp573
-NaNaNaNaNaNaa(lp574
-NaNaNaNaNaNaa(lp575
-NaNaNaNaNaNaa(lp576
+(I25
+I9
+tp570
+a(I22
+I10
+tp571
+a(I25
+I12
+tp572
+a(I16
+I12
+tp573
+a(I12
+I6
+tp574
+a(I6
+I9
+tp575
+aa(lp576
 NaNaNaNaNaNaa(lp577
 NaNaNaNaNaNaa(lp578
 NaNaNaNaNaNaa(lp579
-NaNaNaNaNaNaasg92
-(lp580
-(lp581
+NaNaNaNaNaNaa(lp580
+NaNaNaNaNaNaa(lp581
 NaNaNaNaNaNaa(lp582
 NaNaNaNaNaNaa(lp583
 NaNaNaNaNaNaa(lp584
 NaNaNaNaNaNaa(lp585
-NaNaNaNaNaNaa(lp586
-NaNaNaNaNaNaa(lp587
-NaNaNaNaNaNaa(lp588
-NaNaNaNaNaNaa(lp589
-NaNaNaNaNaNaa(lp590
-NaNaNaNaNaNaa(lp591
-NaNaNaNaNaNaasg128
-(lp592
-(lp593
-NaNaNaNaNaNaa(lp594
-NaNaNaNaNaNaa(lp595
-NaNaNaNaNaNaa(lp596
-NaNaNaNaNaNaa(lp597
-NaNaNaNaNaNaa(lp598
-NaNaNaNaNaNaa(lp599
-NaNaNaNaNaNaa(lp600
-NaNaNaNaNaNaa(lp601
-NaNaNaNaNaNaa(lp602
-NaNaNaNaNaNaa(lp603
-NaNaNaNaNaNaasg160
-(lp604
-S'BRB'
+NaNaNaNaNaNaasg92
+(lp586
+(lp587
+((dp588
+(dp589
+tp590
+a((dp591
+(dp592
+S'Armacdir'
+p593
+I1
+stp594
+a((dp595
+S'Matafierd'
+p596
+I1
+s(dp597
+tp598
+a((dp599
+(dp600
+tp601
+a((dp602
+S'Naestra'
+p603
+I1
+s(dp604
+S'Tenmonael'
 p605
-aS'CAT'
-p606
-aS'FS'
-p607
-aS'GP'
+I2
+stp606
+a((dp607
+S'Praedol'
 p608
-aS'KHR'
-p609
-aS'SN'
-p610
-aS'KH'
-p611
-aS'TO'
-p612
-aS'HTH'
-p613
-aS'MDL'
-p614
-aS'ED'
-p615
-aS'APA'
-p616
-asg174
-(dp617
-g607
-I0
-sg614
-I0
-sg608
-I0
-sg615
-I0
-sg609
-I0
-sg611
-I0
-sg606
-I0
-sg612
-I0
-sg610
-I0
-sg616
-I0
-sg605
-I0
-sg613
-I0
-ssg8
-(lp618
-S'BRB v CAT\nFS v GP\nKHR v SN\nKH v TO\nHTH v MDL\nED v APA'
-p619
-aS'CAT v APA\nMDL v ED\nTO v HTH\nSN v KH\nGP v KHR\nBRB v FS'
-p620
-aS'FS v CAT\nKHR v BRB\nKH v GP\nHTH v SN\nED v TO\nAPA v MDL'
-p621
-aS'CAT v MDL\nTO v APA\nSN v ED\nGP v HTH\nBRB v KH\nFS v KHR'
-p622
-aS'KHR v CAT\nKH v FS\nHTH v BRB\nED v GP\nAPA v SN\nMDL v TO'
-p623
-aS'CAT v TO\nSN v MDL\nGP v APA\nBRB v ED\nFS v HTH\nKHR v KH'
+I1
+s(dp609
+tp610
+aa(lp611
+NaNaNaNaNaNaa(lp612
+NaNaNaNaNaNaa(lp613
+NaNaNaNaNaNaa(lp614
+NaNaNaNaNaNaa(lp615
+NaNaNaNaNaNaa(lp616
+NaNaNaNaNaNaa(lp617
+NaNaNaNaNaNaa(lp618
+NaNaNaNaNaNaa(lp619
+NaNaNaNaNaNaa(lp620
+NaNaNaNaNaNaasg128
+(lp621
+(lp622
+((dp623
+S'Lataen'
 p624
-aS'KH v CAT\nHTH v KHR\nED v FS\nAPA v BRB\nMDL v GP\nTO v SN'
-p625
-aS'CAT v SN\nGP v TO\nBRB v MDL\nFS v APA\nKHR v ED\nKH v HTH'
-p626
-aS'HTH v CAT\nED v KH\nAPA v KHR\nMDL v FS\nTO v BRB\nSN v GP'
-p627
-aS'CAT v GP\nBRB v SN\nFS v TO\nKHR v MDL\nKH v APA\nHTH v ED'
-p628
-aS'ED v CAT\nAPA v HTH\nMDL v KH\nTO v KHR\nSN v FS\nGP v BRB'
-p629
-asg188
-(lp630
-(lp631
-NaNaNaNaNaNaa(lp632
-NaNaNaNaNaNaa(lp633
-NaNaNaNaNaNaa(lp634
-NaNaNaNaNaNaa(lp635
-NaNaNaNaNaNaa(lp636
-NaNaNaNaNaNaa(lp637
-NaNaNaNaNaNaa(lp638
-NaNaNaNaNaNaa(lp639
-NaNaNaNaNaNaa(lp640
-NaNaNaNaNaNaa(lp641
-NaNaNaNaNaNaasg225
-(dp642
-g607
-I0
-sg614
-I0
-sg608
-I0
-sg615
-I0
-sg609
-I0
-sg611
-I0
-sg606
-I0
-sg612
-I0
-sg610
-I0
-sg616
-I0
-sg605
-I0
-sg613
-I0
-ssg227
-I00
-sg228
-(dp643
-g607
-I0
-sg614
-I0
-sg608
-I0
-sg615
-I0
-sg609
-I0
-sg611
-I0
-sg606
-I0
-sg612
-I0
-sg610
-I0
-sg616
-I0
-sg605
-I0
-sg613
-I0
-ssg230
-(dp644
-g607
-I0
-sg614
-I0
-sg608
-I0
-sg615
-I0
-sg609
-I0
-sg611
-I0
-sg606
-I0
-sg612
-I0
-sg610
-I0
-sg616
-I0
-sg605
-I0
-sg613
-I0
-ssg232
-(dp645
-g607
-I0
-sg614
-I0
-sg608
-I0
-sg615
-I0
-sg609
-I0
-sg611
-I0
-sg606
-I0
-sg612
-I0
-sg610
-I0
-sg616
-I0
-sg605
-I0
-sg613
-I0
-ssg234
-(lp646
-(lp647
+I1
+s(dp625
+tp626
+a((dp627
+(dp628
+tp629
+a((dp630
+(dp631
+tp632
+a((dp633
+(dp634
+tp635
+a((dp636
+(dp637
+tp638
+a((dp639
+(dp640
+tp641
+aa(lp642
+NaNaNaNaNaNaa(lp643
+NaNaNaNaNaNaa(lp644
+NaNaNaNaNaNaa(lp645
+NaNaNaNaNaNaa(lp646
+NaNaNaNaNaNaa(lp647
 NaNaNaNaNaNaa(lp648
 NaNaNaNaNaNaa(lp649
 NaNaNaNaNaNaa(lp650
 NaNaNaNaNaNaa(lp651
-NaNaNaNaNaNaa(lp652
-NaNaNaNaNaNaa(lp653
-NaNaNaNaNaNaa(lp654
-NaNaNaNaNaNaa(lp655
-NaNaNaNaNaNaa(lp656
-NaNaNaNaNaNaa(lp657
-NaNaNaNaNaNaasg266
-(dp658
-g607
-I0
-sg614
-I0
-sg608
-I0
-sg615
-I0
-sg609
-I0
-sg611
-I0
-sg606
-I0
-sg612
-I0
-sg610
-I0
-sg616
-I0
-sg605
-I0
-sg613
-I0
-ssg268
-(dp659
-g607
-I0
-sg614
-I0
-sg608
-I0
-sg615
-I0
-sg609
-I0
-sg611
-I0
-sg606
-I0
-sg612
-I0
-sg610
-I0
-sg616
-I0
-sg605
-I0
-sg613
-I0
-ssg270
-(lp660
-(lp661
-S'BRB v CAT'
+NaNaNaNaNaNaasg160
+(lp652
+S'BRB'
+p653
+aS'CAT'
+p654
+aS'FS'
+p655
+aS'GP'
+p656
+aS'KHR'
+p657
+aS'SN'
+p658
+aS'KH'
+p659
+aS'TO'
+p660
+aS'HTH'
+p661
+aS'MDL'
 p662
-aS'FS v GP'
+aS'ED'
 p663
-aS'KHR v SN'
+aS'APA'
 p664
-aS'KH v TO'
-p665
-aS'HTH v MDL'
-p666
-aS'ED v APA'
+asg174
+(dp665
+g655
+I0
+sg662
+I1
+sg656
+I0
+sg663
+I1
+sg657
+I0
+sg659
+I0
+sg654
+I0
+sg660
+I1
+sg658
+I0
+sg664
+I0
+sg653
+I0
+sg661
+I0
+ssg8
+(lp666
+S'BRB v CAT\nFS v GP\nKHR v SN\nKH v TO\nHTH v MDL\nED v APA'
 p667
-aa(lp668
-S'CAT v APA'
+aS'CAT v APA\nMDL v ED\nTO v HTH\nSN v KH\nGP v KHR\nBRB v FS'
+p668
+aS'FS v CAT\nKHR v BRB\nKH v GP\nHTH v SN\nED v TO\nAPA v MDL'
 p669
-aS'MDL v ED'
+aS'CAT v MDL\nTO v APA\nSN v ED\nGP v HTH\nBRB v KH\nFS v KHR'
 p670
-aS'TO v HTH'
+aS'KHR v CAT\nKH v FS\nHTH v BRB\nED v GP\nAPA v SN\nMDL v TO'
 p671
-aS'SN v KH'
+aS'CAT v TO\nSN v MDL\nGP v APA\nBRB v ED\nFS v HTH\nKHR v KH'
 p672
-aS'GP v KHR'
+aS'KH v CAT\nHTH v KHR\nED v FS\nAPA v BRB\nMDL v GP\nTO v SN'
 p673
-aS'BRB v FS'
+aS'CAT v SN\nGP v TO\nBRB v MDL\nFS v APA\nKHR v ED\nKH v HTH'
 p674
-aa(lp675
-S'FS v CAT'
+aS'HTH v CAT\nED v KH\nAPA v KHR\nMDL v FS\nTO v BRB\nSN v GP'
+p675
+aS'CAT v GP\nBRB v SN\nFS v TO\nKHR v MDL\nKH v APA\nHTH v ED'
 p676
-aS'KHR v BRB'
+aS'ED v CAT\nAPA v HTH\nMDL v KH\nTO v KHR\nSN v FS\nGP v BRB'
 p677
-aS'KH v GP'
-p678
-aS'HTH v SN'
-p679
-aS'ED v TO'
-p680
-aS'APA v MDL'
-p681
-aa(lp682
-S'CAT v MDL'
-p683
-aS'TO v APA'
-p684
-aS'SN v ED'
+asg188
+(lp678
+(lp679
+((dp680
+g624
+I2
+s(dp681
+S'Nermael'
+p682
+I3
+stp683
+a((dp684
+S'Gemedol'
 p685
-aS'GP v HTH'
+I2
+sS'Foutor'
 p686
-aS'BRB v KH'
-p687
-aS'FS v KHR'
-p688
-aa(lp689
-S'KHR v CAT'
-p690
-aS'KH v FS'
+I1
+s(dp687
+g593
+I1
+stp688
+a((dp689
+g596
+I4
+s(dp690
+S'Kerfaod'
 p691
-aS'HTH v BRB'
-p692
-aS'ED v GP'
-p693
-aS'APA v SN'
+I4
+stp692
+a((dp693
+S'Lamenoire'
 p694
-aS'MDL v TO'
-p695
-aa(lp696
-S'CAT v TO'
+I2
+s(dp695
+S'Medeuleur'
+p696
+I1
+sS"Qlep'Kek"
 p697
-aS'SN v MDL'
-p698
-aS'GP v APA'
-p699
-aS'BRB v ED'
-p700
-aS'FS v HTH'
-p701
-aS'KHR v KH'
-p702
-aa(lp703
-S'KH v CAT'
+I2
+stp698
+a((dp699
+g603
+I3
+s(dp700
+g605
+I2
+stp701
+a((dp702
+g608
+I2
+s(dp703
+S'Bechen'
 p704
-aS'HTH v KHR'
-p705
-aS'ED v FS'
-p706
-aS'APA v BRB'
-p707
-aS'MDL v GP'
-p708
-aS'TO v SN'
-p709
-aa(lp710
-S'CAT v SN'
-p711
-aS'GP v TO'
-p712
-aS'BRB v MDL'
-p713
-aS'FS v APA'
-p714
-aS'KHR v ED'
-p715
-aS'KH v HTH'
-p716
-aa(lp717
-S'HTH v CAT'
-p718
-aS'ED v KH'
-p719
-aS'APA v KHR'
-p720
-aS'MDL v FS'
-p721
-aS'TO v BRB'
-p722
-aS'SN v GP'
-p723
-aa(lp724
-S'CAT v GP'
-p725
-aS'BRB v SN'
-p726
-aS'FS v TO'
-p727
-aS'KHR v MDL'
-p728
-aS'KH v APA'
-p729
-aS'HTH v ED'
-p730
-aa(lp731
-S'ED v CAT'
-p732
-aS'APA v HTH'
-p733
-aS'MDL v KH'
-p734
-aS'TO v KHR'
-p735
-aS'SN v FS'
-p736
-aS'GP v BRB'
-p737
-aasg52
-I14
-sg350
-(lp738
-(lp739
-NaNaNaNaNaNaa(lp740
+I2
+stp705
+aa(lp706
+NaNaNaNaNaNaa(lp707
+NaNaNaNaNaNaa(lp708
+NaNaNaNaNaNaa(lp709
+NaNaNaNaNaNaa(lp710
+NaNaNaNaNaNaa(lp711
+NaNaNaNaNaNaa(lp712
+NaNaNaNaNaNaa(lp713
+NaNaNaNaNaNaa(lp714
+NaNaNaNaNaNaa(lp715
+NaNaNaNaNaNaasg225
+(dp716
+g655
+I1
+sg662
+I1
+sg656
+I1
+sg663
+I1
+sg657
+I1
+sg659
+I1
+sg654
+I1
+sg660
+I1
+sg658
+I1
+sg664
+I1
+sg653
+I1
+sg661
+I1
+ssg227
+I00
+sg228
+(dp717
+g655
+I22
+sg662
+I6
+sg656
+I10
+sg663
+I6
+sg657
+I25
+sg659
+I16
+sg654
+I9
+sg660
+I12
+sg658
+I12
+sg664
+I9
+sg653
+I25
+sg661
+I12
+ssg230
+(dp718
+g655
+I0
+sg662
+I0
+sg656
+I0
+sg663
+I0
+sg657
+I0
+sg659
+I0
+sg654
+I0
+sg660
+I0
+sg658
+I0
+sg664
+I0
+sg653
+I0
+sg661
+I0
+ssg232
+(dp719
+g655
+I1
+sg662
+I0
+sg656
+I0
+sg663
+I0
+sg657
+I1
+sg659
+I1
+sg654
+I0
+sg660
+I0
+sg658
+I0
+sg664
+I1
+sg653
+I1
+sg661
+I1
+ssg234
+(lp720
+(lp721
+((dp722
+(dp723
+tp724
+a((dp725
+(dp726
+tp727
+a((dp728
+(dp729
+tp730
+a((dp731
+(dp732
+tp733
+a((dp734
+(dp735
+tp736
+a((dp737
+(dp738
+tp739
+aa(lp740
 NaNaNaNaNaNaa(lp741
 NaNaNaNaNaNaa(lp742
 NaNaNaNaNaNaa(lp743
@@ -1581,560 +1513,527 @@ NaNaNaNaNaNaa(lp746
 NaNaNaNaNaNaa(lp747
 NaNaNaNaNaNaa(lp748
 NaNaNaNaNaNaa(lp749
-NaNaNaNaNaNaasg395
-(lp750
-(lp751
-NaNaNaNaNaNaa(lp752
-NaNaNaNaNaNaa(lp753
-NaNaNaNaNaNaa(lp754
-NaNaNaNaNaNaa(lp755
-NaNaNaNaNaNaa(lp756
-NaNaNaNaNaNaa(lp757
-NaNaNaNaNaNaa(lp758
-NaNaNaNaNaNaa(lp759
-NaNaNaNaNaNaa(lp760
-NaNaNaNaNaNaa(lp761
-NaNaNaNaNaNaasg55
-g618
-sg431
-(lp762
-(lp763
-NaNaNaNaNaNaa(lp764
-NaNaNaNaNaNaa(lp765
-NaNaNaNaNaNaa(lp766
-NaNaNaNaNaNaa(lp767
-NaNaNaNaNaNaa(lp768
-NaNaNaNaNaNaa(lp769
-NaNaNaNaNaNaa(lp770
-NaNaNaNaNaNaa(lp771
-NaNaNaNaNaNaa(lp772
-NaNaNaNaNaNaa(lp773
-NaNaNaNaNaNaasg465
-(lp774
-(lp775
-NaNaNaNaNaNaa(lp776
-NaNaNaNaNaNaa(lp777
-NaNaNaNaNaNaa(lp778
-NaNaNaNaNaNaa(lp779
-NaNaNaNaNaNaa(lp780
-NaNaNaNaNaNaa(lp781
-NaNaNaNaNaNaa(lp782
-NaNaNaNaNaNaa(lp783
-NaNaNaNaNaNaa(lp784
-NaNaNaNaNaNaa(lp785
-NaNaNaNaNaNaasg498
-(dp786
-g607
+NaNaNaNaNaNaasg266
+(dp750
+g655
 I0
-sg614
+sg662
+I1
+sg656
+I1
+sg663
+I1
+sg657
 I0
-sg608
+sg659
 I0
-sg615
+sg654
+I1
+sg660
+I1
+sg658
+I1
+sg664
 I0
-sg609
+sg653
 I0
-sg611
-I0
-sg606
-I0
-sg612
-I0
-sg610
-I0
-sg616
-I0
-sg605
-I0
-sg613
-I0
-ssg500
-(lp787
-(lp788
-NaNaNaNaNaNaa(lp789
-NaNaNaNaNaNaa(lp790
-NaNaNaNaNaNaa(lp791
-NaNaNaNaNaNaa(lp792
-NaNaNaNaNaNaa(lp793
-NaNaNaNaNaNaa(lp794
-NaNaNaNaNaNaa(lp795
-NaNaNaNaNaNaa(lp796
-NaNaNaNaNaNaa(lp797
-NaNaNaNaNaNaa(lp798
-NaNaNaNaNaNaasg534
-(lp799
-(lp800
-NaNaNaNaNaNaa(lp801
-NaNaNaNaNaNaa(lp802
-NaNaNaNaNaNaa(lp803
-NaNaNaNaNaNaa(lp804
-NaNaNaNaNaNaa(lp805
-NaNaNaNaNaNaa(lp806
-NaNaNaNaNaNaa(lp807
-NaNaNaNaNaNaa(lp808
-NaNaNaNaNaNaa(lp809
-NaNaNaNaNaNaa(lp810
-NaNaNaNaNaNaasbag0
-(g68
-g2
-Ntp811
-Rp812
-(dp813
-g72
-g44
-sg73
-(lp814
-(lp815
-NaNaNaa(lp816
-NaNaNaa(lp817
-NaNaNaa(lp818
-NaNaNaa(lp819
-NaNaNaa(lp820
-NaNaNaa(lp821
-NaNaNaa(lp822
-NaNaNaa(lp823
-NaNaNaa(lp824
-NaNaNaasg92
-(lp825
-(lp826
-NaNaNaa(lp827
-NaNaNaa(lp828
-NaNaNaa(lp829
-NaNaNaa(lp830
-NaNaNaa(lp831
-NaNaNaa(lp832
-NaNaNaa(lp833
-NaNaNaa(lp834
-NaNaNaa(lp835
-NaNaNaasg128
-(lp836
-(lp837
-NaNaNaa(lp838
-NaNaNaa(lp839
-NaNaNaa(lp840
-NaNaNaa(lp841
-NaNaNaa(lp842
-NaNaNaa(lp843
-NaNaNaa(lp844
-NaNaNaa(lp845
-NaNaNaa(lp846
-NaNaNaasg160
-(lp847
-S'AES'
-p848
-aS'MDH'
-p849
-aS'KKR'
-p850
-aS'KIS'
-p851
-aS'ERE'
-p852
-aS'FST'
-p853
-asg174
-(dp854
-g848
-I0
-sg851
-I0
-sg849
-I0
-sg850
-I0
-sg852
-I0
-sg853
-I0
-ssg8
-(lp855
-S'AES v MDH\nKKR v KIS\nERE v FST'
-p856
-aS'MDH v FST\nKIS v ERE\nAES v KKR'
-p857
-aS'KKR v MDH\nERE v AES\nFST v KIS'
-p858
-aS'MDH v KIS\nAES v FST\nKKR v ERE'
-p859
-aS'ERE v MDH\nFST v KKR\nKIS v AES'
-p860
-aS'MDH v ERE\nKKR v FST\nAES v KIS'
-p861
-aS'KIS v MDH\nFST v AES\nERE v KKR'
-p862
-aS'MDH v KKR\nAES v ERE\nKIS v FST'
-p863
-aS'FST v MDH\nERE v KIS\nKKR v AES'
-p864
-aS'MDH v AES\nKIS v KKR\nFST v ERE'
-p865
-asg188
-(lp866
-(lp867
-NaNaNaa(lp868
-NaNaNaa(lp869
-NaNaNaa(lp870
-NaNaNaa(lp871
-NaNaNaa(lp872
-NaNaNaa(lp873
-NaNaNaa(lp874
-NaNaNaa(lp875
-NaNaNaa(lp876
-NaNaNaasg225
-(dp877
-g848
-I0
-sg851
-I0
-sg849
-I0
-sg850
-I0
-sg852
-I0
-sg853
-I0
-ssg227
-I00
-sg228
-(dp878
-g848
-I0
-sg851
-I0
-sg849
-I0
-sg850
-I0
-sg852
-I0
-sg853
-I0
-ssg230
-(dp879
-g848
-I0
-sg851
-I0
-sg849
-I0
-sg850
-I0
-sg852
-I0
-sg853
-I0
-ssg232
-(dp880
-g848
-I0
-sg851
-I0
-sg849
-I0
-sg850
-I0
-sg852
-I0
-sg853
-I0
-ssg234
-(lp881
-(lp882
-NaNaNaa(lp883
-NaNaNaa(lp884
-NaNaNaa(lp885
-NaNaNaa(lp886
-NaNaNaa(lp887
-NaNaNaa(lp888
-NaNaNaa(lp889
-NaNaNaa(lp890
-NaNaNaa(lp891
-NaNaNaasg266
-(dp892
-g848
-I0
-sg851
-I0
-sg849
-I0
-sg850
-I0
-sg852
-I0
-sg853
+sg661
 I0
 ssg268
-(dp893
-g848
-I0
-sg851
-I0
-sg849
-I0
-sg850
-I0
-sg852
-I0
-sg853
-I0
+(dp751
+g655
+I10
+sg662
+I12
+sg656
+I22
+sg663
+I9
+sg657
+I12
+sg659
+I12
+sg654
+I25
+sg660
+I16
+sg658
+I25
+sg664
+I6
+sg653
+I9
+sg661
+I6
 ssg270
-(lp894
-(lp895
-S'AES v MDH'
-p896
-aS'KKR v KIS'
-p897
-aS'ERE v FST'
-p898
-aa(lp899
-S'MDH v FST'
-p900
-aS'KIS v ERE'
-p901
-aS'AES v KKR'
-p902
-aa(lp903
-S'KKR v MDH'
-p904
-aS'ERE v AES'
-p905
-aS'FST v KIS'
-p906
-aa(lp907
-S'MDH v KIS'
-p908
-aS'AES v FST'
-p909
-aS'KKR v ERE'
-p910
-aa(lp911
-S'ERE v MDH'
-p912
-aS'FST v KKR'
-p913
-aS'KIS v AES'
-p914
-aa(lp915
-S'MDH v ERE'
-p916
-aS'KKR v FST'
-p917
-aS'AES v KIS'
-p918
-aa(lp919
-S'KIS v MDH'
-p920
-aS'FST v AES'
-p921
-aS'ERE v KKR'
-p922
-aa(lp923
-S'MDH v KKR'
-p924
-aS'AES v ERE'
-p925
-aS'KIS v FST'
-p926
-aa(lp927
-S'FST v MDH'
-p928
-aS'ERE v KIS'
-p929
-aS'KKR v AES'
-p930
-aa(lp931
-S'MDH v AES'
-p932
-aS'KIS v KKR'
-p933
-aS'FST v ERE'
-p934
+(lp752
+(lp753
+S'BRB v CAT'
+p754
+aS'FS v GP'
+p755
+aS'KHR v SN'
+p756
+aS'KH v TO'
+p757
+aS'HTH v MDL'
+p758
+aS'ED v APA'
+p759
+aa(lp760
+S'CAT v APA'
+p761
+aS'MDL v ED'
+p762
+aS'TO v HTH'
+p763
+aS'SN v KH'
+p764
+aS'GP v KHR'
+p765
+aS'BRB v FS'
+p766
+aa(lp767
+S'FS v CAT'
+p768
+aS'KHR v BRB'
+p769
+aS'KH v GP'
+p770
+aS'HTH v SN'
+p771
+aS'ED v TO'
+p772
+aS'APA v MDL'
+p773
+aa(lp774
+S'CAT v MDL'
+p775
+aS'TO v APA'
+p776
+aS'SN v ED'
+p777
+aS'GP v HTH'
+p778
+aS'BRB v KH'
+p779
+aS'FS v KHR'
+p780
+aa(lp781
+S'KHR v CAT'
+p782
+aS'KH v FS'
+p783
+aS'HTH v BRB'
+p784
+aS'ED v GP'
+p785
+aS'APA v SN'
+p786
+aS'MDL v TO'
+p787
+aa(lp788
+S'CAT v TO'
+p789
+aS'SN v MDL'
+p790
+aS'GP v APA'
+p791
+aS'BRB v ED'
+p792
+aS'FS v HTH'
+p793
+aS'KHR v KH'
+p794
+aa(lp795
+S'KH v CAT'
+p796
+aS'HTH v KHR'
+p797
+aS'ED v FS'
+p798
+aS'APA v BRB'
+p799
+aS'MDL v GP'
+p800
+aS'TO v SN'
+p801
+aa(lp802
+S'CAT v SN'
+p803
+aS'GP v TO'
+p804
+aS'BRB v MDL'
+p805
+aS'FS v APA'
+p806
+aS'KHR v ED'
+p807
+aS'KH v HTH'
+p808
+aa(lp809
+S'HTH v CAT'
+p810
+aS'ED v KH'
+p811
+aS'APA v KHR'
+p812
+aS'MDL v FS'
+p813
+aS'TO v BRB'
+p814
+aS'SN v GP'
+p815
+aa(lp816
+S'CAT v GP'
+p817
+aS'BRB v SN'
+p818
+aS'FS v TO'
+p819
+aS'KHR v MDL'
+p820
+aS'KH v APA'
+p821
+aS'HTH v ED'
+p822
+aa(lp823
+S'ED v CAT'
+p824
+aS'APA v HTH'
+p825
+aS'MDL v KH'
+p826
+aS'TO v KHR'
+p827
+aS'SN v FS'
+p828
+aS'GP v BRB'
+p829
 aasg52
 I14
 sg350
-(lp935
-(lp936
-NaNaNaa(lp937
-NaNaNaa(lp938
-NaNaNaa(lp939
-NaNaNaa(lp940
-NaNaNaa(lp941
-NaNaNaa(lp942
-NaNaNaa(lp943
-NaNaNaa(lp944
-NaNaNaa(lp945
-NaNaNaasg395
-(lp946
-(lp947
-NaNaNaa(lp948
-NaNaNaa(lp949
-NaNaNaa(lp950
-NaNaNaa(lp951
-NaNaNaa(lp952
-NaNaNaa(lp953
-NaNaNaa(lp954
-NaNaNaa(lp955
-NaNaNaa(lp956
-NaNaNaasg55
-g855
+(lp830
+(lp831
+((dp832
+S'Iyeban'
+p833
+I1
+sS'Chotc'
+p834
+I1
+sS'Trivyzgh'
+p835
+I1
+s(dp836
+tp837
+a((dp838
+S'Zerhen'
+p839
+I1
+s(dp840
+S'Chebanar'
+p841
+I1
+stp842
+a((dp843
+S'Zhdavr'
+p844
+I1
+s(dp845
+tp846
+a((dp847
+S'Eldroth'
+p848
+I1
+s(dp849
+tp850
+a((dp851
+(dp852
+tp853
+a((dp854
+(dp855
+tp856
+aa(lp857
+NaNaNaNaNaNaa(lp858
+NaNaNaNaNaNaa(lp859
+NaNaNaNaNaNaa(lp860
+NaNaNaNaNaNaa(lp861
+NaNaNaNaNaNaa(lp862
+NaNaNaNaNaNaa(lp863
+NaNaNaNaNaNaa(lp864
+NaNaNaNaNaNaa(lp865
+NaNaNaNaNaNaa(lp866
+NaNaNaNaNaNaasg395
+(lp867
+(lp868
+((dp869
+(dp870
+tp871
+a((dp872
+S'Ienlophar'
+p873
+I1
+s(dp874
+tp875
+a((dp876
+(dp877
+S'Cathaen'
+p878
+I1
+sS'Ilirh'
+p879
+I1
+stp880
+a((dp881
+(dp882
+S'Hellborg'
+p883
+I1
+stp884
+a((dp885
+(dp886
+tp887
+a((dp888
+S'Hepelet'
+p889
+I1
+s(dp890
+tp891
+aa(lp892
+NaNaNaNaNaNaa(lp893
+NaNaNaNaNaNaa(lp894
+NaNaNaNaNaNaa(lp895
+NaNaNaNaNaNaa(lp896
+NaNaNaNaNaNaa(lp897
+NaNaNaNaNaNaa(lp898
+NaNaNaNaNaNaa(lp899
+NaNaNaNaNaNaa(lp900
+NaNaNaNaNaNaa(lp901
+NaNaNaNaNaNaasg55
+g666
 sg431
-(lp957
-(lp958
-NaNaNaa(lp959
-NaNaNaa(lp960
-NaNaNaa(lp961
-NaNaNaa(lp962
-NaNaNaa(lp963
-NaNaNaa(lp964
-NaNaNaa(lp965
-NaNaNaa(lp966
-NaNaNaa(lp967
-NaNaNaasg465
-(lp968
-(lp969
-NaNaNaa(lp970
-NaNaNaa(lp971
-NaNaNaa(lp972
-NaNaNaa(lp973
-NaNaNaa(lp974
-NaNaNaa(lp975
-NaNaNaa(lp976
-NaNaNaa(lp977
-NaNaNaa(lp978
-NaNaNaasg498
-(dp979
-g848
+(lp902
+(lp903
+((dp904
+(dp905
+tp906
+a((dp907
+(dp908
+tp909
+a((dp910
+(dp911
+tp912
+a((dp913
+(dp914
+tp915
+a((dp916
+(dp917
+tp918
+a((dp919
+S'Maethol'
+p920
+I1
+s(dp921
+tp922
+aa(lp923
+NaNaNaNaNaNaa(lp924
+NaNaNaNaNaNaa(lp925
+NaNaNaNaNaNaa(lp926
+NaNaNaNaNaNaa(lp927
+NaNaNaNaNaNaa(lp928
+NaNaNaNaNaNaa(lp929
+NaNaNaNaNaNaa(lp930
+NaNaNaNaNaNaa(lp931
+NaNaNaNaNaNaa(lp932
+NaNaNaNaNaNaasg465
+(lp933
+(lp934
+((dp935
+(dp936
+tp937
+a((dp938
+(dp939
+S'Engret'
+p940
+I1
+stp941
+a((dp942
+(dp943
+tp944
+a((dp945
+(dp946
+tp947
+a((dp948
+S'Tretab'
+p949
+I1
+s(dp950
+tp951
+a((dp952
+(dp953
+tp954
+aa(lp955
+NaNaNaNaNaNaa(lp956
+NaNaNaNaNaNaa(lp957
+NaNaNaNaNaNaa(lp958
+NaNaNaNaNaNaa(lp959
+NaNaNaNaNaNaa(lp960
+NaNaNaNaNaNaa(lp961
+NaNaNaNaNaNaa(lp962
+NaNaNaNaNaNaa(lp963
+NaNaNaNaNaNaa(lp964
+NaNaNaNaNaNaasg498
+(dp965
+g655
 I0
-sg851
+sg662
 I0
-sg849
+sg656
 I0
-sg850
+sg663
 I0
-sg852
+sg657
 I0
-sg853
+sg659
+I0
+sg654
+I0
+sg660
+I0
+sg658
+I0
+sg664
+I0
+sg653
+I0
+sg661
 I0
 ssg500
-(lp980
-(lp981
-NaNaNaa(lp982
-NaNaNaa(lp983
-NaNaNaa(lp984
-NaNaNaa(lp985
-NaNaNaa(lp986
-NaNaNaa(lp987
-NaNaNaa(lp988
-NaNaNaa(lp989
-NaNaNaa(lp990
-NaNaNaasg534
-(lp991
-(lp992
-NaNaNaa(lp993
-NaNaNaa(lp994
-NaNaNaa(lp995
-NaNaNaa(lp996
-NaNaNaa(lp997
-NaNaNaa(lp998
-NaNaNaa(lp999
-NaNaNaa(lp1000
-NaNaNaa(lp1001
-NaNaNaasbag0
+(lp966
+(lp967
+((dp968
+(dp969
+tp970
+a((dp971
+S'Vorhovlen'
+p972
+I2
+s(dp973
+tp974
+a((dp975
+S'Rotovlav'
+p976
+I1
+sS'Eltharion'
+p977
+I1
+s(dp978
+tp979
+a((dp980
+g694
+I1
+s(dp981
+S'Coess'
+p982
+I1
+stp983
+a((dp984
+S'Uthimol'
+p985
+I1
+s(dp986
+tp987
+a((dp988
+(dp989
+S'Coutard'
+p990
+I1
+stp991
+aa(lp992
+NaNaNaNaNaNaa(lp993
+NaNaNaNaNaNaa(lp994
+NaNaNaNaNaNaa(lp995
+NaNaNaNaNaNaa(lp996
+NaNaNaNaNaNaa(lp997
+NaNaNaNaNaNaa(lp998
+NaNaNaNaNaNaa(lp999
+NaNaNaNaNaNaa(lp1000
+NaNaNaNaNaNaa(lp1001
+NaNaNaNaNaNaasg534
+(lp1002
+(lp1003
+((dp1004
+g624
+I2
+s(dp1005
+tp1006
+a((dp1007
+g686
+I1
+s(dp1008
+g593
+I1
+stp1009
+a((dp1010
+g596
+I1
+s(dp1011
+tp1012
+a((dp1013
+g694
+I1
+s(dp1014
+tp1015
+a((dp1016
+(dp1017
+tp1018
+a((dp1019
+(dp1020
+tp1021
+aa(lp1022
+NaNaNaNaNaNaa(lp1023
+NaNaNaNaNaNaa(lp1024
+NaNaNaNaNaNaa(lp1025
+NaNaNaNaNaNaa(lp1026
+NaNaNaNaNaNaa(lp1027
+NaNaNaNaNaNaa(lp1028
+NaNaNaNaNaNaa(lp1029
+NaNaNaNaNaNaa(lp1030
+NaNaNaNaNaNaa(lp1031
+NaNaNaNaNaNaasbag0
 (g68
 g2
-Ntp1002
-Rp1003
-(dp1004
+Ntp1032
+Rp1033
+(dp1034
 g72
-g37
+g44
 sg73
-(lp1005
-(lp1006
-NaNaNaa(lp1007
-NaNaNaa(lp1008
-NaNaNaa(lp1009
-NaNaNaa(lp1010
-NaNaNaa(lp1011
-NaNaNaa(lp1012
-NaNaNaa(lp1013
-NaNaNaa(lp1014
-NaNaNaa(lp1015
-NaNaNaasg92
-(lp1016
-(lp1017
-NaNaNaa(lp1018
-NaNaNaa(lp1019
-NaNaNaa(lp1020
-NaNaNaa(lp1021
-NaNaNaa(lp1022
-NaNaNaa(lp1023
-NaNaNaa(lp1024
-NaNaNaa(lp1025
-NaNaNaa(lp1026
-NaNaNaasg128
-(lp1027
-(lp1028
-NaNaNaa(lp1029
-NaNaNaa(lp1030
-NaNaNaa(lp1031
-NaNaNaa(lp1032
-NaNaNaa(lp1033
-NaNaNaa(lp1034
-NaNaNaa(lp1035
-NaNaNaa(lp1036
+(lp1035
+(lp1036
 NaNaNaa(lp1037
-NaNaNaasg160
-(lp1038
-S'MRT'
-p1039
-aS'EKR'
-p1040
-aS'BIL'
-p1041
-aS'CPH'
-p1042
-aS'AHK'
-p1043
-aS'MAG'
-p1044
-asg174
-(dp1045
-g1042
-I0
-sg1041
-I0
-sg1039
-I0
-sg1043
-I0
-sg1044
-I0
-sg1040
-I0
-ssg8
+NaNaNaa(lp1038
+NaNaNaa(lp1039
+NaNaNaa(lp1040
+NaNaNaa(lp1041
+NaNaNaa(lp1042
+NaNaNaa(lp1043
+NaNaNaa(lp1044
+NaNaNaa(lp1045
+NaNaNaasg92
 (lp1046
-S'MRT v EKR\nBIL v CPH\nAHK v MAG'
-p1047
-aS'EKR v MAG\nCPH v AHK\nMRT v BIL'
-p1048
-aS'BIL v EKR\nAHK v MRT\nMAG v CPH'
-p1049
-aS'EKR v CPH\nMRT v MAG\nBIL v AHK'
-p1050
-aS'AHK v EKR\nMAG v BIL\nCPH v MRT'
-p1051
-aS'EKR v AHK\nBIL v MAG\nMRT v CPH'
-p1052
-aS'CPH v EKR\nMAG v MRT\nAHK v BIL'
-p1053
-aS'EKR v BIL\nMRT v AHK\nCPH v MAG'
-p1054
-aS'MAG v EKR\nAHK v CPH\nBIL v MRT'
-p1055
-aS'EKR v MRT\nCPH v BIL\nMAG v AHK'
-p1056
-asg188
+(lp1047
+NaNaNaa(lp1048
+NaNaNaa(lp1049
+NaNaNaa(lp1050
+NaNaNaa(lp1051
+NaNaNaa(lp1052
+NaNaNaa(lp1053
+NaNaNaa(lp1054
+NaNaNaa(lp1055
+NaNaNaa(lp1056
+NaNaNaasg128
 (lp1057
 (lp1058
 NaNaNaa(lp1059
@@ -2146,727 +2045,703 @@ NaNaNaa(lp1064
 NaNaNaa(lp1065
 NaNaNaa(lp1066
 NaNaNaa(lp1067
+NaNaNaasg160
+(lp1068
+S'AES'
+p1069
+aS'MDH'
+p1070
+aS'KKR'
+p1071
+aS'KIS'
+p1072
+aS'ERE'
+p1073
+aS'FST'
+p1074
+asg174
+(dp1075
+g1069
+I0
+sg1072
+I0
+sg1070
+I0
+sg1071
+I0
+sg1073
+I0
+sg1074
+I0
+ssg8
+(lp1076
+S'AES v MDH\nKKR v KIS\nERE v FST'
+p1077
+aS'MDH v FST\nKIS v ERE\nAES v KKR'
+p1078
+aS'KKR v MDH\nERE v AES\nFST v KIS'
+p1079
+aS'MDH v KIS\nAES v FST\nKKR v ERE'
+p1080
+aS'ERE v MDH\nFST v KKR\nKIS v AES'
+p1081
+aS'MDH v ERE\nKKR v FST\nAES v KIS'
+p1082
+aS'KIS v MDH\nFST v AES\nERE v KKR'
+p1083
+aS'MDH v KKR\nAES v ERE\nKIS v FST'
+p1084
+aS'FST v MDH\nERE v KIS\nKKR v AES'
+p1085
+aS'MDH v AES\nKIS v KKR\nFST v ERE'
+p1086
+asg188
+(lp1087
+(lp1088
+NaNaNaa(lp1089
+NaNaNaa(lp1090
+NaNaNaa(lp1091
+NaNaNaa(lp1092
+NaNaNaa(lp1093
+NaNaNaa(lp1094
+NaNaNaa(lp1095
+NaNaNaa(lp1096
+NaNaNaa(lp1097
 NaNaNaasg225
-(dp1068
-g1042
+(dp1098
+g1069
 I0
-sg1041
+sg1072
 I0
-sg1039
+sg1070
 I0
-sg1043
+sg1071
 I0
-sg1044
+sg1073
 I0
-sg1040
+sg1074
 I0
 ssg227
 I00
 sg228
-(dp1069
-g1042
+(dp1099
+g1069
 I0
-sg1041
+sg1072
 I0
-sg1039
+sg1070
 I0
-sg1043
+sg1071
 I0
-sg1044
+sg1073
 I0
-sg1040
+sg1074
 I0
 ssg230
-(dp1070
-g1042
+(dp1100
+g1069
 I0
-sg1041
+sg1072
 I0
-sg1039
+sg1070
 I0
-sg1043
+sg1071
 I0
-sg1044
+sg1073
 I0
-sg1040
+sg1074
 I0
 ssg232
-(dp1071
-g1042
+(dp1101
+g1069
 I0
-sg1041
+sg1072
 I0
-sg1039
+sg1070
 I0
-sg1043
+sg1071
 I0
-sg1044
+sg1073
 I0
-sg1040
+sg1074
 I0
 ssg234
-(lp1072
-(lp1073
-NaNaNaa(lp1074
-NaNaNaa(lp1075
-NaNaNaa(lp1076
-NaNaNaa(lp1077
-NaNaNaa(lp1078
-NaNaNaa(lp1079
-NaNaNaa(lp1080
-NaNaNaa(lp1081
-NaNaNaa(lp1082
+(lp1102
+(lp1103
+NaNaNaa(lp1104
+NaNaNaa(lp1105
+NaNaNaa(lp1106
+NaNaNaa(lp1107
+NaNaNaa(lp1108
+NaNaNaa(lp1109
+NaNaNaa(lp1110
+NaNaNaa(lp1111
+NaNaNaa(lp1112
 NaNaNaasg266
-(dp1083
-g1042
+(dp1113
+g1069
 I0
-sg1041
+sg1072
 I0
-sg1039
+sg1070
 I0
-sg1043
+sg1071
 I0
-sg1044
+sg1073
 I0
-sg1040
+sg1074
 I0
 ssg268
-(dp1084
-g1042
+(dp1114
+g1069
 I0
-sg1041
+sg1072
 I0
-sg1039
+sg1070
 I0
-sg1043
+sg1071
 I0
-sg1044
+sg1073
 I0
-sg1040
+sg1074
 I0
 ssg270
-(lp1085
-(lp1086
-S'MRT v EKR'
-p1087
-aS'BIL v CPH'
-p1088
-aS'AHK v MAG'
-p1089
-aa(lp1090
-S'EKR v MAG'
-p1091
-aS'CPH v AHK'
-p1092
-aS'MRT v BIL'
-p1093
-aa(lp1094
-S'BIL v EKR'
-p1095
-aS'AHK v MRT'
-p1096
-aS'MAG v CPH'
-p1097
-aa(lp1098
-S'EKR v CPH'
-p1099
-aS'MRT v MAG'
-p1100
-aS'BIL v AHK'
-p1101
-aa(lp1102
-S'AHK v EKR'
-p1103
-aS'MAG v BIL'
-p1104
-aS'CPH v MRT'
-p1105
-aa(lp1106
-S'EKR v AHK'
-p1107
-aS'BIL v MAG'
-p1108
-aS'MRT v CPH'
-p1109
-aa(lp1110
-S'CPH v EKR'
-p1111
-aS'MAG v MRT'
-p1112
-aS'AHK v BIL'
-p1113
-aa(lp1114
-S'EKR v BIL'
-p1115
-aS'MRT v AHK'
-p1116
-aS'CPH v MAG'
+(lp1115
+(lp1116
+S'AES v MDH'
 p1117
-aa(lp1118
-S'MAG v EKR'
+aS'KKR v KIS'
+p1118
+aS'ERE v FST'
 p1119
-aS'AHK v CPH'
-p1120
-aS'BIL v MRT'
+aa(lp1120
+S'MDH v FST'
 p1121
-aa(lp1122
-S'EKR v MRT'
+aS'KIS v ERE'
+p1122
+aS'AES v KKR'
 p1123
-aS'CPH v BIL'
-p1124
-aS'MAG v AHK'
+aa(lp1124
+S'KKR v MDH'
 p1125
+aS'ERE v AES'
+p1126
+aS'FST v KIS'
+p1127
+aa(lp1128
+S'MDH v KIS'
+p1129
+aS'AES v FST'
+p1130
+aS'KKR v ERE'
+p1131
+aa(lp1132
+S'ERE v MDH'
+p1133
+aS'FST v KKR'
+p1134
+aS'KIS v AES'
+p1135
+aa(lp1136
+S'MDH v ERE'
+p1137
+aS'KKR v FST'
+p1138
+aS'AES v KIS'
+p1139
+aa(lp1140
+S'KIS v MDH'
+p1141
+aS'FST v AES'
+p1142
+aS'ERE v KKR'
+p1143
+aa(lp1144
+S'MDH v KKR'
+p1145
+aS'AES v ERE'
+p1146
+aS'KIS v FST'
+p1147
+aa(lp1148
+S'FST v MDH'
+p1149
+aS'ERE v KIS'
+p1150
+aS'KKR v AES'
+p1151
+aa(lp1152
+S'MDH v AES'
+p1153
+aS'KIS v KKR'
+p1154
+aS'FST v ERE'
+p1155
 aasg52
 I14
 sg350
-(lp1126
-(lp1127
-NaNaNaa(lp1128
-NaNaNaa(lp1129
-NaNaNaa(lp1130
-NaNaNaa(lp1131
-NaNaNaa(lp1132
-NaNaNaa(lp1133
-NaNaNaa(lp1134
-NaNaNaa(lp1135
-NaNaNaa(lp1136
-NaNaNaasg395
-(lp1137
-(lp1138
-NaNaNaa(lp1139
-NaNaNaa(lp1140
-NaNaNaa(lp1141
-NaNaNaa(lp1142
-NaNaNaa(lp1143
-NaNaNaa(lp1144
-NaNaNaa(lp1145
-NaNaNaa(lp1146
-NaNaNaa(lp1147
-NaNaNaasg55
-g1046
-sg431
-(lp1148
-(lp1149
-NaNaNaa(lp1150
-NaNaNaa(lp1151
-NaNaNaa(lp1152
-NaNaNaa(lp1153
-NaNaNaa(lp1154
-NaNaNaa(lp1155
-NaNaNaa(lp1156
-NaNaNaa(lp1157
+(lp1156
+(lp1157
 NaNaNaa(lp1158
-NaNaNaasg465
-(lp1159
-(lp1160
+NaNaNaa(lp1159
+NaNaNaa(lp1160
 NaNaNaa(lp1161
 NaNaNaa(lp1162
 NaNaNaa(lp1163
 NaNaNaa(lp1164
 NaNaNaa(lp1165
 NaNaNaa(lp1166
-NaNaNaa(lp1167
-NaNaNaa(lp1168
+NaNaNaasg395
+(lp1167
+(lp1168
 NaNaNaa(lp1169
-NaNaNaasg498
-(dp1170
-g1042
-I0
-sg1041
-I0
-sg1039
-I0
-sg1043
-I0
-sg1044
-I0
-sg1040
-I0
-ssg500
-(lp1171
-(lp1172
+NaNaNaa(lp1170
+NaNaNaa(lp1171
+NaNaNaa(lp1172
 NaNaNaa(lp1173
 NaNaNaa(lp1174
 NaNaNaa(lp1175
 NaNaNaa(lp1176
 NaNaNaa(lp1177
-NaNaNaa(lp1178
-NaNaNaa(lp1179
+NaNaNaasg55
+g1076
+sg431
+(lp1178
+(lp1179
 NaNaNaa(lp1180
 NaNaNaa(lp1181
-NaNaNaasg534
-(lp1182
-(lp1183
+NaNaNaa(lp1182
+NaNaNaa(lp1183
 NaNaNaa(lp1184
 NaNaNaa(lp1185
 NaNaNaa(lp1186
 NaNaNaa(lp1187
 NaNaNaa(lp1188
-NaNaNaa(lp1189
-NaNaNaa(lp1190
+NaNaNaasg465
+(lp1189
+(lp1190
 NaNaNaa(lp1191
 NaNaNaa(lp1192
+NaNaNaa(lp1193
+NaNaNaa(lp1194
+NaNaNaa(lp1195
+NaNaNaa(lp1196
+NaNaNaa(lp1197
+NaNaNaa(lp1198
+NaNaNaa(lp1199
+NaNaNaasg498
+(dp1200
+g1069
+I0
+sg1072
+I0
+sg1070
+I0
+sg1071
+I0
+sg1073
+I0
+sg1074
+I0
+ssg500
+(lp1201
+(lp1202
+NaNaNaa(lp1203
+NaNaNaa(lp1204
+NaNaNaa(lp1205
+NaNaNaa(lp1206
+NaNaNaa(lp1207
+NaNaNaa(lp1208
+NaNaNaa(lp1209
+NaNaNaa(lp1210
+NaNaNaa(lp1211
+NaNaNaasg534
+(lp1212
+(lp1213
+NaNaNaa(lp1214
+NaNaNaa(lp1215
+NaNaNaa(lp1216
+NaNaNaa(lp1217
+NaNaNaa(lp1218
+NaNaNaa(lp1219
+NaNaNaa(lp1220
+NaNaNaa(lp1221
+NaNaNaa(lp1222
 NaNaNaasbag0
 (g68
 g2
-Ntp1193
-Rp1194
-(dp1195
+Ntp1223
+Rp1224
+(dp1225
+g72
+g37
+sg73
+(lp1226
+(lp1227
+NaNaNaa(lp1228
+NaNaNaa(lp1229
+NaNaNaa(lp1230
+NaNaNaa(lp1231
+NaNaNaa(lp1232
+NaNaNaa(lp1233
+NaNaNaa(lp1234
+NaNaNaa(lp1235
+NaNaNaa(lp1236
+NaNaNaasg92
+(lp1237
+(lp1238
+NaNaNaa(lp1239
+NaNaNaa(lp1240
+NaNaNaa(lp1241
+NaNaNaa(lp1242
+NaNaNaa(lp1243
+NaNaNaa(lp1244
+NaNaNaa(lp1245
+NaNaNaa(lp1246
+NaNaNaa(lp1247
+NaNaNaasg128
+(lp1248
+(lp1249
+NaNaNaa(lp1250
+NaNaNaa(lp1251
+NaNaNaa(lp1252
+NaNaNaa(lp1253
+NaNaNaa(lp1254
+NaNaNaa(lp1255
+NaNaNaa(lp1256
+NaNaNaa(lp1257
+NaNaNaa(lp1258
+NaNaNaasg160
+(lp1259
+S'MRT'
+p1260
+aS'EKR'
+p1261
+aS'BIL'
+p1262
+aS'CPH'
+p1263
+aS'AHK'
+p1264
+aS'MAG'
+p1265
+asg174
+(dp1266
+g1263
+I0
+sg1262
+I0
+sg1260
+I0
+sg1264
+I0
+sg1265
+I0
+sg1261
+I0
+ssg8
+(lp1267
+S'MRT v EKR\nBIL v CPH\nAHK v MAG'
+p1268
+aS'EKR v MAG\nCPH v AHK\nMRT v BIL'
+p1269
+aS'BIL v EKR\nAHK v MRT\nMAG v CPH'
+p1270
+aS'EKR v CPH\nMRT v MAG\nBIL v AHK'
+p1271
+aS'AHK v EKR\nMAG v BIL\nCPH v MRT'
+p1272
+aS'EKR v AHK\nBIL v MAG\nMRT v CPH'
+p1273
+aS'CPH v EKR\nMAG v MRT\nAHK v BIL'
+p1274
+aS'EKR v BIL\nMRT v AHK\nCPH v MAG'
+p1275
+aS'MAG v EKR\nAHK v CPH\nBIL v MRT'
+p1276
+aS'EKR v MRT\nCPH v BIL\nMAG v AHK'
+p1277
+asg188
+(lp1278
+(lp1279
+NaNaNaa(lp1280
+NaNaNaa(lp1281
+NaNaNaa(lp1282
+NaNaNaa(lp1283
+NaNaNaa(lp1284
+NaNaNaa(lp1285
+NaNaNaa(lp1286
+NaNaNaa(lp1287
+NaNaNaa(lp1288
+NaNaNaasg225
+(dp1289
+g1263
+I0
+sg1262
+I0
+sg1260
+I0
+sg1264
+I0
+sg1265
+I0
+sg1261
+I0
+ssg227
+I00
+sg228
+(dp1290
+g1263
+I0
+sg1262
+I0
+sg1260
+I0
+sg1264
+I0
+sg1265
+I0
+sg1261
+I0
+ssg230
+(dp1291
+g1263
+I0
+sg1262
+I0
+sg1260
+I0
+sg1264
+I0
+sg1265
+I0
+sg1261
+I0
+ssg232
+(dp1292
+g1263
+I0
+sg1262
+I0
+sg1260
+I0
+sg1264
+I0
+sg1265
+I0
+sg1261
+I0
+ssg234
+(lp1293
+(lp1294
+NaNaNaa(lp1295
+NaNaNaa(lp1296
+NaNaNaa(lp1297
+NaNaNaa(lp1298
+NaNaNaa(lp1299
+NaNaNaa(lp1300
+NaNaNaa(lp1301
+NaNaNaa(lp1302
+NaNaNaa(lp1303
+NaNaNaasg266
+(dp1304
+g1263
+I0
+sg1262
+I0
+sg1260
+I0
+sg1264
+I0
+sg1265
+I0
+sg1261
+I0
+ssg268
+(dp1305
+g1263
+I0
+sg1262
+I0
+sg1260
+I0
+sg1264
+I0
+sg1265
+I0
+sg1261
+I0
+ssg270
+(lp1306
+(lp1307
+S'MRT v EKR'
+p1308
+aS'BIL v CPH'
+p1309
+aS'AHK v MAG'
+p1310
+aa(lp1311
+S'EKR v MAG'
+p1312
+aS'CPH v AHK'
+p1313
+aS'MRT v BIL'
+p1314
+aa(lp1315
+S'BIL v EKR'
+p1316
+aS'AHK v MRT'
+p1317
+aS'MAG v CPH'
+p1318
+aa(lp1319
+S'EKR v CPH'
+p1320
+aS'MRT v MAG'
+p1321
+aS'BIL v AHK'
+p1322
+aa(lp1323
+S'AHK v EKR'
+p1324
+aS'MAG v BIL'
+p1325
+aS'CPH v MRT'
+p1326
+aa(lp1327
+S'EKR v AHK'
+p1328
+aS'BIL v MAG'
+p1329
+aS'MRT v CPH'
+p1330
+aa(lp1331
+S'CPH v EKR'
+p1332
+aS'MAG v MRT'
+p1333
+aS'AHK v BIL'
+p1334
+aa(lp1335
+S'EKR v BIL'
+p1336
+aS'MRT v AHK'
+p1337
+aS'CPH v MAG'
+p1338
+aa(lp1339
+S'MAG v EKR'
+p1340
+aS'AHK v CPH'
+p1341
+aS'BIL v MRT'
+p1342
+aa(lp1343
+S'EKR v MRT'
+p1344
+aS'CPH v BIL'
+p1345
+aS'MAG v AHK'
+p1346
+aasg52
+I14
+sg350
+(lp1347
+(lp1348
+NaNaNaa(lp1349
+NaNaNaa(lp1350
+NaNaNaa(lp1351
+NaNaNaa(lp1352
+NaNaNaa(lp1353
+NaNaNaa(lp1354
+NaNaNaa(lp1355
+NaNaNaa(lp1356
+NaNaNaa(lp1357
+NaNaNaasg395
+(lp1358
+(lp1359
+NaNaNaa(lp1360
+NaNaNaa(lp1361
+NaNaNaa(lp1362
+NaNaNaa(lp1363
+NaNaNaa(lp1364
+NaNaNaa(lp1365
+NaNaNaa(lp1366
+NaNaNaa(lp1367
+NaNaNaa(lp1368
+NaNaNaasg55
+g1267
+sg431
+(lp1369
+(lp1370
+NaNaNaa(lp1371
+NaNaNaa(lp1372
+NaNaNaa(lp1373
+NaNaNaa(lp1374
+NaNaNaa(lp1375
+NaNaNaa(lp1376
+NaNaNaa(lp1377
+NaNaNaa(lp1378
+NaNaNaa(lp1379
+NaNaNaasg465
+(lp1380
+(lp1381
+NaNaNaa(lp1382
+NaNaNaa(lp1383
+NaNaNaa(lp1384
+NaNaNaa(lp1385
+NaNaNaa(lp1386
+NaNaNaa(lp1387
+NaNaNaa(lp1388
+NaNaNaa(lp1389
+NaNaNaa(lp1390
+NaNaNaasg498
+(dp1391
+g1263
+I0
+sg1262
+I0
+sg1260
+I0
+sg1264
+I0
+sg1265
+I0
+sg1261
+I0
+ssg500
+(lp1392
+(lp1393
+NaNaNaa(lp1394
+NaNaNaa(lp1395
+NaNaNaa(lp1396
+NaNaNaa(lp1397
+NaNaNaa(lp1398
+NaNaNaa(lp1399
+NaNaNaa(lp1400
+NaNaNaa(lp1401
+NaNaNaa(lp1402
+NaNaNaasg534
+(lp1403
+(lp1404
+NaNaNaa(lp1405
+NaNaNaa(lp1406
+NaNaNaa(lp1407
+NaNaNaa(lp1408
+NaNaNaa(lp1409
+NaNaNaa(lp1410
+NaNaNaa(lp1411
+NaNaNaa(lp1412
+NaNaNaa(lp1413
+NaNaNaasbag0
+(g68
+g2
+Ntp1414
+Rp1415
+(dp1416
 g72
 g42
 sg73
-(lp1196
-(lp1197
-NaNaa(lp1198
-NaNaa(lp1199
-NaNaa(lp1200
-NaNaa(lp1201
-NaNaa(lp1202
-NaNaasg92
-(lp1203
-(lp1204
-NaNaa(lp1205
-NaNaa(lp1206
-NaNaa(lp1207
-NaNaa(lp1208
-NaNaa(lp1209
-NaNaasg128
-(lp1210
-(lp1211
-NaNaa(lp1212
-NaNaa(lp1213
-NaNaa(lp1214
-NaNaa(lp1215
-NaNaa(lp1216
-NaNaasg160
-(lp1217
-S'TA'
-p1218
-aS'KAK'
-p1219
-aS'MSL'
-p1220
-aS'ED'
-p1221
-asg174
-(dp1222
-g1219
-I0
-sg1221
-I0
-sg1220
-I0
-sg1218
-I0
-ssg8
-(lp1223
-S'TA v KAK\nMSL v ED'
-p1224
-aS'KAK v ED\nTA v MSL'
-p1225
-aS'MSL v KAK\nED v TA'
-p1226
-aS'KAK v MSL\nTA v ED'
-p1227
-aS'ED v KAK\nMSL v TA'
-p1228
-aS'KAK v TA\nED v MSL'
-p1229
-asg188
-(lp1230
-(lp1231
-NaNaa(lp1232
-NaNaa(lp1233
-NaNaa(lp1234
-NaNaa(lp1235
-NaNaa(lp1236
-NaNaasg225
-(dp1237
-g1219
-I0
-sg1221
-I0
-sg1220
-I0
-sg1218
-I0
-ssg227
-I00
-sg228
-(dp1238
-g1219
-I0
-sg1221
-I0
-sg1220
-I0
-sg1218
-I0
-ssg230
-(dp1239
-g1219
-I0
-sg1221
-I0
-sg1220
-I0
-sg1218
-I0
-ssg232
-(dp1240
-g1219
-I0
-sg1221
-I0
-sg1220
-I0
-sg1218
-I0
-ssg234
-(lp1241
-(lp1242
-NaNaa(lp1243
-NaNaa(lp1244
-NaNaa(lp1245
-NaNaa(lp1246
-NaNaa(lp1247
-NaNaasg266
-(dp1248
-g1219
-I0
-sg1221
-I0
-sg1220
-I0
-sg1218
-I0
-ssg268
-(dp1249
-g1219
-I0
-sg1221
-I0
-sg1220
-I0
-sg1218
-I0
-ssg270
-(lp1250
-(lp1251
-S'TA v KAK'
-p1252
-aS'MSL v ED'
-p1253
-aa(lp1254
-S'KAK v ED'
-p1255
-aS'TA v MSL'
-p1256
-aa(lp1257
-S'MSL v KAK'
-p1258
-aS'ED v TA'
-p1259
-aa(lp1260
-S'KAK v MSL'
-p1261
-aS'TA v ED'
-p1262
-aa(lp1263
-S'ED v KAK'
-p1264
-aS'MSL v TA'
-p1265
-aa(lp1266
-S'KAK v TA'
-p1267
-aS'ED v MSL'
-p1268
-aasg52
-I14
-sg350
-(lp1269
-(lp1270
-NaNaa(lp1271
-NaNaa(lp1272
-NaNaa(lp1273
-NaNaa(lp1274
-NaNaa(lp1275
-NaNaasg395
-(lp1276
-(lp1277
-NaNaa(lp1278
-NaNaa(lp1279
-NaNaa(lp1280
-NaNaa(lp1281
-NaNaa(lp1282
-NaNaasg55
-g1223
-sg431
-(lp1283
-(lp1284
-NaNaa(lp1285
-NaNaa(lp1286
-NaNaa(lp1287
-NaNaa(lp1288
-NaNaa(lp1289
-NaNaasg465
-(lp1290
-(lp1291
-NaNaa(lp1292
-NaNaa(lp1293
-NaNaa(lp1294
-NaNaa(lp1295
-NaNaa(lp1296
-NaNaasg498
-(dp1297
-g1219
-I0
-sg1221
-I0
-sg1220
-I0
-sg1218
-I0
-ssg500
-(lp1298
-(lp1299
-NaNaa(lp1300
-NaNaa(lp1301
-NaNaa(lp1302
-NaNaa(lp1303
-NaNaa(lp1304
-NaNaasg534
-(lp1305
-(lp1306
-NaNaa(lp1307
-NaNaa(lp1308
-NaNaa(lp1309
-NaNaa(lp1310
-NaNaa(lp1311
-NaNaasbag0
-(g68
-g2
-Ntp1312
-Rp1313
-(dp1314
-g72
-g40
-sg73
-(lp1315
-(lp1316
-NaNaa(lp1317
-NaNaa(lp1318
-NaNaa(lp1319
-NaNaa(lp1320
-NaNaa(lp1321
-NaNaasg92
-(lp1322
-(lp1323
-NaNaa(lp1324
-NaNaa(lp1325
-NaNaa(lp1326
-NaNaa(lp1327
-NaNaa(lp1328
-NaNaasg128
-(lp1329
-(lp1330
-NaNaa(lp1331
-NaNaa(lp1332
-NaNaa(lp1333
-NaNaa(lp1334
-NaNaa(lp1335
-NaNaasg160
-(lp1336
-S'MRB'
-p1337
-aS'MRT'
-p1338
-aS'KH'
-p1339
-aS'AL'
-p1340
-asg174
-(dp1341
-g1338
-I0
-sg1339
-I0
-sg1340
-I0
-sg1337
-I0
-ssg8
-(lp1342
-S'MRB v MRT\nKH v AL'
-p1343
-aS'MRT v AL\nMRB v KH'
-p1344
-aS'KH v MRT\nAL v MRB'
-p1345
-aS'MRT v KH\nMRB v AL'
-p1346
-aS'AL v MRT\nKH v MRB'
-p1347
-aS'MRT v MRB\nAL v KH'
-p1348
-asg188
-(lp1349
-(lp1350
-NaNaa(lp1351
-NaNaa(lp1352
-NaNaa(lp1353
-NaNaa(lp1354
-NaNaa(lp1355
-NaNaasg225
-(dp1356
-g1338
-I0
-sg1339
-I0
-sg1340
-I0
-sg1337
-I0
-ssg227
-I00
-sg228
-(dp1357
-g1338
-I0
-sg1339
-I0
-sg1340
-I0
-sg1337
-I0
-ssg230
-(dp1358
-g1338
-I0
-sg1339
-I0
-sg1340
-I0
-sg1337
-I0
-ssg232
-(dp1359
-g1338
-I0
-sg1339
-I0
-sg1340
-I0
-sg1337
-I0
-ssg234
-(lp1360
-(lp1361
-NaNaa(lp1362
-NaNaa(lp1363
-NaNaa(lp1364
-NaNaa(lp1365
-NaNaa(lp1366
-NaNaasg266
-(dp1367
-g1338
-I0
-sg1339
-I0
-sg1340
-I0
-sg1337
-I0
-ssg268
-(dp1368
-g1338
-I0
-sg1339
-I0
-sg1340
-I0
-sg1337
-I0
-ssg270
-(lp1369
-(lp1370
-S'MRB v MRT'
-p1371
-aS'KH v AL'
-p1372
-aa(lp1373
-S'MRT v AL'
-p1374
-aS'MRB v KH'
-p1375
-aa(lp1376
-S'KH v MRT'
-p1377
-aS'AL v MRB'
-p1378
-aa(lp1379
-S'MRT v KH'
-p1380
-aS'MRB v AL'
-p1381
-aa(lp1382
-S'AL v MRT'
-p1383
-aS'KH v MRB'
-p1384
-aa(lp1385
-S'MRT v MRB'
-p1386
-aS'AL v KH'
-p1387
-aasg52
-I14
-sg350
-(lp1388
-(lp1389
-NaNaa(lp1390
-NaNaa(lp1391
-NaNaa(lp1392
-NaNaa(lp1393
-NaNaa(lp1394
-NaNaasg395
-(lp1395
-(lp1396
-NaNaa(lp1397
-NaNaa(lp1398
-NaNaa(lp1399
-NaNaa(lp1400
-NaNaa(lp1401
-NaNaasg55
-g1342
-sg431
-(lp1402
-(lp1403
-NaNaa(lp1404
-NaNaa(lp1405
-NaNaa(lp1406
-NaNaa(lp1407
-NaNaa(lp1408
-NaNaasg465
-(lp1409
-(lp1410
-NaNaa(lp1411
-NaNaa(lp1412
-NaNaa(lp1413
-NaNaa(lp1414
-NaNaa(lp1415
-NaNaasg498
-(dp1416
-g1338
-I0
-sg1339
-I0
-sg1340
-I0
-sg1337
-I0
-ssg500
 (lp1417
 (lp1418
 NaNaa(lp1419
@@ -2874,7 +2749,7 @@ NaNaa(lp1420
 NaNaa(lp1421
 NaNaa(lp1422
 NaNaa(lp1423
-NaNaasg534
+NaNaasg92
 (lp1424
 (lp1425
 NaNaa(lp1426
@@ -2882,229 +2757,229 @@ NaNaa(lp1427
 NaNaa(lp1428
 NaNaa(lp1429
 NaNaa(lp1430
-NaNaasbag0
-(g68
-g2
-Ntp1431
-Rp1432
-(dp1433
-g72
-g38
-sg73
-(lp1434
-(lp1435
+NaNaasg128
+(lp1431
+(lp1432
+NaNaa(lp1433
+NaNaa(lp1434
+NaNaa(lp1435
 NaNaa(lp1436
 NaNaa(lp1437
-NaNaa(lp1438
-NaNaa(lp1439
-NaNaa(lp1440
-NaNaasg92
-(lp1441
-(lp1442
-NaNaa(lp1443
-NaNaa(lp1444
-NaNaa(lp1445
-NaNaa(lp1446
-NaNaa(lp1447
-NaNaasg128
-(lp1448
-(lp1449
-NaNaa(lp1450
-NaNaa(lp1451
-NaNaa(lp1452
-NaNaa(lp1453
-NaNaa(lp1454
 NaNaasg160
-(lp1455
-S'BRB'
-p1456
-aS'APA'
-p1457
-aS'KHR'
-p1458
-aS'HTH'
-p1459
+(lp1438
+S'TA'
+p1439
+aS'KAK'
+p1440
+aS'MSL'
+p1441
+aS'ED'
+p1442
 asg174
-(dp1460
-g1458
+(dp1443
+g1440
 I0
-sg1457
+sg1442
 I0
-sg1456
+sg1441
 I0
-sg1459
+sg1439
 I0
 ssg8
-(lp1461
-S'BRB v APA\nKHR v HTH'
-p1462
-aS'APA v HTH\nBRB v KHR'
-p1463
-aS'KHR v APA\nHTH v BRB'
-p1464
-aS'APA v KHR\nBRB v HTH'
-p1465
-aS'HTH v APA\nKHR v BRB'
-p1466
-aS'APA v BRB\nHTH v KHR'
-p1467
+(lp1444
+S'TA v KAK\nMSL v ED'
+p1445
+aS'KAK v ED\nTA v MSL'
+p1446
+aS'MSL v KAK\nED v TA'
+p1447
+aS'KAK v MSL\nTA v ED'
+p1448
+aS'ED v KAK\nMSL v TA'
+p1449
+aS'KAK v TA\nED v MSL'
+p1450
 asg188
-(lp1468
-(lp1469
-NaNaa(lp1470
-NaNaa(lp1471
-NaNaa(lp1472
-NaNaa(lp1473
-NaNaa(lp1474
+(lp1451
+(lp1452
+NaNaa(lp1453
+NaNaa(lp1454
+NaNaa(lp1455
+NaNaa(lp1456
+NaNaa(lp1457
 NaNaasg225
-(dp1475
-g1458
+(dp1458
+g1440
 I0
-sg1457
+sg1442
 I0
-sg1456
+sg1441
 I0
-sg1459
+sg1439
 I0
 ssg227
 I00
 sg228
-(dp1476
-g1458
+(dp1459
+g1440
 I0
-sg1457
+sg1442
 I0
-sg1456
+sg1441
 I0
-sg1459
+sg1439
 I0
 ssg230
-(dp1477
-g1458
+(dp1460
+g1440
 I0
-sg1457
+sg1442
 I0
-sg1456
+sg1441
 I0
-sg1459
+sg1439
 I0
 ssg232
-(dp1478
-g1458
+(dp1461
+g1440
 I0
-sg1457
+sg1442
 I0
-sg1456
+sg1441
 I0
-sg1459
+sg1439
 I0
 ssg234
-(lp1479
-(lp1480
-NaNaa(lp1481
-NaNaa(lp1482
-NaNaa(lp1483
-NaNaa(lp1484
-NaNaa(lp1485
+(lp1462
+(lp1463
+NaNaa(lp1464
+NaNaa(lp1465
+NaNaa(lp1466
+NaNaa(lp1467
+NaNaa(lp1468
 NaNaasg266
-(dp1486
-g1458
+(dp1469
+g1440
 I0
-sg1457
+sg1442
 I0
-sg1456
+sg1441
 I0
-sg1459
+sg1439
 I0
 ssg268
-(dp1487
-g1458
+(dp1470
+g1440
 I0
-sg1457
+sg1442
 I0
-sg1456
+sg1441
 I0
-sg1459
+sg1439
 I0
 ssg270
-(lp1488
-(lp1489
-S'BRB v APA'
-p1490
-aS'KHR v HTH'
-p1491
-aa(lp1492
-S'APA v HTH'
-p1493
-aS'BRB v KHR'
-p1494
-aa(lp1495
-S'KHR v APA'
-p1496
-aS'HTH v BRB'
-p1497
-aa(lp1498
-S'APA v KHR'
-p1499
-aS'BRB v HTH'
-p1500
-aa(lp1501
-S'HTH v APA'
-p1502
-aS'KHR v BRB'
-p1503
-aa(lp1504
-S'APA v BRB'
-p1505
-aS'HTH v KHR'
-p1506
+(lp1471
+(lp1472
+S'TA v KAK'
+p1473
+aS'MSL v ED'
+p1474
+aa(lp1475
+S'KAK v ED'
+p1476
+aS'TA v MSL'
+p1477
+aa(lp1478
+S'MSL v KAK'
+p1479
+aS'ED v TA'
+p1480
+aa(lp1481
+S'KAK v MSL'
+p1482
+aS'TA v ED'
+p1483
+aa(lp1484
+S'ED v KAK'
+p1485
+aS'MSL v TA'
+p1486
+aa(lp1487
+S'KAK v TA'
+p1488
+aS'ED v MSL'
+p1489
 aasg52
 I14
 sg350
-(lp1507
-(lp1508
+(lp1490
+(lp1491
+NaNaa(lp1492
+NaNaa(lp1493
+NaNaa(lp1494
+NaNaa(lp1495
+NaNaa(lp1496
+NaNaasg395
+(lp1497
+(lp1498
+NaNaa(lp1499
+NaNaa(lp1500
+NaNaa(lp1501
+NaNaa(lp1502
+NaNaa(lp1503
+NaNaasg55
+g1444
+sg431
+(lp1504
+(lp1505
+NaNaa(lp1506
+NaNaa(lp1507
+NaNaa(lp1508
 NaNaa(lp1509
 NaNaa(lp1510
-NaNaa(lp1511
-NaNaa(lp1512
+NaNaasg465
+(lp1511
+(lp1512
 NaNaa(lp1513
-NaNaasg395
-(lp1514
-(lp1515
+NaNaa(lp1514
+NaNaa(lp1515
 NaNaa(lp1516
 NaNaa(lp1517
-NaNaa(lp1518
-NaNaa(lp1519
-NaNaa(lp1520
-NaNaasg55
-g1461
-sg431
-(lp1521
-(lp1522
+NaNaasg498
+(dp1518
+g1440
+I0
+sg1442
+I0
+sg1441
+I0
+sg1439
+I0
+ssg500
+(lp1519
+(lp1520
+NaNaa(lp1521
+NaNaa(lp1522
 NaNaa(lp1523
 NaNaa(lp1524
 NaNaa(lp1525
-NaNaa(lp1526
-NaNaa(lp1527
-NaNaasg465
-(lp1528
-(lp1529
+NaNaasg534
+(lp1526
+(lp1527
+NaNaa(lp1528
+NaNaa(lp1529
 NaNaa(lp1530
 NaNaa(lp1531
 NaNaa(lp1532
-NaNaa(lp1533
-NaNaa(lp1534
-NaNaasg498
+NaNaasbag0
+(g68
+g2
+Ntp1533
+Rp1534
 (dp1535
-g1458
-I0
-sg1457
-I0
-sg1456
-I0
-sg1459
-I0
-ssg500
+g72
+g40
+sg73
 (lp1536
 (lp1537
 NaNaa(lp1538
@@ -3112,7 +2987,7 @@ NaNaa(lp1539
 NaNaa(lp1540
 NaNaa(lp1541
 NaNaa(lp1542
-NaNaasg534
+NaNaasg92
 (lp1543
 (lp1544
 NaNaa(lp1545
@@ -3120,229 +2995,229 @@ NaNaa(lp1546
 NaNaa(lp1547
 NaNaa(lp1548
 NaNaa(lp1549
-NaNaasbag0
-(g68
-g2
-Ntp1550
-Rp1551
-(dp1552
-g72
-g43
-sg73
-(lp1553
-(lp1554
+NaNaasg128
+(lp1550
+(lp1551
+NaNaa(lp1552
+NaNaa(lp1553
+NaNaa(lp1554
 NaNaa(lp1555
 NaNaa(lp1556
-NaNaa(lp1557
-NaNaa(lp1558
-NaNaa(lp1559
-NaNaasg92
-(lp1560
-(lp1561
-NaNaa(lp1562
-NaNaa(lp1563
-NaNaa(lp1564
-NaNaa(lp1565
-NaNaa(lp1566
-NaNaasg128
-(lp1567
-(lp1568
-NaNaa(lp1569
-NaNaa(lp1570
-NaNaa(lp1571
-NaNaa(lp1572
-NaNaa(lp1573
 NaNaasg160
-(lp1574
-S'FS'
-p1575
-aS'AES'
-p1576
-aS'QNL'
-p1577
-aS'ALT'
-p1578
+(lp1557
+S'MRB'
+p1558
+aS'MRT'
+p1559
+aS'KH'
+p1560
+aS'AL'
+p1561
 asg174
-(dp1579
-g1577
+(dp1562
+g1559
 I0
-sg1576
+sg1560
 I0
-sg1575
+sg1561
 I0
-sg1578
+sg1558
 I0
 ssg8
-(lp1580
-S'FS v AES\nQNL v ALT'
-p1581
-aS'AES v ALT\nFS v QNL'
-p1582
-aS'QNL v AES\nALT v FS'
-p1583
-aS'AES v QNL\nFS v ALT'
-p1584
-aS'ALT v AES\nQNL v FS'
-p1585
-aS'AES v FS\nALT v QNL'
-p1586
+(lp1563
+S'MRB v MRT\nKH v AL'
+p1564
+aS'MRT v AL\nMRB v KH'
+p1565
+aS'KH v MRT\nAL v MRB'
+p1566
+aS'MRT v KH\nMRB v AL'
+p1567
+aS'AL v MRT\nKH v MRB'
+p1568
+aS'MRT v MRB\nAL v KH'
+p1569
 asg188
-(lp1587
-(lp1588
-NaNaa(lp1589
-NaNaa(lp1590
-NaNaa(lp1591
-NaNaa(lp1592
-NaNaa(lp1593
+(lp1570
+(lp1571
+NaNaa(lp1572
+NaNaa(lp1573
+NaNaa(lp1574
+NaNaa(lp1575
+NaNaa(lp1576
 NaNaasg225
-(dp1594
-g1577
+(dp1577
+g1559
 I0
-sg1576
+sg1560
 I0
-sg1575
+sg1561
 I0
-sg1578
+sg1558
 I0
 ssg227
 I00
 sg228
-(dp1595
-g1577
+(dp1578
+g1559
 I0
-sg1576
+sg1560
 I0
-sg1575
+sg1561
 I0
-sg1578
+sg1558
 I0
 ssg230
-(dp1596
-g1577
+(dp1579
+g1559
 I0
-sg1576
+sg1560
 I0
-sg1575
+sg1561
 I0
-sg1578
+sg1558
 I0
 ssg232
-(dp1597
-g1577
+(dp1580
+g1559
 I0
-sg1576
+sg1560
 I0
-sg1575
+sg1561
 I0
-sg1578
+sg1558
 I0
 ssg234
-(lp1598
-(lp1599
-NaNaa(lp1600
-NaNaa(lp1601
-NaNaa(lp1602
-NaNaa(lp1603
-NaNaa(lp1604
+(lp1581
+(lp1582
+NaNaa(lp1583
+NaNaa(lp1584
+NaNaa(lp1585
+NaNaa(lp1586
+NaNaa(lp1587
 NaNaasg266
-(dp1605
-g1577
+(dp1588
+g1559
 I0
-sg1576
+sg1560
 I0
-sg1575
+sg1561
 I0
-sg1578
+sg1558
 I0
 ssg268
-(dp1606
-g1577
+(dp1589
+g1559
 I0
-sg1576
+sg1560
 I0
-sg1575
+sg1561
 I0
-sg1578
+sg1558
 I0
 ssg270
-(lp1607
-(lp1608
-S'FS v AES'
-p1609
-aS'QNL v ALT'
-p1610
-aa(lp1611
-S'AES v ALT'
-p1612
-aS'FS v QNL'
-p1613
-aa(lp1614
-S'QNL v AES'
-p1615
-aS'ALT v FS'
-p1616
-aa(lp1617
-S'AES v QNL'
-p1618
-aS'FS v ALT'
-p1619
-aa(lp1620
-S'ALT v AES'
-p1621
-aS'QNL v FS'
-p1622
-aa(lp1623
-S'AES v FS'
-p1624
-aS'ALT v QNL'
-p1625
+(lp1590
+(lp1591
+S'MRB v MRT'
+p1592
+aS'KH v AL'
+p1593
+aa(lp1594
+S'MRT v AL'
+p1595
+aS'MRB v KH'
+p1596
+aa(lp1597
+S'KH v MRT'
+p1598
+aS'AL v MRB'
+p1599
+aa(lp1600
+S'MRT v KH'
+p1601
+aS'MRB v AL'
+p1602
+aa(lp1603
+S'AL v MRT'
+p1604
+aS'KH v MRB'
+p1605
+aa(lp1606
+S'MRT v MRB'
+p1607
+aS'AL v KH'
+p1608
 aasg52
 I14
 sg350
-(lp1626
-(lp1627
+(lp1609
+(lp1610
+NaNaa(lp1611
+NaNaa(lp1612
+NaNaa(lp1613
+NaNaa(lp1614
+NaNaa(lp1615
+NaNaasg395
+(lp1616
+(lp1617
+NaNaa(lp1618
+NaNaa(lp1619
+NaNaa(lp1620
+NaNaa(lp1621
+NaNaa(lp1622
+NaNaasg55
+g1563
+sg431
+(lp1623
+(lp1624
+NaNaa(lp1625
+NaNaa(lp1626
+NaNaa(lp1627
 NaNaa(lp1628
 NaNaa(lp1629
-NaNaa(lp1630
-NaNaa(lp1631
+NaNaasg465
+(lp1630
+(lp1631
 NaNaa(lp1632
-NaNaasg395
-(lp1633
-(lp1634
+NaNaa(lp1633
+NaNaa(lp1634
 NaNaa(lp1635
 NaNaa(lp1636
-NaNaa(lp1637
-NaNaa(lp1638
-NaNaa(lp1639
-NaNaasg55
-g1580
-sg431
-(lp1640
-(lp1641
+NaNaasg498
+(dp1637
+g1559
+I0
+sg1560
+I0
+sg1561
+I0
+sg1558
+I0
+ssg500
+(lp1638
+(lp1639
+NaNaa(lp1640
+NaNaa(lp1641
 NaNaa(lp1642
 NaNaa(lp1643
 NaNaa(lp1644
-NaNaa(lp1645
-NaNaa(lp1646
-NaNaasg465
-(lp1647
-(lp1648
+NaNaasg534
+(lp1645
+(lp1646
+NaNaa(lp1647
+NaNaa(lp1648
 NaNaa(lp1649
 NaNaa(lp1650
 NaNaa(lp1651
-NaNaa(lp1652
-NaNaa(lp1653
-NaNaasg498
+NaNaasbag0
+(g68
+g2
+Ntp1652
+Rp1653
 (dp1654
-g1577
-I0
-sg1576
-I0
-sg1575
-I0
-sg1578
-I0
-ssg500
+g72
+g38
+sg73
 (lp1655
 (lp1656
 NaNaa(lp1657
@@ -3350,7 +3225,7 @@ NaNaa(lp1658
 NaNaa(lp1659
 NaNaa(lp1660
 NaNaa(lp1661
-NaNaasg534
+NaNaasg92
 (lp1662
 (lp1663
 NaNaa(lp1664
@@ -3358,707 +3233,707 @@ NaNaa(lp1665
 NaNaa(lp1666
 NaNaa(lp1667
 NaNaa(lp1668
-NaNaasbag0
-(g68
-g2
-Ntp1669
-Rp1670
-(dp1671
-g72
-g49
-sg73
-(lp1672
-(lp1673
+NaNaasg128
+(lp1669
+(lp1670
+NaNaa(lp1671
+NaNaa(lp1672
+NaNaa(lp1673
 NaNaa(lp1674
 NaNaa(lp1675
-NaNaa(lp1676
-NaNaa(lp1677
-NaNaa(lp1678
-NaNaNaasg92
-(lp1679
-(lp1680
-NaNaa(lp1681
-NaNaa(lp1682
-NaNaa(lp1683
-NaNaa(lp1684
-NaNaa(lp1685
-NaNaNaasg128
-(lp1686
-(lp1687
-NaNaa(lp1688
-NaNaa(lp1689
-NaNaa(lp1690
-NaNaa(lp1691
-NaNaa(lp1692
-NaNaNaasg160
-(lp1693
-S'MDL'
-p1694
-aS'MDH'
-p1695
-aS'DKW'
-p1696
-aS'ERE'
-p1697
+NaNaasg160
+(lp1676
+S'BRB'
+p1677
+aS'APA'
+p1678
+aS'KHR'
+p1679
+aS'HTH'
+p1680
 asg174
-(dp1698
-g1696
+(dp1681
+g1679
 I0
-sg1695
+sg1678
 I0
-sg1694
+sg1677
 I0
-sg1697
+sg1680
 I0
 ssg8
-(lp1699
-S'MDL v MDH\nDKW v ERE'
-p1700
-aS'MDH v ERE\nMDL v DKW'
-p1701
-aS'DKW v MDH\nERE v MDL'
-p1702
-aS'MDH v DKW\nMDL v ERE'
-p1703
-aS'ERE v MDH\nDKW v MDL'
-p1704
-aS'Round 6\nMDH v MDL\nERE v DKW'
-p1705
+(lp1682
+S'BRB v APA\nKHR v HTH'
+p1683
+aS'APA v HTH\nBRB v KHR'
+p1684
+aS'KHR v APA\nHTH v BRB'
+p1685
+aS'APA v KHR\nBRB v HTH'
+p1686
+aS'HTH v APA\nKHR v BRB'
+p1687
+aS'APA v BRB\nHTH v KHR'
+p1688
 asg188
-(lp1706
-(lp1707
-NaNaa(lp1708
-NaNaa(lp1709
-NaNaa(lp1710
-NaNaa(lp1711
-NaNaa(lp1712
-NaNaNaasg225
-(dp1713
-g1696
+(lp1689
+(lp1690
+NaNaa(lp1691
+NaNaa(lp1692
+NaNaa(lp1693
+NaNaa(lp1694
+NaNaa(lp1695
+NaNaasg225
+(dp1696
+g1679
 I0
-sg1695
+sg1678
 I0
-sg1694
+sg1677
 I0
-sg1697
+sg1680
 I0
 ssg227
 I00
 sg228
-(dp1714
-g1696
+(dp1697
+g1679
 I0
-sg1695
+sg1678
 I0
-sg1694
+sg1677
 I0
-sg1697
+sg1680
 I0
 ssg230
-(dp1715
-g1696
+(dp1698
+g1679
 I0
-sg1695
+sg1678
 I0
-sg1694
+sg1677
 I0
-sg1697
+sg1680
 I0
 ssg232
-(dp1716
-g1696
+(dp1699
+g1679
 I0
-sg1695
+sg1678
 I0
-sg1694
+sg1677
 I0
-sg1697
+sg1680
 I0
 ssg234
-(lp1717
-(lp1718
-NaNaa(lp1719
-NaNaa(lp1720
-NaNaa(lp1721
-NaNaa(lp1722
-NaNaa(lp1723
-NaNaNaasg266
-(dp1724
-g1696
+(lp1700
+(lp1701
+NaNaa(lp1702
+NaNaa(lp1703
+NaNaa(lp1704
+NaNaa(lp1705
+NaNaa(lp1706
+NaNaasg266
+(dp1707
+g1679
 I0
-sg1695
+sg1678
 I0
-sg1694
+sg1677
 I0
-sg1697
+sg1680
 I0
 ssg268
-(dp1725
-g1696
+(dp1708
+g1679
 I0
-sg1695
+sg1678
 I0
-sg1694
+sg1677
 I0
-sg1697
+sg1680
 I0
 ssg270
-(lp1726
-(lp1727
-S'MDL v MDH'
-p1728
-aS'DKW v ERE'
-p1729
-aa(lp1730
-S'MDH v ERE'
-p1731
-aS'MDL v DKW'
-p1732
-aa(lp1733
-S'DKW v MDH'
-p1734
-aS'ERE v MDL'
-p1735
-aa(lp1736
-S'MDH v DKW'
-p1737
-aS'MDL v ERE'
-p1738
-aa(lp1739
-S'ERE v MDH'
-p1740
-aS'DKW v MDL'
-p1741
-aa(lp1742
-S'Round 6'
-p1743
-aS'MDH v MDL'
-p1744
-aS'ERE v DKW'
-p1745
+(lp1709
+(lp1710
+S'BRB v APA'
+p1711
+aS'KHR v HTH'
+p1712
+aa(lp1713
+S'APA v HTH'
+p1714
+aS'BRB v KHR'
+p1715
+aa(lp1716
+S'KHR v APA'
+p1717
+aS'HTH v BRB'
+p1718
+aa(lp1719
+S'APA v KHR'
+p1720
+aS'BRB v HTH'
+p1721
+aa(lp1722
+S'HTH v APA'
+p1723
+aS'KHR v BRB'
+p1724
+aa(lp1725
+S'APA v BRB'
+p1726
+aS'HTH v KHR'
+p1727
 aasg52
 I14
 sg350
-(lp1746
-(lp1747
+(lp1728
+(lp1729
+NaNaa(lp1730
+NaNaa(lp1731
+NaNaa(lp1732
+NaNaa(lp1733
+NaNaa(lp1734
+NaNaasg395
+(lp1735
+(lp1736
+NaNaa(lp1737
+NaNaa(lp1738
+NaNaa(lp1739
+NaNaa(lp1740
+NaNaa(lp1741
+NaNaasg55
+g1682
+sg431
+(lp1742
+(lp1743
+NaNaa(lp1744
+NaNaa(lp1745
+NaNaa(lp1746
+NaNaa(lp1747
 NaNaa(lp1748
-NaNaa(lp1749
-NaNaa(lp1750
+NaNaasg465
+(lp1749
+(lp1750
 NaNaa(lp1751
 NaNaa(lp1752
-NaNaNaasg395
-(lp1753
-(lp1754
+NaNaa(lp1753
+NaNaa(lp1754
 NaNaa(lp1755
-NaNaa(lp1756
-NaNaa(lp1757
-NaNaa(lp1758
-NaNaa(lp1759
-NaNaNaasg55
-g1699
-sg431
-(lp1760
-(lp1761
-NaNaa(lp1762
-NaNaa(lp1763
-NaNaa(lp1764
-NaNaa(lp1765
-NaNaa(lp1766
-NaNaNaasg465
-(lp1767
-(lp1768
-NaNaa(lp1769
-NaNaa(lp1770
-NaNaa(lp1771
-NaNaa(lp1772
-NaNaa(lp1773
-NaNaNaasg498
-(dp1774
-g1696
+NaNaasg498
+(dp1756
+g1679
 I0
-sg1695
+sg1678
 I0
-sg1694
+sg1677
 I0
-sg1697
+sg1680
 I0
 ssg500
+(lp1757
+(lp1758
+NaNaa(lp1759
+NaNaa(lp1760
+NaNaa(lp1761
+NaNaa(lp1762
+NaNaa(lp1763
+NaNaasg534
+(lp1764
+(lp1765
+NaNaa(lp1766
+NaNaa(lp1767
+NaNaa(lp1768
+NaNaa(lp1769
+NaNaa(lp1770
+NaNaasbag0
+(g68
+g2
+Ntp1771
+Rp1772
+(dp1773
+g72
+g43
+sg73
+(lp1774
 (lp1775
-(lp1776
+NaNaa(lp1776
 NaNaa(lp1777
 NaNaa(lp1778
 NaNaa(lp1779
 NaNaa(lp1780
-NaNaa(lp1781
-NaNaNaasg534
+NaNaasg92
+(lp1781
 (lp1782
-(lp1783
+NaNaa(lp1783
 NaNaa(lp1784
 NaNaa(lp1785
 NaNaa(lp1786
 NaNaa(lp1787
-NaNaa(lp1788
-NaNaNaasbag0
-(g68
-g2
-Ntp1789
-Rp1790
-(dp1791
-g72
-g48
-sg73
-(lp1792
-(lp1793
-NaNaa(lp1794
-NaNaa(lp1795
-NaNaa(lp1796
-NaNaa(lp1797
-NaNaa(lp1798
-NaNaasg92
-(lp1799
-(lp1800
-NaNaa(lp1801
-NaNaa(lp1802
-NaNaa(lp1803
-NaNaa(lp1804
-NaNaa(lp1805
 NaNaasg128
-(lp1806
-(lp1807
-NaNaa(lp1808
-NaNaa(lp1809
+(lp1788
+(lp1789
+NaNaa(lp1790
+NaNaa(lp1791
+NaNaa(lp1792
+NaNaa(lp1793
+NaNaa(lp1794
+NaNaasg160
+(lp1795
+S'FS'
+p1796
+aS'AES'
+p1797
+aS'QNL'
+p1798
+aS'ALT'
+p1799
+asg174
+(dp1800
+g1798
+I0
+sg1797
+I0
+sg1796
+I0
+sg1799
+I0
+ssg8
+(lp1801
+S'FS v AES\nQNL v ALT'
+p1802
+aS'AES v ALT\nFS v QNL'
+p1803
+aS'QNL v AES\nALT v FS'
+p1804
+aS'AES v QNL\nFS v ALT'
+p1805
+aS'ALT v AES\nQNL v FS'
+p1806
+aS'AES v FS\nALT v QNL'
+p1807
+asg188
+(lp1808
+(lp1809
 NaNaa(lp1810
 NaNaa(lp1811
 NaNaa(lp1812
-NaNaasg160
-(lp1813
-S'TO'
-p1814
-aS'EKR'
-p1815
-aS'BIL'
-p1816
-aS'MAG'
-p1817
-asg174
-(dp1818
-g1814
-I0
-sg1816
-I0
-sg1815
-I0
-sg1817
-I0
-ssg8
-(lp1819
-S'TO v EKR\nBIL v MAG'
-p1820
-aS'EKR v MAG\nTO v BIL'
-p1821
-aS'BIL v EKR\nMAG v TO'
-p1822
-aS'EKR v BIL\nTO v MAG'
-p1823
-aS'MAG v EKR\nBIL v TO'
-p1824
-aS'EKR v TO\nMAG v BIL'
-p1825
-asg188
-(lp1826
-(lp1827
-NaNaa(lp1828
-NaNaa(lp1829
-NaNaa(lp1830
-NaNaa(lp1831
-NaNaa(lp1832
+NaNaa(lp1813
+NaNaa(lp1814
 NaNaasg225
-(dp1833
-g1814
+(dp1815
+g1798
 I0
-sg1816
+sg1797
 I0
-sg1815
+sg1796
 I0
-sg1817
+sg1799
 I0
 ssg227
 I00
 sg228
-(dp1834
-g1814
+(dp1816
+g1798
 I0
-sg1816
+sg1797
 I0
-sg1815
+sg1796
 I0
-sg1817
+sg1799
 I0
 ssg230
-(dp1835
-g1814
+(dp1817
+g1798
 I0
-sg1816
+sg1797
 I0
-sg1815
+sg1796
 I0
-sg1817
+sg1799
 I0
 ssg232
-(dp1836
-g1814
+(dp1818
+g1798
 I0
-sg1816
+sg1797
 I0
-sg1815
+sg1796
 I0
-sg1817
+sg1799
 I0
 ssg234
-(lp1837
-(lp1838
-NaNaa(lp1839
-NaNaa(lp1840
-NaNaa(lp1841
-NaNaa(lp1842
-NaNaa(lp1843
+(lp1819
+(lp1820
+NaNaa(lp1821
+NaNaa(lp1822
+NaNaa(lp1823
+NaNaa(lp1824
+NaNaa(lp1825
 NaNaasg266
-(dp1844
-g1814
+(dp1826
+g1798
 I0
-sg1816
+sg1797
 I0
-sg1815
+sg1796
 I0
-sg1817
+sg1799
 I0
 ssg268
-(dp1845
-g1814
+(dp1827
+g1798
 I0
-sg1816
+sg1797
 I0
-sg1815
+sg1796
 I0
-sg1817
+sg1799
 I0
 ssg270
-(lp1846
-(lp1847
-S'TO v EKR'
-p1848
-aS'BIL v MAG'
-p1849
-aa(lp1850
-S'EKR v MAG'
-p1851
-aS'TO v BIL'
-p1852
-aa(lp1853
-S'BIL v EKR'
-p1854
-aS'MAG v TO'
-p1855
-aa(lp1856
-S'EKR v BIL'
-p1857
-aS'TO v MAG'
-p1858
-aa(lp1859
-S'MAG v EKR'
-p1860
-aS'BIL v TO'
-p1861
-aa(lp1862
-S'EKR v TO'
-p1863
-aS'MAG v BIL'
-p1864
+(lp1828
+(lp1829
+S'FS v AES'
+p1830
+aS'QNL v ALT'
+p1831
+aa(lp1832
+S'AES v ALT'
+p1833
+aS'FS v QNL'
+p1834
+aa(lp1835
+S'QNL v AES'
+p1836
+aS'ALT v FS'
+p1837
+aa(lp1838
+S'AES v QNL'
+p1839
+aS'FS v ALT'
+p1840
+aa(lp1841
+S'ALT v AES'
+p1842
+aS'QNL v FS'
+p1843
+aa(lp1844
+S'AES v FS'
+p1845
+aS'ALT v QNL'
+p1846
 aasg52
 I14
 sg350
-(lp1865
-(lp1866
+(lp1847
+(lp1848
+NaNaa(lp1849
+NaNaa(lp1850
+NaNaa(lp1851
+NaNaa(lp1852
+NaNaa(lp1853
+NaNaasg395
+(lp1854
+(lp1855
+NaNaa(lp1856
+NaNaa(lp1857
+NaNaa(lp1858
+NaNaa(lp1859
+NaNaa(lp1860
+NaNaasg55
+g1801
+sg431
+(lp1861
+(lp1862
+NaNaa(lp1863
+NaNaa(lp1864
+NaNaa(lp1865
+NaNaa(lp1866
 NaNaa(lp1867
-NaNaa(lp1868
-NaNaa(lp1869
+NaNaasg465
+(lp1868
+(lp1869
 NaNaa(lp1870
 NaNaa(lp1871
-NaNaasg395
-(lp1872
-(lp1873
+NaNaa(lp1872
+NaNaa(lp1873
 NaNaa(lp1874
-NaNaa(lp1875
-NaNaa(lp1876
-NaNaa(lp1877
-NaNaa(lp1878
-NaNaasg55
-g1819
-sg431
-(lp1879
-(lp1880
-NaNaa(lp1881
-NaNaa(lp1882
-NaNaa(lp1883
-NaNaa(lp1884
-NaNaa(lp1885
-NaNaasg465
-(lp1886
-(lp1887
-NaNaa(lp1888
-NaNaa(lp1889
-NaNaa(lp1890
-NaNaa(lp1891
-NaNaa(lp1892
 NaNaasg498
-(dp1893
-g1814
+(dp1875
+g1798
 I0
-sg1816
+sg1797
 I0
-sg1815
+sg1796
 I0
-sg1817
+sg1799
 I0
 ssg500
+(lp1876
+(lp1877
+NaNaa(lp1878
+NaNaa(lp1879
+NaNaa(lp1880
+NaNaa(lp1881
+NaNaa(lp1882
+NaNaasg534
+(lp1883
+(lp1884
+NaNaa(lp1885
+NaNaa(lp1886
+NaNaa(lp1887
+NaNaa(lp1888
+NaNaa(lp1889
+NaNaasbag0
+(g68
+g2
+Ntp1890
+Rp1891
+(dp1892
+g72
+g49
+sg73
+(lp1893
 (lp1894
-(lp1895
+NaNaa(lp1895
 NaNaa(lp1896
 NaNaa(lp1897
 NaNaa(lp1898
 NaNaa(lp1899
-NaNaa(lp1900
-NaNaasg534
+NaNaNaasg92
+(lp1900
 (lp1901
-(lp1902
+NaNaa(lp1902
 NaNaa(lp1903
 NaNaa(lp1904
 NaNaa(lp1905
 NaNaa(lp1906
-NaNaa(lp1907
-NaNaasbag0
-(g68
-g2
-Ntp1908
-Rp1909
-(dp1910
-g72
-g47
-sg73
-(lp1911
-(lp1912
+NaNaNaasg128
+(lp1907
+(lp1908
+NaNaa(lp1909
+NaNaa(lp1910
+NaNaa(lp1911
+NaNaa(lp1912
 NaNaa(lp1913
-NaNaa(lp1914
-NaNaa(lp1915
-NaNaa(lp1916
-NaNaa(lp1917
-NaNaasg92
-(lp1918
-(lp1919
-NaNaa(lp1920
-NaNaa(lp1921
-NaNaa(lp1922
-NaNaa(lp1923
-NaNaa(lp1924
-NaNaasg128
-(lp1925
-(lp1926
-NaNaa(lp1927
-NaNaa(lp1928
+NaNaNaasg160
+(lp1914
+S'MDL'
+p1915
+aS'MDH'
+p1916
+aS'DKW'
+p1917
+aS'ERE'
+p1918
+asg174
+(dp1919
+g1917
+I0
+sg1916
+I0
+sg1915
+I0
+sg1918
+I0
+ssg8
+(lp1920
+S'MDL v MDH\nDKW v ERE'
+p1921
+aS'MDH v ERE\nMDL v DKW'
+p1922
+aS'DKW v MDH\nERE v MDL'
+p1923
+aS'MDH v DKW\nMDL v ERE'
+p1924
+aS'ERE v MDH\nDKW v MDL'
+p1925
+aS'Round 6\nMDH v MDL\nERE v DKW'
+p1926
+asg188
+(lp1927
+(lp1928
 NaNaa(lp1929
 NaNaa(lp1930
 NaNaa(lp1931
-NaNaasg160
-(lp1932
-S'PRG'
-p1933
-aS'CPH'
-p1934
-aS'SN'
-p1935
-aS'DKF'
-p1936
-asg174
-(dp1937
-g1934
+NaNaa(lp1932
+NaNaa(lp1933
+NaNaNaasg225
+(dp1934
+g1917
 I0
-sg1936
+sg1916
 I0
-sg1933
+sg1915
 I0
-sg1935
-I0
-ssg8
-(lp1938
-S'PRG v CPH\nSN v DKF'
-p1939
-aS'CPH v DKF\nPRG v SN'
-p1940
-aS'SN v CPH\nDKF v PRG'
-p1941
-aS'CPH v SN\nPRG v DKF'
-p1942
-aS'DKF v CPH\nSN v PRG'
-p1943
-aS'CPH v PRG\nDKF v SN'
-p1944
-asg188
-(lp1945
-(lp1946
-NaNaa(lp1947
-NaNaa(lp1948
-NaNaa(lp1949
-NaNaa(lp1950
-NaNaa(lp1951
-NaNaasg225
-(dp1952
-g1934
-I0
-sg1936
-I0
-sg1933
-I0
-sg1935
+sg1918
 I0
 ssg227
 I00
 sg228
-(dp1953
-g1934
+(dp1935
+g1917
 I0
-sg1936
+sg1916
 I0
-sg1933
+sg1915
 I0
-sg1935
+sg1918
 I0
 ssg230
-(dp1954
-g1934
+(dp1936
+g1917
 I0
-sg1936
+sg1916
 I0
-sg1933
+sg1915
 I0
-sg1935
+sg1918
 I0
 ssg232
-(dp1955
-g1934
+(dp1937
+g1917
 I0
-sg1936
+sg1916
 I0
-sg1933
+sg1915
 I0
-sg1935
+sg1918
 I0
 ssg234
-(lp1956
-(lp1957
-NaNaa(lp1958
-NaNaa(lp1959
-NaNaa(lp1960
-NaNaa(lp1961
-NaNaa(lp1962
-NaNaasg266
-(dp1963
-g1934
+(lp1938
+(lp1939
+NaNaa(lp1940
+NaNaa(lp1941
+NaNaa(lp1942
+NaNaa(lp1943
+NaNaa(lp1944
+NaNaNaasg266
+(dp1945
+g1917
 I0
-sg1936
+sg1916
 I0
-sg1933
+sg1915
 I0
-sg1935
+sg1918
 I0
 ssg268
-(dp1964
-g1934
+(dp1946
+g1917
 I0
-sg1936
+sg1916
 I0
-sg1933
+sg1915
 I0
-sg1935
+sg1918
 I0
 ssg270
-(lp1965
-(lp1966
-S'PRG v CPH'
-p1967
-aS'SN v DKF'
-p1968
-aa(lp1969
-S'CPH v DKF'
-p1970
-aS'PRG v SN'
-p1971
-aa(lp1972
-S'SN v CPH'
-p1973
-aS'DKF v PRG'
-p1974
-aa(lp1975
-S'CPH v SN'
-p1976
-aS'PRG v DKF'
-p1977
-aa(lp1978
-S'DKF v CPH'
-p1979
-aS'SN v PRG'
-p1980
-aa(lp1981
-S'CPH v PRG'
-p1982
-aS'DKF v SN'
-p1983
+(lp1947
+(lp1948
+S'MDL v MDH'
+p1949
+aS'DKW v ERE'
+p1950
+aa(lp1951
+S'MDH v ERE'
+p1952
+aS'MDL v DKW'
+p1953
+aa(lp1954
+S'DKW v MDH'
+p1955
+aS'ERE v MDL'
+p1956
+aa(lp1957
+S'MDH v DKW'
+p1958
+aS'MDL v ERE'
+p1959
+aa(lp1960
+S'ERE v MDH'
+p1961
+aS'DKW v MDL'
+p1962
+aa(lp1963
+S'Round 6'
+p1964
+aS'MDH v MDL'
+p1965
+aS'ERE v DKW'
+p1966
 aasg52
 I14
 sg350
-(lp1984
-(lp1985
+(lp1967
+(lp1968
+NaNaa(lp1969
+NaNaa(lp1970
+NaNaa(lp1971
+NaNaa(lp1972
+NaNaa(lp1973
+NaNaNaasg395
+(lp1974
+(lp1975
+NaNaa(lp1976
+NaNaa(lp1977
+NaNaa(lp1978
+NaNaa(lp1979
+NaNaa(lp1980
+NaNaNaasg55
+g1920
+sg431
+(lp1981
+(lp1982
+NaNaa(lp1983
+NaNaa(lp1984
+NaNaa(lp1985
 NaNaa(lp1986
 NaNaa(lp1987
-NaNaa(lp1988
-NaNaa(lp1989
+NaNaNaasg465
+(lp1988
+(lp1989
 NaNaa(lp1990
-NaNaasg395
-(lp1991
-(lp1992
+NaNaa(lp1991
+NaNaa(lp1992
 NaNaa(lp1993
 NaNaa(lp1994
-NaNaa(lp1995
-NaNaa(lp1996
-NaNaa(lp1997
-NaNaasg55
-g1938
-sg431
-(lp1998
-(lp1999
+NaNaNaasg498
+(dp1995
+g1917
+I0
+sg1916
+I0
+sg1915
+I0
+sg1918
+I0
+ssg500
+(lp1996
+(lp1997
+NaNaa(lp1998
+NaNaa(lp1999
 NaNaa(lp2000
 NaNaa(lp2001
 NaNaa(lp2002
-NaNaa(lp2003
-NaNaa(lp2004
-NaNaasg465
-(lp2005
-(lp2006
+NaNaNaasg534
+(lp2003
+(lp2004
+NaNaa(lp2005
+NaNaa(lp2006
 NaNaa(lp2007
 NaNaa(lp2008
 NaNaa(lp2009
-NaNaa(lp2010
-NaNaa(lp2011
-NaNaasg498
+NaNaNaasbag0
+(g68
+g2
+Ntp2010
+Rp2011
 (dp2012
-g1934
-I0
-sg1936
-I0
-sg1933
-I0
-sg1935
-I0
-ssg500
+g72
+g48
+sg73
 (lp2013
 (lp2014
 NaNaa(lp2015
@@ -4066,7 +3941,7 @@ NaNaa(lp2016
 NaNaa(lp2017
 NaNaa(lp2018
 NaNaa(lp2019
-NaNaasg534
+NaNaasg92
 (lp2020
 (lp2021
 NaNaa(lp2022
@@ -4074,229 +3949,229 @@ NaNaa(lp2023
 NaNaa(lp2024
 NaNaa(lp2025
 NaNaa(lp2026
-NaNaasbag0
-(g68
-g2
-Ntp2027
-Rp2028
-(dp2029
-g72
-g46
-sg73
-(lp2030
-(lp2031
+NaNaasg128
+(lp2027
+(lp2028
+NaNaa(lp2029
+NaNaa(lp2030
+NaNaa(lp2031
 NaNaa(lp2032
 NaNaa(lp2033
-NaNaa(lp2034
-NaNaa(lp2035
-NaNaa(lp2036
-NaNaasg92
-(lp2037
-(lp2038
-NaNaa(lp2039
-NaNaa(lp2040
-NaNaa(lp2041
-NaNaa(lp2042
-NaNaa(lp2043
-NaNaasg128
-(lp2044
-(lp2045
-NaNaa(lp2046
-NaNaa(lp2047
-NaNaa(lp2048
-NaNaa(lp2049
-NaNaa(lp2050
 NaNaasg160
-(lp2051
-S'KKR'
-p2052
-aS'FST'
-p2053
-aS'GP'
-p2054
-aS'AHK'
-p2055
+(lp2034
+S'TO'
+p2035
+aS'EKR'
+p2036
+aS'BIL'
+p2037
+aS'MAG'
+p2038
 asg174
-(dp2056
-g2055
+(dp2039
+g2035
 I0
-sg2054
+sg2037
 I0
-sg2053
+sg2036
 I0
-sg2052
+sg2038
 I0
 ssg8
-(lp2057
-S'KKR v FST\nGP v AHK'
-p2058
-aS'FST v AHK\nKKR v GP'
-p2059
-aS'GP v FST\nAHK v KKR'
-p2060
-aS'FST v GP\nKKR v AHK'
-p2061
-aS'AHK v FST\nGP v KKR'
-p2062
-aS'FST v KKR\nAHK v GP'
-p2063
+(lp2040
+S'TO v EKR\nBIL v MAG'
+p2041
+aS'EKR v MAG\nTO v BIL'
+p2042
+aS'BIL v EKR\nMAG v TO'
+p2043
+aS'EKR v BIL\nTO v MAG'
+p2044
+aS'MAG v EKR\nBIL v TO'
+p2045
+aS'EKR v TO\nMAG v BIL'
+p2046
 asg188
-(lp2064
-(lp2065
-NaNaa(lp2066
-NaNaa(lp2067
-NaNaa(lp2068
-NaNaa(lp2069
-NaNaa(lp2070
+(lp2047
+(lp2048
+NaNaa(lp2049
+NaNaa(lp2050
+NaNaa(lp2051
+NaNaa(lp2052
+NaNaa(lp2053
 NaNaasg225
-(dp2071
-g2055
+(dp2054
+g2035
 I0
-sg2054
+sg2037
 I0
-sg2053
+sg2036
 I0
-sg2052
+sg2038
 I0
 ssg227
 I00
 sg228
-(dp2072
-g2055
+(dp2055
+g2035
 I0
-sg2054
+sg2037
 I0
-sg2053
+sg2036
 I0
-sg2052
+sg2038
 I0
 ssg230
-(dp2073
-g2055
+(dp2056
+g2035
 I0
-sg2054
+sg2037
 I0
-sg2053
+sg2036
 I0
-sg2052
+sg2038
 I0
 ssg232
-(dp2074
-g2055
+(dp2057
+g2035
 I0
-sg2054
+sg2037
 I0
-sg2053
+sg2036
 I0
-sg2052
+sg2038
 I0
 ssg234
-(lp2075
-(lp2076
-NaNaa(lp2077
-NaNaa(lp2078
-NaNaa(lp2079
-NaNaa(lp2080
-NaNaa(lp2081
+(lp2058
+(lp2059
+NaNaa(lp2060
+NaNaa(lp2061
+NaNaa(lp2062
+NaNaa(lp2063
+NaNaa(lp2064
 NaNaasg266
-(dp2082
-g2055
+(dp2065
+g2035
 I0
-sg2054
+sg2037
 I0
-sg2053
+sg2036
 I0
-sg2052
+sg2038
 I0
 ssg268
-(dp2083
-g2055
+(dp2066
+g2035
 I0
-sg2054
+sg2037
 I0
-sg2053
+sg2036
 I0
-sg2052
+sg2038
 I0
 ssg270
-(lp2084
-(lp2085
-S'KKR v FST'
-p2086
-aS'GP v AHK'
-p2087
-aa(lp2088
-S'FST v AHK'
-p2089
-aS'KKR v GP'
-p2090
-aa(lp2091
-S'GP v FST'
-p2092
-aS'AHK v KKR'
-p2093
-aa(lp2094
-S'FST v GP'
-p2095
-aS'KKR v AHK'
-p2096
-aa(lp2097
-S'AHK v FST'
-p2098
-aS'GP v KKR'
-p2099
-aa(lp2100
-S'FST v KKR'
-p2101
-aS'AHK v GP'
-p2102
+(lp2067
+(lp2068
+S'TO v EKR'
+p2069
+aS'BIL v MAG'
+p2070
+aa(lp2071
+S'EKR v MAG'
+p2072
+aS'TO v BIL'
+p2073
+aa(lp2074
+S'BIL v EKR'
+p2075
+aS'MAG v TO'
+p2076
+aa(lp2077
+S'EKR v BIL'
+p2078
+aS'TO v MAG'
+p2079
+aa(lp2080
+S'MAG v EKR'
+p2081
+aS'BIL v TO'
+p2082
+aa(lp2083
+S'EKR v TO'
+p2084
+aS'MAG v BIL'
+p2085
 aasg52
 I14
 sg350
-(lp2103
-(lp2104
+(lp2086
+(lp2087
+NaNaa(lp2088
+NaNaa(lp2089
+NaNaa(lp2090
+NaNaa(lp2091
+NaNaa(lp2092
+NaNaasg395
+(lp2093
+(lp2094
+NaNaa(lp2095
+NaNaa(lp2096
+NaNaa(lp2097
+NaNaa(lp2098
+NaNaa(lp2099
+NaNaasg55
+g2040
+sg431
+(lp2100
+(lp2101
+NaNaa(lp2102
+NaNaa(lp2103
+NaNaa(lp2104
 NaNaa(lp2105
 NaNaa(lp2106
-NaNaa(lp2107
-NaNaa(lp2108
+NaNaasg465
+(lp2107
+(lp2108
 NaNaa(lp2109
-NaNaasg395
-(lp2110
-(lp2111
+NaNaa(lp2110
+NaNaa(lp2111
 NaNaa(lp2112
 NaNaa(lp2113
-NaNaa(lp2114
-NaNaa(lp2115
-NaNaa(lp2116
-NaNaasg55
-g2057
-sg431
-(lp2117
-(lp2118
+NaNaasg498
+(dp2114
+g2035
+I0
+sg2037
+I0
+sg2036
+I0
+sg2038
+I0
+ssg500
+(lp2115
+(lp2116
+NaNaa(lp2117
+NaNaa(lp2118
 NaNaa(lp2119
 NaNaa(lp2120
 NaNaa(lp2121
-NaNaa(lp2122
-NaNaa(lp2123
-NaNaasg465
-(lp2124
-(lp2125
+NaNaasg534
+(lp2122
+(lp2123
+NaNaa(lp2124
+NaNaa(lp2125
 NaNaa(lp2126
 NaNaa(lp2127
 NaNaa(lp2128
-NaNaa(lp2129
-NaNaa(lp2130
-NaNaasg498
+NaNaasbag0
+(g68
+g2
+Ntp2129
+Rp2130
 (dp2131
-g2055
-I0
-sg2054
-I0
-sg2053
-I0
-sg2052
-I0
-ssg500
+g72
+g47
+sg73
 (lp2132
 (lp2133
 NaNaa(lp2134
@@ -4304,7 +4179,7 @@ NaNaa(lp2135
 NaNaa(lp2136
 NaNaa(lp2137
 NaNaa(lp2138
-NaNaasg534
+NaNaasg92
 (lp2139
 (lp2140
 NaNaa(lp2141
@@ -4312,229 +4187,229 @@ NaNaa(lp2142
 NaNaa(lp2143
 NaNaa(lp2144
 NaNaa(lp2145
-NaNaasbag0
-(g68
-g2
-Ntp2146
-Rp2147
-(dp2148
-g72
-g45
-sg73
-(lp2149
-(lp2150
+NaNaasg128
+(lp2146
+(lp2147
+NaNaa(lp2148
+NaNaa(lp2149
+NaNaa(lp2150
 NaNaa(lp2151
 NaNaa(lp2152
-NaNaa(lp2153
-NaNaa(lp2154
-NaNaa(lp2155
-NaNaasg92
-(lp2156
-(lp2157
-NaNaa(lp2158
-NaNaa(lp2159
-NaNaa(lp2160
-NaNaa(lp2161
-NaNaa(lp2162
-NaNaasg128
-(lp2163
-(lp2164
-NaNaa(lp2165
-NaNaa(lp2166
-NaNaa(lp2167
-NaNaa(lp2168
-NaNaa(lp2169
 NaNaasg160
-(lp2170
-S'BSK'
-p2171
-aS'KIS'
-p2172
-aS'TLB'
-p2173
-aS'CAT'
-p2174
+(lp2153
+S'PRG'
+p2154
+aS'CPH'
+p2155
+aS'SN'
+p2156
+aS'DKF'
+p2157
 asg174
-(dp2175
-g2172
+(dp2158
+g2155
 I0
-sg2173
+sg2157
 I0
-sg2174
+sg2154
 I0
-sg2171
+sg2156
 I0
 ssg8
-(lp2176
-S'BSK v KIS\nTLB v CAT'
-p2177
-aS'KIS v CAT\nBSK v TLB'
-p2178
-aS'TLB v KIS\nCAT v BSK'
-p2179
-aS'KIS v TLB\nBSK v CAT'
-p2180
-aS'CAT v KIS\nTLB v BSK'
-p2181
-aS'KIS v BSK\nCAT v TLB'
-p2182
+(lp2159
+S'PRG v CPH\nSN v DKF'
+p2160
+aS'CPH v DKF\nPRG v SN'
+p2161
+aS'SN v CPH\nDKF v PRG'
+p2162
+aS'CPH v SN\nPRG v DKF'
+p2163
+aS'DKF v CPH\nSN v PRG'
+p2164
+aS'CPH v PRG\nDKF v SN'
+p2165
 asg188
-(lp2183
-(lp2184
-NaNaa(lp2185
-NaNaa(lp2186
-NaNaa(lp2187
-NaNaa(lp2188
-NaNaa(lp2189
+(lp2166
+(lp2167
+NaNaa(lp2168
+NaNaa(lp2169
+NaNaa(lp2170
+NaNaa(lp2171
+NaNaa(lp2172
 NaNaasg225
-(dp2190
-g2172
+(dp2173
+g2155
 I0
-sg2173
+sg2157
 I0
-sg2174
+sg2154
 I0
-sg2171
+sg2156
 I0
 ssg227
 I00
 sg228
-(dp2191
-g2172
+(dp2174
+g2155
 I0
-sg2173
+sg2157
 I0
-sg2174
+sg2154
 I0
-sg2171
+sg2156
 I0
 ssg230
-(dp2192
-g2172
+(dp2175
+g2155
 I0
-sg2173
+sg2157
 I0
-sg2174
+sg2154
 I0
-sg2171
+sg2156
 I0
 ssg232
-(dp2193
-g2172
+(dp2176
+g2155
 I0
-sg2173
+sg2157
 I0
-sg2174
+sg2154
 I0
-sg2171
+sg2156
 I0
 ssg234
-(lp2194
-(lp2195
-NaNaa(lp2196
-NaNaa(lp2197
-NaNaa(lp2198
-NaNaa(lp2199
-NaNaa(lp2200
+(lp2177
+(lp2178
+NaNaa(lp2179
+NaNaa(lp2180
+NaNaa(lp2181
+NaNaa(lp2182
+NaNaa(lp2183
 NaNaasg266
-(dp2201
-g2172
+(dp2184
+g2155
 I0
-sg2173
+sg2157
 I0
-sg2174
+sg2154
 I0
-sg2171
+sg2156
 I0
 ssg268
-(dp2202
-g2172
+(dp2185
+g2155
 I0
-sg2173
+sg2157
 I0
-sg2174
+sg2154
 I0
-sg2171
+sg2156
 I0
 ssg270
-(lp2203
-(lp2204
-S'BSK v KIS'
-p2205
-aS'TLB v CAT'
-p2206
-aa(lp2207
-S'KIS v CAT'
-p2208
-aS'BSK v TLB'
-p2209
-aa(lp2210
-S'TLB v KIS'
-p2211
-aS'CAT v BSK'
-p2212
-aa(lp2213
-S'KIS v TLB'
-p2214
-aS'BSK v CAT'
-p2215
-aa(lp2216
-S'CAT v KIS'
-p2217
-aS'TLB v BSK'
-p2218
-aa(lp2219
-S'KIS v BSK'
-p2220
-aS'CAT v TLB'
-p2221
+(lp2186
+(lp2187
+S'PRG v CPH'
+p2188
+aS'SN v DKF'
+p2189
+aa(lp2190
+S'CPH v DKF'
+p2191
+aS'PRG v SN'
+p2192
+aa(lp2193
+S'SN v CPH'
+p2194
+aS'DKF v PRG'
+p2195
+aa(lp2196
+S'CPH v SN'
+p2197
+aS'PRG v DKF'
+p2198
+aa(lp2199
+S'DKF v CPH'
+p2200
+aS'SN v PRG'
+p2201
+aa(lp2202
+S'CPH v PRG'
+p2203
+aS'DKF v SN'
+p2204
 aasg52
 I14
 sg350
-(lp2222
-(lp2223
+(lp2205
+(lp2206
+NaNaa(lp2207
+NaNaa(lp2208
+NaNaa(lp2209
+NaNaa(lp2210
+NaNaa(lp2211
+NaNaasg395
+(lp2212
+(lp2213
+NaNaa(lp2214
+NaNaa(lp2215
+NaNaa(lp2216
+NaNaa(lp2217
+NaNaa(lp2218
+NaNaasg55
+g2159
+sg431
+(lp2219
+(lp2220
+NaNaa(lp2221
+NaNaa(lp2222
+NaNaa(lp2223
 NaNaa(lp2224
 NaNaa(lp2225
-NaNaa(lp2226
-NaNaa(lp2227
+NaNaasg465
+(lp2226
+(lp2227
 NaNaa(lp2228
-NaNaasg395
-(lp2229
-(lp2230
+NaNaa(lp2229
+NaNaa(lp2230
 NaNaa(lp2231
 NaNaa(lp2232
-NaNaa(lp2233
-NaNaa(lp2234
-NaNaa(lp2235
-NaNaasg55
-g2176
-sg431
-(lp2236
-(lp2237
+NaNaasg498
+(dp2233
+g2155
+I0
+sg2157
+I0
+sg2154
+I0
+sg2156
+I0
+ssg500
+(lp2234
+(lp2235
+NaNaa(lp2236
+NaNaa(lp2237
 NaNaa(lp2238
 NaNaa(lp2239
 NaNaa(lp2240
-NaNaa(lp2241
-NaNaa(lp2242
-NaNaasg465
-(lp2243
-(lp2244
+NaNaasg534
+(lp2241
+(lp2242
+NaNaa(lp2243
+NaNaa(lp2244
 NaNaa(lp2245
 NaNaa(lp2246
 NaNaa(lp2247
-NaNaa(lp2248
-NaNaa(lp2249
-NaNaasg498
+NaNaasbag0
+(g68
+g2
+Ntp2248
+Rp2249
 (dp2250
-g2172
-I0
-sg2173
-I0
-sg2174
-I0
-sg2171
-I0
-ssg500
+g72
+g46
+sg73
 (lp2251
 (lp2252
 NaNaa(lp2253
@@ -4542,7 +4417,7 @@ NaNaa(lp2254
 NaNaa(lp2255
 NaNaa(lp2256
 NaNaa(lp2257
-NaNaasg534
+NaNaasg92
 (lp2258
 (lp2259
 NaNaa(lp2260
@@ -4550,4 +4425,456 @@ NaNaa(lp2261
 NaNaa(lp2262
 NaNaa(lp2263
 NaNaa(lp2264
+NaNaasg128
+(lp2265
+(lp2266
+NaNaa(lp2267
+NaNaa(lp2268
+NaNaa(lp2269
+NaNaa(lp2270
+NaNaa(lp2271
+NaNaasg160
+(lp2272
+S'KKR'
+p2273
+aS'FST'
+p2274
+aS'GP'
+p2275
+aS'AHK'
+p2276
+asg174
+(dp2277
+g2276
+I0
+sg2275
+I0
+sg2274
+I0
+sg2273
+I0
+ssg8
+(lp2278
+S'KKR v FST\nGP v AHK'
+p2279
+aS'FST v AHK\nKKR v GP'
+p2280
+aS'GP v FST\nAHK v KKR'
+p2281
+aS'FST v GP\nKKR v AHK'
+p2282
+aS'AHK v FST\nGP v KKR'
+p2283
+aS'FST v KKR\nAHK v GP'
+p2284
+asg188
+(lp2285
+(lp2286
+NaNaa(lp2287
+NaNaa(lp2288
+NaNaa(lp2289
+NaNaa(lp2290
+NaNaa(lp2291
+NaNaasg225
+(dp2292
+g2276
+I0
+sg2275
+I0
+sg2274
+I0
+sg2273
+I0
+ssg227
+I00
+sg228
+(dp2293
+g2276
+I0
+sg2275
+I0
+sg2274
+I0
+sg2273
+I0
+ssg230
+(dp2294
+g2276
+I0
+sg2275
+I0
+sg2274
+I0
+sg2273
+I0
+ssg232
+(dp2295
+g2276
+I0
+sg2275
+I0
+sg2274
+I0
+sg2273
+I0
+ssg234
+(lp2296
+(lp2297
+NaNaa(lp2298
+NaNaa(lp2299
+NaNaa(lp2300
+NaNaa(lp2301
+NaNaa(lp2302
+NaNaasg266
+(dp2303
+g2276
+I0
+sg2275
+I0
+sg2274
+I0
+sg2273
+I0
+ssg268
+(dp2304
+g2276
+I0
+sg2275
+I0
+sg2274
+I0
+sg2273
+I0
+ssg270
+(lp2305
+(lp2306
+S'KKR v FST'
+p2307
+aS'GP v AHK'
+p2308
+aa(lp2309
+S'FST v AHK'
+p2310
+aS'KKR v GP'
+p2311
+aa(lp2312
+S'GP v FST'
+p2313
+aS'AHK v KKR'
+p2314
+aa(lp2315
+S'FST v GP'
+p2316
+aS'KKR v AHK'
+p2317
+aa(lp2318
+S'AHK v FST'
+p2319
+aS'GP v KKR'
+p2320
+aa(lp2321
+S'FST v KKR'
+p2322
+aS'AHK v GP'
+p2323
+aasg52
+I14
+sg350
+(lp2324
+(lp2325
+NaNaa(lp2326
+NaNaa(lp2327
+NaNaa(lp2328
+NaNaa(lp2329
+NaNaa(lp2330
+NaNaasg395
+(lp2331
+(lp2332
+NaNaa(lp2333
+NaNaa(lp2334
+NaNaa(lp2335
+NaNaa(lp2336
+NaNaa(lp2337
+NaNaasg55
+g2278
+sg431
+(lp2338
+(lp2339
+NaNaa(lp2340
+NaNaa(lp2341
+NaNaa(lp2342
+NaNaa(lp2343
+NaNaa(lp2344
+NaNaasg465
+(lp2345
+(lp2346
+NaNaa(lp2347
+NaNaa(lp2348
+NaNaa(lp2349
+NaNaa(lp2350
+NaNaa(lp2351
+NaNaasg498
+(dp2352
+g2276
+I0
+sg2275
+I0
+sg2274
+I0
+sg2273
+I0
+ssg500
+(lp2353
+(lp2354
+NaNaa(lp2355
+NaNaa(lp2356
+NaNaa(lp2357
+NaNaa(lp2358
+NaNaa(lp2359
+NaNaasg534
+(lp2360
+(lp2361
+NaNaa(lp2362
+NaNaa(lp2363
+NaNaa(lp2364
+NaNaa(lp2365
+NaNaa(lp2366
+NaNaasbag0
+(g68
+g2
+Ntp2367
+Rp2368
+(dp2369
+g72
+g45
+sg73
+(lp2370
+(lp2371
+NaNaa(lp2372
+NaNaa(lp2373
+NaNaa(lp2374
+NaNaa(lp2375
+NaNaa(lp2376
+NaNaasg92
+(lp2377
+(lp2378
+NaNaa(lp2379
+NaNaa(lp2380
+NaNaa(lp2381
+NaNaa(lp2382
+NaNaa(lp2383
+NaNaasg128
+(lp2384
+(lp2385
+NaNaa(lp2386
+NaNaa(lp2387
+NaNaa(lp2388
+NaNaa(lp2389
+NaNaa(lp2390
+NaNaasg160
+(lp2391
+S'BSK'
+p2392
+aS'KIS'
+p2393
+aS'TLB'
+p2394
+aS'CAT'
+p2395
+asg174
+(dp2396
+g2393
+I0
+sg2394
+I0
+sg2395
+I0
+sg2392
+I0
+ssg8
+(lp2397
+S'BSK v KIS\nTLB v CAT'
+p2398
+aS'KIS v CAT\nBSK v TLB'
+p2399
+aS'TLB v KIS\nCAT v BSK'
+p2400
+aS'KIS v TLB\nBSK v CAT'
+p2401
+aS'CAT v KIS\nTLB v BSK'
+p2402
+aS'KIS v BSK\nCAT v TLB'
+p2403
+asg188
+(lp2404
+(lp2405
+NaNaa(lp2406
+NaNaa(lp2407
+NaNaa(lp2408
+NaNaa(lp2409
+NaNaa(lp2410
+NaNaasg225
+(dp2411
+g2393
+I0
+sg2394
+I0
+sg2395
+I0
+sg2392
+I0
+ssg227
+I00
+sg228
+(dp2412
+g2393
+I0
+sg2394
+I0
+sg2395
+I0
+sg2392
+I0
+ssg230
+(dp2413
+g2393
+I0
+sg2394
+I0
+sg2395
+I0
+sg2392
+I0
+ssg232
+(dp2414
+g2393
+I0
+sg2394
+I0
+sg2395
+I0
+sg2392
+I0
+ssg234
+(lp2415
+(lp2416
+NaNaa(lp2417
+NaNaa(lp2418
+NaNaa(lp2419
+NaNaa(lp2420
+NaNaa(lp2421
+NaNaasg266
+(dp2422
+g2393
+I0
+sg2394
+I0
+sg2395
+I0
+sg2392
+I0
+ssg268
+(dp2423
+g2393
+I0
+sg2394
+I0
+sg2395
+I0
+sg2392
+I0
+ssg270
+(lp2424
+(lp2425
+S'BSK v KIS'
+p2426
+aS'TLB v CAT'
+p2427
+aa(lp2428
+S'KIS v CAT'
+p2429
+aS'BSK v TLB'
+p2430
+aa(lp2431
+S'TLB v KIS'
+p2432
+aS'CAT v BSK'
+p2433
+aa(lp2434
+S'KIS v TLB'
+p2435
+aS'BSK v CAT'
+p2436
+aa(lp2437
+S'CAT v KIS'
+p2438
+aS'TLB v BSK'
+p2439
+aa(lp2440
+S'KIS v BSK'
+p2441
+aS'CAT v TLB'
+p2442
+aasg52
+I14
+sg350
+(lp2443
+(lp2444
+NaNaa(lp2445
+NaNaa(lp2446
+NaNaa(lp2447
+NaNaa(lp2448
+NaNaa(lp2449
+NaNaasg395
+(lp2450
+(lp2451
+NaNaa(lp2452
+NaNaa(lp2453
+NaNaa(lp2454
+NaNaa(lp2455
+NaNaa(lp2456
+NaNaasg55
+g2397
+sg431
+(lp2457
+(lp2458
+NaNaa(lp2459
+NaNaa(lp2460
+NaNaa(lp2461
+NaNaa(lp2462
+NaNaa(lp2463
+NaNaasg465
+(lp2464
+(lp2465
+NaNaa(lp2466
+NaNaa(lp2467
+NaNaa(lp2468
+NaNaa(lp2469
+NaNaa(lp2470
+NaNaasg498
+(dp2471
+g2393
+I0
+sg2394
+I0
+sg2395
+I0
+sg2392
+I0
+ssg500
+(lp2472
+(lp2473
+NaNaa(lp2474
+NaNaa(lp2475
+NaNaa(lp2476
+NaNaa(lp2477
+NaNaa(lp2478
+NaNaasg534
+(lp2479
+(lp2480
+NaNaa(lp2481
+NaNaa(lp2482
+NaNaa(lp2483
+NaNaa(lp2484
+NaNaa(lp2485
 NaNaasbasb.
