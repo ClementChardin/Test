@@ -26,7 +26,6 @@ TLB v ALT
 TA v QNL
 MRB v MSL
 
-Round 5
 MSL v DKF
 QNL v MRB
 ALT v TA
@@ -46,7 +45,7 @@ ALT v MSL
 AL v MRB
 KAK v TA
 PRG v TLB
-BSK v DK
+BSK v DKW
 
 DKF v DKW
 TLB v BSK
