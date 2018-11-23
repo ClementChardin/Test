@@ -13,6 +13,5 @@ MDL v ERE
 ERE v MDH
 DKW v MDL
 
-Round 6
 MDH v MDL
 ERE v DKW

@@ -309,8 +309,7 @@ class ColMatchWidget(QtGui.QWidget):
         noms_equipes = pm.split(' v ')
         if pm == 'repos':
             mb = QtGui.QMessageBox()
-            if mb.question(None, "Question", """"Le prochain match est un jour de repos\n
-                                                 Avez-vous exempté les équipes concernées ?""", "Non", "Oui") == 1:
+            if mb.question(None, "Question", """"Le prochain match est un jour de repos.\nAvez-vous exempté les équipes concernées ?""", "Non", "Oui") == 1:
                 idx = self.saison.repos_effectues.index(False)
                 self.saison.repos_effectues[idx] = True
                 self.set_prochain_match(nom_championnat)
