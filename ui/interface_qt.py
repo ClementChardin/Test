@@ -492,6 +492,7 @@ class Col2Widget(QtGui.QWidget):
             if mb.question(None, "Confirmation", "Sauvegarder sous nom " + self.nom.text(), "Non", "Oui") == 1:
                 self.comp.sauvegarder(self.nom.text(), self.club.nom, self.parent().c_ou_s)
                 self.parent().compo_sauvee = True
+                self.parent().col1.set_comp(self.nom.text())
 
     def restaurer_defaut(self):
         self.parent().comp = s.charger_compo(self.club.nom+'_defaut', self.club.nom, self.c_ou_s, self.dat)
