@@ -219,10 +219,13 @@ class Match():
         else:
             bonus_domicile = 7 + misc.d6_plus()
 
+        print "\ncartes", self.eq1.nom, l1[0]["valeur"], l1[1]["valeur"], l1[2]["valeur"], u"-> total =", l1[0]["valeur"]+l1[1]["valeur"]+l1[2]["valeur"]
         print self.eq1.nom, ceil(self.eq1.comp.totaux_old['T1']) + l1[0]["valeur"], \
               ceil(self.eq1.comp.totaux_old['T2']) + l1[1]["valeur"], \
               ceil(self.eq1.comp.totaux_old['T3']) + l1[2]["valeur"], \
               evs_tot1, bonus_domicile
+
+        print "\ncartes", self.eq2.nom, l2[0]["valeur"], l2[1]["valeur"], l2[2]["valeur"], u"-> total =", l2[0]["valeur"]+l2[1]["valeur"]+l2[2]["valeur"]
         print self.eq2.nom, ceil(self.eq2.comp.totaux_old['T1']) + l2[0]["valeur"], \
               ceil(self.eq2.comp.totaux_old['T2']) + l2[1]["valeur"], \
               ceil(self.eq2.comp.totaux_old['T3']) + l2[2]["valeur"], \
@@ -245,7 +248,7 @@ class Match():
         n1 = int(n_tps_forts(res1, prolongation))
         n2 = int(n_tps_forts(res2, prolongation))
 
-        print self.eq1.nom, "tot", tot1, "tps forts", n1
+        print '\n'+self.eq1.nom, "tot", tot1, "tps forts", n1
         print self.eq2.nom, "tot", tot2, "tps forts", n2
         print "resultat 1", res1, "resultat 2", res2
 

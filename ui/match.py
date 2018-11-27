@@ -330,11 +330,11 @@ class ColMatchWidget(QtGui.QWidget):
 
         compos1 = []
         for nom in self.parent().col_eq1.equipe.compos_sauvees():
-            if noms_compos in nom:
+            if nom1 in nom.split('_') and nom2 in nom.split('_'):
                 compos1.append(nom)
         compos2 = []
         for nom in self.parent().col_eq2.equipe.compos_sauvees():
-            if noms_compos in nom:
+            if nom1 in nom.split('_') and nom2 in nom.split('_'):
                 compos2.append(nom)
         if len(compos1) > 0 and len(compos2) > 0:
             """
@@ -343,7 +343,10 @@ class ColMatchWidget(QtGui.QWidget):
             cas len égale et > 1 -> dialog
             """
             if not compos1 == compos2:
-                dial = InfoDialog("Il manque une compo !")
+                dial = InfoDialog("Il manque une compo :\nNom supposé : "+noms_compos+\
+                                  "\nCompos1 : "+str(compos1)+\
+                                  "\nCompos2 : "+str(compos2)+\
+                                  "\n(compos1==compos2 = False)")
                 dial.exec_()
             elif len(compos1) == 1:
                 nom = compos1[0]
