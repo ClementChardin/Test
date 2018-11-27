@@ -789,8 +789,8 @@ def set_caracs_old_compo(comp, equipe, fatigue=True):
         else:
             malus = 0
 
-        for car in jj.caracs.keys():
-            jj.caracs[car] -= malus
+        #for car in jj.caracs.keys():
+        #    jj.caracs[car] -= malus
         
         #On vérifie que le joueur est à son poste, sinon toutes les caracs subissent un -1
         postes = corres_num_poste[num].split(" ")
