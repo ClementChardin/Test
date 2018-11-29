@@ -682,7 +682,8 @@ def attribuer_matches(eq, c_ou_s='c', clubs=None):
     print 'attribuer_matches', eq.equipe.nom, c_ou_s, '; clubs is None :', clubs is None
     equipe = eq.equipe
     clubs_a_sauver = []
-    ev_moy = eq.autre_equipe.comp.EV_moyenne()
+    ev_moy = eq.comp.EV_moyenne()
+    ev_moy_autre = eq.autre_equipe.comp.EV_moyenne()
     for (num, jj) in eq.comp.joueurs.items():
         if c_ou_s == 'c':
             jj_club = equipe.get_joueur_from_nom(jj.nom)
@@ -721,8 +722,11 @@ def attribuer_matches(eq, c_ou_s='c', clubs=None):
         setattr(jj_club, "MJ"+str(numero_poste), attr_saison)
         setattr(jj_club, "MJ"+str(numero_poste)+"_total", attr_total)
 
-        jj_club.xp_saison += ev_moy
-        jj_club.xp_total += ev_moy
+        xp_gagnee = (round(ev_moy) + round(ev_moy_autre))/2. /10.
+        if int(num.split('n')[1]) <= 15:
+            xp_gagnee /= 2.
+        jj_club.xp_saison += xp_gagnee
+        jj_club.xp_total += xp_gagnee
 
         if not jj.postes_maitrises[numero_poste] and attr_total[key_final] >= 10:
             jj.postes_maitrises[numero_poste] = True
