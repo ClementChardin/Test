@@ -2,6 +2,7 @@
 import selection as s
 from miscellaneous import carte_to_string
 from ui.couleurs import *
+from stats_uniquement_bonus_evolution import *
 
 class BioPopup(QtGui.QWidget):
     def __init__(self, parent=None, joueurs=None, col3=None, dat=None, fatigue=True):
@@ -20,7 +21,7 @@ class BioPopup(QtGui.QWidget):
         self.car_tab = JCaracsWidget(joueurs=self.joueurs, parent=self)
         self.tabs.addTab(self.car_tab, "Caracs")
 
-        self.info_tab = JInfosWidget(joueurs=self.joueurs)
+        self.info_tab = JInfosWidget(joueurs=self.joueurs, dat=self.dat)
         self.tabs.addTab(self.info_tab, "Infos")
 
         self.stats_saison_tab = JStatsWidget(joueurs=self.joueurs, s_ou_t='s')
@@ -35,9 +36,9 @@ class BioPopup(QtGui.QWidget):
         self.evolution_total_tab = JEvolutionWidget(joueurs=self.joueurs, dat=self.dat)
         self.tabs.addTab(self.evolution_total_tab, "Evolution totale")
 
-        width = max(350, 120+70*len(self.joueurs))
+        width = max(350, 120+150*len(self.joueurs))
         if width < 1200:
-            self.setGeometry(100, 100, width, 650)
+            self.setGeometry(100, 100, width, 900)
         else:
             self.resize(self.maximumSize())
 
@@ -220,9 +221,10 @@ class JCaracsWidget(QtGui.QWidget):
                                 QtCore.Qt.BackgroundColorRole)
             
 class JInfosWidget(QtGui.QWidget):
-    def __init__(self, joueurs):
+    def __init__(self, joueurs, dat=None):
         QtGui.QWidget.__init__(self)
         self.joueurs = joueurs
+        self.dat = s.lire_date() if dat is None else dat
 
         self.mod = QtGui.QStandardItemModel(9, len(self.joueurs))
         self.setup_model()
@@ -233,7 +235,8 @@ class JInfosWidget(QtGui.QWidget):
         c_header = []
         r_header = ['Poste 1', 'Poste 2', 'Poste 3', 'Armee', 'Rang',
                     'Creation', 'Valeur', 'MS', 'Rang max', 'Declin', 'Club',
-                    'Anciens clubs', 'Changements de postes']
+                    'Anciens clubs', 'Changements de postes', 'Nouveaux Bonus',
+                    'Bonus Avant', 'Bonus Saison', 'XP manquante']
         r = 0
         c = 0
 
@@ -273,9 +276,34 @@ class JInfosWidget(QtGui.QWidget):
             st = str(jj.anciens_clubs.replace(';', '\n'))
             self.mod.setItem(r, c, QtGui.QStandardItem(st))
             r += 1
-            st = str(jj.changements_postes)#.replace(';', '\n')
+            st = str(jj.changements_postes)
             self.mod.setItem(r, c, QtGui.QStandardItem(st))
             r += 1
+
+            st = str(jj.nouveau_bonus_evolution)
+            self.mod.setItem(r, c, QtGui.QStandardItem(st))
+            r += 1
+            if jj.nouveau_bonus_evolution:
+                avant, residus = bonus_atteint_avant_debut_saison(jj, self.dat)
+                st = str(avant)
+                self.mod.setItem(r, c, QtGui.QStandardItem(st))
+                r += 1
+                saison, residus, tot = bonus_atteints_saison_en_cours(jj, self.dat)
+                st = str(saison)
+                self.mod.setItem(r, c, QtGui.QStandardItem(st))
+                r += 1
+                manquante = xp_manquante_prochain_bonus(jj, self.dat)
+                st = str(manquante)
+                self.mod.setItem(r, c, QtGui.QStandardItem(st))
+                r += 1
+            else:
+                st = 'NA'
+                self.mod.setItem(r, c, QtGui.QStandardItem(st))
+                r += 1
+                self.mod.setItem(r, c, QtGui.QStandardItem(st))
+                r += 1
+                self.mod.setItem(r, c, QtGui.QStandardItem(st))
+                r += 1
 
             c += 1
 
@@ -323,7 +351,7 @@ class JStatsWidget(QtGui.QWidget):
         c_header = []
         r_header = ['Essais', 'Transformations', u'Pénalites', 'Drops', 'Points',
                     u'Matches joués\nen club\n(dont tit)', 'Total club',
-                    u'Sélections', u'Total sélections']
+                    u'Sélections', u'Total sélections', u'Expérience']
         r = 0
         c = 0
 
@@ -384,6 +412,10 @@ class JStatsWidget(QtGui.QWidget):
             self.mod.setItem(r, c, QtGui.QStandardItem(sts))
             r += 1
             self.mod.setItem(r, c, QtGui.QStandardItem(st_tot_sel))
+            r += 1
+
+            st_xp = str(jj.xp_saison) if self.s_ou_t == 's' else str(jj.xp_total)
+            self.mod.setItem(r, c, QtGui.QStandardItem(st_xp))
             r += 1
 
             c += 1

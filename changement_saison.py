@@ -347,19 +347,8 @@ def bonus_evolution_new(jj, dat=None):
     else:
         atteint_precedant = jj.jj_passe['s'+str(dat-2)].num_dernier_bonus
         res_xp_ini = jj.jj_passe['s'+str(dat-2)].residu_experience
-    xp_sais = jj.jj_passe['s'+str(dat-1)].experience_saison
-    """
-    xp = jj.experience_saison + jj.residu_experience
-    jj.residu_experience = xp
-    age = dat - jj.C
-    seuil = jj.num_dernier_bonus + age
-    bonus = 0
-    while jj.residu_experience >= seuil:
-        bonus += 1
-        jj.num_dernier_bonus += 1
-        jj.residu_experience -= seuil
-        seuil += jj.num_dernier_bonus
-    """
+    xp_sais = jj.jj_passe['s'+str(dat-1)].xp_saison
+
     atteint, bonus, res_xp = bonus_new_atteints(jj, dat, atteint_precedant, xp_sais, res_xp_ini)
     jj.residu_experience = res_xp
     jj.num_dernier_bonus = atteint
