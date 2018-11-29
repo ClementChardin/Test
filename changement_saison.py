@@ -564,14 +564,16 @@ def evolution_joueur(jj, dat=None):
     if jj.D <= dat: 
         bonus = 0
     jj.bonus = bonus
+
+    if jj.RG < jj.RG_max:
+        upgrade_rang(jj)
+
     carte = tirer_carte()
     jj.carte_evolution = carte
     sgn = -1 if (carte['r_n'] == 'r' or jj.D <= dat) else 1
     if carte['valeur'] == 14 and jj.RG.type_nb >= 5 and not jj.D <= dat:
         sgn = 1
     print jj.nom, "signe :", sgn, "; valeur :", carte['valeur'], "; bonus :", bonus
-    if jj.RG < jj.RG_max:
-        upgrade_rang(jj)
 
     if carte['valeur'] == 14 \
        and sgn == -1 \

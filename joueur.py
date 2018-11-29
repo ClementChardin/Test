@@ -302,7 +302,7 @@ class joueur:
 
         #Résultats de l'évolution
         self.bonus = 0
-        self.carte_evolution = {'valeur':0, 'couleur':1, 'r_nr':'n'}
+        self.carte_evolution = {'valeur':0, 'couleur':1, 'r_n':'n'}
         self.evolution = 0
 
         #Cette saison
@@ -675,7 +675,7 @@ def calc_EV(jj, poste, fatigue=True, caracs=None):
             poste_aux = poste
         poste_maitrise = jj.postes_maitrises[jj.postes.index(poste_aux)]
         if not poste_maitrise:
-            idx = 2 if not jj.postes[2] == poste else 3
+            idx = 2 if jj.postes[2] == poste_aux else 3
             MJ = getattr(jj, 'MJ'+str(idx))
             nb_matches = MJ['CT']+MJ['ST'] + .5*(MJ['CR']+MJ['SR'])
             seuil = matches_pour_maitriser_poste(jj.postes[1], jj.postes[idx])

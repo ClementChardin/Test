@@ -776,7 +776,8 @@ def set_caracs_old_compo(comp, equipe, fatigue=True):
                     poste = 'CE'
                 poste_maitrise = poste_maitrise or jj.postes_maitrises[jj.postes.index(poste)]
         if not poste_maitrise and not jj.nom == "":
-            idx = 2 if not jj.postes[2] in s.corres_num_poste[num].split(' ') and not jj.postes_maitrises[2] else 3
+            idx = 2 if jj.postes[2] in s.corres_num_poste[num].split(' ') and not jj.postes_maitrises[2] else 3
+            print u'Poste non maîtrisé :', jj.postes[idx], '- Poste num.', idx, '- joueurs.postes =', jj.postes
             MJ = getattr(jj, 'MJ'+str(idx))
             nb_matches = MJ['CT']+MJ['ST'] + .5*(MJ['CR']+MJ['SR'])
             seuil = 0 if jj.nom == '' else matches_pour_maitriser_poste(jj.postes[1], jj.postes[idx])

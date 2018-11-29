@@ -58,7 +58,7 @@ class JCaracsWidget(QtGui.QWidget):
                 jj.jj_passe['s'+str(dat)].caracs_sans_fatigue
             """
 
-        rows = 14 if self.evolution else 10
+        rows = 15 if self.evolution else 10
         self.mod = QtGui.QStandardItemModel(rows, len(self.joueurs))
         self.setup_model()
         
@@ -116,13 +116,16 @@ class JCaracsWidget(QtGui.QWidget):
                 self.mod.setItem(r, c, QtGui.QStandardItem(declin))
                 r += 1
 
+                self.mod.setItem(r, c, QtGui.QStandardItem(jj.RG.rang))
+                r += 1
+
             c += 1
             
         for car in sorted(s.ordre_caracs_joueurs, key=lambda car: s.ordre_caracs_joueurs[car]):
             r_header.append(car)
 
         if self.evolution:
-            r_header += [u'Carte évolution', 'Bonus', 'Evolution', u'Déclin']
+            r_header += [u'Carte évolution', 'Bonus', 'Evolution', u'Déclin', 'Rang']
             
         self.mod.setHorizontalHeaderLabels(c_header)
         self.mod.setVerticalHeaderLabels(r_header)

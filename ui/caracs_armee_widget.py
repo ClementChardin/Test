@@ -33,3 +33,6 @@ class CaracsArmeeWidget(QtGui.QWidget):
             self.dd_jcaracs[armee] = jcarac
             self.tab.addTab(jcarac, armee)
 
+        self.setGeometry(QtCore.QRect(490, 110, 930, 810))
+        self.show()
+
